@@ -4,7 +4,7 @@ Hedef: 2028 YKS öğrencileri. İlk modül: **11. sınıf fizik (Türkiye Yüzy�
 
 - Mimari: [docs/knowledge-base-architecture.md](docs/knowledge-base-architecture.md)
 - Müfredat haritası: [knowledge-base/physics-11/curriculum/master-map.md](knowledge-base/physics-11/curriculum/master-map.md)
-- Denetimler: [initial-audit](knowledge-base/physics-11/audits/initial-audit.md) · [step-4-6-audit](knowledge-base/physics-11/audits/step-4-6-audit.md) · [gap-analysis](knowledge-base/physics-11/audits/gap-analysis.md)
+- Denetimler: [initial-audit](knowledge-base/physics-11/audits/initial-audit.md) · [step-4-6-audit](knowledge-base/physics-11/audits/step-4-6-audit.md) · [step-7-audit](knowledge-base/physics-11/audits/step-7-audit.md) · [gap-analysis](knowledge-base/physics-11/audits/gap-analysis.md)
 
 ## Komutlar
 
@@ -20,6 +20,7 @@ Tüm katmanları resmî kaynaklardan baştan üretir ve doğrular; hata varsa ç
 | Öğrenme çıktıları, beceriler, kapsam sınırları | `knowledge-base/physics-11/learning-outcomes/` |
 | Kavram grafiği | `knowledge-base/physics-11/concepts/` |
 | Ön koşul grafiği | `knowledge-base/physics-11/prerequisites/` |
+| Formül veritabanı | `knowledge-base/physics-11/formulas/` |
 | Denetimler | `knowledge-base/physics-11/audits/` |
 
 `legacy-taslak-fizik-11/` mimariden önce üretilmiş taslakları içerir; bilgi tabanının parçası değildir.

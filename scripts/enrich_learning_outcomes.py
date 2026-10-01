@@ -120,6 +120,7 @@ def main():
                 continue
             items.append({"id": f"{o['id']}-scope-{i}", "type": it["type"], "official_text": hit[0],
                           "implication": it["implication"], "implication_confidence": "MEDIUM",
+                          "applies_to": it.get("applies_to"),
                           "source_id": "src-meb-fizik-op-2026"})
         o["official_scope_constraints"] = items
         # ölçme

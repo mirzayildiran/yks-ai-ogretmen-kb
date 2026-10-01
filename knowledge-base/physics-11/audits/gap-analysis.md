@@ -1,7 +1,7 @@
 # Boşluk Analizi — 11. Sınıf Fizik
 
 - **Güncelleme:** 2026-10-01
-- **Durum:** STEP 1–6 tamamlandı. STEP 7–16 başlamadı.
+- **Durum:** STEP 1–7 tamamlandı. STEP 8–16 başlamadı.
 
 ## Missing curriculum data
 - Yok. 3 ünite, 18 içerik başlığı, 33 çıktı ve 85 süreç bileşeni resmî PDF ile birebir.
@@ -21,12 +21,11 @@
 - **Matematik programı toplanmadı.** Trigonometri, oran-orantı ve ters kare ilişkisinin matematik programındaki yeri ve sınıfı doğrulanmadı.
 - 16 çıktının 9–10. sınıf fizik çıktısına bağlantısı yok. Çoğu (Ünite 2'nin manyetizma kısmı, Ünite 3) ortaokul bilgisine dayanıyor.
 
-## Missing formulas (STEP 7)
-- Formül veritabanı başlamadı.
-- Ders kitabında doğrulanması gerekenler:
-  - **Kitapta görülen:** E = φ/A ve E = I/r² (s. 307, 311); limit hızda m·g = k·A·v² (s. 90); F = B·I·L; ε = ΔΦ/Δt; Snell.
-  - **Kitapta yok:** Ayna ve mercek denklemi.
-- PDF metin çıkarımında formül sembolleri kayboluyor (ör. "E = r2"). Formüller sayfa görüntülerinden doğrulanmalı.
+## Missing formulas (STEP 7 — tamamlandı)
+- 53 formül oluşturuldu; 48'i ders kitabının sayfa görüntüsünden doğrulandı, 53/53 boyut analizinden geçti (ayrıntı: `step-7-audit.md`).
+- 3 türetilmiş formülün kitap sayfası doğrulanmadı: ilk hız bileşenleri, yatay virajda azami hız, sınır açısı formülü.
+- 8 çıktı nitel olduğu için formülsüz: FİZ.11.2.3, 11.2.4, 11.2.7, 11.2.9, 11.3.4, 11.3.7, 11.3.8, 11.3.10.
+- Ders kitabındaki çözümlü örneklerin tamamı taranmadı; az kullanılan ara bağıntılar eksik olabilir. Örnek: düşey çemberde enerji korunumu (s. 112), 10. sınıf mekanik enerji konusu.
 
 ## Missing question families / variations / solution methods / shortcuts (STEP 8, 9, 11, 12)
 - Başlamadı.
@@ -48,6 +47,9 @@
 | İçerik başlığı adları | Web: "Newton Hareket Yasaları", "Çembersel Hareket" | PDF esas: "Newton'ın ...", "Düzgün Çembersel ...". |
 | Kod | Web sayfasında "FİZ.11.4.10" | PDF: FİZ.11.3.10. |
 | Kitap numaralandırması | 1.6 alt başlıkları "1.4.x" | 1.6.1 / 1.6.2 olarak kaydedildi. |
+| Program ve ders kitabı (ikisi de Tier 1) | Program 11 çıktıda hesaplamayı dışlıyor; kitap 12 formül ve sayısal alıştırma veriyor | İkisi de kayıtlı: `program_calc_status` + `textbook_vs_program_conflict`. |
+| Ders kitabı ve fizik | Tablo 1.2'de k "boyutsuz" | Boyut analiziyle reddedildi; doğru birim kg/m³. |
+| Ders kitabı iç tutarlılığı | s. 116 eğimli viraj alt indisleri ters | Sonuç formülü doğru; not düşüldü. |
 
 ## Unverified claims
 | İddia | Güven | Not |
@@ -55,4 +57,5 @@
 | ÖSYM'nin 2028 YKS'de 11. sınıf fiziğini nasıl kapsayacağı | UNVERIFIED | Resmî duyuru aranmadı (STEP 10). |
 | Kapsam sınırlarının sınav kapsamına etkisi ("CALC_EXCLUDED → ÖSYM sayısal sormaz") | UNVERIFIED | Program öğretimi sınırlar; ÖSYM'nin uyacağı varsayım. |
 | Kavram tanımları ve 220 ilişki | MEDIUM | Yapay zekâ tarafından yazıldı; uzman incelemesi gerekli. |
-| Etkin değer, Lenz, eğik düzlem kapsamda mı? | MEDIUM | Ders kitabında var, programda adı geçmiyor. |
+| Etkin değer, Lenz, eğik düzlem, E = V/d, renklere ayrılma kapsamda mı? | MEDIUM | Ders kitabında var, programda adı geçmiyor. |
+| Programın "hesaplamasız" dediği 12 formül için ÖSYM sayısal soru sorar mı? | UNVERIFIED | Kitap formülü ve sayısal alıştırmayı veriyor; program dışlıyor (STEP 10). |

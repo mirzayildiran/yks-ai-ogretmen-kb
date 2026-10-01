@@ -62,6 +62,7 @@
           "official_text": "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar.",
           "implication": "Hava direnci yok sayılır.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -70,6 +71,7 @@
           "official_text": "Yer çekimi ivmesi sabit kabul edilir.",
           "implication": "g yükseklikle değişmez.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -238,7 +240,10 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-002"
+      ]
     },
     {
       "id": "phys11-lo-002",
@@ -306,6 +311,7 @@
           "official_text": "Öğrenciler, deney ya da dijital içerikler yolu ile düşey doğrultuda ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini gözlemleyerek hız, ivme, konum, zaman ve yer değiştirme ile ilgili verileri toplayıp kaydeder.",
           "implication": "İlk hızlı (aşağı/yukarı) düşey hareket de serbest düşme kapsamında.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -314,6 +320,7 @@
           "official_text": "Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur.",
           "implication": "Hava direnci yok sayılır.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -322,6 +329,7 @@
           "official_text": "Ön öğrenmelerindeki ivmeli hareket grafiklerini dikkate alarak oluşturduğu veri setleri üzerinden hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer.",
           "implication": "Üç hareket grafiği ve aralarındaki dönüşüm kapsamda.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -330,6 +338,7 @@
           "official_text": "Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır.",
           "implication": "'Düşey atış' adı kullanılmaz; hepsi 'serbest düşme'.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -569,7 +578,15 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-001",
+        "phys11-formula-002",
+        "phys11-formula-003",
+        "phys11-formula-004",
+        "phys11-formula-005",
+        "phys11-formula-006"
+      ]
     },
     {
       "id": "phys11-lo-003",
@@ -626,6 +643,7 @@
           "official_text": "Öğrenciler, yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden cisimlerin hareketini gözlemler.",
           "implication": "İki boyutlu hareketin ivmesi yalnız g; başka sabit ivme kaynağı yok.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -634,6 +652,7 @@
           "official_text": "Öğretmen, öğrencilerin trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine yönelik farkındalık kazandırır.",
           "implication": "Hız bileşenleri trigonometriyle bulunur.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -642,6 +661,7 @@
           "official_text": "‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır.",
           "implication": "'Yatay atış' ve 'eğik atış' adları kullanılmaz.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -650,6 +670,7 @@
           "official_text": "Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
           "implication": "Sayısal hesap ve grafik yorumu ölçülür.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -922,7 +943,12 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-007",
+        "phys11-formula-008",
+        "phys11-formula-009"
+      ]
     },
     {
       "id": "phys11-lo-004",
@@ -1115,7 +1141,10 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-010"
+      ]
     },
     {
       "id": "phys11-lo-005",
@@ -1183,6 +1212,7 @@
           "official_text": "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
           "implication": "Bağlı sistemlerde tüm cisimler aynı ivmeyle hareket eder; farklı ivmeli sistem hesaplanmaz.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "partial",
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -1191,6 +1221,7 @@
           "official_text": "Sabit ivmeli hareket ile sınırlı kalınır.",
           "implication": "Değişken ivmeli dinamik yok.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -1371,7 +1402,14 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-010",
+        "phys11-formula-011",
+        "phys11-formula-012",
+        "phys11-formula-013",
+        "phys11-formula-014"
+      ]
     },
     {
       "id": "phys11-lo-006",
@@ -1439,6 +1477,7 @@
           "official_text": "Öğretmen, örnek olay ya da dijital içeriklerde yer alan görselleri yorumlayarak öğrencilerin harekete zorlanmasına rağmen durmakta olan, kayarak öteleme hareketi yapmakta olan ve dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini fark etmesini sağlar.",
           "implication": "Duran, kayan ve yuvarlanan cisimlerde sürtünme (nitel).",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -1569,7 +1608,8 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-007",
@@ -1626,6 +1666,7 @@
           "official_text": "Öğrenciler, matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar ve modeli geneller.",
           "implication": "Sürtünme kuvveti hesabı kapsamda.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -1634,6 +1675,7 @@
           "official_text": "Öğrencilerden dijital içerik ya da deney verilerini kullanarak sürtünme kuvveti-uygulanan kuvvet grafiğini çizmeleri istenebilir.",
           "implication": "f–F grafiği kapsamda.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -1803,7 +1845,12 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-014",
+        "phys11-formula-015",
+        "phys11-formula-016"
+      ]
     },
     {
       "id": "phys11-lo-008",
@@ -1871,6 +1918,7 @@
           "official_text": "Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır.",
           "implication": "Limit hız sayısal hesaplanmaz; yalnız değişken ilişkisi yorumlanır.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -2042,7 +2090,11 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-017",
+        "phys11-formula-018"
+      ]
     },
     {
       "id": "phys11-lo-009",
@@ -2239,7 +2291,8 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-010",
@@ -2296,6 +2349,7 @@
           "official_text": "Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller.",
           "implication": "Yatay düzlem, düşey düzlem, yatay ve eğimli viraj problemleri kapsamda.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -2304,6 +2358,16 @@
           "official_text": "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır.",
           "implication": "Ray (ör. lunapark rayı) problemleri hesaplanmaz.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "partial",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-010-scope-3",
+          "type": "CALC_INCLUDED",
+          "official_text": "Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir.",
+          "implication": "Düzgün çembersel hareket problemlerinde sayısal hesap ölçülür.",
+          "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -2557,7 +2621,20 @@
             "concept_id": null
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-011",
+        "phys11-formula-019",
+        "phys11-formula-020",
+        "phys11-formula-021",
+        "phys11-formula-022",
+        "phys11-formula-023",
+        "phys11-formula-024",
+        "phys11-formula-025",
+        "phys11-formula-026",
+        "phys11-formula-027",
+        "phys11-formula-028"
+      ]
     },
     {
       "id": "phys11-lo-011",
@@ -2614,6 +2691,7 @@
           "official_text": "Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller.",
           "implication": "Coulomb kuvveti yalnız oran/yön/yorum düzeyinde; sayısal hesap yok.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -2771,7 +2849,11 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-029",
+        "phys11-formula-030"
+      ]
     },
     {
       "id": "phys11-lo-012",
@@ -2828,6 +2910,7 @@
           "official_text": "Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller.",
           "implication": "Elektriksel alan yalnız oran/yön/yorum düzeyinde.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -3002,7 +3085,12 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-031",
+        "phys11-formula-032",
+        "phys11-formula-033"
+      ]
     },
     {
       "id": "phys11-lo-013",
@@ -3207,7 +3295,8 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-014",
@@ -3412,7 +3501,8 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-015",
@@ -3469,6 +3559,7 @@
           "official_text": "Manyetik alanın iletkene olan uzaklığı ve elektrik akımının büyüklüğünün değişimi hakkında öğrenci görüşleri alınarak hipotezler kurulur.Öğretmen manyetik alan katsayısı ve sağ el kuralı ile ilgili bilgi verir.",
           "implication": "Sağ el kuralı kapsamda.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -3477,6 +3568,7 @@
           "official_text": "Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller.",
           "implication": "Düz telin manyetik alanı oran/yön düzeyinde.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -3627,7 +3719,10 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-034"
+      ]
     },
     {
       "id": "phys11-lo-016",
@@ -3806,7 +3901,10 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-035"
+      ]
     },
     {
       "id": "phys11-lo-017",
@@ -4018,7 +4116,8 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-018",
@@ -4075,6 +4174,7 @@
           "official_text": "Öğretmen manyetik alan içerisindeki akım geçen tele etki eden manyetik kuvvetin telin içerisinde hareketli yüklü parçacıklara etki eden kuvvetten kaynaklandığını vurgular.",
           "implication": "Tele etki eden kuvvetin kaynağı yüklü parçacıklar olarak kavramsal anılır; yüke etki eden kuvvet ayrı bir çıktı değildir.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -4083,6 +4183,7 @@
           "official_text": "Öğrenciler her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler üzerinden, manyetik kuvvet ile değişkenler arasındaki ilişkiyi geneller.",
           "implication": "F = BIL modeliyle değişken bazlı problem çözümü; açık hesap yasağı yok.",
           "implication_confidence": "MEDIUM",
+          "applies_to": null,
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -4259,7 +4360,10 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-036"
+      ]
     },
     {
       "id": "phys11-lo-019",
@@ -4468,7 +4572,8 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-020",
@@ -4525,6 +4630,7 @@
           "official_text": "Öğretmen manyetik akı kavramını kavramsal olarak açıklar.",
           "implication": "Manyetik akı kavramsal tanıtılır; B ve yüzey alanıyla ilişkisi belirlenir.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -4635,7 +4741,10 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-037"
+      ]
     },
     {
       "id": "phys11-lo-021",
@@ -4848,7 +4957,11 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-038",
+        "phys11-formula-039"
+      ]
     },
     {
       "id": "phys11-lo-022",
@@ -5066,7 +5179,11 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-019",
+        "phys11-formula-040"
+      ]
     },
     {
       "id": "phys11-lo-023",
@@ -5134,6 +5251,7 @@
           "official_text": "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır.",
           "implication": "Transformatör nitelikleri yalnız yorumlanır.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         },
         {
@@ -5142,6 +5260,7 @@
           "official_text": "Matematiksel işlemlerden kaçınılır.",
           "implication": "Sarım-gerilim-akım sayısal hesabı yok.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -5325,7 +5444,12 @@
             "concept_id": "phys11-c-pusula"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-041",
+        "phys11-formula-042",
+        "phys11-formula-043"
+      ]
     },
     {
       "id": "phys11-lo-024",
@@ -5544,7 +5668,12 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-044",
+        "phys11-formula-045",
+        "phys11-formula-046"
+      ]
     },
     {
       "id": "phys11-lo-025",
@@ -5726,7 +5855,11 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-051",
+        "phys11-formula-053"
+      ]
     },
     {
       "id": "phys11-lo-026",
@@ -5959,7 +6092,10 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-050"
+      ]
     },
     {
       "id": "phys11-lo-027",
@@ -6158,7 +6294,10 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-052"
+      ]
     },
     {
       "id": "phys11-lo-028",
@@ -6345,7 +6484,12 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-047",
+        "phys11-formula-048",
+        "phys11-formula-049"
+      ]
     },
     {
       "id": "phys11-lo-029",
@@ -6413,6 +6557,7 @@
           "official_text": "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır.",
           "implication": "Görünür derinlik yalnız nitel.",
           "implication_confidence": "MEDIUM",
+          "applies_to": "whole",
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
@@ -6564,7 +6709,8 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-030",
@@ -6782,7 +6928,10 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-049"
+      ]
     },
     {
       "id": "phys11-lo-031",
@@ -6999,7 +7148,10 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-048"
+      ]
     },
     {
       "id": "phys11-lo-032",
@@ -7230,7 +7382,8 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": []
     },
     {
       "id": "phys11-lo-033",
@@ -7438,7 +7591,10 @@
             "concept_id": "phys11-c-odak-noktasi"
           }
         ]
-      }
+      },
+      "formulas": [
+        "phys11-formula-052"
+      ]
     }
   ],
   "global_scope_constraints": [

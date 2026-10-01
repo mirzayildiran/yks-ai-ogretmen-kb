@@ -1,5 +1,5 @@
 {
-  "_description": "Elle gözden geçirilmiş kapsam sınırları. 'anchor' resmî öğretme uygulaması metninde birebir geçmek zorundadır; betik (enrich_learning_outcomes.py) anchor'ı içeren tam resmî cümleyi alır. 'type' ve 'implication' bizim yorumumuzdur.",
+  "_description": "Elle gözden geçirilmiş kapsam sınırları. 'anchor' resmî öğretme uygulaması metninde birebir geçmek zorundadır; betik (enrich_learning_outcomes.py) anchor'ı içeren tam resmî cümleyi alır. 'type' ve 'implication' bizim yorumumuzdur. 'applies_to': hesap türlerinde (CALC_*, CONCEPTUAL_ONLY) sınırın tüm çıktıya mı ('whole') yoksa yalnız belirli bir durum türüne mi ('partial') uygulandığı.",
   "types": {
     "ASSUMPTION": "Modelin varsayımı (ör. hava direnci ihmal)",
     "TERMINOLOGY": "Kullanılmayacak / kullanılacak terim",
@@ -10,71 +10,210 @@
     "CONCEPTUAL_ONLY": "Kavramsal düzeyde ele alınır"
   },
   "global": [
-    {"type": "CALC_LIMITED", "source": "src-meb-fizik-op-2026", "page": 7,
-     "official_text": "Fizik Dersi Öğretim Programı’nın uygulanmasında ders içeriğinden ziyade öğrenme çıktıları önceliklendirilmeli, öğrencilerin öğrenme çıktılarını kazanmalarını sağlayacak içerik bilgisi sunulmalı, konu yoğunluğuna sebep olmayacak şekilde matematiksel hesaplamalar ile ilgili sınırlamalara dikkat edilmelidir.",
-     "implication": "Programda açık hesap sınırı olmayan çıktılarda da hesap karmaşıklığı düşük tutulmalı."},
-    {"type": "SCOPE_EXCLUDED_FROM_TEXTBOOK", "source": "src-meb-fizik-op-2026", "page": 9,
-     "official_text": "Farklılaştırma kapsamında zenginleştirme ve destekleme bölümlerinde yer verilen uygulamalara (“*” sembolü ile verilen uygulamalar dâhil) ders kitaplarında yer verilmez.",
-     "implication": "Zenginleştirme maddeleri öğrenme çıktısı eklemez; temel kapsamın parçası sayılmaz (fen liselerinde * işaretliler zorunlu)."}
+    {
+      "type": "CALC_LIMITED",
+      "source": "src-meb-fizik-op-2026",
+      "page": 7,
+      "official_text": "Fizik Dersi Öğretim Programı’nın uygulanmasında ders içeriğinden ziyade öğrenme çıktıları önceliklendirilmeli, öğrencilerin öğrenme çıktılarını kazanmalarını sağlayacak içerik bilgisi sunulmalı, konu yoğunluğuna sebep olmayacak şekilde matematiksel hesaplamalar ile ilgili sınırlamalara dikkat edilmelidir.",
+      "implication": "Programda açık hesap sınırı olmayan çıktılarda da hesap karmaşıklığı düşük tutulmalı."
+    },
+    {
+      "type": "SCOPE_EXCLUDED_FROM_TEXTBOOK",
+      "source": "src-meb-fizik-op-2026",
+      "page": 9,
+      "official_text": "Farklılaştırma kapsamında zenginleştirme ve destekleme bölümlerinde yer verilen uygulamalara (“*” sembolü ile verilen uygulamalar dâhil) ders kitaplarında yer verilmez.",
+      "implication": "Zenginleştirme maddeleri öğrenme çıktısı eklemez; temel kapsamın parçası sayılmaz (fen liselerinde * işaretliler zorunlu)."
+    }
   ],
   "outcomes": {
     "FİZ.11.1.1": [
-      {"type": "ASSUMPTION", "anchor": "hava direncinin ihmal edildiği ortamda", "implication": "Hava direnci yok sayılır."},
-      {"type": "ASSUMPTION", "anchor": "Yer çekimi ivmesi sabit kabul edilir", "implication": "g yükseklikle değişmez."}
+      {
+        "type": "ASSUMPTION",
+        "anchor": "hava direncinin ihmal edildiği ortamda",
+        "implication": "Hava direnci yok sayılır."
+      },
+      {
+        "type": "ASSUMPTION",
+        "anchor": "Yer çekimi ivmesi sabit kabul edilir",
+        "implication": "g yükseklikle değişmez."
+      }
     ],
     "FİZ.11.1.2": [
-      {"type": "SCOPE_INCLUDED", "anchor": "ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin", "implication": "İlk hızlı (aşağı/yukarı) düşey hareket de serbest düşme kapsamında."},
-      {"type": "ASSUMPTION", "anchor": "Hava direncini ihmal ederek", "implication": "Hava direnci yok sayılır."},
-      {"type": "SCOPE_INCLUDED", "anchor": "hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer", "implication": "Üç hareket grafiği ve aralarındaki dönüşüm kapsamda."},
-      {"type": "TERMINOLOGY", "anchor": "düşey atış hareketi", "implication": "'Düşey atış' adı kullanılmaz; hepsi 'serbest düşme'."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin",
+        "implication": "İlk hızlı (aşağı/yukarı) düşey hareket de serbest düşme kapsamında."
+      },
+      {
+        "type": "ASSUMPTION",
+        "anchor": "Hava direncini ihmal ederek",
+        "implication": "Hava direnci yok sayılır."
+      },
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer",
+        "implication": "Üç hareket grafiği ve aralarındaki dönüşüm kapsamda."
+      },
+      {
+        "type": "TERMINOLOGY",
+        "anchor": "düşey atış hareketi",
+        "implication": "'Düşey atış' adı kullanılmaz; hepsi 'serbest düşme'."
+      }
     ],
     "FİZ.11.1.3": [
-      {"type": "SCOPE_INCLUDED", "anchor": "yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden", "implication": "İki boyutlu hareketin ivmesi yalnız g; başka sabit ivme kaynağı yok."},
-      {"type": "SCOPE_INCLUDED", "anchor": "hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine", "implication": "Hız bileşenleri trigonometriyle bulunur."},
-      {"type": "TERMINOLOGY", "anchor": "eğik atış", "implication": "'Yatay atış' ve 'eğik atış' adları kullanılmaz."},
-      {"type": "CALC_INCLUDED", "anchor": "Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar", "implication": "Sayısal hesap ve grafik yorumu ölçülür."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden",
+        "implication": "İki boyutlu hareketin ivmesi yalnız g; başka sabit ivme kaynağı yok."
+      },
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine",
+        "implication": "Hız bileşenleri trigonometriyle bulunur."
+      },
+      {
+        "type": "TERMINOLOGY",
+        "anchor": "eğik atış",
+        "implication": "'Yatay atış' ve 'eğik atış' adları kullanılmaz."
+      },
+      {
+        "type": "CALC_INCLUDED",
+        "anchor": "Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar",
+        "implication": "Sayısal hesap ve grafik yorumu ölçülür.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.1.5": [
-      {"type": "CALC_LIMITED", "anchor": "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır", "implication": "Bağlı sistemlerde tüm cisimler aynı ivmeyle hareket eder; farklı ivmeli sistem hesaplanmaz."},
-      {"type": "CALC_LIMITED", "anchor": "Sabit ivmeli hareket ile sınırlı kalınır", "implication": "Değişken ivmeli dinamik yok."}
+      {
+        "type": "CALC_LIMITED",
+        "anchor": "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır",
+        "implication": "Bağlı sistemlerde tüm cisimler aynı ivmeyle hareket eder; farklı ivmeli sistem hesaplanmaz.",
+        "applies_to": "partial"
+      },
+      {
+        "type": "CALC_LIMITED",
+        "anchor": "Sabit ivmeli hareket ile sınırlı kalınır",
+        "implication": "Değişken ivmeli dinamik yok.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.1.6": [
-      {"type": "SCOPE_INCLUDED", "anchor": "dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini", "implication": "Duran, kayan ve yuvarlanan cisimlerde sürtünme (nitel)."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini",
+        "implication": "Duran, kayan ve yuvarlanan cisimlerde sürtünme (nitel)."
+      }
     ],
     "FİZ.11.1.7": [
-      {"type": "CALC_INCLUDED", "anchor": "matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar", "implication": "Sürtünme kuvveti hesabı kapsamda."},
-      {"type": "SCOPE_INCLUDED", "anchor": "sürtünme kuvveti-uygulanan kuvvet grafiğini", "implication": "f–F grafiği kapsamda."}
+      {
+        "type": "CALC_INCLUDED",
+        "anchor": "matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar",
+        "implication": "Sürtünme kuvveti hesabı kapsamda.",
+        "applies_to": "whole"
+      },
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "sürtünme kuvveti-uygulanan kuvvet grafiğini",
+        "implication": "f–F grafiği kapsamda."
+      }
     ],
     "FİZ.11.1.8": [
-      {"type": "CALC_EXCLUDED", "anchor": "limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır", "implication": "Limit hız sayısal hesaplanmaz; yalnız değişken ilişkisi yorumlanır."}
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır",
+        "implication": "Limit hız sayısal hesaplanmaz; yalnız değişken ilişkisi yorumlanır.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.1.10": [
-      {"type": "SCOPE_INCLUDED", "anchor": "yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki", "implication": "Yatay düzlem, düşey düzlem, yatay ve eğimli viraj problemleri kapsamda."},
-      {"type": "CALC_EXCLUDED", "anchor": "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır", "implication": "Ray (ör. lunapark rayı) problemleri hesaplanmaz."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki",
+        "implication": "Yatay düzlem, düşey düzlem, yatay ve eğimli viraj problemleri kapsamda."
+      },
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır",
+        "implication": "Ray (ör. lunapark rayı) problemleri hesaplanmaz.",
+        "applies_to": "partial"
+      },
+      {
+        "type": "CALC_INCLUDED",
+        "anchor": "Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir",
+        "implication": "Düzgün çembersel hareket problemlerinde sayısal hesap ölçülür.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.2.1": [
-      {"type": "CALC_EXCLUDED", "anchor": "Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden", "implication": "Coulomb kuvveti yalnız oran/yön/yorum düzeyinde; sayısal hesap yok."}
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden",
+        "implication": "Coulomb kuvveti yalnız oran/yön/yorum düzeyinde; sayısal hesap yok.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.2.2": [
-      {"type": "CALC_EXCLUDED", "anchor": "matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri", "implication": "Elektriksel alan yalnız oran/yön/yorum düzeyinde."}
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri",
+        "implication": "Elektriksel alan yalnız oran/yön/yorum düzeyinde.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.2.5": [
-      {"type": "SCOPE_INCLUDED", "anchor": "manyetik alan katsayısı ve sağ el kuralı", "implication": "Sağ el kuralı kapsamda."},
-      {"type": "CALC_EXCLUDED", "anchor": "matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri", "implication": "Düz telin manyetik alanı oran/yön düzeyinde."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "manyetik alan katsayısı ve sağ el kuralı",
+        "implication": "Sağ el kuralı kapsamda."
+      },
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri",
+        "implication": "Düz telin manyetik alanı oran/yön düzeyinde.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.2.8": [
-      {"type": "SCOPE_INCLUDED", "anchor": "telin içerisinde hareketli yüklü parçacıklara etki eden", "implication": "Tele etki eden kuvvetin kaynağı yüklü parçacıklar olarak kavramsal anılır; yüke etki eden kuvvet ayrı bir çıktı değildir."},
-      {"type": "SCOPE_INCLUDED", "anchor": "her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler", "implication": "F = BIL modeliyle değişken bazlı problem çözümü; açık hesap yasağı yok."}
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "telin içerisinde hareketli yüklü parçacıklara etki eden",
+        "implication": "Tele etki eden kuvvetin kaynağı yüklü parçacıklar olarak kavramsal anılır; yüke etki eden kuvvet ayrı bir çıktı değildir."
+      },
+      {
+        "type": "SCOPE_INCLUDED",
+        "anchor": "her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler",
+        "implication": "F = BIL modeliyle değişken bazlı problem çözümü; açık hesap yasağı yok."
+      }
     ],
     "FİZ.11.2.10": [
-      {"type": "CONCEPTUAL_ONLY", "anchor": "manyetik akı kavramını kavramsal olarak açıklar", "implication": "Manyetik akı kavramsal tanıtılır; B ve yüzey alanıyla ilişkisi belirlenir."}
+      {
+        "type": "CONCEPTUAL_ONLY",
+        "anchor": "manyetik akı kavramını kavramsal olarak açıklar",
+        "implication": "Manyetik akı kavramsal tanıtılır; B ve yüzey alanıyla ilişkisi belirlenir.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.2.13": [
-      {"type": "CALC_EXCLUDED", "anchor": "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır", "implication": "Transformatör nitelikleri yalnız yorumlanır."},
-      {"type": "CALC_EXCLUDED", "anchor": "Matematiksel işlemlerden kaçınılır", "implication": "Sarım-gerilim-akım sayısal hesabı yok."}
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır",
+        "implication": "Transformatör nitelikleri yalnız yorumlanır.",
+        "applies_to": "whole"
+      },
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "Matematiksel işlemlerden kaçınılır",
+        "implication": "Sarım-gerilim-akım sayısal hesabı yok.",
+        "applies_to": "whole"
+      }
     ],
     "FİZ.11.3.6": [
-      {"type": "CALC_EXCLUDED", "anchor": "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır", "implication": "Görünür derinlik yalnız nitel."}
+      {
+        "type": "CALC_EXCLUDED",
+        "anchor": "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır",
+        "implication": "Görünür derinlik yalnız nitel.",
+        "applies_to": "whole"
+      }
     ]
   }
 }

@@ -1,0 +1,4360 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "generated_by": "scripts/build_formulas.py",
+  "generated_at": "2026-10-01",
+  "notation_note": "Ders kitabı hız için ϑ, akım için i, manyetik alan katsayısı için K, Coulomb sabiti için k kullanır.",
+  "count": 53,
+  "dimension_negative_tests": [
+    {
+      "test": "drag-force-textbook-claim",
+      "assumption": "k boyutsuz (ders kitabı Tablo 1.2, s. 90)",
+      "result": "rejected",
+      "dims_seen": [
+        "L M T^-2",
+        "L^4 T^-2"
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "id": "phys11-formula-001",
+      "slug": "free-fall-h-v0zero",
+      "name": "Serbest düşmede yükseklik (ilk hız sıfır)",
+      "formula": "h = ½·g·t²",
+      "spoken_tr": "h eşittir bir bölü iki g t kare",
+      "meaning": "Durgun hâlden bırakılan cismin t sürede düştüğü yükseklik.",
+      "variables": [
+        {
+          "symbol": "h",
+          "name": "düşülen yükseklik",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s²",
+        "s"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İlk hız sıfır",
+        "Hava direnci ihmal",
+        "g sabit (yükseklik Dünya yarıçapına göre küçük)"
+      ],
+      "invalid_use_cases": [
+        "İlk hızı sıfırdan farklı cisimlerde (h = ϑ₀t ± ½gt² kullanılır)",
+        "Hava direncinin önemli olduğu, limit hıza yaklaşan hareketlerde (FİZ.11.1.8)",
+        "Cisim yerden yukarı atıldıysa toplam süreye doğrudan uygulanamaz"
+      ],
+      "common_mistakes": [
+        "½ katsayısını unutmak",
+        "t'yi değil t²'yi almayı unutmak",
+        "Ardışık eşit sürelerde alınan yolları eşit sanmak (oran 1:3:5:7'dir)"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-yer-cekimi-ivmesi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-002",
+      "slug": "free-fall-v-v0zero",
+      "name": "Serbest düşmede hız (ilk hız sıfır)",
+      "formula": "ϑ = g·t",
+      "spoken_tr": "hız eşittir g çarpı t",
+      "meaning": "Durgun hâlden bırakılan cismin t anındaki hızı.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        }
+      ],
+      "units": [
+        "m/s",
+        "m/s²",
+        "s"
+      ],
+      "dimensions": "L T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İlk hız sıfır",
+        "Hava direnci ihmal",
+        "g sabit"
+      ],
+      "invalid_use_cases": [
+        "İlk hızlı hareketlerde",
+        "Hava direncinin önemli olduğu düşüşlerde (hız sınırsız artmaz)"
+      ],
+      "common_mistakes": [
+        "Hızın kütleye bağlı olduğunu sanmak",
+        "Hız birimini m/s² yazmak"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-yer-cekimi-ivmesi",
+        "phys11-c-hiz"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.1",
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-001",
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-003",
+      "slug": "free-fall-v2-v0zero",
+      "name": "Zamansız hız bağıntısı (ilk hız sıfır)",
+      "formula": "ϑ² = 2·g·h",
+      "spoken_tr": "hız kare eşittir iki g h",
+      "meaning": "Durgun bırakılan cismin h yükseklik düştükten sonraki hızı; süre bilinmeden kullanılır.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "h",
+          "name": "düşülen yükseklik",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İlk hız sıfır",
+        "Hava direnci ihmal",
+        "g sabit"
+      ],
+      "invalid_use_cases": [
+        "İlk hızlı hareketlerde (ϑ² = ϑ₀² ± 2gh)",
+        "h yükseklik değil yol (gidiş-dönüş) olarak alınırsa"
+      ],
+      "common_mistakes": [
+        "Karekök almayı unutmak",
+        "h'yi yerden yükseklik yerine düşülen mesafe yerine karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-004",
+      "slug": "free-fall-h-general",
+      "name": "Serbest düşmede konum (ilk hızlı)",
+      "formula": "h = ϑ₀·t ± ½·g·t²",
+      "spoken_tr": "h eşittir hız sıfır çarpı t artı eksi bir bölü iki g t kare",
+      "meaning": "İlk hızı ϑ₀ olan düşey harekette t sürede alınan düşey yer değiştirme; aşağı yönlü ilk hızda +, yukarı yönlüde −.",
+      "variables": [
+        {
+          "symbol": "h",
+          "name": "düşey yer değiştirme",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        },
+        {
+          "symbol": "ϑ₀",
+          "name": "ilk hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ₀"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²",
+        "s"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yalnız yer çekimi etkisi (hava direnci ihmal)",
+        "g sabit",
+        "İşaret seçimi hareket boyunca tutarlı"
+      ],
+      "invalid_use_cases": [
+        "Yatayda ilk hız bileşeni varken düşey bileşen yerine toplam hız konursa",
+        "Hava direnci önemliyse"
+      ],
+      "common_mistakes": [
+        "± işaretini ilk hızın yönüne göre seçmemek",
+        "Yukarı atışta tepe noktasından sonra işaret değiştirmeye çalışıp karışıklık yaratmak",
+        "Yer değiştirme ile alınan yolu karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-tepe-noktasi-hareket",
+        "phys11-c-maksimum-yukseklik"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-005",
+      "slug": "free-fall-v-general",
+      "name": "Serbest düşmede hız (ilk hızlı)",
+      "formula": "ϑ = ϑ₀ ± g·t",
+      "spoken_tr": "hız eşittir hız sıfır artı eksi g t",
+      "meaning": "İlk hızı ϑ₀ olan düşey harekette t anındaki hız.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "ϑ₀",
+          "name": "ilk hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ₀"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        }
+      ],
+      "units": [
+        "m/s",
+        "m/s²",
+        "s"
+      ],
+      "dimensions": "L T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yalnız yer çekimi etkisi",
+        "g sabit"
+      ],
+      "invalid_use_cases": [
+        "Hava direncinin önemli olduğu durumlarda"
+      ],
+      "common_mistakes": [
+        "Tepe noktasında ivmenin de sıfır olduğunu sanmak (ivme her an g)",
+        "Çıkış ve iniş sürelerinin farklı olduğunu sanmak (aynı seviyede eşittir)"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-tepe-noktasi-hareket"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-006",
+      "slug": "free-fall-v2-general",
+      "name": "Zamansız hız bağıntısı (ilk hızlı)",
+      "formula": "ϑ² = ϑ₀² ± 2·g·h",
+      "spoken_tr": "hız kare eşittir hız sıfır kare artı eksi iki g h",
+      "meaning": "Süre bilinmeden hız ile yer değiştirme arasındaki ilişki.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "son hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "ϑ₀",
+          "name": "ilk hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ₀"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "h",
+          "name": "düşey yer değiştirme",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yalnız yer çekimi etkisi",
+        "g sabit",
+        "h yer değiştirmedir (yol değil)"
+      ],
+      "invalid_use_cases": [
+        "h yerine toplam alınan yol konursa (yukarı çıkıp inen cisimde)"
+      ],
+      "common_mistakes": [
+        "Maksimum yükseklikte ϑ = 0 koşulunu kullanmayı unutmak (h_max = ϑ₀²/2g)"
+      ],
+      "related_concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-maksimum-yukseklik"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-002"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 29,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-007",
+      "slug": "2d-horizontal-range",
+      "name": "İki boyutlu harekette yatay konum ve menzil",
+      "formula": "x = ϑₓ·t ;  x_menzil = ϑₓ·t_uçuş",
+      "spoken_tr": "x eşittir hız x çarpı t; menzil eşittir hız x çarpı uçuş süresi",
+      "meaning": "Yatay bileşen sabit hızlıdır; menzil, yatay hızın uçuş süresiyle çarpımıdır.",
+      "variables": [
+        {
+          "symbol": "x",
+          "name": "yatay konum",
+          "si_unit": "m",
+          "dim_var": "x",
+          "textbook_symbol": "x"
+        },
+        {
+          "symbol": "ϑₓ",
+          "name": "hızın yatay bileşeni",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑₓ"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "s"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yalnız yer çekimi etkisi (yatayda ivme yok)",
+        "Hava direnci ihmal"
+      ],
+      "invalid_use_cases": [
+        "Yatayda bir kuvvet/ivme varsa (ör. rüzgâr)",
+        "Hareketli referanstan atılan cisimde zemine göre hız kullanılmazsa (zenginleştirme konusu)"
+      ],
+      "common_mistakes": [
+        "ϑₓ yerine ilk hızın büyüklüğünü (ϑ₀) koymak",
+        "Uçuş süresini yatay hareketten bulmaya çalışmak (düşeyden bulunur)"
+      ],
+      "related_concepts": [
+        "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+        "phys11-c-menzil",
+        "phys11-c-ucus-suresi",
+        "phys11-c-bilesenlerin-bagimsizligi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.3"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-003"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 39,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-008",
+      "slug": "2d-velocity-components",
+      "name": "İlk hızın bileşenleri",
+      "formula": "ϑₓ = ϑ₀·cosα ;  ϑᵧ = ϑ₀·sinα",
+      "spoken_tr": "hız x eşittir hız sıfır kosinüs alfa; hız y eşittir hız sıfır sinüs alfa",
+      "meaning": "Yatayla α açısı yapan ilk hızın yatay ve düşey bileşenleri.",
+      "variables": [
+        {
+          "symbol": "ϑ₀",
+          "name": "ilk hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ₀"
+        },
+        {
+          "symbol": "α",
+          "name": "atış açısı (yatayla)",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "α"
+        }
+      ],
+      "units": [
+        "m/s",
+        "°"
+      ],
+      "dimensions": "L T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "α yatayla ölçülür",
+        "Bileşenler dik eksenlerde"
+      ],
+      "invalid_use_cases": [
+        "Açı düşeyle verilmişse sin ve cos yer değiştirir",
+        "Yatay ilk hızlı harekette (α = 0) ϑᵧ = 0 olduğunu unutmamak gerekir"
+      ],
+      "common_mistakes": [
+        "Açının hangi eksenle verildiğine bakmamak",
+        "Özel üçgen değerlerini (37°-53°, 30°-60°) karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-vektor-bilesenleri",
+        "phys11-c-trigonometrik-oranlar",
+        "phys11-c-iki-boyutta-sabit-ivmeli-hareket"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.3"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-003"
+      ],
+      "derivation_level": "derived",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": null,
+        "verified": false,
+        "verified_by": null
+      },
+      "notes": "Program FİZ.11.1.3 öğretme uygulaması trigonometrik bileşen hesabını açıkça istiyor; kitapta formül kutusu sayfa görüntüsünde doğrulanmadı.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "MEDIUM",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-009",
+      "slug": "2d-vertical-up-phase",
+      "name": "İki boyutlu harekette düşey bileşen (yükselme)",
+      "formula": "h = ϑᵧ·t − ½·g·t² ;  ϑᵧ₁ = ϑᵧ − g·t ;  ϑ² = ϑᵧ² − 2·g·h",
+      "spoken_tr": "h eşittir hız y çarpı t eksi bir bölü iki g t kare",
+      "meaning": "Düşey bileşen, ilk hızı ϑᵧ olan yukarı yönlü serbest düşmedir.",
+      "variables": [
+        {
+          "symbol": "h",
+          "name": "düşey yer değiştirme",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        },
+        {
+          "symbol": "ϑᵧ",
+          "name": "hızın düşey bileşeni",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑᵧ"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "t",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "t",
+          "textbook_symbol": "t"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²",
+        "s"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yalnız yer çekimi etkisi",
+        "Düşey bileşene uygulanır, toplam hıza değil"
+      ],
+      "invalid_use_cases": [
+        "Toplam hız (ϑ₀) düşey bileşen yerine konursa"
+      ],
+      "common_mistakes": [
+        "Tepe noktasında hızın sıfır olduğunu sanmak (yalnız düşey bileşen sıfır, yatay bileşen ϑₓ)"
+      ],
+      "related_concepts": [
+        "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+        "phys11-c-maksimum-yukseklik",
+        "phys11-c-tepe-noktasi-hareket"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.3"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-003"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 39,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-010",
+      "slug": "newton-second-law",
+      "name": "Newton'ın 2. Hareket Yasası",
+      "formula": "F⃗_net = m·a⃗",
+      "spoken_tr": "F net eşittir m çarpı a",
+      "meaning": "Bileşke kuvvet, kütle ile ivmenin çarpımına eşittir; ivme bileşke kuvvet yönündedir.",
+      "variables": [
+        {
+          "symbol": "F_net",
+          "name": "bileşke kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F_net"
+        },
+        {
+          "symbol": "m",
+          "name": "kütle",
+          "si_unit": "kg",
+          "dim_var": "m",
+          "textbook_symbol": "m"
+        },
+        {
+          "symbol": "a",
+          "name": "ivme",
+          "si_unit": "m/s²",
+          "dim_var": "a",
+          "textbook_symbol": "a"
+        }
+      ],
+      "units": [
+        "N",
+        "kg",
+        "m/s²"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Eylemsiz (ivmesiz) referans sistemi",
+        "F_net tüm dış kuvvetlerin vektörel toplamı",
+        "Kütle sabit"
+      ],
+      "invalid_use_cases": [
+        "Tek bir kuvvet (bileşke değil) konursa",
+        "Programda: farklı ivmeli cisimlerden oluşan sistemlerin tek denklemle çözümü (kapsam dışı)"
+      ],
+      "common_mistakes": [
+        "Etki-tepki kuvvetlerini aynı cisme etki ediyor sanıp birbirini götürmek",
+        "Ağırlığı ve normal kuvveti her durumda eşit sanmak",
+        "Hız yönünü ivme yönü sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-bileske-kuvvet"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.4",
+        "FİZ.11.1.5"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-004",
+        "phys11-lo-005"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_LIMITED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 64,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-011",
+      "slug": "weight",
+      "name": "Ağırlık",
+      "formula": "G = m·g",
+      "spoken_tr": "G eşittir m çarpı g",
+      "meaning": "Cisme etki eden yer çekimi kuvveti.",
+      "variables": [
+        {
+          "symbol": "G",
+          "name": "ağırlık",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "G"
+        },
+        {
+          "symbol": "m",
+          "name": "kütle",
+          "si_unit": "kg",
+          "dim_var": "m",
+          "textbook_symbol": "m"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        }
+      ],
+      "units": [
+        "N",
+        "kg",
+        "m/s²"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yer yüzeyine yakın, g sabit"
+      ],
+      "invalid_use_cases": [
+        "Kütle ile ağırlığın aynı nicelik olarak kullanılması"
+      ],
+      "common_mistakes": [
+        "Kütle birimini N, ağırlık birimini kg yazmak"
+      ],
+      "related_concepts": [
+        "phys11-c-agirlik",
+        "phys11-c-yer-cekimi-ivmesi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.5",
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-005",
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_LIMITED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 116,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "10. sınıf ön koşulu; kitapta serbest cisim diyagramlarında kullanılıyor.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-012",
+      "slug": "frictionless-incline",
+      "name": "Sürtünmesiz eğik düzlemde ivme",
+      "formula": "a = g·sinθ",
+      "spoken_tr": "a eşittir g sinüs teta",
+      "meaning": "Sürtünmesiz eğik düzlemde serbest kayan cismin ivmesi; ağırlığın düzleme paralel bileşeninden gelir.",
+      "variables": [
+        {
+          "symbol": "a",
+          "name": "ivme",
+          "si_unit": "m/s²",
+          "dim_var": "a",
+          "textbook_symbol": "a"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "θ",
+          "name": "eğim açısı (yatayla)",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        }
+      ],
+      "units": [
+        "m/s²",
+        "°"
+      ],
+      "dimensions": "L T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Sürtünme yok",
+        "Cisme yalnız ağırlık ve normal kuvvet etki ediyor",
+        "θ yatayla ölçülür"
+      ],
+      "invalid_use_cases": [
+        "Sürtünmeli eğik düzlemde",
+        "Cisme ek bir kuvvet uygulanıyorsa",
+        "Açı düşeyle verilmişse"
+      ],
+      "common_mistakes": [
+        "sin yerine cos almak",
+        "Normal kuvveti ağırlığa eşit almak (eğik düzlemde N = m·g·cosθ)"
+      ],
+      "related_concepts": [
+        "phys11-c-egik-duzlem",
+        "phys11-c-vektor-bilesenleri",
+        "phys11-c-newton-ikinci-yasa"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.5"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-005"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_LIMITED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 60,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-013",
+      "slug": "pendulum-in-accelerating-car",
+      "name": "İvmeli araçta asılı cismin sapma açısı",
+      "formula": "tanθ = a/g",
+      "spoken_tr": "tanjant teta eşittir a bölü g",
+      "meaning": "Yatayda a ivmesiyle hızlanan araçta tavana asılı cismin düşeyle yaptığı açı.",
+      "variables": [
+        {
+          "symbol": "θ",
+          "name": "düşeyle açı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        },
+        {
+          "symbol": "a",
+          "name": "aracın ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "a",
+          "textbook_symbol": "a"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        }
+      ],
+      "units": [
+        "m/s²",
+        "°"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Araç sabit ivmeli, cisim araca göre durgun",
+        "Hava direnci ihmal"
+      ],
+      "invalid_use_cases": [
+        "Araç sabit hızla gidiyorsa (θ = 0)",
+        "Cisim salınım yapıyorsa"
+      ],
+      "common_mistakes": [
+        "Açının kütleye bağlı olduğunu sanmak",
+        "Sapmanın ivme yönünde olduğunu sanmak (ivmenin tersine sapar)"
+      ],
+      "related_concepts": [
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-serbest-cisim-diyagrami",
+        "phys11-c-gerilme-kuvveti"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.5"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-005"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_LIMITED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 63,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-014",
+      "slug": "system-acceleration",
+      "name": "Aynı ivmeli bağlı sistemin ivmesi",
+      "formula": "a = ΣF_dış / Σm",
+      "spoken_tr": "a eşittir dış kuvvetlerin toplamı bölü toplam kütle",
+      "meaning": "Birlikte aynı ivmeyle hareket eden cisimler tek cisim gibi ele alınır.",
+      "variables": [
+        {
+          "symbol": "a",
+          "name": "sistem ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "a",
+          "textbook_symbol": "a"
+        },
+        {
+          "symbol": "ΣF_dış",
+          "name": "dış kuvvetlerin bileşkesi",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "ΣF_dış"
+        },
+        {
+          "symbol": "Σm",
+          "name": "toplam kütle",
+          "si_unit": "kg",
+          "dim_var": "m",
+          "textbook_symbol": "Σm"
+        }
+      ],
+      "units": [
+        "N",
+        "kg",
+        "m/s²"
+      ],
+      "dimensions": "L T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Tüm cisimler aynı büyüklükte ivmeyle hareket ediyor (ip gergin, kaymıyor)",
+        "İp kütlesiz, makara sürtünmesiz"
+      ],
+      "invalid_use_cases": [
+        "Cisimler farklı ivmeyle hareket ediyorsa (program: kapsam dışı)",
+        "İp gevşekse",
+        "İç kuvvetler (ip gerilmesi) dış kuvvet gibi toplanırsa"
+      ],
+      "common_mistakes": [
+        "İp gerilmesini dış kuvvet sanmak",
+        "Sistem ivmesini bulduktan sonra ip gerilmesini tek cisim üzerinden hesaplamamak"
+      ],
+      "related_concepts": [
+        "phys11-c-bagli-cisim-sistemi",
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-gerilme-kuvveti"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.5",
+        "FİZ.11.1.7"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-005",
+        "phys11-lo-007"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_LIMITED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 80,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-015",
+      "slug": "friction-model",
+      "name": "Sürtünme kuvvetinin matematiksel modeli",
+      "formula": "f = k·N  (statik: f_s ≤ k_s·N ;  kinetik: f_k = k_k·N)",
+      "spoken_tr": "f eşittir k çarpı N",
+      "meaning": "Sürtünme kuvveti, sürtünme katsayısı ile normal kuvvetin çarpımıdır; statikte bu değer üst sınırdır.",
+      "variables": [
+        {
+          "symbol": "f",
+          "name": "sürtünme kuvveti",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "f"
+        },
+        {
+          "symbol": "k",
+          "name": "sürtünme katsayısı",
+          "si_unit": "—",
+          "dim_var": "kf",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "N",
+          "name": "normal kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "N"
+        }
+      ],
+      "units": [
+        "N",
+        "—"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Kinetik: cisim yüzeyde kayıyor",
+        "Statik: k_s·N maksimum değerdir; cisim kaymıyorsa f_s uygulanan kuvvete eşittir (f_s = F)",
+        "Kuru yüzeyler"
+      ],
+      "invalid_use_cases": [
+        "Cisim kaymıyorken f_s = k_s·N almak (yalnız harekete geçme sınırında geçerli)",
+        "Normal kuvvet yerine her durumda m·g almak (eğik düzlem, ek düşey kuvvet)",
+        "Akışkan direncinde (hız ve kesit alanına bağlı, F_d = k·A·ϑ²)"
+      ],
+      "common_mistakes": [
+        "Statik sürtünmeyi her zaman maksimum değerinde sanmak",
+        "Sürtünmenin temas yüzey alanına bağlı olduğunu sanmak",
+        "Sürtünmenin her zaman harekete zıt olduğunu sanmak (yürümede ileri yönlüdür)"
+      ],
+      "related_concepts": [
+        "phys11-c-surtunme-kuvveti",
+        "phys11-c-statik-surtunme",
+        "phys11-c-kinetik-surtunme",
+        "phys11-c-surtunme-katsayisi",
+        "phys11-c-normal-kuvvet",
+        "phys11-c-maksimum-statik-surtunme"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.7"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-007"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 85,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-016",
+      "slug": "kinetic-coefficient-incline",
+      "name": "Eğik düzlemde sabit hızla kaymadan katsayı",
+      "formula": "k_k = tanθ",
+      "spoken_tr": "k kinetik eşittir tanjant teta",
+      "meaning": "Eğik düzlemde kendiliğinden sabit hızla kayan cisim için kinetik sürtünme katsayısı.",
+      "variables": [
+        {
+          "symbol": "k_k",
+          "name": "kinetik sürtünme katsayısı",
+          "si_unit": "—",
+          "dim_var": "kf",
+          "textbook_symbol": "k_k"
+        },
+        {
+          "symbol": "θ",
+          "name": "eğim açısı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        }
+      ],
+      "units": [
+        "°",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Cisim yalnız ağırlık, normal ve sürtünme etkisinde",
+        "Sabit hızla kayıyor (ivme sıfır)"
+      ],
+      "invalid_use_cases": [
+        "Cisim ivmeli kayıyorsa",
+        "Ek bir kuvvet uygulanıyorsa",
+        "Harekete geçme anı için statik katsayı aranıyorsa (k_s = tanθ_s, θ_s harekete başlama açısı)"
+      ],
+      "common_mistakes": [
+        "Statik ve kinetik katsayıyı karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-surtunme-katsayisi",
+        "phys11-c-egik-duzlem",
+        "phys11-c-kinetik-surtunme"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.7"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-007"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 82,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-017",
+      "slug": "drag-force",
+      "name": "Akışkan direnç kuvveti",
+      "formula": "F_d = k·A·ϑ²",
+      "spoken_tr": "F d eşittir k çarpı A çarpı hız kare",
+      "meaning": "Akışkan içinde hareket eden cisme etki eden direnç kuvvetinin büyüklüğü.",
+      "variables": [
+        {
+          "symbol": "F_d",
+          "name": "direnç kuvveti",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F_d"
+        },
+        {
+          "symbol": "k",
+          "name": "direnç katsayısı (ortam ve şekle bağlı)",
+          "si_unit": "kg/m³",
+          "dim_var": "kd",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "A",
+          "name": "harekete dik kesit alanı",
+          "si_unit": "m²",
+          "dim_var": "A",
+          "textbook_symbol": "A"
+        },
+        {
+          "symbol": "ϑ",
+          "name": "akışkana göre hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        }
+      ],
+      "units": [
+        "N",
+        "kg/m³",
+        "m/s",
+        "m²"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yüksek hızlı (türbülanslı) akış yaklaşımı",
+        "k ortama ve cismin şekline bağlı sabit"
+      ],
+      "invalid_use_cases": [
+        "Programda sayısal hesap istenmez: FİZ.11.1.8 'yorumlamalarla sınırlı kalınır'",
+        "Kuru yüzey sürtünmesinde (f = k·N)",
+        "Çok düşük hızlarda (direnç hızla doğrusal artar)"
+      ],
+      "common_mistakes": [
+        "Direnç kuvvetinin kütleye bağlı olduğunu sanmak",
+        "k'yı sürtünme katsayısıyla aynı (boyutsuz) sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-hava-direnci",
+        "phys11-c-kesit-alani",
+        "phys11-c-limit-hiz"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.8"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-008"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 90,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "KAYNAK HATASI: Kitap Tablo 1.2 (s. 90) k'yı 'boyutsuz bir katsayı' olarak tanımlıyor. Boyut analizi k'nın birimini kg/m³ verir; k boyutsuz olamaz. Bu kayıt boyut testinde ayrıca doğrulanır (DIM_OVERRIDES).",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-018",
+      "slug": "terminal-velocity",
+      "name": "Limit hız",
+      "formula": "ϑ_limit = √( m·g / (k·A) )",
+      "spoken_tr": "hız limit eşittir karekök içinde m g bölü k A",
+      "meaning": "Direnç kuvvetinin ağırlığa eşitlendiği andaki sabit hız.",
+      "variables": [
+        {
+          "symbol": "ϑ_limit",
+          "name": "limit hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ_limit"
+        },
+        {
+          "symbol": "m",
+          "name": "kütle",
+          "si_unit": "kg",
+          "dim_var": "m",
+          "textbook_symbol": "m"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "k",
+          "name": "direnç katsayısı",
+          "si_unit": "kg/m³",
+          "dim_var": "kd",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "A",
+          "name": "kesit alanı",
+          "si_unit": "m²",
+          "dim_var": "A",
+          "textbook_symbol": "A"
+        }
+      ],
+      "units": [
+        "kg",
+        "kg/m³",
+        "m/s",
+        "m/s²",
+        "m²"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "F_d = k·A·ϑ² modeli geçerli",
+        "Cisim düşey düşüyor, net kuvvet sıfır"
+      ],
+      "invalid_use_cases": [
+        "Programda sayısal hesap istenmez; yalnız orantı yorumu (m↑ → ϑ_limit↑, A↑ → ϑ_limit↓)",
+        "Hava direnci ihmal edilen serbest düşmede"
+      ],
+      "common_mistakes": [
+        "Limit hızda ivmenin g olduğunu sanmak (ivme sıfırdır)",
+        "Paraşüt açılınca cismin yukarı gittiğini sanmak (yavaşlar, yön değişmez)"
+      ],
+      "related_concepts": [
+        "phys11-c-limit-hiz",
+        "phys11-c-hava-direnci",
+        "phys11-c-newton-birinci-yasa"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.8"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-008"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 90,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-019",
+      "slug": "period-frequency",
+      "name": "Periyot-frekans ilişkisi",
+      "formula": "T·f = 1",
+      "spoken_tr": "T çarpı f eşittir bir",
+      "meaning": "Periyot ve frekans birbirinin tersidir.",
+      "variables": [
+        {
+          "symbol": "T",
+          "name": "periyot",
+          "si_unit": "s",
+          "dim_var": "per",
+          "textbook_symbol": "T"
+        },
+        {
+          "symbol": "f",
+          "name": "frekans",
+          "si_unit": "Hz",
+          "dim_var": "fr",
+          "textbook_symbol": "f"
+        }
+      ],
+      "units": [
+        "Hz",
+        "s"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Periyodik hareket"
+      ],
+      "invalid_use_cases": [
+        "Periyodik olmayan harekette"
+      ],
+      "common_mistakes": [
+        "Frekansı devir sayısı ile karıştırmak (birim zamandaki devir sayısıdır)",
+        "Dakikadaki devir sayısını saniyeye çevirmemek"
+      ],
+      "related_concepts": [
+        "phys11-c-periyot",
+        "phys11-c-frekans"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10",
+        "FİZ.11.2.12"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010",
+        "phys11-lo-022"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 104,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "10. sınıf ön koşulu; kitap s. 104'te hatırlatma kutusunda.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-020",
+      "slug": "linear-speed-circular",
+      "name": "Çizgisel sürat",
+      "formula": "ϑ = 2·π·r / T = 2·π·r·f",
+      "spoken_tr": "hız eşittir iki pi r bölü T",
+      "meaning": "Düzgün çembersel harekette birim zamanda alınan yay uzunluğu.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "çizgisel sürat",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        },
+        {
+          "symbol": "T",
+          "name": "periyot",
+          "si_unit": "s",
+          "dim_var": "per",
+          "textbook_symbol": "T"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "s"
+      ],
+      "dimensions": "L T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün çembersel hareket (sabit sürat)"
+      ],
+      "invalid_use_cases": [
+        "Sürat değişiyorsa (düzgün olmayan çembersel hareket)",
+        "r yerine çap konursa"
+      ],
+      "common_mistakes": [
+        "Çizgisel hızın yönünün sabit olduğunu sanmak",
+        "Çap ile yarıçapı karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-cizgisel-surat",
+        "phys11-c-cizgisel-hiz",
+        "phys11-c-periyot"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 104,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-021",
+      "slug": "angular-speed",
+      "name": "Açısal hız",
+      "formula": "ω = 2·π / T = 2·π·f",
+      "spoken_tr": "omega eşittir iki pi bölü T",
+      "meaning": "Yarıçap vektörünün birim zamanda taradığı açı (radyan).",
+      "variables": [
+        {
+          "symbol": "ω",
+          "name": "açısal hız",
+          "si_unit": "rad/s",
+          "dim_var": "w",
+          "textbook_symbol": "ω"
+        },
+        {
+          "symbol": "T",
+          "name": "periyot",
+          "si_unit": "s",
+          "dim_var": "per",
+          "textbook_symbol": "T"
+        }
+      ],
+      "units": [
+        "rad/s",
+        "s"
+      ],
+      "dimensions": "T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün çembersel hareket",
+        "Açı radyan cinsinden"
+      ],
+      "invalid_use_cases": [
+        "Açı derece cinsinden kullanılırsa"
+      ],
+      "common_mistakes": [
+        "ω'yi frekansla aynı sanmak (ω = 2πf)",
+        "Aynı eksende dönen noktaların açısal hızlarını farklı sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-acisal-hiz",
+        "phys11-c-periyot",
+        "phys11-c-frekans"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 104,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-022",
+      "slug": "v-omega-r",
+      "name": "Çizgisel ve açısal hız ilişkisi",
+      "formula": "ϑ = ω·r",
+      "spoken_tr": "hız eşittir omega çarpı r",
+      "meaning": "Çizgisel sürat, açısal hız ile yarıçapın çarpımıdır.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "çizgisel sürat",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "ω",
+          "name": "açısal hız",
+          "si_unit": "rad/s",
+          "dim_var": "w",
+          "textbook_symbol": "ω"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "rad/s"
+      ],
+      "dimensions": "L T^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Açısal hız radyan/saniye"
+      ],
+      "invalid_use_cases": [
+        "Kayışla ya da temasla bağlı farklı tekerleklerde ω'nin eşit sanılması (bu durumda çizgisel süratler eşittir)"
+      ],
+      "common_mistakes": [
+        "Aynı eksenli tekerleklerde ϑ'nin, kayışla bağlı tekerleklerde ω'nin eşit olduğunu karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-cizgisel-surat",
+        "phys11-c-acisal-hiz"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 104,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-023",
+      "slug": "centripetal-acceleration",
+      "name": "Merkezcil ivme",
+      "formula": "a = ϑ²/r = ω²·r = 4·π²·f²·r",
+      "spoken_tr": "a eşittir hız kare bölü r",
+      "meaning": "Hız vektörünün yön değişiminden doğan, merkeze yönelik ivme.",
+      "variables": [
+        {
+          "symbol": "a",
+          "name": "merkezcil ivme",
+          "si_unit": "m/s²",
+          "dim_var": "a",
+          "textbook_symbol": "a"
+        },
+        {
+          "symbol": "ϑ",
+          "name": "çizgisel sürat",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²"
+      ],
+      "dimensions": "L T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün çembersel hareket"
+      ],
+      "invalid_use_cases": [
+        "Teğetsel ivmenin olduğu (sürati değişen) harekette toplam ivme yerine kullanılması"
+      ],
+      "common_mistakes": [
+        "Sabit süratte ivme olmadığını sanmak",
+        "İvmenin dışa (merkezkaç) yönlü olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-merkezcil-ivme",
+        "phys11-c-cizgisel-hiz",
+        "phys11-c-acisal-hiz"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 109,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-024",
+      "slug": "centripetal-force",
+      "name": "Merkezcil kuvvet",
+      "formula": "F_m = m·ϑ²/r = m·ω²·r",
+      "spoken_tr": "F m eşittir m hız kare bölü r",
+      "meaning": "Çembersel hareketi sağlayan, merkeze yönelik bileşke kuvvet.",
+      "variables": [
+        {
+          "symbol": "F_m",
+          "name": "merkezcil kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F_m"
+        },
+        {
+          "symbol": "m",
+          "name": "kütle",
+          "si_unit": "kg",
+          "dim_var": "m",
+          "textbook_symbol": "m"
+        },
+        {
+          "symbol": "ϑ",
+          "name": "çizgisel sürat",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "N",
+        "kg",
+        "m",
+        "m/s"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün çembersel hareket",
+        "F_m, cisme etki eden gerçek kuvvetlerin merkeze yönelik bileşkesidir"
+      ],
+      "invalid_use_cases": [
+        "Serbest cisim diyagramına ayrı bir 'merkezcil kuvvet' oku eklenirse (çift sayım)",
+        "Ray sistemlerinde sayısal hesap (program: kapsam dışı)"
+      ],
+      "common_mistakes": [
+        "Merkezcil kuvveti ayrı bir kuvvet türü sanmak",
+        "Merkezkaç kuvvetini gerçek kuvvet sanmak",
+        "İp koptuğunda cismin dışa doğru gideceğini sanmak (teğet doğrultuda gider)"
+      ],
+      "related_concepts": [
+        "phys11-c-merkezcil-kuvvet",
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-bileske-kuvvet"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 108,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-025",
+      "slug": "vertical-circle-forces",
+      "name": "Düşey düzlemde çembersel harekette kuvvetler",
+      "formula": "Tepe: F_m = T + G ;  Dip: F_m = T − G ;  Yan: F_m = T",
+      "spoken_tr": "tepede F m eşittir T artı G; dipte F m eşittir T eksi G",
+      "meaning": "İpe bağlı cismin farklı noktalarında merkezcil kuvveti veren bağıntılar (kitap Tablo 1.3).",
+      "variables": [
+        {
+          "symbol": "F_m",
+          "name": "merkezcil kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F_m"
+        },
+        {
+          "symbol": "T",
+          "name": "ip gerilmesi",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "T"
+        },
+        {
+          "symbol": "G",
+          "name": "ağırlık",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "G"
+        }
+      ],
+      "units": [
+        "N"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Kitap ve programda sabit süratle (düzgün) dönen cisim kabulü",
+        "İp kütlesiz"
+      ],
+      "invalid_use_cases": [
+        "Gerçekte sürat tepe ve dipte farklıysa her noktada aynı ϑ kullanılması (kitap s. 112 bunu enerji korunumuyla ayrıca ele alır)",
+        "Çubuk/ray sistemlerinde (ray: kapsam dışı)"
+      ],
+      "common_mistakes": [
+        "Tepe noktasında ağırlığın yönünü yanlış almak",
+        "Dipte gerilmenin ağırlıktan küçük olabileceğini sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-dusey-duzlemde-cembersel",
+        "phys11-c-merkezcil-kuvvet",
+        "phys11-c-gerilme-kuvveti",
+        "phys11-c-agirlik"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 110,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-026",
+      "slug": "vertical-circle-min-speed",
+      "name": "Düşey çemberin tepesinde en küçük hız",
+      "formula": "ϑ_min = √(g·r)",
+      "spoken_tr": "hız min eşittir karekök g r",
+      "meaning": "İpe bağlı cismin (ya da kovadaki suyun) tepe noktasından geçebilmesi için gereken en küçük sürat; ip gerilmesi sıfır.",
+      "variables": [
+        {
+          "symbol": "ϑ_min",
+          "name": "en küçük sürat",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ_min"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İp ya da kova (yalnız çekebilen/itebilen tek yönlü bağ)",
+        "Tepe noktası"
+      ],
+      "invalid_use_cases": [
+        "Çubuğa bağlı cisimde (çubuk itebilir, ϑ_min = 0 olabilir)",
+        "Dip noktasında"
+      ],
+      "common_mistakes": [
+        "Kütleye bağlı olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-dusey-duzlemde-cembersel",
+        "phys11-c-merkezcil-kuvvet"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 111,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-027",
+      "slug": "banked-curve-speed",
+      "name": "Sürtünmesiz eğimli virajda güvenli hız",
+      "formula": "ϑ = √(tanθ·g·r)",
+      "spoken_tr": "hız eşittir karekök tanjant teta g r",
+      "meaning": "Sürtünme olmadan, normal kuvvetin yatay bileşeniyle dönülebilen hız.",
+      "variables": [
+        {
+          "symbol": "ϑ",
+          "name": "güvenli hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        },
+        {
+          "symbol": "θ",
+          "name": "viraj eğim açısı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²",
+        "°"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Sürtünme yok",
+        "θ yatayla ölçülür"
+      ],
+      "invalid_use_cases": [
+        "Sürtünmeli eğimli virajda (hız aralığı değişir)",
+        "Yatay virajda (θ = 0)"
+      ],
+      "common_mistakes": [
+        "Güvenli hızın araç kütlesine bağlı olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-egimli-viraj",
+        "phys11-c-merkezcil-kuvvet",
+        "phys11-c-normal-kuvvet"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "derived_in_textbook",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 116,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "KAYNAK TUTARSIZLIĞI: Kitap s. 116'da metin N_x'i yatay (merkezcil), N_y'yi düşey bileşen olarak tanımlıyor; hemen altındaki denklemlerde alt indisler ters (N_y = N·sinθ = F_m, N_x = N·cosθ = m·g). Sonuç formülü doğru.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-028",
+      "slug": "flat-curve-max-speed",
+      "name": "Yatay virajda kaymadan dönme hızı",
+      "formula": "ϑ_max = √(k_s·g·r)",
+      "spoken_tr": "hız max eşittir karekök k g r",
+      "meaning": "Merkezcil kuvveti statik sürtünmenin sağladığı yatay virajda kaymadan dönülebilecek en büyük hız.",
+      "variables": [
+        {
+          "symbol": "ϑ_max",
+          "name": "en büyük hız",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ_max"
+        },
+        {
+          "symbol": "k_s",
+          "name": "statik sürtünme katsayısı",
+          "si_unit": "—",
+          "dim_var": "kf",
+          "textbook_symbol": "k_s"
+        },
+        {
+          "symbol": "g",
+          "name": "yer çekimi ivmesi",
+          "si_unit": "m/s²",
+          "dim_var": "g",
+          "textbook_symbol": "g"
+        },
+        {
+          "symbol": "r",
+          "name": "yarıçap",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "m",
+        "m/s",
+        "m/s²",
+        "—"
+      ],
+      "dimensions": "L^2 T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Yatay yol",
+        "Merkezcil kuvveti yalnız statik sürtünme sağlar"
+      ],
+      "invalid_use_cases": [
+        "Eğimli virajda",
+        "Araç kayıyorsa (kinetik sürtünme)"
+      ],
+      "common_mistakes": [
+        "Kinetik sürtünme katsayısını kullanmak",
+        "Kütleye bağlı olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-yatay-viraj",
+        "phys11-c-statik-surtunme",
+        "phys11-c-merkezcil-kuvvet"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.1.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-010"
+      ],
+      "derivation_level": "derived",
+      "program_calc_status": "CALC_INCLUDED",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": null,
+        "verified": false,
+        "verified_by": null
+      },
+      "notes": "Kitapta s. 109 (41. Alıştırma) ve s. 117 (45c) bu modeli gerektiren sorular var; formül kutusu sayfa görüntüsünde doğrulanmadı.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "MEDIUM",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-029",
+      "slug": "coulomb-law",
+      "name": "Coulomb Yasası",
+      "formula": "F = k·q₁·q₂ / d²",
+      "spoken_tr": "F eşittir k çarpı q bir çarpı q iki bölü d kare",
+      "meaning": "İki noktasal yük arasındaki elektriksel kuvvetin büyüklüğü.",
+      "variables": [
+        {
+          "symbol": "F",
+          "name": "elektriksel kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F"
+        },
+        {
+          "symbol": "k",
+          "name": "Coulomb sabiti",
+          "si_unit": "N·m²/C²",
+          "dim_var": "kc",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "q₁, q₂",
+          "name": "yükler",
+          "si_unit": "C",
+          "dim_var": "q",
+          "textbook_symbol": "q₁, q₂"
+        },
+        {
+          "symbol": "d",
+          "name": "yükler arası uzaklık",
+          "si_unit": "m",
+          "dim_var": "d",
+          "textbook_symbol": "d"
+        }
+      ],
+      "units": [
+        "C",
+        "N",
+        "N·m²/C²",
+        "m"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Noktasal yükler (boyutlar d'ye göre küçük)",
+        "Yükler durgun",
+        "k ortama bağlı (boşlukta ≈ 9·10⁹)"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.1 'matematiksel hesaplamalara girmeden'; sayısal hesap yerine oran/yön yorumu beklenir",
+        "Yüklü küre içinde/üzerinde ya da noktasal olmayan dağılımlarda"
+      ],
+      "common_mistakes": [
+        "d yerine d² almamak",
+        "Kuvvetlerin yük büyüklükleri farklıyken de eşit olduğunu unutmak (etki-tepki)",
+        "Yük işaretini büyüklük hesabına katıp yönü işaretten okumaya çalışmak"
+      ],
+      "related_concepts": [
+        "phys11-c-coulomb-yasasi",
+        "phys11-c-elektriksel-kuvvet",
+        "phys11-c-ters-kare-iliskisi",
+        "phys11-c-coulomb-sabiti"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.1"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-011"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 160,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-030",
+      "slug": "coulomb-constant",
+      "name": "Coulomb sabiti",
+      "formula": "k = 1/(4·π·ε₀) ≈ 9·10⁹ N·m²/C²",
+      "spoken_tr": "k eşittir bir bölü dört pi epsilon sıfır",
+      "meaning": "Boşlukta Coulomb sabitinin değeri ve elektriksel geçirgenlikle ilişkisi.",
+      "variables": [
+        {
+          "symbol": "k",
+          "name": "Coulomb sabiti",
+          "si_unit": "N·m²/C²",
+          "dim_var": "kc",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "ε₀",
+          "name": "boşluğun elektriksel geçirgenliği",
+          "si_unit": "C²/(N·m²)",
+          "dim_var": "eps0",
+          "textbook_symbol": "ε₀"
+        }
+      ],
+      "units": [
+        "C²/(N·m²)",
+        "N·m²/C²"
+      ],
+      "dimensions": "I^-2 L^3 M T^-4",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Boşluk (hava için yaklaşık aynı)"
+      ],
+      "invalid_use_cases": [
+        "Yalıtkan ortamda boşluk değeri kullanılırsa (k küçülür)"
+      ],
+      "common_mistakes": [
+        "k'nın her ortamda aynı olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-coulomb-sabiti"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.1"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-011"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 161,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "Kitapta kenar notu (s. 161).",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-031",
+      "slug": "electric-field-definition",
+      "name": "Elektriksel alanın tanımı",
+      "formula": "E = F / q₀",
+      "spoken_tr": "E eşittir F bölü q sıfır",
+      "meaning": "Birim (deneme) yük başına düşen elektriksel kuvvet.",
+      "variables": [
+        {
+          "symbol": "E",
+          "name": "elektriksel alan",
+          "si_unit": "N/C",
+          "dim_var": "E",
+          "textbook_symbol": "E"
+        },
+        {
+          "symbol": "F",
+          "name": "kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F"
+        },
+        {
+          "symbol": "q₀",
+          "name": "deneme yükü",
+          "si_unit": "C",
+          "dim_var": "q",
+          "textbook_symbol": "q₀"
+        }
+      ],
+      "units": [
+        "C",
+        "N",
+        "N/C"
+      ],
+      "dimensions": "I^-1 L M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "q₀ alanı bozmayacak kadar küçük pozitif deneme yükü"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.2 hesaplamasız",
+        "q₀ alanı oluşturan yükün kendisi alınırsa"
+      ],
+      "common_mistakes": [
+        "Alanın deneme yüküne bağlı olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-elektriksel-alan"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-012"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 185,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-032",
+      "slug": "point-charge-field",
+      "name": "Noktasal yükün elektriksel alanı",
+      "formula": "E = k·q / d²",
+      "spoken_tr": "E eşittir k q bölü d kare",
+      "meaning": "Noktasal yükün d uzaklıkta oluşturduğu alanın büyüklüğü; yön + yükten dışa, − yüke doğru.",
+      "variables": [
+        {
+          "symbol": "E",
+          "name": "elektriksel alan",
+          "si_unit": "N/C",
+          "dim_var": "E",
+          "textbook_symbol": "E"
+        },
+        {
+          "symbol": "k",
+          "name": "Coulomb sabiti",
+          "si_unit": "N·m²/C²",
+          "dim_var": "kc",
+          "textbook_symbol": "k"
+        },
+        {
+          "symbol": "q",
+          "name": "kaynak yük",
+          "si_unit": "C",
+          "dim_var": "q",
+          "textbook_symbol": "q"
+        },
+        {
+          "symbol": "d",
+          "name": "uzaklık",
+          "si_unit": "m",
+          "dim_var": "d",
+          "textbook_symbol": "d"
+        }
+      ],
+      "units": [
+        "C",
+        "N/C",
+        "N·m²/C²",
+        "m"
+      ],
+      "dimensions": "I^-1 L M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Noktasal yük",
+        "Birden çok yükte alanlar vektörel toplanır"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.2 hesaplamasız; oran ve yön yorumu beklenir",
+        "Bileşke alan büyüklükleri skaler toplanırsa"
+      ],
+      "common_mistakes": [
+        "Alanları vektörel değil cebirsel toplamak",
+        "Negatif yükün alan yönünü dışa doğru çizmek"
+      ],
+      "related_concepts": [
+        "phys11-c-elektriksel-alan",
+        "phys11-c-bileske-elektriksel-alan",
+        "phys11-c-ters-kare-iliskisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-012"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 185,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-033",
+      "slug": "uniform-field-plates",
+      "name": "Paralel levhalar arasında düzgün elektriksel alan",
+      "formula": "E = V / d",
+      "spoken_tr": "E eşittir V bölü d",
+      "meaning": "Potansiyel farkı V, aralığı d olan paralel levhalar arasındaki düzgün alan.",
+      "variables": [
+        {
+          "symbol": "E",
+          "name": "elektriksel alan",
+          "si_unit": "N/C (= V/m)",
+          "dim_var": "E",
+          "textbook_symbol": "E"
+        },
+        {
+          "symbol": "V",
+          "name": "potansiyel fark",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "V"
+        },
+        {
+          "symbol": "d",
+          "name": "levhalar arası uzaklık",
+          "si_unit": "m",
+          "dim_var": "d",
+          "textbook_symbol": "d"
+        }
+      ],
+      "units": [
+        "N/C (= V/m)",
+        "V",
+        "m"
+      ],
+      "dimensions": "I^-1 L M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Levhalar paralel ve geniş, kenar etkileri ihmal"
+      ],
+      "invalid_use_cases": [
+        "Noktasal yük alanında",
+        "PROGRAM: FİZ.11.2.2 hesaplamasız ve programda 'düzgün alan/levha' açıkça yok"
+      ],
+      "common_mistakes": [
+        "Alanın levhalara yakınlığa göre değiştiğini sanmak (düzgün alanda her yerde aynı)"
+      ],
+      "related_concepts": [
+        "phys11-c-elektriksel-alan",
+        "phys11-c-potansiyel-fark"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-012"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 185,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "Kitapta var (s. 176, 185); programın 11. sınıf çıktılarında levha/düzgün alan adı geçmiyor. Kapsam belirsiz.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-034",
+      "slug": "straight-wire-field",
+      "name": "Akım geçen düz telin manyetik alanı",
+      "formula": "B = 2·K·i / d",
+      "spoken_tr": "B eşittir iki K i bölü d",
+      "meaning": "Sonsuz uzun düz telden d uzaklıktaki manyetik alanın büyüklüğü; yön sağ el kuralıyla.",
+      "variables": [
+        {
+          "symbol": "B",
+          "name": "manyetik alan",
+          "si_unit": "T",
+          "dim_var": "B",
+          "textbook_symbol": "B"
+        },
+        {
+          "symbol": "K",
+          "name": "manyetik alan katsayısı (10⁻⁷ T·m/A)",
+          "si_unit": "T·m/A",
+          "dim_var": "Km",
+          "textbook_symbol": "K"
+        },
+        {
+          "symbol": "i",
+          "name": "akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i"
+        },
+        {
+          "symbol": "d",
+          "name": "telden uzaklık",
+          "si_unit": "m",
+          "dim_var": "d",
+          "textbook_symbol": "d"
+        }
+      ],
+      "units": [
+        "A",
+        "T",
+        "T·m/A",
+        "m"
+      ],
+      "dimensions": "I^-1 M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Uzun düz tel",
+        "d tel uzunluğuna göre küçük"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.5 'matematiksel hesaplamalara girmeden'; oran/yön yorumu beklenir",
+        "Halka ya da makara için"
+      ],
+      "common_mistakes": [
+        "B'nin d² ile ters orantılı olduğunu sanmak (d ile ters orantılı)",
+        "Alan yönünü tele paralel çizmek (tel etrafında çemberseldir)"
+      ],
+      "related_concepts": [
+        "phys11-c-duz-telin-manyetik-alani",
+        "phys11-c-manyetik-alan-katsayisi",
+        "phys11-c-sag-el-kurali"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.5"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-015"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 235,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-035",
+      "slug": "solenoid-field",
+      "name": "Akım makarasının merkez eksenindeki manyetik alan",
+      "formula": "B = 4·π·K·i·N / L",
+      "spoken_tr": "B eşittir dört pi K i N bölü L",
+      "meaning": "Uzunluğu L, sarım sayısı N olan makaranın ekseninde oluşan alan.",
+      "variables": [
+        {
+          "symbol": "B",
+          "name": "manyetik alan",
+          "si_unit": "T",
+          "dim_var": "B",
+          "textbook_symbol": "B"
+        },
+        {
+          "symbol": "K",
+          "name": "manyetik alan katsayısı",
+          "si_unit": "T·m/A",
+          "dim_var": "Km",
+          "textbook_symbol": "K"
+        },
+        {
+          "symbol": "i",
+          "name": "akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i"
+        },
+        {
+          "symbol": "N",
+          "name": "sarım sayısı",
+          "si_unit": "—",
+          "dim_var": "N",
+          "textbook_symbol": "N"
+        },
+        {
+          "symbol": "L",
+          "name": "makara boyu",
+          "si_unit": "m",
+          "dim_var": "len",
+          "textbook_symbol": "L"
+        }
+      ],
+      "units": [
+        "A",
+        "T",
+        "T·m/A",
+        "m",
+        "—"
+      ],
+      "dimensions": "I^-1 M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Uzun makara, merkez ekseni",
+        "Hava çekirdekli"
+      ],
+      "invalid_use_cases": [
+        "Demir çekirdekli makarada (alan çok artar)",
+        "Makara uçlarında"
+      ],
+      "common_mistakes": [
+        "Alanın makara yarıçapına bağlı olduğunu sanmak",
+        "N/L yerine yalnız N'ye bakmak"
+      ],
+      "related_concepts": [
+        "phys11-c-akim-makarasi",
+        "phys11-c-sarim-sayisi",
+        "phys11-c-manyetik-alan-katsayisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.6"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-016"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 235,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "Program FİZ.11.2.6 için açık hesap sınırı koymuyor; kitapta formül var.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-036",
+      "slug": "force-on-wire",
+      "name": "Manyetik alanda akım geçen tele etki eden kuvvet",
+      "formula": "F = B·i·L·sinθ",
+      "spoken_tr": "F eşittir B i L sinüs teta",
+      "meaning": "Manyetik alandaki akım geçen düz tele etki eden kuvvet; θ alan ile tel arasındaki açı.",
+      "variables": [
+        {
+          "symbol": "F",
+          "name": "manyetik kuvvet",
+          "si_unit": "N",
+          "dim_var": "F",
+          "textbook_symbol": "F"
+        },
+        {
+          "symbol": "B",
+          "name": "manyetik alan",
+          "si_unit": "T",
+          "dim_var": "B",
+          "textbook_symbol": "B"
+        },
+        {
+          "symbol": "i",
+          "name": "akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i"
+        },
+        {
+          "symbol": "L",
+          "name": "tel uzunluğu (alan içindeki)",
+          "si_unit": "m",
+          "dim_var": "len",
+          "textbook_symbol": "L"
+        },
+        {
+          "symbol": "θ",
+          "name": "alan-tel açısı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        }
+      ],
+      "units": [
+        "A",
+        "N",
+        "T",
+        "m",
+        "°"
+      ],
+      "dimensions": "L M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün manyetik alan",
+        "Düz tel"
+      ],
+      "invalid_use_cases": [
+        "Tel alana paralelse (θ = 0, F = 0)",
+        "Hareketli tek yüke etki eden kuvvet (qϑB) bu çıktıda yok"
+      ],
+      "common_mistakes": [
+        "Kuvvet yönünü alan yönünde sanmak (kuvvet hem alana hem tele diktir)",
+        "sinθ'yı unutmak"
+      ],
+      "related_concepts": [
+        "phys11-c-tele-etki-eden-manyetik-kuvvet",
+        "phys11-c-manyetik-kuvvet",
+        "phys11-c-sag-el-kurali"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.8"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-018"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 235,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-037",
+      "slug": "magnetic-flux",
+      "name": "Manyetik akı",
+      "formula": "Φ = B·A·cosθ",
+      "spoken_tr": "fi eşittir B A kosinüs teta",
+      "meaning": "Bir yüzeyden geçen manyetik alan çizgilerinin ölçüsü; θ alan ile yüzey normali arasındaki açı.",
+      "variables": [
+        {
+          "symbol": "Φ",
+          "name": "manyetik akı",
+          "si_unit": "Wb",
+          "dim_var": "phiB",
+          "textbook_symbol": "Φ"
+        },
+        {
+          "symbol": "B",
+          "name": "manyetik alan",
+          "si_unit": "T",
+          "dim_var": "B",
+          "textbook_symbol": "B"
+        },
+        {
+          "symbol": "A",
+          "name": "yüzey alanı",
+          "si_unit": "m²",
+          "dim_var": "A",
+          "textbook_symbol": "A"
+        },
+        {
+          "symbol": "θ",
+          "name": "alan-normal açısı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ"
+        }
+      ],
+      "units": [
+        "T",
+        "Wb",
+        "m²",
+        "°"
+      ],
+      "dimensions": "I^-1 L^2 M T^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzgün alan, düz yüzey"
+      ],
+      "invalid_use_cases": [
+        "θ yüzeyle ölçülen açı alınırsa (cos yerine sin gerekir)",
+        "Program: 'kavramsal olarak açıklar' (FİZ.11.2.10)"
+      ],
+      "common_mistakes": [
+        "Açıyı yüzeyle ölçmek",
+        "Akının vektör olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-manyetik-aki",
+        "phys11-c-manyetik-alan"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-020"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CONCEPTUAL_ONLY",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 262,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-038",
+      "slug": "faraday-law",
+      "name": "İndüksiyon gerilimi (Faraday Yasası)",
+      "formula": "ε = −N·ΔΦ / Δt",
+      "spoken_tr": "epsilon eşittir eksi N delta fi bölü delta t",
+      "meaning": "Bobinden geçen akı değiştiğinde oluşan gerilim; eksi işaret Lenz Yasası'nı gösterir.",
+      "variables": [
+        {
+          "symbol": "ε",
+          "name": "indüksiyon gerilimi",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "ε"
+        },
+        {
+          "symbol": "N",
+          "name": "sarım sayısı",
+          "si_unit": "—",
+          "dim_var": "N",
+          "textbook_symbol": "N"
+        },
+        {
+          "symbol": "ΔΦ",
+          "name": "akı değişimi",
+          "si_unit": "Wb",
+          "dim_var": "phiB",
+          "textbook_symbol": "ΔΦ"
+        },
+        {
+          "symbol": "Δt",
+          "name": "süre",
+          "si_unit": "s",
+          "dim_var": "dt",
+          "textbook_symbol": "Δt"
+        }
+      ],
+      "units": [
+        "V",
+        "Wb",
+        "s",
+        "—"
+      ],
+      "dimensions": "I^-1 L^2 M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Akı değişimi Δt süresince düzgün (ortalama gerilim)"
+      ],
+      "invalid_use_cases": [
+        "Akı sabitse (alan büyük olsa bile ε = 0)"
+      ],
+      "common_mistakes": [
+        "Akı büyüklüğünü akı değişimiyle karıştırmak",
+        "N'yi unutmak",
+        "Eksi işaretini büyüklük hesabında taşıyıp yönü yanlış yorumlamak"
+      ],
+      "related_concepts": [
+        "phys11-c-faraday-induksiyon-yasasi",
+        "phys11-c-induksiyon-gerilimi",
+        "phys11-c-manyetik-aki",
+        "phys11-c-lenz-yasasi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.11"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-021"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 262,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-039",
+      "slug": "ohm-law",
+      "name": "Ohm Yasası (indüksiyon akımında)",
+      "formula": "ε = i·R",
+      "spoken_tr": "epsilon eşittir i çarpı R",
+      "meaning": "İndüksiyon geriliminin direnç R'li devrede oluşturduğu akım.",
+      "variables": [
+        {
+          "symbol": "ε",
+          "name": "gerilim",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "ε"
+        },
+        {
+          "symbol": "i",
+          "name": "akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i"
+        },
+        {
+          "symbol": "R",
+          "name": "direnç",
+          "si_unit": "Ω",
+          "dim_var": "R",
+          "textbook_symbol": "R"
+        }
+      ],
+      "units": [
+        "A",
+        "V",
+        "Ω"
+      ],
+      "dimensions": "I^-1 L^2 M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Omik direnç"
+      ],
+      "invalid_use_cases": [
+        "Devre açıksa (akım yok, gerilim var)"
+      ],
+      "common_mistakes": [
+        "Gerilim varsa her zaman akım olduğunu sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-induksiyon-akimi",
+        "phys11-c-direnc",
+        "phys11-c-potansiyel-fark"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.11"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-021"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 248,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "10. sınıf ön koşulu (FİZ.10.3.3).",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-040",
+      "slug": "ac-rms",
+      "name": "Alternatif akımda maksimum ve etkin değer",
+      "formula": "V_max = V_etkin·√2 ;  i_max = i_etkin·√2",
+      "spoken_tr": "V max eşittir V etkin çarpı kök iki",
+      "meaning": "Sinüzoidal alternatif akımda tepe değer ile etkin değer ilişkisi.",
+      "variables": [
+        {
+          "symbol": "V_max",
+          "name": "maksimum gerilim",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "V_max"
+        },
+        {
+          "symbol": "V_etkin",
+          "name": "etkin gerilim",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "V_etkin"
+        }
+      ],
+      "units": [
+        "V"
+      ],
+      "dimensions": "I^-1 L^2 M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Sinüzoidal dalga"
+      ],
+      "invalid_use_cases": [
+        "Kare/üçgen dalgada",
+        "Program metninde etkin değer adı geçmiyor; ders kitabında var"
+      ],
+      "common_mistakes": [
+        "Voltmetrenin maksimum değeri ölçtüğünü sanmak (etkin değeri ölçer)",
+        "√2 ile çarpmak yerine bölmek"
+      ],
+      "related_concepts": [
+        "phys11-c-etkin-deger",
+        "phys11-c-alternatif-akim"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.12"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-022"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 259,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-041",
+      "slug": "electric-power",
+      "name": "Elektriksel güç ve iletim kaybı",
+      "formula": "P = V·i ;  P_kayıp = i²·R",
+      "spoken_tr": "P eşittir V i; kayıp eşittir i kare R",
+      "meaning": "Üretilen güç ve iletim hattında ısıya dönüşen güç.",
+      "variables": [
+        {
+          "symbol": "P",
+          "name": "güç",
+          "si_unit": "W",
+          "dim_var": "P",
+          "textbook_symbol": "P"
+        },
+        {
+          "symbol": "V",
+          "name": "gerilim",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "V"
+        },
+        {
+          "symbol": "i",
+          "name": "akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i"
+        },
+        {
+          "symbol": "R",
+          "name": "hat direnci",
+          "si_unit": "Ω",
+          "dim_var": "R",
+          "textbook_symbol": "R"
+        }
+      ],
+      "units": [
+        "A",
+        "V",
+        "W",
+        "Ω"
+      ],
+      "dimensions": "L^2 M T^-3",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "P = V·i: toplam güç; i²R: direnç üzerindeki ısı kaybı"
+      ],
+      "invalid_use_cases": [
+        "P_kayıp = V²/R'de V olarak hattın iki ucu arası değil şebeke gerilimi konursa"
+      ],
+      "common_mistakes": [
+        "Gerilim artınca kaybın arttığını sanmak (aynı güçte akım azalır, kayıp azalır)"
+      ],
+      "related_concepts": [
+        "phys11-c-iletimde-enerji-kaybi",
+        "phys11-c-transformator",
+        "phys11-c-direnc"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.13"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-023"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 263,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-042",
+      "slug": "ideal-transformer",
+      "name": "İdeal transformatör",
+      "formula": "V_p / V_s = N_p / N_s = i_s / i_p",
+      "spoken_tr": "V p bölü V s eşittir N p bölü N s eşittir i s bölü i p",
+      "meaning": "İdeal transformatörde gerilim sarım sayısıyla doğru, akım sarım sayısıyla ters orantılı.",
+      "variables": [
+        {
+          "symbol": "V_p, V_s",
+          "name": "birincil/ikincil gerilim",
+          "si_unit": "V",
+          "dim_var": "V",
+          "textbook_symbol": "V_p, V_s"
+        },
+        {
+          "symbol": "N_p, N_s",
+          "name": "sarım sayıları",
+          "si_unit": "—",
+          "dim_var": "N",
+          "textbook_symbol": "N_p, N_s"
+        },
+        {
+          "symbol": "i_p, i_s",
+          "name": "birincil/ikincil akım",
+          "si_unit": "A",
+          "dim_var": "i",
+          "textbook_symbol": "i_p, i_s"
+        }
+      ],
+      "units": [
+        "A",
+        "V",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İdeal (kayıpsız) transformatör: giriş gücü = çıkış gücü",
+        "Alternatif akım"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.13 'Matematiksel işlemlerden kaçınılır'; yalnız nitel ilişki",
+        "Doğru akımla (çıkış gerilimi sıfır)",
+        "İdeal olmayan transformatörde akım oranında"
+      ],
+      "common_mistakes": [
+        "Akım oranını sarım oranıyla doğru orantılı yazmak",
+        "Transformatörün enerji ürettiğini sanmak",
+        "DC'de çalıştığını sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-transformator",
+        "phys11-c-birincil-ikincil-sarim",
+        "phys11-c-sarim-sayisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.13"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-023"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 273,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": "KAYNAK ÇELİŞKİSİ (Tier 1 – Tier 1): Program 'Matematiksel işlemlerden kaçınılır' derken kitap bu bağıntıyı ve sayısal alıştırma (47a, s. 272) veriyor.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-043",
+      "slug": "transformer-efficiency",
+      "name": "Transformatörün verimi",
+      "formula": "verim = (V_s·i_s) / (V_p·i_p)",
+      "spoken_tr": "verim eşittir V s i s bölü V p i p",
+      "meaning": "Çıkış gücünün giriş gücüne oranı.",
+      "variables": [
+        {
+          "symbol": "verim",
+          "name": "verim",
+          "si_unit": "—",
+          "dim_var": "eta",
+          "textbook_symbol": "verim"
+        },
+        {
+          "symbol": "V·i",
+          "name": "güçler",
+          "si_unit": "W",
+          "dim_var": "P",
+          "textbook_symbol": "V·i"
+        }
+      ],
+      "units": [
+        "W",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "İdeal olmayan transformatör"
+      ],
+      "invalid_use_cases": [
+        "PROGRAM: FİZ.11.2.13 hesaplamasız"
+      ],
+      "common_mistakes": [
+        "Verimin 1'den büyük olabileceğini sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-transformator"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.2.13"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-023"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "CALC_EXCLUDED",
+      "textbook_vs_program_conflict": true,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 273,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-044",
+      "slug": "illuminance-definition",
+      "name": "Aydınlanma",
+      "formula": "E = Φ / A",
+      "spoken_tr": "E eşittir fi bölü A",
+      "meaning": "Yüzeye dik düşen ışık akısının birim alana düşen miktarı.",
+      "variables": [
+        {
+          "symbol": "E",
+          "name": "aydınlanma",
+          "si_unit": "lx",
+          "dim_var": "Ev",
+          "textbook_symbol": "E"
+        },
+        {
+          "symbol": "Φ",
+          "name": "ışık akısı",
+          "si_unit": "lm",
+          "dim_var": "phiV",
+          "textbook_symbol": "Φ"
+        },
+        {
+          "symbol": "A",
+          "name": "yüzey alanı",
+          "si_unit": "m²",
+          "dim_var": "A",
+          "textbook_symbol": "A"
+        }
+      ],
+      "units": [
+        "lm",
+        "lx",
+        "m²"
+      ],
+      "dimensions": "J L^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Akı yüzeye dik ve düzgün dağılmış"
+      ],
+      "invalid_use_cases": [
+        "Işınlar yüzeye eğik geliyorsa (dik bileşen gerekir)"
+      ],
+      "common_mistakes": [
+        "Işık akısı ile ışık şiddetini karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-aydinlanma",
+        "phys11-c-isik-akisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.1"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-024"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 311,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-045",
+      "slug": "total-luminous-flux",
+      "name": "Kapalı yüzeyde toplam ışık akısı",
+      "formula": "Φ = 4·π·I",
+      "spoken_tr": "fi eşittir dört pi I",
+      "meaning": "Noktasal kaynağın her yöne yaydığı toplam ışık akısı; yüzeyin şekline ve uzaklığa bağlı değildir.",
+      "variables": [
+        {
+          "symbol": "Φ",
+          "name": "toplam ışık akısı",
+          "si_unit": "lm",
+          "dim_var": "phiV",
+          "textbook_symbol": "Φ"
+        },
+        {
+          "symbol": "I",
+          "name": "ışık şiddeti",
+          "si_unit": "cd",
+          "dim_var": "Iv",
+          "textbook_symbol": "I"
+        }
+      ],
+      "units": [
+        "cd",
+        "lm"
+      ],
+      "dimensions": "J",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Noktasal, her yöne eşit ışık veren kaynak",
+        "Kaynağı tamamen saran kapalı yüzey"
+      ],
+      "invalid_use_cases": [
+        "Kaynak yönlüyse (el feneri)",
+        "Yüzey kaynağı tamamen sarmıyorsa"
+      ],
+      "common_mistakes": [
+        "Kürenin yarıçapı büyüyünce toplam akının azaldığını sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-isik-akisi",
+        "phys11-c-isik-siddeti"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.1"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-024"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 311,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-046",
+      "slug": "illuminance-point-source",
+      "name": "Noktasal kaynağın aydınlanması",
+      "formula": "E = I / r²",
+      "spoken_tr": "E eşittir I bölü r kare",
+      "meaning": "Noktasal kaynaktan r uzaklıktaki yüzeye dik gelen ışınların oluşturduğu aydınlanma.",
+      "variables": [
+        {
+          "symbol": "E",
+          "name": "aydınlanma",
+          "si_unit": "lx",
+          "dim_var": "Ev",
+          "textbook_symbol": "E"
+        },
+        {
+          "symbol": "I",
+          "name": "ışık şiddeti",
+          "si_unit": "cd",
+          "dim_var": "Iv",
+          "textbook_symbol": "I"
+        },
+        {
+          "symbol": "r",
+          "name": "uzaklık",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        }
+      ],
+      "units": [
+        "cd",
+        "lx",
+        "m"
+      ],
+      "dimensions": "J L^-2",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Noktasal kaynak",
+        "Işınlar yüzeye dik"
+      ],
+      "invalid_use_cases": [
+        "Paralel ışık veren kaynakta (el feneri: uzaklıkla değişmez)",
+        "Eğik gelişte (cos çarpanı gerekir; kitapta yok)"
+      ],
+      "common_mistakes": [
+        "Uzaklıkla doğrusal azaldığını sanmak",
+        "Paralel ışında da ters kare uygulamak"
+      ],
+      "related_concepts": [
+        "phys11-c-aydinlanma",
+        "phys11-c-isik-siddeti",
+        "phys11-c-ters-kare-iliskisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.1"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-024"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 311,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-047",
+      "slug": "refractive-index",
+      "name": "Kırma indisi",
+      "formula": "n = c / ϑ",
+      "spoken_tr": "n eşittir c bölü hız",
+      "meaning": "Işığın boşluktaki süratinin ortamdaki süratine oranı.",
+      "variables": [
+        {
+          "symbol": "n",
+          "name": "kırma indisi",
+          "si_unit": "—",
+          "dim_var": "n",
+          "textbook_symbol": "n"
+        },
+        {
+          "symbol": "c",
+          "name": "ışığın boşluktaki sürati",
+          "si_unit": "m/s",
+          "dim_var": "c",
+          "textbook_symbol": "c"
+        },
+        {
+          "symbol": "ϑ",
+          "name": "ışığın ortamdaki sürati",
+          "si_unit": "m/s",
+          "dim_var": "v",
+          "textbook_symbol": "ϑ"
+        }
+      ],
+      "units": [
+        "m/s",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Saydam ortam"
+      ],
+      "invalid_use_cases": [
+        "n < 1 sonucu çıkarsa (sıradan ortamlarda olmaz)"
+      ],
+      "common_mistakes": [
+        "Kırma indisi büyük ortamda ışığın daha hızlı gittiğini sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-kirma-indisi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.5"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-028"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 352,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-048",
+      "slug": "snell-law",
+      "name": "Snell Yasası",
+      "formula": "n₁·sin î = n₂·sin r̂",
+      "spoken_tr": "n bir sinüs i eşittir n iki sinüs r",
+      "meaning": "Kırılmada gelme ve kırılma açıları ile ortamların kırma indisleri arasındaki ilişki; açılar normalle ölçülür.",
+      "variables": [
+        {
+          "symbol": "n₁, n₂",
+          "name": "kırma indisleri",
+          "si_unit": "—",
+          "dim_var": "n",
+          "textbook_symbol": "n₁, n₂"
+        },
+        {
+          "symbol": "î, r̂",
+          "name": "gelme ve kırılma açıları (normalle)",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "î, r̂"
+        }
+      ],
+      "units": [
+        "°",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Açılar yüzey normaliyle ölçülür",
+        "Tek renkli ışık"
+      ],
+      "invalid_use_cases": [
+        "Açılar yüzeyle ölçülmüşse",
+        "Gelme açısı sınır açısından büyükse (kırılma yok, tam yansıma)"
+      ],
+      "common_mistakes": [
+        "Açıyı yüzeyle ölçmek",
+        "Az kırıcıdan çok kırıcıya geçişte ışının normalden uzaklaştığını sanmak (yaklaşır)"
+      ],
+      "related_concepts": [
+        "phys11-c-snell-yasasi",
+        "phys11-c-kirma-indisi",
+        "phys11-c-trigonometrik-oranlar"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.5",
+        "FİZ.11.3.8"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-028",
+        "phys11-lo-031"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 352,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-049",
+      "slug": "critical-angle",
+      "name": "Sınır açısı",
+      "formula": "sin θ_s = n₂ / n₁   (n₁ > n₂)",
+      "spoken_tr": "sinüs teta s eşittir n iki bölü n bir",
+      "meaning": "Çok kırıcıdan az kırıcıya geçişte kırılma açısını 90° yapan gelme açısı.",
+      "variables": [
+        {
+          "symbol": "θ_s",
+          "name": "sınır açısı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "θ_s"
+        },
+        {
+          "symbol": "n₁",
+          "name": "ışığın geldiği (çok kırıcı) ortam",
+          "si_unit": "—",
+          "dim_var": "n",
+          "textbook_symbol": "n₁"
+        },
+        {
+          "symbol": "n₂",
+          "name": "az kırıcı ortam",
+          "si_unit": "—",
+          "dim_var": "n",
+          "textbook_symbol": "n₂"
+        }
+      ],
+      "units": [
+        "°",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "n₁ > n₂ (ışık çok kırıcıdan az kırıcıya gidiyor)"
+      ],
+      "invalid_use_cases": [
+        "Işık az kırıcıdan çok kırıcıya gidiyorsa (sınır açısı ve tam yansıma yok)"
+      ],
+      "common_mistakes": [
+        "Tam yansımanın her geçişte olabileceğini sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-sinir-acisi",
+        "phys11-c-tam-yansima",
+        "phys11-c-snell-yasasi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.5",
+        "FİZ.11.3.7"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-028",
+        "phys11-lo-030"
+      ],
+      "derivation_level": "derived",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": null,
+        "verified": false,
+        "verified_by": null
+      },
+      "notes": "Kitap sınır açısını tanımla veriyor (s. 353) ve camdan havaya 42° değerini kullanıyor (s. 372); formül kutusu doğrulanmadı. Snell'den r̂ = 90° konarak türetilir.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "MEDIUM",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-050",
+      "slug": "mirror-radius-focal",
+      "name": "Küresel aynada eğrilik yarıçapı ve odak uzaklığı",
+      "formula": "r = 2·f",
+      "spoken_tr": "r eşittir iki f",
+      "meaning": "Merkez ile tepe noktası arası, odak uzaklığının iki katıdır.",
+      "variables": [
+        {
+          "symbol": "r",
+          "name": "eğrilik yarıçapı",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "r"
+        },
+        {
+          "symbol": "f",
+          "name": "odak uzaklığı",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "f"
+        }
+      ],
+      "units": [
+        "m"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Küçük açılı (asal eksene yakın) ışınlar"
+      ],
+      "invalid_use_cases": [
+        "Asal eksenden uzak ışınlarda (küresel sapınç)"
+      ],
+      "common_mistakes": [
+        "Odağı merkez noktasıyla karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-odak-uzakligi",
+        "phys11-c-egrilik-merkezi",
+        "phys11-c-kuresel-ayna"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.3"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-026"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 341,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-051",
+      "slug": "plane-mirror-image",
+      "name": "Düzlem aynada görüntü konumu ve boyu",
+      "formula": "d_görüntü = d_cisim ;  h_görüntü = h_cisim",
+      "spoken_tr": "görüntünün aynaya uzaklığı cismin aynaya uzaklığına eşit",
+      "meaning": "Düzlem aynada görüntü aynaya göre cismin simetriğidir, cisimle eşit boyda, düz ve sanaldır.",
+      "variables": [
+        {
+          "symbol": "d",
+          "name": "aynaya dik uzaklık",
+          "si_unit": "m",
+          "dim_var": "d",
+          "textbook_symbol": "d"
+        },
+        {
+          "symbol": "h",
+          "name": "boy",
+          "si_unit": "m",
+          "dim_var": "h",
+          "textbook_symbol": "h"
+        }
+      ],
+      "units": [
+        "m"
+      ],
+      "dimensions": "L",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Düzlem ayna"
+      ],
+      "invalid_use_cases": [
+        "Küresel aynalarda"
+      ],
+      "common_mistakes": [
+        "Görüntünün aynanın yüzeyinde oluştuğunu sanmak",
+        "Aynaya yaklaşınca görüntünün büyüdüğünü sanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-duzlem-ayna",
+        "phys11-c-goruntu"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-025"
+      ],
+      "derivation_level": "given_in_textbook",
+      "program_calc_status": "NO_EXPLICIT_LIMIT",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": 322,
+        "verified": true,
+        "verified_by": "page_image_manual_review_2026-10-01"
+      },
+      "notes": null,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "HIGH",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-052",
+      "slug": "mirror-lens-equation",
+      "name": "Ayna / mercek denklemi (KAPSAM DIŞI)",
+      "formula": "1/f = 1/d_c + 1/d_g",
+      "spoken_tr": "bir bölü f eşittir bir bölü d c artı bir bölü d g",
+      "meaning": "Küresel ayna ve ince mercekte cisim, görüntü uzaklığı ve odak uzaklığı ilişkisi.",
+      "variables": [
+        {
+          "symbol": "f",
+          "name": "odak uzaklığı",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "f"
+        },
+        {
+          "symbol": "d_c",
+          "name": "cisim uzaklığı",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "d_c"
+        },
+        {
+          "symbol": "d_g",
+          "name": "görüntü uzaklığı",
+          "si_unit": "m",
+          "dim_var": "r",
+          "textbook_symbol": "d_g"
+        }
+      ],
+      "units": [
+        "m"
+      ],
+      "dimensions": "L^-1",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "Asal eksene yakın ışınlar, ince mercek",
+        "İşaret kuralı tutarlı"
+      ],
+      "invalid_use_cases": [
+        "11. sınıf Maarif programı ve ders kitabında YOK: görüntü konumu özel ışın çizimi ve konum tablosuyla bulunur",
+        "Yapay zekâ bunu öğrenciye beklenen yöntem olarak sunmamalı; yalnız sonucu kendi içinde doğrulamak için kullanabilir"
+      ],
+      "common_mistakes": [
+        "İşaret kuralını karıştırmak"
+      ],
+      "related_concepts": [
+        "phys11-c-kuresel-aynada-goruntu",
+        "phys11-c-mercekte-goruntu",
+        "phys11-c-odak-uzakligi"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.4",
+        "FİZ.11.3.10"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-027",
+        "phys11-lo-033"
+      ],
+      "derivation_level": "out_of_curriculum",
+      "program_calc_status": "OUT_OF_CURRICULUM",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": null,
+        "verified": false,
+        "verified_by": null
+      },
+      "notes": "Ders kitabının 416 sayfasında 'ayna denklemi' / 'mercek denklemi' ifadesi ve bu bağıntı bulunmadı.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "MEDIUM",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-formula-053",
+      "slug": "plane-mirror-image-count",
+      "name": "Açılı düzlem aynalarda görüntü sayısı (KAPSAM DIŞI)",
+      "formula": "n = 360°/α − 1",
+      "spoken_tr": "n eşittir üç yüz altmış bölü alfa eksi bir",
+      "meaning": "Aralarında α açısı olan iki düzlem aynada oluşan görüntü sayısı.",
+      "variables": [
+        {
+          "symbol": "n",
+          "name": "görüntü sayısı",
+          "si_unit": "—",
+          "dim_var": "n",
+          "textbook_symbol": "n"
+        },
+        {
+          "symbol": "α",
+          "name": "aynalar arası açı",
+          "si_unit": "°",
+          "dim_var": "ang",
+          "textbook_symbol": "α"
+        }
+      ],
+      "units": [
+        "°",
+        "—"
+      ],
+      "dimensions": "boyutsuz",
+      "dimension_check": "pass",
+      "validity_conditions": [
+        "360/α tam sayı ve cisim açıortay üzerinde"
+      ],
+      "invalid_use_cases": [
+        "11. sınıf Maarif ders kitabında YOK",
+        "360/α tam sayı değilse ya da cisim simetrik konumda değilse formül doğrudan geçersiz"
+      ],
+      "common_mistakes": [
+        "360/α tam sayı değilken formülü kullanmak"
+      ],
+      "related_concepts": [
+        "phys11-c-duzlem-ayna",
+        "phys11-c-goruntu"
+      ],
+      "learning_outcomes": [
+        "FİZ.11.3.2"
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-025"
+      ],
+      "derivation_level": "out_of_curriculum",
+      "program_calc_status": "OUT_OF_CURRICULUM",
+      "textbook_vs_program_conflict": false,
+      "partial_program_limits": [],
+      "textbook": {
+        "source_id": "src-meb-fiz11-ders-kitabi",
+        "printed_page": null,
+        "verified": false,
+        "verified_by": null
+      },
+      "notes": "Eski programa göre yazılmış piyasa kaynaklarında sık görülür; ders kitabında 'görüntü sayısı' ifadesi geçmiyor.",
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        "src-meb-fiz11-ders-kitabi",
+        "src-meb-fizik-op-2026"
+      ],
+      "confidence": "MEDIUM",
+      "review_status": "ai_authored_pending_expert_review",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    }
+  ]
+}

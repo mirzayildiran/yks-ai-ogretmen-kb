@@ -71,13 +71,27 @@ def main():
     for c in concepts:
         if deg[c["id"]] == 0:
             warnings.append(f"Yetim kavram: {c['id']}")
-    versions = {d["curriculum_version"] for d in (lo_doc, cdoc, rdoc, sdoc, pdoc)}
+    fdoc = load("formulas/formulas.json")
+    fids = {f["id"] for f in fdoc["formulas"]}
+    for f in fdoc["formulas"]:
+        for c in f["related_concepts"]:
+            if c not in cids:
+                errors.append(f"{f['id']}: kırık kavram referansı {c}")
+        if f["dimension_check"] != "pass":
+            errors.append(f"{f['id']}: boyut analizi başarısız")
+        if not f["invalid_use_cases"]:
+            errors.append(f"{f['id']}: 'ne zaman kullanılmaz' alanı boş")
+    for o in los:
+        for fid in o.get("formulas", []):
+            if fid not in fids:
+                errors.append(f"{o['official_code']}: kırık formül referansı {fid}")
+    versions = {d["curriculum_version"] for d in (lo_doc, cdoc, rdoc, sdoc, pdoc, fdoc)}
     if len(versions) != 1:
         errors.append(f"Tutarsız müfredat sürümü: {versions}")
     if any(e["forward_in_program_order"] for e in pdoc["intra_grade_outcome_edges"]):
         warnings.append("Program sırasına ters ön koşul kenarı var")
 
-    print(f"GRAFİK DOĞRULAMA: {len(concepts)} kavram, {len(rels)} ilişki, {len(skills)} beceri, "
+    print(f"GRAFİK DOĞRULAMA: {len(concepts)} kavram, {len(rels)} ilişki, {len(skills)} beceri, {len(fids)} formül, "
           f"{len(pdoc['intra_grade_outcome_edges'])} çıktı-içi ön koşul kenarı")
     for w in warnings:
         print("  !", w)

@@ -110,6 +110,7 @@ Hiyerarşi: **Ünite → İçerik başlığı → Öğrenme çıktısı → Sür
   - b) Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller. `[FBAB10.SB2]`
   - ⚠️ `SCOPE_INCLUDED` _Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller._ → Yatay düzlem, düşey düzlem, yatay ve eğimli viraj problemleri kapsamda.
   - ⚠️ `CALC_EXCLUDED` _Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır._ → Ray (ör. lunapark rayı) problemleri hesaplanmaz.
+  - ⚠️ `CALC_INCLUDED` _Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir._ → Düzgün çembersel hareket problemlerinde sayısal hesap ölçülür.
 
 **Zenginleştirme (resmî; öğrenme çıktısı eklemez, ders kitabında yer almaz):**
 
