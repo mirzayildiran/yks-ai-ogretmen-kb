@@ -13,15 +13,20 @@ Uyarılar: çıktı başına grafik / tablo / deney / günlük hayat uyarıcıs�
 """
 import importlib
 import json
-import re
+import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
 from build_curriculum import KB, TODAY, CURRICULUM_VERSION, letters_only
 from enrich_learning_outcomes import book_pages
 
 OUT = KB / "question-families"
-MODULES = ["data_question_families_u1"]
-UNITS = {"data_question_families_u1": 1}
+# Varsayılan: mevcut tüm ünite modülleri. Komut satırı: python3 build_question_families.py [--check] [modül ...]
+#   --check : yalnız doğrular, hiçbir dosya yazmaz (paralel çalışan ajanlar için)
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+CHECK_ONLY = "--check" in sys.argv
+MODULES = ARGS or sorted(p.stem for p in Path(__file__).parent.glob("data_question_families_u*.py"))
+UNITS = {m: int(m.rsplit("_u", 1)[1]) for m in MODULES}
 ERROR_TYPES = {"CONCEPTUAL_ERROR", "FORMULA_SELECTION_ERROR", "FORMULA_APPLICATION_ERROR", "SIGN_ERROR", "UNIT_ERROR",
                "VECTOR_ERROR", "GRAPH_READING_ERROR", "TABLE_READING_ERROR", "ALGEBRA_ERROR", "ARITHMETIC_ERROR",
                "QUESTION_INTERPRETATION_ERROR", "METHOD_SELECTION_ERROR", "PREREQUISITE_GAP", "CARELESS_ERROR"}
@@ -168,7 +173,19 @@ def main():
             warnings.append(f"{code}: uyarıcı türü yok → {', '.join(missing)}")
         coverage.append({"code": code, "families": len(fams), "stimuli": dict(st), "missing_stimuli": missing})
         o["question_families"] = [q["id"] for q in out if code in q["learning_outcomes"]]
+    for code, o in los.items():
+        if int(code.split(".")[2]) not in units_done:
+            o["question_families"] = []
 
+    if CHECK_ONLY:
+        print("(--check: dosya yazılmadı)")
+    else:
+        write_all(out, lo_doc, coverage, units_done)
+    report(out, by_comp, warnings, errors, units_done)
+    return 1 if errors else 0
+
+
+def write_all(out, lo_doc, coverage, units_done):
     OUT.mkdir(exist_ok=True)
     (OUT / "question-families.json").write_text(json.dumps({
         "subject": "physics", "grade": 11, "curriculum_version": CURRICULUM_VERSION,
@@ -179,6 +196,8 @@ def main():
     (KB / "learning-outcomes" / "learning-outcomes.json").write_text(json.dumps(lo_doc, ensure_ascii=False, indent=2), encoding="utf-8")
     write_md(out, coverage)
 
+
+def report(out, by_comp, warnings, errors, units_done):
     print(f"{len(out)} soru ailesi (ünite {sorted(units_done)}); kapsam: {dict(Counter(q['scope'] for q in out))}")
     print(f"kitap kanıtı: {sum(e['verified'] for q in out for e in q['sources'] if 'item' in e)}/"
           f"{sum(1 for q in out for e in q['sources'] if 'item' in e)} doğrulandı; "
@@ -192,7 +211,6 @@ def main():
         print("UYARI:", w)
     for e in errors:
         print("HATA:", e)
-    return 1 if errors else 0
 
 
 def write_md(out, coverage):
