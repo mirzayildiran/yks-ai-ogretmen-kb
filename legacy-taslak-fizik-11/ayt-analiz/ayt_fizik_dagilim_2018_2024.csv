@@ -1,0 +1,23 @@
+konu_eski_program,2018,2019,2020,2021,2022,2023,2024,maarif_karsiligi
+Vektörler,0,0,0,0,1,1,0,9.sınıf (FİZ.9.2.3-4) + 11.sınıf bileşenlere ayırma (FİZ.11.1.3)
+Hareket (1 boyut / bağıl),0,1,1,0,0,1,1,10.sınıf (FİZ.10.1.x); bağıl hareket yalnız zenginleştirmede
+Newton'un Hareket Yasaları,1,0,1,0,1,1,1,11.sınıf FİZ.11.1.4-5 (+ sürtünme FİZ.11.1.6-7)
+Atışlar,1,1,1,1,0,0,1,11.sınıf FİZ.11.1.2-3 (terim olarak 'atış' kullanılmıyor)
+"İş, Güç ve Enerji",0,0,1,1,0,1,1,10.sınıf FİZ.10.2.x + 12.sınıf FİZ.12.2.x
+İtme ve Momentum,1,1,1,0,1,1,1,12.sınıf FİZ.12.1.3-4
+"Kuvvet, Tork ve Denge",1,1,1,1,0,0,0,12.sınıf FİZ.12.1.1-2
+Basit Makineler,0,0,0,0,1,0,0,Programda yok (12.sınıf verim dolaylı)
+Elektrik Alan ve Potansiyel,1,1,1,2,0,1,1,11.sınıf FİZ.11.2.1-2 (hesaplamasız); potansiyel/sığaç yok
+Manyetik Alan ve Manyetik Kuvvet,0,0,0,1,1,1,1,11.sınıf FİZ.11.2.4-9
+"İndüksiyon, Alternatif Akım, Transformatör",2,2,2,1,1,2,2,11.sınıf FİZ.11.2.10-13 (trafo hesapsız)
+Düzgün Çembersel Hareket,1,1,2,1,1,1,0,11.sınıf FİZ.11.1.9-10
+"Dönme, Yuvarlanma, Açısal Momentum",0,1,1,0,1,1,0,12.sınıf FİZ.12.1.5-6
+Kütle Çekim ve Kepler,1,0,0,1,0,1,0,Programda açık çıktı yok
+Basit Harmonik Hareket,1,1,1,1,1,1,1,Programda açık çıktı yok (10.sınıf periyodik hareketler kavramsal)
+Dalga Mekaniği ve EM Dalgalar,1,1,1,1,1,1,1,12.sınıf FİZ.12.3.x
+Büyük Patlama ve Parçacık Fiziği,0,0,0,0,1,0,0,12.sınıf FİZ.12.4.6 (standart model)
+Radyoaktivite / Atom,1,1,0,1,0,0,0,12.sınıf FİZ.12.4.7-8
+Özel Görelilik,0,0,0,0,1,0,1,Programda yok
+Fotoelektrik ve Compton,1,1,0,1,1,0,1,12.sınıf FİZ.12.4.1-3 (Compton açıkça yok)
+Modern Fiziğin Teknolojideki Uygulamaları,1,1,0,1,1,0,1,12.sınıf FİZ.12.4.3-5
+Optik (eski programda TYT/10.sınıf),0,0,0,0,0,0,0,11.sınıf FİZ.11.3.1-10 (AYT'ye taşınması bekleniyor)

@@ -1,0 +1,422 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "primary_source": "src-meb-fizik-op-2026",
+  "generated_by": "scripts/build_curriculum.py",
+  "generated_at": "2026-10-01",
+  "total_hours_units": 138,
+  "school_based_planning_hours": 6,
+  "total_hours": 144,
+  "units": [
+    {
+      "id": "phys11-unit-1",
+      "unit_no": 1,
+      "official_title": "KUVVET VE HAREKET",
+      "hours": 54,
+      "purpose": "Bu ünitede öğrencilerin serbest düşmeye yönelik matematiksel hesaplamaları yapmaları, matematiksel modelleri ve grafiksel dönüşümleri iki boyutta sabit ivmeli harekete yönelik problem durumlarına çözüm getirmek için kullanabilmeleri, Newton'ın Hareket Yasalarını açıklamaları, bir cisme etki eden kuvvetleri serbest cisim diyagramında göstermeleri, statik ve kinetik sürtünme kuvvetinin bağlı olduğu değişkenleri gözlemleyerek sürtünme kuvvetinin matematiksel modelini oluşturmaları, limit hızı tanımlamaları ve limit hıza ait değişkenleri belirlemeleri, çembersel hareketin temel kavramları arasındaki ilişkileri açıklamaları amaçlanmaktadır.",
+      "topics": [
+        {
+          "id": "phys11-topic-1-1",
+          "official_title": "Serbest Düşme"
+        },
+        {
+          "id": "phys11-topic-1-2",
+          "official_title": "İki Boyutta Sabit İvmeli Hareket"
+        },
+        {
+          "id": "phys11-topic-1-3",
+          "official_title": "Newton'ın Hareket Yasaları"
+        },
+        {
+          "id": "phys11-topic-1-4",
+          "official_title": "Sürtünme Kuvveti"
+        },
+        {
+          "id": "phys11-topic-1-5",
+          "official_title": "Limit Hız"
+        },
+        {
+          "id": "phys11-topic-1-6",
+          "official_title": "Düzgün Çembersel Hareket"
+        }
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-001",
+        "phys11-lo-002",
+        "phys11-lo-003",
+        "phys11-lo-004",
+        "phys11-lo-005",
+        "phys11-lo-006",
+        "phys11-lo-007",
+        "phys11-lo-008",
+        "phys11-lo-009",
+        "phys11-lo-010"
+      ],
+      "key_concepts_official": [
+        "serbest düşme",
+        "eylemsizlik",
+        "etki-tepki kuvvetleri",
+        "serbest cisim diyagramı",
+        "sürtünme kuvveti",
+        "statik sürtünme kuvveti",
+        "kinetik sürtünme kuvveti",
+        "limit hız",
+        "düzgün çembersel hareket",
+        "çizgisel sürat",
+        "açısal hız",
+        "çizgisel hız",
+        "merkezcil ivme",
+        "açısal ivme",
+        "merkezcil kuvvet"
+      ],
+      "field_skills": [
+        "FBAB8. Bilimsel Çıkarım Yapma",
+        "FBAB10. Tümevarımsal Akıl Yürütme",
+        "FBAB12. Kanıt Kullanma"
+      ],
+      "conceptual_skills": [
+        "KB2.7. Karşılaştırma",
+        "KB2.14. Yorumlama",
+        "KB2.16. Muhakeme (Akıl Yürütme) (KB2.16.3. Analojik Akıl Yürütme)"
+      ],
+      "dispositions": [
+        "E1.2. Bağımsızlık",
+        "E1.3. Azim ve Kararlılık",
+        "E1.6. Seçicilik",
+        "E2.5. Oyunseverlik",
+        "E3.1. Muhakeme",
+        "E3.2. Odaklanma",
+        "E3.3. Yaratıcılık",
+        "E3.5. Açık Fikirlilik",
+        "E3.6. Analitiklik",
+        "E3.10. Eleştirel Bakma"
+      ],
+      "social_emotional_skills": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB2.3. Sosyal Farkındalık"
+      ],
+      "values": [
+        "D3. Çalışkanlık",
+        "D4. Dostluk",
+        "D12. Sabır",
+        "D14. Saygı"
+      ],
+      "literacy_skills": [
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı",
+        "OB9. Sanat Okuryazarlığı"
+      ],
+      "interdisciplinary_links": [
+        "Astronomi ve Uzay Bilimleri",
+        "Beden Eğitimi",
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "cross_skill_links": [
+        "KB2.3. Özetleme",
+        "KB2.18. Tartışma",
+        "KB3.2. Problem Çözme"
+      ],
+      "basic_assumptions_official": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+      "pre_assessment_official": "Hız, ivme, ağırlık, periyot ve frekans kavramına yönelik soru cevap etkinliği yapılarak bu kavramlar hatırlatılabilir.",
+      "bridging_official": "Hareketli araçlar içindeki yolcuların hız değişimi sırasında yaşadıkları, aynı kuvvet etkisinde kalan farklı kütleli cisimlerin hızlanması ya da yavaşlamasındaki farklılıklara yönelik gözlemler ve futbolda topa vurma sonucunda ayağa etki eden kuvvet gibi yaşantılar üzerinden örnekler verilerek bu örnekler serbest düşme ve Newton'ın Hareket Yasaları ile ilişkilendirilebilir.",
+      "assessment_official": "Öğrenme çıktıları; poster, kısa rapor, çıkış kartı, çalışma yaprağı, açık uçlu maddelerden oluşan test, yapılandırılmış grid, bilgi görseli, kısa film veya animasyon kullanılarak değerlendirilebilir. Öğrencilerden serbest düşme hareketi yapan cisimlerin ivme ve hız değişimlerini gösteren bir poster hazırlaması istenebilir. Bu poster dereceli puanlama anahtarı ve öz değerlendirme formu ile değerlendirilebilir. Matematiksel model kullanılarak yapılan hesaplama, grafik çizimi, grafikten değer bulma ve grafik verilerini yorumlayabilmeleri amacı ile öğrencilere sınıfta kısa rapor yazdırılabilir. Rapor, analitik dereceli puanlama anahtarı ile değerlendirilebilir. Newton'ın Hareket Yasalarına örnek verebilmesi için çıkış kartı verilebilir. Newton'ın Hareket Yasalarını serbest cisim diyagramını kullanarak yorumlayabilmeleri için bir çalışma yaprağı verilebilir. Statik ve kinetik sürtünme kuvvetlerine yönelik karşılaştırabilme yapmaları için yapılandırılmış grid verilebilir. Sürtünme kuvvetinin hesaplanmasına yönelik farklı soru türlerinden oluşan bir test verilebilir. Çıkış kartı, çalışma yaprağı, test ve yapılandırılmış grid puanlama anahtarı ile değerlendirilebilir. Limit hızı etkileyen faktörler hakkında bilgi görseli hazırlanması ve düzgün çembersel hareket ile vektörler hakkında kavramları göstermek için kısa bir film çekilmesi ya da animasyon hazırlanması performans görevleri olarak verilebilir. Performans görevleri dereceli puanlama anahtarı ile değerlendirilebilir. Matematiksel hesaplamaları yapmaları için açık uçlu test verilebilir. Açık uçlu test dereceli puanlama anahtarı ile değerlendirilebilir. Değerlendirmelerde öz değerlendirme, akran değerlendirme veya grup değerlendirmesi yapılarak çeşitlilik sağlanabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "enrichment_official": [
+        {
+          "official_text": "Farklı çekim ivmesine sahip uydu ve gezegenlerdeki serbest düşme hareketine yönelik problem durumları ele alınabilir. Serbest düşme hareketinde farklı yüksekliklerdeki konumlardan çeşitli açılarla atılan cisimlerin hareketleriyle ilgili hesaplamalar yapılabilir. Hareketli referanslardan farklı açılarla atılan cisimlerin hareketine yönelik problem durumları ele alınabilir. Eğimli virajda yol alan araçlara etki eden statik sürtünme kuvvetinin matematiksel hesaplamaları yapılabilir. Türkiye’de ve dünyada araç kazalarının sebepleri arasında “viraj güvenliği”nin yeri ve kazalardaki istatistik oranları araştırılabilir. Araçlarda kullanılan fren sistemleri incelenerek ABS fren sisteminin avantajlarının, statik ve kinetik sürtünme kuvvetleri arasındaki farklarla ilişkilendirilerek açıklanması istenebilir.",
+          "mandatory_in_science_high_schools": false
+        },
+        {
+          "official_text": "Farklı açılarla atılan cisimlerin hareketini dikkate alan basit malzemeleri kullanarak bir oyun tasarlamaları istenebilir. Virajlarda güvenli sürüş yapmak için gereken önlemler ile Newton'ın Hareket Yasaları, sürtünme kuvveti ve çembersel hareket konu başlıkları ilişkilendirilerek araba lastiği tasarım önerisi oluşturulabilir.",
+          "mandatory_in_science_high_schools": true
+        },
+        {
+          "official_text": "Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde sık kullanılan açı değerlerinin dışında başka açılar verilerek hesap makinesi ya da dinamik matematik uygulamalarının kullanımı teşvik edilebilir. Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde en az iki vektörün toplanması sağlanabilir. Newton'ın Hareket Yasaları, Bernoulli İlkesi, sürtünme kuvveti ve düzgün çembersel hareket konuları ile ilişkilendirerek yarış arabası tasarımı yapılabilir.",
+          "mandatory_in_science_high_schools": true
+        }
+      ],
+      "support_official": [
+        "Serbest düşme gibi konular için basit veri toplama etkinlikleri ve bu verileri kullanarak temel matematiksel modellere ulaşmaları için basılı öğretim materyalleri sağlanabilir. Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde sadece bir vektör kullanılabilir. Bu vektörün bileşenleri trigonometrik hesaplamalar ile bulunabilir. Bu bileşenler toplanarak vektörün kendisine ulaşılabilir. Trigonometrik hesaplamalarda sadece özel üçgenlerden yararlanılan vektörler kullanılabilir. Newton'ın Hareket Yasalarına yönelik problem çözümlerinde yalnızca tek cisim içeren örnekler tercih edilebilir. Sürtünme kuvvetinin hesaplanmasına yönelik örnek problem durumlarında yatay zemindeki cisimlere kendi ağırlıkları ve zemin tarafından uygulanan tepki kuvvetleri dışında herhangi bir düşey kuvvetin uygulanmadığı örnekler kullanılabilir. Limit hız ile ilgili örnek ve açıklamalarda yağmur damlasının ve paraşütle atlayan kişinin hareketi ile sınırlı kalınarak limit hız konusu sadece kavramsal düzeyde verilebilir."
+      ],
+      "web_page_updated": "05.08.2026",
+      "sources": [
+        "src-meb-fizik-op-2026",
+        "src-tymm-fiz11-unite1"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "phys11-unit-2",
+      "unit_no": 2,
+      "official_title": "ELEKTRİK VE MANYETİZMA",
+      "hours": 48,
+      "purpose": "Bu ünitede öğrencilerin elektrik motorları ve elektrik jeneratörleri arasındaki ilişki ile transformatörlerin yapısı ve kullanımı hakkında çıkarım yapmaları amaçlanmaktadır.",
+      "topics": [
+        {
+          "id": "phys11-topic-2-1",
+          "official_title": "Elektriksel Kuvvet ve Elektriksel Alan"
+        },
+        {
+          "id": "phys11-topic-2-2",
+          "official_title": "Manyetik Alan ve Manyetik Kuvvet"
+        },
+        {
+          "id": "phys11-topic-2-3",
+          "official_title": "İndüksiyon Akımı"
+        },
+        {
+          "id": "phys11-topic-2-4",
+          "official_title": "Transformatörler"
+        }
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-011",
+        "phys11-lo-012",
+        "phys11-lo-013",
+        "phys11-lo-014",
+        "phys11-lo-015",
+        "phys11-lo-016",
+        "phys11-lo-017",
+        "phys11-lo-018",
+        "phys11-lo-019",
+        "phys11-lo-020",
+        "phys11-lo-021",
+        "phys11-lo-022",
+        "phys11-lo-023"
+      ],
+      "key_concepts_official": [
+        "elektriksel kuvvet",
+        "elektriksel alan",
+        "manyetik alan",
+        "manyetik kuvvet",
+        "manyetik akı",
+        "indüksiyon akımı",
+        "indüksiyon gerilimi",
+        "alternatif akım",
+        "transformatör"
+      ],
+      "field_skills": [
+        "FBAB1. Bilimsel Gözlem",
+        "FBAB8. Bilimsel Çıkarım",
+        "FBAB10. Tümevarımsal Akıl Yürütme"
+      ],
+      "conceptual_skills": [
+        "KB2.4. Çözümleme",
+        "KB2.6. Bilgi Toplama",
+        "KB2.15. Yansıtma"
+      ],
+      "dispositions": [
+        "E1.1. Merak",
+        "E3.6. Analitiklik"
+      ],
+      "social_emotional_skills": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB1.2. Kendini Düzenleme (Öz Düzenleme)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB2.3 Sosyal Farkındalık"
+      ],
+      "values": [
+        "D17.Tasarruf",
+        "D19. Vatanseverlik"
+      ],
+      "literacy_skills": [
+        "OB1. Bilgi Okuryazarlığı",
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı",
+        "OB8. Sürdürülebilirlik"
+      ],
+      "interdisciplinary_links": [
+        "Biyoloji",
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "cross_skill_links": [
+        "KB2.10. Çıkarım Yapma",
+        "KB2.12. Mevcut Bilgiye/Veriye Dayalı Tahmin Etme",
+        "KB2.19. Mantıksal Denetleme",
+        "KB3.2. Problem Çözme"
+      ],
+      "basic_assumptions_official": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+      "pre_assessment_official": "Öğrencinin elektrik yüklerinin etkileşimini ve çeşitlerini açıklayabilmeleri amacıyla ön bilgilerine dayalı kavram haritası hazırlanabilir. Soru cevap tekniği ile öğrencilerin mıknatısların kutuplarının davranışı ile ilgili hazır bulunuşluk düzeyleri tespit edilebilir. Dünya'nın manyetik alanı yardımıyla yapılabilecek etkinlikler ve manyetik alan yardımıyla yön bulabilen canlıların varlığı ile ilgili ön bilgilerini ölçmek amacıyla eşleştirme soruları sorulabilir.",
+      "bridging_official": "Öğrencilerin fen bilimleri dersinde öğrendikleri elektrostatikle ilgili bilgileri elektriksel kuvvet ve elektriksel alan ile ilişkilendirilebilir. Öğrenciler fen bilimleri dersinde öğrenmiş oldukları mıknatısların etkileşimini manyetik alan çizgileriyle ilişkilendirilebilir. Dünya'nın manyetik alanını da manyetik alan çizgileriyle incelenebilir.",
+      "assessment_official": "Öğrenme çıktıları; soru kutusu, test (açık uçlu maddeler), sunu, çıkış kartı, deney tasarlama, çalışma yaprağı, basit elektrik motoru tasarlama, bilgi görseli kullanılarak değerlendirilebilir. Elektrik yükleri arasındaki kuvvetin matematiksel modeline ulaşmaları için farklı madde türlerinden oluşan bir soru kutusu hazırlama ve elektriksel alanın matematiksel modelini tanımlayabilmeleri için açık uçlu maddelerden oluşan bir test verilebilir. Faraday kafesi ve kullanım alanları ile ilgili bir performans görevi verilebilir. Mıknatısların oluşturduğu manyetik alan ve özellikleri manyetik alan çizgileriyle sorgulamak için bir çıkış kartı verilebilir. Ørsted'in deneyi ile benzerlik gösteren bir deney tasarlama performans görevi verilebilir. Akım makarasının merkez ekseninde oluşan manyetik alan ve elektromıknatısların kullanım alanları ile ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir. Manyetik alanda akım geçen tele etki eden manyetik kuvvet ve büyüklüğünü etkileyen faktörler hakkında deney ve basit bir elektrik motoru tasarlamaları ile ilgili performans görevleri verilebilir. Manyetik akı ile değişkenleri ve indüksiyon akımının matematiksel modeline ulaşabilmeleri için açık uçlu maddelerden oluşan bir test verilebilir. İndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir. Transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları performans görevi olarak istenebilir. Öğrenciler soru kutusu, test, çıkış kartı, çalışma yaprağı, puanlama anahtarı ile değerlendirilebilir. Performans görevleri dereceli puanlama anahtarı ile değerlendirilebilir. Değerlendirmelerde öz/akran/grup değerlendirmesi yapılarak çeşitlilik sağlanabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "enrichment_official": [
+        {
+          "official_text": "Ferromanyetik, diyamanyetik ve paramanyetik maddelerin özellikleri ve manyetik alanla etkileşimleri araştırılabilir. Yüksek gerilim hatları ve trafoların etrafında oluşan manyetik alanın veya elektrikli cihazlar kullanılırken oluşan manyetik alanın sağlığa etkileri araştırılabilir.",
+          "mandatory_in_science_high_schools": false
+        },
+        {
+          "official_text": "Elektrik jeneratörlerinde manyetik akı değişimiyle elektrik elde edilmesine ve cevher tespitinde metal dedektörlerin kullanılmasına yönelik uygulamalara yer verilebilir.",
+          "mandatory_in_science_high_schools": true
+        },
+        {
+          "official_text": "STEM basamaklarını uygulayarak transformatörlerde elektrik gerilimini yükseltip alçaltma işlemine dayalı bir düzenek kurulabilir.",
+          "mandatory_in_science_high_schools": true
+        }
+      ],
+      "support_official": [
+        "Deney tasarlama, veri toplama, veri işleme ve sonuca varma süreçlerinde deneyin yapılışına dönük adım adım yönergeler ve hazır veri toplama şablonları kullanılabilir."
+      ],
+      "web_page_updated": "05.08.2026",
+      "sources": [
+        "src-meb-fizik-op-2026",
+        "src-tymm-fiz11-unite2"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "phys11-unit-3",
+      "unit_no": 3,
+      "official_title": "OPTİK",
+      "hours": 36,
+      "purpose": "Bu ünitede öğrencilerin ışık şiddeti, ışık akısı ve aydınlanma kavramlarını tanımlamaları, düzlem aynaları kullanarak model oluşturmaları, küresel aynaların ve merceklerin yapılarını karşılaştırmaları, küresel aynalarda ve merceklerde görüntü oluşumu ile ilgili deney yapmaları, ışığın saydam ortamlardaki davranışını kullanarak deney düzeneği oluşturmaları, görünür derinliği gözlemlemeleri, fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanlarına ilişkin bilgi toplamaları, prizmalar ve prizmalar ile kurulan optik sistemler hakkında çıkarım yapmaları amaçlanmaktadır.",
+      "topics": [
+        {
+          "id": "phys11-topic-3-1",
+          "official_title": "Işık Şiddeti, Işık Akısı ve Aydınlanma"
+        },
+        {
+          "id": "phys11-topic-3-2",
+          "official_title": "Düzlem Aynalar"
+        },
+        {
+          "id": "phys11-topic-3-3",
+          "official_title": "Küresel Aynalar"
+        },
+        {
+          "id": "phys11-topic-3-4",
+          "official_title": "Kırılma"
+        },
+        {
+          "id": "phys11-topic-3-5",
+          "official_title": "Görünür Derinlik"
+        },
+        {
+          "id": "phys11-topic-3-6",
+          "official_title": "Fiber Optik"
+        },
+        {
+          "id": "phys11-topic-3-7",
+          "official_title": "Prizmalar"
+        },
+        {
+          "id": "phys11-topic-3-8",
+          "official_title": "Mercekler"
+        }
+      ],
+      "learning_outcome_ids": [
+        "phys11-lo-024",
+        "phys11-lo-025",
+        "phys11-lo-026",
+        "phys11-lo-027",
+        "phys11-lo-028",
+        "phys11-lo-029",
+        "phys11-lo-030",
+        "phys11-lo-031",
+        "phys11-lo-032",
+        "phys11-lo-033"
+      ],
+      "key_concepts_official": [
+        "ışık şiddeti",
+        "ışık akısı",
+        "aydınlanma",
+        "merkez",
+        "tepe noktası",
+        "asal eksen",
+        "ortamın ışığı kırma indisi",
+        "Snell Yasası",
+        "tam yansıma",
+        "sınır açısı",
+        "görünür derinlik",
+        "fiber optik"
+      ],
+      "field_skills": [
+        "FBAB1. Bilimsel Gözlem",
+        "FBAB7. Deney Yapma",
+        "FBAB8. Bilimsel Çıkarım Yapma",
+        "FBAB9. Bilimsel Model Oluşturma",
+        "FBAB11. Tümdengelimsel Akıl Yürütme"
+      ],
+      "conceptual_skills": [
+        "KB2.6. Bilgi Toplama",
+        "KB2.7. Karşılaştırma"
+      ],
+      "dispositions": [
+        "E1.1. Merak",
+        "E1.3. Azim ve Kararlılık",
+        "E1.5. Kendine Güvenme (Öz Güven)",
+        "E3.1. Muhakeme",
+        "E3.3. Yaratıcılık",
+        "E3.4. Gerçeği Arama",
+        "E3.5. Açık Fikirlilik",
+        "E3.6. Analitiklik",
+        "E3.7. Sistematiklik",
+        "E3.8. Soru Sorma"
+      ],
+      "social_emotional_skills": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB1.2. Kendini Düzenleme (Öz Düzenleme)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB3.1. Uyum",
+        "SDB3.2. Esneklik",
+        "SDB3.3. Sorumlu Karar Verme"
+      ],
+      "values": [
+        "D1. Adalet",
+        "D3. Çalışkanlık",
+        "D16. Sorumluluk",
+        "D17. Tasarruf",
+        "D19. Vatanseverlik"
+      ],
+      "literacy_skills": [
+        "OB1. Bilgi Okuryazarlığı",
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı"
+      ],
+      "interdisciplinary_links": [
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "cross_skill_links": [
+        "KB2.11. Gözleme Dayalı Tahmin Etme",
+        "KB2.12. Mevcut Bilgiye/Veriye Dayalı Tahmin Etme",
+        "KB2.14. Yorumlama",
+        "KB2.15. Yansıtma",
+        "KB3.1. Karar Verme",
+        "KB3.2. Problem Çözme"
+      ],
+      "basic_assumptions_official": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+      "pre_assessment_official": "Işın, ışık ve aydınlanma kavramlarına ilişkin ve düzlem ayna, küresel ayna ve merceklerin temel özellikleri hakkında sorular sorulabilir.",
+      "bridging_official": "Günlük hayatta kullanılan düzlem ayna, küresel ayna, mercek ve optik araçlarla kurulan sistemler arasında ilişki kurulabilir.",
+      "assessment_official": "Öğrenme çıktıları; çalışma yaprağı, ürün veya model tasarlama, çizimler, tablo oluşturma, farklı madde türleri içeren testler, poster veya slayt gösterisi kullanılarak değerlendirilebilir. Işık şiddeti, ışık akısı ve aydınlanma kavramlarını veri setini kullanarak tanımlamaya yönelik kavram haritası hazırlama ve bu kavramların operasyonel tanımlarını açıklamaya yönelik açık uçlu sorular içeren bir çalışma yaprağı verilebilir. Düzlem aynada yansıma ve görüntü oluşumunun kurallarını kullanarak bir günlük hayat problemine çözüm olabilecek ürün ya da model tasarlamaya yönelik bir performans görevi verilebilir. Öz ve akran değerlendirme formu ve problem tanımlama, bilgi toplama, sınırlılıkları belirleme, özgün ürün ortaya koyma basamaklarını içeren dereceli puanlama anahtarı ile değerlendirilebilir. Küresel aynaların yapılarına ilişkin yapılan karşılaştırmaları listelemek için kullanılabilecek nitelik sıralama, anlam çözümleme veya sınıflandırma tabloları ile yapılan çizimlerin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Küresel aynalardaki deney sürecine yönelik kontrol listesi, öz ve akran değerlendirme formları ile küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapılabilir. Işığın saydam ortamlardaki davranışını açıklamaya yönelik deney düzeneği tasarlanması istenir. Hazırlanan deney düzeneğinin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Görünür derinlikte cismin bulunduğu gerçek derinlik ile görünür derinliğin ortamların kırıcılık indislerine bağlı olarak farklı olduğunu değerlendirmede açık uçlu maddelerden oluşan bir test kullanılabilir. Açık uçlu maddeler puanlama anahtarlarıyla değerlendirilebilir. Fiber optik malzemelerin yapısı ve kullanım alanlarına ilişkin hazırlanan poster veya slayt gösterisinin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Prizmalarda tek renkli ışığın izlediği yola ilişkin hipotezlerin olduğu çalışma kâğıdının değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Gözlemlere dayanarak merceklerde ışının hareketine ilişkin çizimler yapmaları; nitelik sıralama, anlam çözümleme tablosu veya sınıflandırma tablosu kullanılarak yakınsak ve ıraksak merceklerin benzer ve farklı özelliklerini listelemeleri istenebilir. Hazırlanan çizim ve listelerin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Merceklerde farklı yerlerde olan cisimlerin görüntülerinin özelliklerini içeren farklı türde sorulardan oluşan testi kullanarak değerlendirme yapılabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "enrichment_official": [
+        {
+          "official_text": "Kırılma olayında paralel ortamlarda kayma miktarını belirleyen değişkenler incelenebilir. Aydınlatma sistemlerinde kırılmanın kullanımı, refraktometre cihazının çalışma prensibi ve kullanım alanları araştırılabilir. Fiber optik hatlarda yaşanan sorunlara ilişkin araştırma yaparak çözüm önerileri geliştirilebilir. İbnülheysem'in optik bilimi adına yapmış olduğu çalışmalar ve “optik ve mekanik analojisi” araştırılabilir.",
+          "mandatory_in_science_high_schools": false
+        },
+        {
+          "official_text": "Mercek ve ayna sistemlerinin bütünleşik kullanıldığı sistemler araştırılarak bu sistemlere ilişkin bir model geliştirilebilir.",
+          "mandatory_in_science_high_schools": true
+        },
+        {
+          "official_text": "Teleskop, mikroskop, dürbün gibi optik sistemlerden birini belirleyerek bunların tarihsel serüvenleri, diğer bilim alanlarındaki kullanımları ve çalışma ilkeleri hakkında sunum hazırlanabilir. Sunumlarda Kemâleddin el-Fârisî ile Freibergli Theodoric'in yaptıkları çalışmalara yer vermeleri istenebilir.",
+          "mandatory_in_science_high_schools": true
+        }
+      ],
+      "support_official": [
+        "Küresel aynalarda hazır verilen model üzerinde incelemeler yapılabilir. Kırılma yasalarına ilişkin hazır deney düzeneği verilebilir. Fiber optik sistemler için bilgiler öğretmen tarafından verilebilir. Prizmalar ve merceklerde hazır modeller üzerinden incelemeler yapılabilir."
+      ],
+      "web_page_updated": "05.08.2026",
+      "sources": [
+        "src-meb-fizik-op-2026",
+        "src-tymm-fiz11-unite3"
+      ],
+      "confidence": "HIGH"
+    }
+  ]
+}

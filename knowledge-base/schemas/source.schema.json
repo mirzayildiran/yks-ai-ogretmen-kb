@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "required": ["id", "title", "organization", "tier", "source_type", "url", "access_date", "reliability", "status", "notes"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^src-[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "organization": {"type": "string"},
+    "tier": {"enum": [1, 2, 3, 4], "description": "1 MEB/ÖSYM, 2 akademik, 3 yayıncı, 4 blog/forum"},
+    "source_type": {"type": "string"},
+    "url": {"type": "string"},
+    "publication_date": {"type": ["string", "null"]},
+    "access_date": {"type": "string"},
+    "reliability": {"enum": ["HIGH", "MEDIUM", "LOW", "UNVERIFIED"]},
+    "status": {"enum": ["used_primary", "used_secondary", "collected_for_prerequisites", "downloaded_not_analyzed",
+                        "download_failed", "superseded_not_compared", "not_yet_used", "conflicting_rejected"]},
+    "used_for": {"type": "array", "items": {"type": "string"}},
+    "local_path": {"type": "string"},
+    "sha256": {"type": "string"},
+    "bytes": {"type": "integer"},
+    "notes": {"type": "string"}
+  }
+}

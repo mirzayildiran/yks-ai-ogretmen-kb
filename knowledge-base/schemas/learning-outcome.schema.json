@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "learning-outcome.schema.json",
+  "title": "Learning Outcome",
+  "description": "MEB öğrenme çıktısı. official_* alanları resmî metni birebir taşır; parafraz içermez.",
+  "type": "object",
+  "required": ["id", "official_code", "official_text", "subject", "grade", "curriculum_version", "unit_id", "unit",
+               "subtopic", "process_components", "skills", "sources", "confidence", "created_at", "updated_at"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^phys11-lo-[0-9]{3}$"},
+    "official_code": {"type": "string", "pattern": "^FİZ\\.11\\.[1-9]\\.[0-9]{1,2}$"},
+    "official_text": {"type": "string", "minLength": 10},
+    "subject": {"const": "physics"},
+    "grade": {"const": 11},
+    "curriculum_version": {"type": "string"},
+    "unit_id": {"type": "string", "pattern": "^phys11-unit-[0-9]+$"},
+    "unit": {"type": "string"},
+    "subtopic": {
+      "type": "object",
+      "required": ["topic_id", "official_title", "mapping_method", "confidence"],
+      "properties": {
+        "topic_id": {"type": "string"},
+        "official_title": {"type": "string"},
+        "mapping_method": {"enum": ["official", "derived_from_titles"]},
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNVERIFIED"]}
+      }
+    },
+    "process_components": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["id", "label", "official_text"]}
+    },
+    "skills": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["code", "mapping_method", "confidence"]}
+    },
+    "official_teaching_practice": {"type": "string"},
+    "official_scope_constraints": {"type": "array", "items": {"type": "string"}},
+    "concepts": {"type": "array", "items": {"type": "string", "description": "concept id (STEP 5)"}},
+    "prerequisites": {"type": "array", "items": {"type": "string"}},
+    "mathematical_prerequisites": {"type": "array", "items": {"type": "string"}},
+    "measurable_behaviors": {"type": "array"},
+    "common_misconceptions": {"type": "array"},
+    "assessment_implications": {"type": "array"},
+    "pending_fields": {"type": "array", "items": {"type": "string"}},
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["source_id", "fields"]}
+    },
+    "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNVERIFIED"]},
+    "created_at": {"type": "string", "format": "date"},
+    "updated_at": {"type": "string", "format": "date"}
+  }
+}

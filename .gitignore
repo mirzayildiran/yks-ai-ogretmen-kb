@@ -1,0 +1,4 @@
+.DS_Store
+__pycache__/
+# Büyük resmî PDF'ler depoya konmaz; URL ve SHA-256 kayıtları sources.json içinde.
+knowledge-base/physics-11/sources/raw/pdf/

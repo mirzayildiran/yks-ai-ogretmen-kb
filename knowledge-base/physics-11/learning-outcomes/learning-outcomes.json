@@ -1,0 +1,2510 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "primary_source": "src-meb-fizik-op-2026",
+  "generated_by": "scripts/build_curriculum.py",
+  "generated_at": "2026-10-01",
+  "count": 33,
+  "learning_outcomes": [
+    {
+      "id": "phys11-lo-001",
+      "official_code": "FİZ.11.1.1",
+      "official_text": "Serbest düşme hareketi yapan cisimlerin ivmesine yönelik tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-1",
+        "official_title": "Serbest Düşme",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-001-a",
+          "label": "a",
+          "official_text": "Serbest düşme hareketi yapan cisimleri gözlemleyerek ivme ve hız değişimleri arasındaki ilişkiyi bulur."
+        },
+        {
+          "id": "phys11-lo-001-b",
+          "label": "b",
+          "official_text": "Serbest düşme hareketi yapan cisimlerin ivmesi hakkında genelleme yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar. Öğrencilerden görsellerdeki cisimlerin hareketini gözlemleyerek sınıf tartışması ile serbest düşen cisimlerin ivmesine ilişkin açıklama getirmesi istenir. Öğrenciler tartışma sırasında kendi iddialarını ve destekleyicilerini açıklar varsa akranlarının karşıt iddialarına yönelik çürütücülerini belirterek yer çekimi ivmesi ile hız değişimi arasındaki ilişkiye yönelik fikir birliği ile çıkarımda bulunur. Serbest düşme hareketi yapan cisimlerin ivmeleriyle ilgili genelleme yapar. Yer çekimi ivmesi sabit kabul edilir. Öğrencilerden serbest düşme hareketi ile ilgili poster hazırlayarak sunmaları istenebilir.",
+      "official_scope_constraints": [
+        "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar.",
+        "Yer çekimi ivmesi sabit kabul edilir."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-002",
+      "official_code": "FİZ.11.1.2",
+      "official_text": "Serbest düşme hareketi ile ilgili kanıt kullanabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-1",
+        "official_title": "Serbest Düşme",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-002-a",
+          "label": "a",
+          "official_text": "Serbest düşme hareketi ile ilgili verileri toplayarak kaydeder."
+        },
+        {
+          "id": "phys11-lo-002-b",
+          "label": "b",
+          "official_text": "Serbest düşme hareketi ile ilgili veri setleri oluşturur."
+        },
+        {
+          "id": "phys11-lo-002-c",
+          "label": "c",
+          "official_text": "Serbest düşme hareketini verilere dayalı olarak açıklar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB12",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler, deney ya da dijital içerikler yolu ile düşey doğrultuda ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini gözlemleyerek hız, ivme, konum, zaman ve yer değiştirme ile ilgili verileri toplayıp kaydeder. Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur. Ön öğrenmelerindeki ivmeli hareket grafiklerini dikkate alarak oluşturduğu veri setleri üzerinden hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer. Düşeyde serbest düşen cisimlerin hareketini grafiklere ve veriye dayalı olarak açıklar. Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır. Öğrenciler düşey düzlemde ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini açıklayacakları kısa rapor hazırlayabilir.",
+      "official_scope_constraints": [
+        "Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur.",
+        "Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-003",
+      "official_code": "FİZ.11.1.3",
+      "official_text": "İki boyutta sabit ivmeli hareket ile ilgili tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-2",
+        "official_title": "İki Boyutta Sabit İvmeli Hareket",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-003-a",
+          "label": "a",
+          "official_text": "İki boyutta sabit ivmeli hareketin bileşenleri ile sabit hızlı ve sabit ivmeli hareket arasındaki ilişkiyi bulur."
+        },
+        {
+          "id": "phys11-lo-003-b",
+          "label": "b",
+          "official_text": "İki boyutta sabit ivmeli harekete yönelik genelleme yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler, iki boyutta sabit ivmeyle hareket eden cisimlerin hareketlerini animasyon, simülasyon ya da video gibi dijital içerikler yolu ile gözlemler. Öğrenciler, öğretmen rehberliğinde gruplar oluşturup küçük grup tartışmalarında akranlarıyla iletişim kurarak hareketin bileşenlerini yatay ve düşey eksende ayrı ayrı ele alır. Öğretmen, öğrencilerin trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine yönelik farkındalık kazandırır. Öğrenciler, vektörlerin bileşenlerine ayrılarak toplanmasıyla ilgili problem çözümlerinde de trigonometrik hesaplamaları kullanabileceğini fark eder. Öğrenciler, yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden cisimlerin hareketini gözlemler. Bu hareketi yapan cisimlerin hız, ivme ve yer değiştirme değişkenlerini inceleyerek hareket bileşenlerini eksenlere göre sabit hızlı ve sabit ivmeli hareket ile ilişkilendirir. Öğretmen, her gruptan bir temsilcinin iki boyutta sabit ivmeyle hareket eden cisimlerin hareketine yönelik gruplarının iddialarını ve gerekçelerini sunmalarını isteyebilir. Grup temsilcileri, hareketin farklı boyutlardaki hız, ivme ve yer değiştirme değişkenlerine yönelik kendi gruplarının iddialarını ve gerekçelerini ifade eder; varsa akranlarının karşıt iddialarına yönelik çürütücü fikirlerini etki altında kalmadan sunar. Büyük grup tartışması neticesinde öğrenciler iki boyutta sabit ivmeli hareket eden cisimlerin hareketi ile ilgili genellemelere ulaşır. ‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır. Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
+      "official_scope_constraints": [
+        "‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-004",
+      "official_code": "FİZ.11.1.4",
+      "official_text": "Newton'ın Hareket Yasaları ile ilgili tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-3",
+        "official_title": "Newton'ın Hareket Yasaları",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-004-a",
+          "label": "a",
+          "official_text": "Bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkileri keşfeder."
+        },
+        {
+          "id": "phys11-lo-004-b",
+          "label": "b",
+          "official_text": "Newton'ın Hareket Yasalarına yönelik genellemeler yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, İbni Sina’nın mekanik konusundaki çalışmalarını anlatan bir metin kullanarak çalışmaları hakkında farkındalık oluşturur. Öğrencilere bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkilerin gözlenebildiği bir deney yaptırılır ya da animasyon, simülasyon veya video gösterimi gibi dijital içeriklerden biri kullanılabilir. Öğrenciler deney veya dijital içeriklerdeki hareket veya olayları tartışma yöntemi ile yorumlar. Dijital içeriklerdeki hareket veya olaylara ilişkin iddialarını, destekleyicilerini ve varsa akranlarından farklı düşündüğü durumlarda çürütücülerini sunar. Öğrencilerin iddialarını ortaya koyarken ön öğrenmelerinde yer alan ivme kavramı ile ilişki kurması sağlanır. Öğrenciler, sınıf tartışması neticesinde bileşke kuvvet ve cisimlerin hareketleri arasındaki ilişkileri keşfeder. Öğrenciler, soru cevap veya beyin fırtınası gibi tekniklerle desteklenen tartışma ortamında keşfettiği ilişkiler üzerinden Newton'ın Hareket Yasalarına yönelik genellemeler yapar. Öğrencilere Newton'ın Hareket Yasalarına yönelik örnekler vermeleri için çıkış kartı verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-005",
+      "official_code": "FİZ.11.1.5",
+      "official_text": "Newton'ın Hareket Yasalarını serbest cisim diyagramını kullanarak yorumlayabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-3",
+        "official_title": "Newton'ın Hareket Yasaları",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-005-a",
+          "label": "a",
+          "official_text": "Bir cisme etki eden kuvvetleri belirler."
+        },
+        {
+          "id": "phys11-lo-005-b",
+          "label": "b",
+          "official_text": "Bir cisme etki eden kuvvetleri serbest cisim diyagramı üzerinde gösterir."
+        },
+        {
+          "id": "phys11-lo-005-c",
+          "label": "c",
+          "official_text": "Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını yeniden ifade eder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.14",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, birden fazla kuvvetin etkisinde kalan cisimlerle ilgili görseller gösterir. Öğrenciler görselleri yorumlayarak cisimler üzerine etki eden tüm kuvvetleri belirler. Öğrenciler belirledikleri kuvvetleri serbest cisim diyagramını kullanarak gösterir. Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını kendi cümleleriyle yeniden ifade eder. Serbest cisim diyagramı kullanmanın bir cisme etki eden net kuvvetin hesaplanması ile ilgili matematiksel problemlerin çözümündeki işlevini analitik bakış açısıyla tartışır. Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır. Sabit ivmeli hareket ile sınırlı kalınır. Serbest cisim diyagramları hakkında farklı soru türleri içeren bir çalışma yaprağı verilebilir.",
+      "official_scope_constraints": [
+        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
+        "Sabit ivmeli hareket ile sınırlı kalınır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-006",
+      "official_code": "FİZ.11.1.6",
+      "official_text": "Statik ve kinetik sürtünme kuvvetlerini karşılaştırabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-4",
+        "official_title": "Sürtünme Kuvveti",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-006-a",
+          "label": "a",
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin özellikleri belirler."
+        },
+        {
+          "id": "phys11-lo-006-b",
+          "label": "b",
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin benzerlikleri listeler."
+        },
+        {
+          "id": "phys11-lo-006-c",
+          "label": "c",
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin farklılıkları listeler."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, örnek olay ya da dijital içeriklerde yer alan görselleri yorumlayarak öğrencilerin harekete zorlanmasına rağmen durmakta olan, kayarak öteleme hareketi yapmakta olan ve dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini fark etmesini sağlar. Öğrenciler, statik ve kinetik sürtünme kuvvetlerinin özelliklerini belirleyerek bunları ifade eder. Öğrenciler, soru cevap tekniğinin kullanıldığı etkileşimli ortamda görsellerde yer alan sürtünme kuvvetinin temel bileşenlerini, statik ve kinetik sürtünme kuvvetinin benzerliklerini ve farklılıklarını sorgulayarak listeler. Öğrencilere, statik ve kinetik sürtünme kuvvetlerini karşılaştırabilmeleri için yapılandırılmış grid verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-007",
+      "official_code": "FİZ.11.1.7",
+      "official_text": "Sürtünme kuvvetinin matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-4",
+        "official_title": "Sürtünme Kuvveti",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-007-a",
+          "label": "a",
+          "official_text": "Sürtünme kuvvetinin bağlı olduğu değişkenler arasındaki ilişkiyi keşfederek matematiksel modeline ulaşır."
+        },
+        {
+          "id": "phys11-lo-007-b",
+          "label": "b",
+          "official_text": "Farklı veri setleri ile hesaplamalar yaparak sürtünme kuvvetinin matematiksel modelini geneller."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler, simülasyon gibi dijital içerikler yoluyla ya da deney yardımıyla kayarak öteleme hareketinde zorlanmasına rağmen duran ve sabit hızla hareket eden cisimlere etki eden sürtünme kuvvetinin bağlı olduğu değişkenleri gözlemler. Öğrenciler, sınıf tartışması yolu ile gözlemlerine yönelik çıkarımlarını simülasyon veya deney yoluyla elde ettiği verilerle destekleyerek ifade eder. Tartışma sonucunda sürtünme kuvvetinin matematiksel modeline ulaşır. Öğretmen, sürtünmeli ortamda hareket eden cisimlere yönelik problem durumları sunabilir. Öğrencilerden dijital içerik ya da deney verilerini kullanarak sürtünme kuvveti-uygulanan kuvvet grafiğini çizmeleri istenebilir. Öğrenciler, matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar ve modeli geneller. Kayarak öteleme ve dönerek öteleme hareketlerinde sürtünme kuvvetinin yönünün belirlendiği durumlara günlük hayattan örnekler verir. Öğrencilere, sürtünme kuvveti ile ilgili hesaplamalar yapmaları için farklı soru türlerinden oluşan bir test verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-008",
+      "official_code": "FİZ.11.1.8",
+      "official_text": "Limit hızı etkileyen değişkenler ile ilgili bilimsel çıkarım yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-5",
+        "official_title": "Limit Hız",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-008-a",
+          "label": "a",
+          "official_text": "Limit hızı etkileyen değişkenleri tanımlar."
+        },
+        {
+          "id": "phys11-lo-008-b",
+          "label": "b",
+          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri toplayarak kaydeder."
+        },
+        {
+          "id": "phys11-lo-008-c",
+          "label": "c",
+          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri yorumlayarak değerlendirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB8",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Profesyonel bir paraşütçünün uçaktan atlama deneyimine yönelik video üzerinden öğrencilerin paraşütçünün hareketini ve hareketine etki eden değişkenleri tartışıp yorumlaması sağlanır. Öğrencilerin yorumları alındıktan sonra öğretmen özdeş kâğıtlardan birini yatay, diğerini buruşturulmuş olmak üzere iki farklı şekilde serbest bırakarak basit gösteri deneyi gerçekleştirebilir. Yatay ve buruşturulmuş olarak bırakılan özdeş kâğıtların havada kalma süreleri arasındaki ve düşey hızları arasındaki farklılıkların nedenleri soru cevap etkinliğiyle sorgulanabilir. Sınıf tartışmasında öğrenciler kendi iddialarını ve destekleyicilerini paraşüt hareketini de kullanarak ortaya koyabilir. Yapılan tartışmalar neticesinde, öğrencilerin limit hıza etki eden değişkenleri sürtünme kuvveti ile ilişkilendirerek tanımlamaları sağlanır. Öğretmen, öğrencileri simülasyon kullanarak limit hıza etki eden değişkenlerle ilgili veri toplamaya yönlendirebilir. Öğrenciler, limit hıza etki eden değişkenlerin büyüklüğünü değiştirerek limit hızın aldığı değerleri kaydeder. Öğrenciler kendi iddialarını, tekrar eden gözlemleri ve gözlemler esnasında kaydettikleri verileri kullanarak gerekçelendirir. Kendi iddialarını ve gerekçelerini, varsa arkadaşlarının karşıt iddialarına yönelik çürütücülerini saygı çerçevesinde ve yapıcı olarak ifade eder, limit hızı etkileyen değişkenleri değerlendirir. Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır. Öğrenciler limit hızı etkileyen faktörler hakkında bilgi görseli hazırlayabilir.",
+      "official_scope_constraints": [
+        "Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-009",
+      "official_code": "FİZ.11.1.9",
+      "official_text": "Düzgün çembersel hareket yapan cisimlerin yörüngeleri ve hız vektörleri hakkında analojik akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-6",
+        "official_title": "Düzgün Çembersel Hareket",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-009-a",
+          "label": "a",
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerini gözlemler."
+        },
+        {
+          "id": "phys11-lo-009-b",
+          "label": "b",
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder."
+        },
+        {
+          "id": "phys11-lo-009-c",
+          "label": "c",
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin benzerliklerinden yola çıkarak yörüngeleri ve hız vektörü hakkında çıkarım yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.16.3",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, öğrencilerin ön bilgilerinde yer alan Türksat uydularının Dünya etrafındaki dolanımı ya da lunaparklardaki dönme dolap gibi çeşitli eğlence araçlarının hareketlerini yorumlamaları için düzgün çembersel hareket yapan farklı cisimleri görsel içerikli dijital araçlar ile gösterir. Öğrenciler görsellere odaklanarak, görsellerde yer alan hareketleri inceler. Öğrenciler, soru cevap tekniği yardımıyla görsellerde yer alan hareketlilerin yörüngeleri, yörüngelerinin merkez noktaları ve hızları hakkında görüşlerini ifade ederek düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder. Öğretmen, öğrencilerin vektörel niceliklerle ilgili ön bilgilerini hatırlamalarına yardımcı olur ve birbirinden farklı düzgün çembersel hareket yapan cisimlerin herhangi bir konumdaki hız vektörlerinin yönlerini çizmelerini ister. Öğrenciler, düzgün çembersel hareket yapan cisimlerin hareketlerindeki benzerliklerden yola çıkarak hız vektörü ile yörüngelerinin yarıçap vektörünün yönlerine yönelik çıkarımda bulunur. Öğrenciler hız ve yarıçap vektörünün yönlerine yönelik açık uçlu sorulardan oluşan çalışma yaprağı ile değerlendirilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-010",
+      "official_code": "FİZ.11.1.10",
+      "official_text": "Düzgün çembersel hareketin değişkenleri arasındaki ilişkilerin matematiksel olarak modellenmesine ilişkin tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-1",
+      "unit": "KUVVET VE HAREKET",
+      "subtopic": {
+        "topic_id": "phys11-topic-1-6",
+        "official_title": "Düzgün Çembersel Hareket",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-010-a",
+          "label": "a",
+          "official_text": "Düzgün çembersel hareketin değişkenlerini keşfederek aralarındaki ilişkileri matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-010-b",
+          "label": "b",
+          "official_text": "Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Düzgün çembersel hareketle ilgili temel kavramları (çizgisel sürat, açısal hız, çizgisel hız, merkezcil ivme, açısal ivme ve merkezcil kuvvet) içeren video veya animasyon izletebilir. Öğretmen, öğrencilerden düzgün çembersel hareketin temel değişkenlerinden en az iki tanesinin karşılıklı etkileşimini gösteren drama etkinliği yapmalarını ister. Öğrencilerden, akranlarına değişkenleri doğru aktarabilmek için hazırlayacakları senaryo üzerinde tartışarak görüş birliğine varmaları istenir. Öğretmen, canlandırma etkinliği öncesinde gruplar tarafından hazırlanan bütün senaryoları inceleyerek temel değişkenlerin tamamının senaryolar kapsamında yer aldığından emin olur. Öğrenciler hazırladıkları senaryoları canlandırır. Öğrenciler, canlandırma etkinlikleri sonrasında gruplar arası tartışma yolu ile değişkenlere ve değişkenler arasındaki ilişkiye yönelik iddialarını, gerekçelerini ve varsa karşıt iddialara sahip olan arkadaşlarına yönelik çürütücülerini saygı çerçevesinde ifade eder. Gruplar arası tartışma ile öğrenciler değişkenler arasındaki ilişkileri keşfederek bu ilişkileri matematiksel olarak modeller. Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller. Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır. Düzgün çembersel hareket ile ilgili değişkenleri göstermek için bir kısa film çekilmesi ya da animasyon hazırlanması performans görevi olarak verilebilir. Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir.",
+      "official_scope_constraints": [
+        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite1",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-011",
+      "official_code": "FİZ.11.2.1",
+      "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeline yönelik tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-1",
+        "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-011-a",
+          "label": "a",
+          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin bağlı olduğu değişkenler arasındaki keşfettiği ilişkiyi matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-011-b",
+          "label": "b",
+          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeli üzerinden genellemeler yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen bu çıktının öğretiminde 5E öğrenme modelinden yararlanabilir. Öğretmen, öğrencilere otomobillerin üretim aşamasında homojen olarak boyanması veya fotokopi makinelerinde bir metnin çoğaltılması ile ilgili sorular sorabilir. Öğretmen elektriksel kuvvetin günlük hayattaki rolünden bahsederek bu tür uygulamalarda elektriksel kuvvetin önemini vurgulayabilir. Öğrencilerin konuya yönelik ilgileri çekilir ve yeni öğreneceği bilgilere ihtiyaçları olduğunu fark etmeleri sağlanır. Öğretmen rehberliğinde öğrenciler gruplara ayrılır. Öğrencilere noktasal yükler arasındaki elektriksel kuvvetin büyüklüğünün bağlı olduğu faktörlere yönelik sorular sorularak gruplardan iş birliği ile hipotezler oluşturmaları istenir. Gruplar etkileşimli bir simülasyon aracılığıyla veri toplayarak tablo şeklinde kaydedebilir. Gruplardan tablodaki verilere dayalı olarak grafikler oluşturmaları, grafikleri kullanarak hipotezlerini desteklemeleri veya yanlışlamaları istenebilir. Gruplar simülasyon, tablo ve grafikler üzerinden topladıkları verilerden yararlanarak ve fikir alışverişinde bulunarak elektriksel kuvvetin bağlı olduğu faktörler arasındaki ilişkiyi keşfeder ve bu ilişkiyi matematiksel olarak modeller. Öğretmen Coulomb sabitinden bahsederek öğrencilerin yaptıkları çıkarımları açıklayan matematiksel modelin Coulomb Yasası olarak adlandırıldığını belirtir. Gruplar elektrik yüklü bir yalıtkanı belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir. Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin Coulomb Yasası'nı kavrama durumları, farklı madde türlerinden oluşan bir soru kutusu hazırlanarak değerlendirilebilir.",
+      "official_scope_constraints": [
+        "Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir.",
+        "Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-012",
+      "official_code": "FİZ.11.2.2",
+      "official_text": "Elektriksel alanın matematiksel modeline yönelik tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-1",
+        "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-012-a",
+          "label": "a",
+          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alana ilişkin keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-012-b",
+          "label": "b",
+          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alanın matematiksel modeli üzerinden genellemeler yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen elektrik yüklerinin oluşturduğu elektriksel alanı açıklamak için 5E öğrenme modelinden yararlanabilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak elektriksel alanın bağlı olduğu faktörler hakkında sorular sorar. Gruplar hipotezlerini oluşturarak not edebilir. Öğrenciler hipotezlerini test edebilecekleri bir simülasyon aracılığıyla ölçümler yaparak verileri tablo şeklinde kaydeder. Öğrenciler, toplanan verilerle oluşturulan grafikleri kullanarak elektriksel alanın bağlı olduğu faktörleri keşfeder ve elektriksel alana ilişkin buldukları ilişkileri öğretmen rehberliğinde matematiksel olarak modeller. Gruplar elektrik yüklü yalıtkan çubuğu belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir. Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin elektriksel alanı kavrama durumları, farklı madde türlerinin bulunduğu soru kutusu yardımıyla değerlendirilebilir.",
+      "official_scope_constraints": [
+        "Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir.",
+        "Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-013",
+      "official_code": "FİZ.11.2.3",
+      "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgi toplayabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-1",
+        "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
+        "mapping_method": "derived_from_titles",
+        "confidence": "MEDIUM"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-013-a",
+          "label": "a",
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+        },
+        {
+          "id": "phys11-lo-013-b",
+          "label": "b",
+          "official_text": "Belirlediği kaynağı kullanarak Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgileri bulur."
+        },
+        {
+          "id": "phys11-lo-013-c",
+          "label": "c",
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri doğrular."
+        },
+        {
+          "id": "phys11-lo-013-ç",
+          "label": "ç",
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri kaydeder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.6",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, yolculuk sırasında uçaklara ve kara ulaşım araçlarına yıldırım çarpınca yolcuların etkilenmemesinin, cep telefonlarının asansör içerisinde genellikle baz istasyonuyla bağlantısının kesilmesi ya da MR cihazlarının bulunduğu odaların metal kaplı olmasının nedenleri gibi günlük hayattan örneklerle öğrencilerin dikkatlerini çekebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğrenciler konu hakkındaki bilgilere ulaşabilmek için kullanacağı kaynakları (genel ağ, kütüphaneler, dergiler vb.) belirler. Gruplar belirledikleri kaynaklar yoluyla Faraday kafesi ve kullanım alanlarına yönelik bilgilere ulaşır. Faraday kafesi ve kullanım alanları hakkında derlenen bilgiler sınıfla paylaşılır. Öğrenciler tartışma ortamında topladıkları bilgileri doğrular. Doğruluğu teyit edilen bilgilerden yararlanarak Faraday kafesi ve kullanım alanları ile ilgili sunum hazırlayabilir. Öz değerlendirme veya akran değerlendirme formu ile değerlendirme yapılabilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-014",
+      "official_code": "FİZ.11.2.4",
+      "official_text": "Mıknatısların birbiriyle etkileşimine yönelik bilimsel gözlem yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-014-a",
+          "label": "a",
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili nitelikleri tanımlar."
+        },
+        {
+          "id": "phys11-lo-014-b",
+          "label": "b",
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri toplayarak kaydeder."
+        },
+        {
+          "id": "phys11-lo-014-c",
+          "label": "c",
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB1",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen öğrencilere kuşların göç yollarındaki önemli uğrak noktalarından birinin de Türkiye olduğunu vurgulayarak, göç sırasında kuşların veya balina ve yunus gibi hayvanların yön bulma yetenekleri hakkında sorular sorar. Cevaplardan sonra insanların yönlerini bulma yöntemleri hakkında da sorular sorabilir. Bilim ve medeniyet tarihinde yer alan bilim insanlarının pusula ile ilgili yaptıkları çalışmalar hakkında bilgi verebilir. Öğrenciler pusulanın çalışma prensibinden yola çıkarak mıknatısların birbirleriyle etkileşimi ile ilgili nitelikleri tanımlar. Mıknatıs isminin Manisa ili ile olan ilişkisi de vurgulanabilir. Öğrenciler mıknatısların etkileşimlerinin manyetik alan çizgileriyle temsil edilebileceğini gözlemleyebilecekleri bir deney tasarlar. Öğrenciler, tasarladıkları deney düzeneği üzerinden manyetik alan büyüklüğüyle alan çizgilerinin sıklığı arasındaki ilişkiyle ilgili verileri toplayıp kaydeder. Öğrenciler mıknatısların birbirleriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar. Öğretmen Dünya'nın manyetik alanının ve manyetik alan büyüklüğünün manyetik alan çizgileriyle açıklanabileceğini ifade eder. Mıknatısların oluşturduğu manyetik alan ve özelliklerini sorgulamak için bir çıkış kartı verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-015",
+      "official_code": "FİZ.11.2.5",
+      "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-015-a",
+          "label": "a",
+          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli bulur."
+        },
+        {
+          "id": "phys11-lo-015-b",
+          "label": "b",
+          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli geneller."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen okul bahçesinde öğrencilere pusula kullanılan oryantiring (yönbul) gibi bir yarışa veya arama kurtarma faaliyetlerine dayalı bir etkinlik yaptırabilir. Öğrencilere bu tür yarışlarda veya arama kurtarma faaliyetlerinde pusulaların her yerde doğru çalışıp çalışmadığı sorulabilir. Ørsted’in, üzerinden akım geçen bir iletken ve pusula ile yaptığı çalışmalardan bahsedilebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak Ørsted’in deneyi ile benzerlik gösteren bir deney tasarlar. Manyetik alanın iletkene olan uzaklığı ve elektrik akımının büyüklüğünün değişimi hakkında öğrenci görüşleri alınarak hipotezler kurulur.Öğretmen manyetik alan katsayısı ve sağ el kuralı ile ilgili bilgi verir. Öğrenciler, deney düzeneği üzerinden hipotezlerini test eder. Manyetik alanın, iletkene olan uzaklığı ve elektrik akımının değişimi ile ilişkisini keşfeder ve matematiksel olarak modeller. Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller. Öğrencilere, tasarladıkları deneyle ilgili öz değerlendirme formu verilebilir.",
+      "official_scope_constraints": [
+        "Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-016",
+      "official_code": "FİZ.11.2.6",
+      "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-016-a",
+          "label": "a",
+          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alana ilişkin keşfettiği ilişkiyi matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-016-b",
+          "label": "b",
+          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeli üzerinden genelleme yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, düz bir iletken yerine akım makarası kullanılması durumunda oluşacak manyetik alanın yönü ve büyüklüğüne yönelik sorular sorabilir. Akım makarasından geçen akım, sarım sayısı ve akım makarasının boyunda yapılacak değişiklikler sonucu merkez ekseninde oluşan manyetik alandaki değişim hakkında Sokratik sorgulama yöntemini kullanarak öğrencilerin görüşlerini alabilir ve hipotez oluşturmalarını isteyebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak ve hipotezlerini test edecekleri deneyler tasarlayarak veri toplar. Öğrenciler veri analizine dayalı olarak manyetik alanın büyüklüğünün akım ve uzunlukla olan ilişkisini keşfederek matematiksel modele ulaşır. Matematiksel modele dayanarak akım makarasının merkez ekseninde oluşan manyetik alana yönelik genelleme yapar.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-017",
+      "official_code": "FİZ.11.2.7",
+      "official_text": "Elektromıknatısların kullanım alanlarına ilişkin bilgi toplayabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "MEDIUM"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-017-a",
+          "label": "a",
+          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+        },
+        {
+          "id": "phys11-lo-017-b",
+          "label": "b",
+          "official_text": "Belirlediği kaynağı kullanarak elektromıknatısların kullanım alanlarıyla ilgili bilgileri bulur."
+        },
+        {
+          "id": "phys11-lo-017-c",
+          "label": "c",
+          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili ulaştığı bilgilerin doğru olup olmadığını belirler."
+        },
+        {
+          "id": "phys11-lo-017-ç",
+          "label": "ç",
+          "official_text": "Elektromıknatısların günlük hayattaki kullanım alanlarıyla ilgili ulaştığı bilgileri kaydeder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.6",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Gruplar elektromıknatıslar hakkındaki bilgilere ulaşabilmek için kullanacağı genel ağ, kütüphaneler, dergiler ve uzman kişiler gibi kaynakları belirler. Gruplar belirledikleri güvenilir kaynaklar yoluyla elektromıknatısların kullanım alanlarına yönelik bilgilere ulaşır. Öğrenciler, elektromıknatısların kullanım alanları hakkında topladıkları bilgileri akranlarıyla paylaşır. Öğretmen yönlendirici sorular içeren tartışma ortamı sağlayabilir. Öğrenciler toplanan bilgilerin doğru olup olmadıklarını tartışarak belirler. Öğretmen, öğrencilerden yönlendirici sorular yardımıyla doğruluğu belirlenen bilgileri kaydederek elektromıknatısların kullanım alanları ile ilgili sunum hazırlamalarını ister. Akım makarasının merkez ekseninde oluşan manyetik alanla ve elektromıknatısların kullanım alanlarıyla ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-018",
+      "official_code": "FİZ.11.2.8",
+      "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel modele yönelik tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-018-a",
+          "label": "a",
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvetin etmenleri arasındaki keşfettiği ilişkiyi matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-018-b",
+          "label": "b",
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel model üzerinden genelleme yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrencilere, üzerinden akım geçen bir telin çevresinde manyetik alan oluşturduğu hatırlatılır. Öğrencilere, üzerinden akım geçen düz bir tel manyetik alana bırakıldığında manyetik alanın tele etkileri sorulur. Öğretmen manyetik alan içerisindeki akım geçen tele etki eden manyetik kuvvetin telin içerisinde hareketli yüklü parçacıklara etki eden kuvvetten kaynaklandığını vurgular. Öğrencilere iletken bir tel üzerinde manyetik kuvvet oluşmasını sağlayan etmenler hakkında sorular sorulur. Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Gruplar manyetik alanda akım geçen tele etki eden manyetik kuvvet ve büyüklüğünü etkileyen faktörler hakkında bir deney tasarlayarak veri toplar. Veri analizine dayalı olarak manyetik kuvvet ve büyüklüğünü etkileyen etmenler arasındaki ilişkiyi keşfeder ve matematiksel modele ulaşır. Öğrenciler manyetik alanda akım geçen tele etki eden manyetik kuvvetin büyüklüğünü etkileyen değişkenlere bağlı matematiksel modeli oluşturabilir. Öğretmen manyetik kuvvetin vektörel olduğundan bahsederek sağ el kuralını açıklar. Öğrenciler her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler üzerinden, manyetik kuvvet ile değişkenler arasındaki ilişkiyi geneller. Öğrencilerin grup içindeki performanslarını ölçmek üzere öz veya akran değerlendirme formu verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-019",
+      "official_code": "FİZ.11.2.9",
+      "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini elektrik motorlarının çalışma prensibine yansıtabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-2",
+        "official_title": "Manyetik Alan ve Manyetik Kuvvet",
+        "mapping_method": "derived_from_titles",
+        "confidence": "MEDIUM"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-019-a",
+          "label": "a",
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini gözden geçirir."
+        },
+        {
+          "id": "phys11-lo-019-b",
+          "label": "b",
+          "official_text": "Deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen telin bir eksen etrafında dönmesi hakkında çıkarım yapar."
+        },
+        {
+          "id": "phys11-lo-019-c",
+          "label": "c",
+          "official_text": "Yaptığı çıkarımları elektrik motorlarının çalışma prensibi açısından değerlendirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.15",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen öğrencilere fosil yakıtlı araçların yerlerini elektrikli araçların almaya başladığını ve Türkiye’nin de bu alanda girişimleri olduğunu söyler. Bu konuda güncel ve dikkat çekici haber metinleri öğrencilere gösterilebilir. Öğrencilere elektrikli motorların çalışma prensibi hakkında fikirleri olup olmadığı sorulabilir. Manyetik alandaki akım geçen düz tele etki eden kuvvet ile ilgili önceki bilgi ve deneyimleri hatırlatılır. Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Gruplara elektrik motorlarının iç yapıları ile ilgili görseller dağıtılabilir. Öğrenciler inceledikleri görsellere ve deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen şeklindeki telin bir eksen etrafında dönmesi hakkında çıkarım yapar. Öğrenciler çıkarımlara dayanarak basit bir elektrik motoru tasarlayıp çalıştırır. Görsellerden faydalanarak veya yaptıkları tasarımı kullanarak elektrik motorlarını, çalışma prensibi açısından değerlendirir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-020",
+      "official_code": "FİZ.11.2.10",
+      "official_text": "Manyetik akıya etki eden etmenleri çözümleyebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-3",
+        "official_title": "İndüksiyon Akımı",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-020-a",
+          "label": "a",
+          "official_text": "Manyetik akıya etki eden etmenleri belirler."
+        },
+        {
+          "id": "phys11-lo-020-b",
+          "label": "b",
+          "official_text": "Manyetik akıya etki eden etmenler arasındaki ilişkiyi belirler."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.4",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen manyetik akı kavramını kavramsal olarak açıklar. Püskürtme boya ile kâğıt üzerine bir kez boya püskürterek manyetik akı ve püskürtülen boyanın tanecik yoğunluğu arasında analoji kurulabilir. Öğrencilerin analojideki boyanın tanecik yoğunluğunu etkileyebilecek etmenler üzerine düşünmeleri istenebilir. Öğretmen, öğrencilerin manyetik alanın boya gibi taneciklerden oluşmadığını fark etmelerini sağlar. Öğrenciler analojiden yola çıkarak manyetik akıya etki eden etmenleri belirler. Öğrenciler manyetik akının manyetik alanın büyüklüğü ve yüzey alanının büyüklüğü ile olan ilişkisini belirler.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-021",
+      "official_code": "FİZ.11.2.11",
+      "official_text": "İndüksiyon geriliminin matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-3",
+        "official_title": "İndüksiyon Akımı",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-021-a",
+          "label": "a",
+          "official_text": "İndüksiyon geriliminin oluşmasında keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller."
+        },
+        {
+          "id": "phys11-lo-021-b",
+          "label": "b",
+          "official_text": "İndüksiyon geriliminin matematiksel modeli üzerinden genellemeler yapar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB10",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, öğrencilere Türkiye’de Atatürk Barajı ve Keban Barajı gibi elektrik üreten hidroelektrik santrallerin olduğunu belirterek suyun mekanik enerjisinin elektrik enerjisine dönüştürülmesine yönelik sorular sorar. Öğretmen barajlarda olduğu gibi öğrencilerin de mekanik enerjiyle elektrik üretebileceklerini belirtebilir. Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Öğrenciler mekanik enerjiden elektrik üretebilecekleri basit araç gereçle yapılabilen bir düzenek tasarlar. Tasarladığı düzenek üzerinden indüksiyon akımı oluşturabilir ve indüksiyon akımını etkileyen etmenleri tespit edebilir. Öğrenciler birim zamandaki manyetik akı değişiminin indüksiyon akımını oluşturduğunu fark eder. İndüksiyon akımının indüksiyon gerilimi ile birlikte oluştuğunu keşfederek indüksiyon geriliminin matematiksel modeline ulaşır. Oluşturduğu matematiksel modeli örnekler üzerinden geneller. Öğretmen, manyetik akı ve indüksiyon akımı ile ilgili dijital içerikler kullanarak öğrencilerden yaptıkları genellemeleri dijital içeriklerdeki gözlemleri ile karşılaştırarak değerlendirmelerini isteyebilir. Manyetik akı ve indüksiyon geriliminin matematiksel modeline yönelik açık uçlu maddelerden oluşan bir test verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-022",
+      "official_code": "FİZ.11.2.12",
+      "official_text": "İndüklenme sonucu oluşan alternatif (değişken) akım hakkında bilimsel çıkarım yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-3",
+        "official_title": "İndüksiyon Akımı",
+        "mapping_method": "derived_from_titles",
+        "confidence": "MEDIUM"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-022-a",
+          "label": "a",
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenleri belirler."
+        },
+        {
+          "id": "phys11-lo-022-b",
+          "label": "b",
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişkiyi belirlemek üzere veri toplayarak kaydeder."
+        },
+        {
+          "id": "phys11-lo-022-c",
+          "label": "c",
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı topladığı verilerden yola çıkarak yorumlayıp değerlendirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB8",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrencilere indüksiyon akımıyla ilgili önceki öğrenmeleri hatırlatılabilir. Öğrencilerin manyetik alandaki tel çerçeve bir tam turunu tamamlarken akımın büyüklüğü ve yönünün değişimini sorgulaması sağlanır. Öğretmen zamanla değişkenlik gösteren bu akımın alternatif (değişken) akım olarak adlandırıldığını ifade eder. Öğrenciler alternatif akımı etkileyen etmenleri öğretmenin yönlendirici soruları yardımıyla belirler. Öğrenciler indüksiyon akımının oluşturulabileceği bir deney tasarlar. Deney sırasında LED lambanın parlaklığını gözlemleyerek indüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişki ile ilgili verileri kaydeder. Kaydettikleri verilere dayalı olarak öğrenciler indüklenme sonucu oluşan alternatif akımı yorumlayarak değerlendirir. İndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-023",
+      "official_code": "FİZ.11.2.13",
+      "official_text": "Transformatörün yapısı ve kullanım alanlarına yönelik bilimsel çıkarım yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-2",
+      "unit": "ELEKTRİK VE MANYETİZMA",
+      "subtopic": {
+        "topic_id": "phys11-topic-2-4",
+        "official_title": "Transformatörler",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-023-a",
+          "label": "a",
+          "official_text": "Transformatörün niteliklerini deney yaparak tanımlar."
+        },
+        {
+          "id": "phys11-lo-023-b",
+          "label": "b",
+          "official_text": "Transformatörlerin kullanım alanlarına yönelik topladığı verileri kaydeder."
+        },
+        {
+          "id": "phys11-lo-023-c",
+          "label": "c",
+          "official_text": "Elde ettiği verilerden yola çıkarak transformatörün kullanım alanlarındaki rolünü yorumlar ve değerlendirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB8",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen, elektrik üretim santrallerinde üretilen elektriğin taşınması sırasında harcanan elektrik enerjisi miktarının iletkenlerin direncine bağlı olarak değiştiğini belirtir. Öğrencilere bu kaybı azaltmanın en verimli yolları sorularak verilen cevaplar doğrultusunda toplum yararına en verimli yolun, elektriğin en düşük akımlarla taşınması olduğu sonucuna varmaları sağlanır. Öğretmen transformatörü tanıtarak tartışma ortamı oluşturur. Tartışma sonucunda öğrenciler transformatörün birincil gerilim, birincil akım, ikincil gerilim, ikincil akım ve sarım sayısı gibi niteliklerini tanımlar. Öğrenciler bu nitelikler arasındaki ilişkileri deneylerle veri toplayarak ortaya koyar ve verileri kaydeder. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır. Matematiksel işlemlerden kaçınılır. Öğrenciler transformatörlerin kullanım alanlarını araştırarak kullanım alanlarındaki rolünü yorumlar ve değerlendirir. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir. Öğrencilerden performans görevi olarak transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları istenebilir.",
+      "official_scope_constraints": [
+        "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır.",
+        "Matematiksel işlemlerden kaçınılır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite2",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-024",
+      "official_code": "FİZ.11.3.1",
+      "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarına ilişkin bilimsel çıkarım yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-1",
+        "official_title": "Işık Şiddeti, Işık Akısı ve Aydınlanma",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-024-a",
+          "label": "a",
+          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarının tanımlarını yapar."
+        },
+        {
+          "id": "phys11-lo-024-b",
+          "label": "b",
+          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramları ile ilgili veri setlerini inceler."
+        },
+        {
+          "id": "phys11-lo-024-c",
+          "label": "c",
+          "official_text": "Veri setlerini kullanarak ışık şiddeti, ışık akısı ve aydınlanma kavramlarını yorumlayarak değerlendirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB8",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen ışık şiddeti, ışık akısı ve aydınlanmanın ölçülebilen nicelikler olduğunu belirtebilir. Öğretmen öğrencilere evde, okulda sınıf veya koridorlarda bulunan mevcut ışık kaynakları ile daha fazla aydınlanmanın sağlanmasına ilişkin sorular sorarak aydınlanma kavramını öğrencilerin tartışmalarını sağlar. Öğretmen sınıfa üzerinde ampulün lümen değerinin yazılı olduğu bir ampul kutusu getirerek, lümen niceliğini gösterip bu niceliğin anlamını sorabilir. Öğretmen, öğrencilere elektrik konusundaki ampulün gücü ile enerjisi arasındaki ilişkiye yönelik ön bilgilerini hatırlatabilir. Püskürtme boya ve kâğıt kullanarak analojik bir etkinlik yapabilir. Etkinlikte belli uzaklıklardan kâğıt üzerine boya püskürtülerek boyanın kâğıt üzerinde oluşturduğu koyuluk gözlemlenebilir. Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını tanımlar. Öğrenciler simülasyon veya deney düzenekleri kullanarak bu kavramlarla ilgili veri setleri oluşturur veya öğretmen hazır veri setleri verebilir. Öğrenciler ışık şiddetinin ışık akısı ve aydınlanma kavramları ile ilişkisi ve bu kavramların bağlı olduğu etmenleri belirlemek için veri setlerini analitik bakış açısıyla inceler. Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını bağlı oldukları etmenlere göre yorumlar ve değerlendirir. Öğretmen farklı veri setleri üzerinden ışık akısı, ışık şiddeti ve aydınlanma hakkında açık uçlu sorulardan oluşan bir çalışma kâğıdı kullanarak değerlendirme yapabilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-025",
+      "official_code": "FİZ.11.3.2",
+      "official_text": "Düzlem aynaları kullanarak bilimsel model oluşturabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-2",
+        "official_title": "Düzlem Aynalar",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-025-a",
+          "label": "a",
+          "official_text": "Düzlem aynaları kullanarak bir model önerir."
+        },
+        {
+          "id": "phys11-lo-025-b",
+          "label": "b",
+          "official_text": "Düzlem aynaları kullanarak önerdiği modeli yeni durumlara uyarlayarak geliştirir."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB9",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler günlük hayatta veya geçmiş öğrenmelerinde karşılaştıkları bilgiyi kullanarak düzlem aynada yansıma ve görüntü oluşumunun kurallarını açıklar. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak performans görevi çerçevesinde düzlem aynalarda STEM yaklaşımına uygun bilgi temelli hayat problemi belirler. Problemin çözümüne ilişkin bir ürün veya model tasarlamak için bilgi toplar ve sınırlılıklarını belirler. Öğrenciler modeller ile ilgili özgün ve yaratıcı fikirlerini çizim yaparak grup arkadaşları ile tartışırlar. Grup üyeleri sorumluluklarını yerine getirerek ortaklaşa karar verdikleri ürünü sınıf arkadaşlarına bir model olarak önerir. Önerilen modelin günlük hayattaki farklı problem durumlarının çözümüne yönelik geliştirilmesi üzerine sınıf tartışması yaparlar. Öğrenciler sınıf tartışmasında yapılan dönütler doğrultusunda ürünü yeni durumlara da uyarlanacak şekilde geliştirmek üzere etkileşim kurar. Öğretmen öğrencilerden model veya ürünü geliştirme sırasında öz değerlendirme yapabilecekleri ve kendi öğrenme durumlarını geliştirmeye yönelik bir formu doldurmalarını isteyebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-026",
+      "official_code": "FİZ.11.3.3",
+      "official_text": "Küresel aynaların özelliklerine ilişkin karşılaştırma yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-3",
+        "official_title": "Küresel Aynalar",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-026-a",
+          "label": "a",
+          "official_text": "Küresel aynaların fiziksel özelliklerini ve ışınların küresel aynalarda yansıdıktan sonra izlediği yolu belirler."
+        },
+        {
+          "id": "phys11-lo-026-b",
+          "label": "b",
+          "official_text": "Çukur ve tümsek aynaların benzer özelliklerini listeler."
+        },
+        {
+          "id": "phys11-lo-026-c",
+          "label": "c",
+          "official_text": "Çukur ve tümsek aynaların farklı özelliklerini listeler."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen öğrencilere küresel ve silindirik yansıtıcı yüzeye sahip cisimlerin (çanak anten, araba farı, arabaların dikiz aynası, elektrikli ısıtıcının yansıtıcı yüzeyi, termosun iç yüzeyi vb.) fotoğraflarını gösterir. Bu süreçte soru cevap veya beyin fırtınası gibi yöntem ve tekniklerle öğrencilerin etkileşim kurmaları sağlanarak yüzeyler arasındaki farkları belirlemeleri istenir. Belirlenen benzerlikler ve farklılıklar not edilebilir. Öğrencilerin küresel aynaların silindirik aynalardan farklı özelliklere sahip olduğu çıkarımını yapmaları sağlanabilir. Öğretmen küresel aynaların çukur ve tümsek aynalar olmak üzere ikiye ayrıldığını belirtir. Öğrenciler simülasyon, animasyon veya deney düzeneklerini kullanarak asal eksen, tepe noktası, odak noktası ve merkez noktası çizimlerini kararlılıkla hareket ederek yapar. Öğrenciler ışınların küresel aynalardan yansıdıktan sonra izledikleri yolu, ilgili çizimleri yaparak belirler. Öğrenciler küresel aynaların yapılarına ve küresel aynalarda yansıma yasalarına ilişkin özellikleri belirler. Nitelik sıralama, anlam çözümleme veya sınıflandırma tablolarını kullanarak çukur ve tümsek aynaların benzer ve farklı özelliklerini listeler. Öğretmen öğrencilerin yaptıkları çizim ve tabloları dereceli puanlama anahtarı kullanarak değerlendirebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-027",
+      "official_code": "FİZ.11.3.4",
+      "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili deney yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-3",
+        "official_title": "Küresel Aynalar",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-027-a",
+          "label": "a",
+          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili bir deney tasarlar."
+        },
+        {
+          "id": "phys11-lo-027-b",
+          "label": "b",
+          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğrenciler grup hâlinde adil görev paylaşımı yaparak küresel aynalarda cismin bulunduğu yere göre görüntünün yeri ve özelliklerini belirleyebilecekleri bir deney tasarlar. Simülasyon, animasyon veya hazır görseller kullanılarak görüntü oluşumu gösterilebilir. Öğrenciler deney düzeneklerindeki cisim ve görüntü yerlerine göre çizimlerini yapar, elde ettiği verileri kullanarak tablo oluşturur. Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden küresel aynalarda cismin yerine göre görüntünün yeri ve özellikleri hakkında analizler yapar. Öğretmen küresel aynalardaki deney sürecine yönelik kontrol listesi ve küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapabilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-028",
+      "official_code": "FİZ.11.3.5",
+      "official_text": "Işığın saydam ortamlardaki davranışını kullanarak deney yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-4",
+        "official_title": "Kırılma",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-028-a",
+          "label": "a",
+          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili deney tasarlar."
+        },
+        {
+          "id": "phys11-lo-028-b",
+          "label": "b",
+          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Serap olayı ve su dolu bardağın içindeki kaşığın kırık görünmesine ilişkin görsel ve sorular ile öğrencilerin dikkati çekilebilir. Öğrenciler bu olaylara ilişkin sorular sorar. Öğretmen deney düzenekleri kullanarak ortamın ışığı kırma indisini tanımlayabilir, kırılma olayı ve Snell Yasası ile sınır açısı ve tam yansıma olaylarını açıklar. Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Grup üyeleri yardımlaşarak kırılma yasalarına ilişkin farklı bir deney tasarlar. Oluşturulan deney düzeneğinde saydam ortamın özellikleri ve tek renkli ışığın gelme açısına ilişkin araştırma problemi belirlenebilir. Farklı saydam ortamlar için gelme açısı ve kırılma açısı değişkenlerine ilişkin veriler toplanarak tablo oluşturulabilir. Kırılma açısının bağlı olduğu değişkenler tablodaki veriler kullanılarak analiz edilir. Öğretmen deney düzeneklerini dereceli puanlama anahtarını kullanarak değerlendirebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-029",
+      "official_code": "FİZ.11.3.6",
+      "official_text": "Saydam ortamlarda görünür derinliğin, gerçek derinlik ve ortamların ışığı kırma indislerine bağlı olarak değiştiğine ilişkin bilimsel gözlem yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-5",
+        "official_title": "Görünür Derinlik",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-029-a",
+          "label": "a",
+          "official_text": "Görünür derinliği etkileyen gerçek derinlik ve ortamların ışığı kırma indisini tanımlar."
+        },
+        {
+          "id": "phys11-lo-029-b",
+          "label": "b",
+          "official_text": "Görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değiştiğini gözlemleyerek kaydeder."
+        },
+        {
+          "id": "phys11-lo-029-c",
+          "label": "c",
+          "official_text": "Gözlemlerine dayalı olarak görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değişimini açıklar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB1",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Günlük hayattan görünür derinliğe ilişkin örneklerin fotoğraf ya da videoları sınıf ile paylaşılabilir. Öğrenciler kullanılan görsellerdeki cisimlerin gerçek derinlikleri ile görünür derinliklerinin farklı olmasının nedenlerini sorgular. Işığı kırma indisleri farklı olan ortamlardaki cisimlerin görünür derinlikleri üzerine yapılan tahminler, soru cevap veya beyin fırtınası gibi tekniklerden biri kullanılarak not edilebilir. Öğrenciler görünür derinliği etkileyen ortamların sahip oldukları farklı kırıcılık indisleri ve cismin bulunduğu gerçek derinlik değişkenlerini tanımlar. Görünür derinliğe ilişkin düzenekler su, sıvı yağ, cam gibi ortamlar; bozuk para ve kalem gibi malzemeler kullanılarak sınıf ortamında kurulabilir. Öğrenciler bu düzeneklerdeki cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi gözlemleyerek kaydeder. Yapılan gözlemler üzerinden öğrenciler ortamların ışığı kırma indisi ve cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi açıklar. Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır. Öğretmen açık uçlu sorulardan oluşan bir test veya gözlem formu ile değerlendirme yapabilir.",
+      "official_scope_constraints": [
+        "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır."
+      ],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-030",
+      "official_code": "FİZ.11.3.7",
+      "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanlarına ilişkin bilgi toplayabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-6",
+        "official_title": "Fiber Optik",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-030-a",
+          "label": "a",
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+        },
+        {
+          "id": "phys11-lo-030-b",
+          "label": "b",
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için belirlediği araçları kullanarak bilgi toplar."
+        },
+        {
+          "id": "phys11-lo-030-c",
+          "label": "c",
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında toplanan bilgiyi doğrular."
+        },
+        {
+          "id": "phys11-lo-030-ç",
+          "label": "ç",
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında ulaşılan bilgileri kaydeder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.6",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğretmen genel ağ alt yapısında fiber optik malzemelerin kullanıldığını belirtilebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili araştırma planlar. Öğrenciler uygun düşünme ve öğrenme stratejisi seçip kütüphane, genel ağ, uzman kişiler ve kurumlar gibi kaynaklardan birini belirler. Öğrenciler fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında bilgi toplar ve kaydeder. Yaptıkları araştırma sonuçları ile poster veya slayt gösterisi şeklinde bir sunum hazırlayabilir. Gruplar fiber optik malzemelerin tam yansıma olayı ile çalışmasına odaklanıp sunumlarını sınıf arkadaşları ile paylaşarak toplanan bilgileri tartışır. Grupların ulaştıkları bilgiler tartışma sırasında birbirleri ile karşılaştırılarak doğrulanır. Öğrencilerin fiber optik kabloların yapısı, çalışma prensibi ve kullanım alanları ile ilgili hazırladıkları sunum dereceli puanlama anahtarı ile değerlendirilebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-031",
+      "official_code": "FİZ.11.3.8",
+      "official_text": "Prizmalar ve prizmalar ile kurulan birleşik sistemlerde ışığın izlediği yola ilişkin tümdengelimsel akıl yürütebilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-7",
+        "official_title": "Prizmalar",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-031-a",
+          "label": "a",
+          "official_text": "Kırılma yasalarının prizmalar için kullanılabilir olduğuna dair hipotez kurarak test eder."
+        },
+        {
+          "id": "phys11-lo-031-b",
+          "label": "b",
+          "official_text": "Geçerli hipotezleri kullanarak prizmalar ile oluşturulmuş birleşik sistemlerde tek renkli ışığın izleyeceği yolu açıklar."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB11",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğretmen gruplara birer çalışma yaprağı verebilir. Öğrencilerden çalışma yaprağında ışığın kırılma sırasındaki davranışlarını listelemeleri için nitelik sıralaması yapmaları, sınıflandırma tablosu oluşturmaları veya anlam çözümleme tablosu hazırlamaları istenebilir. Öğretmen, öğrencilere prizma dağıtıp öğrencilerden prizmaları şekil, büyüklük ve yapıldığı malzeme gibi özelliklerini dikkate alarak incelemelerini isteyebilir. Öğrenciler çalışma yaprağındaki ilgili bölüme prizmanın özelliklerini yazabilir ve şeklini çizebilir. Gruplar ekip çalışması ile ışığın prizma içinde izlediği yola ilişkin hipotezlerini çizerek gösterir veya yazar. Öğrenciler hipotezlerini simülasyon veya deney düzeneği ile test eder. Hipotezlerinin doğru olup olmadığına karar vererek sonuçlarını çalışma kâğıdına yazar. Prizmalar ile oluşturulmuş birleşik sistemlere geçiş yapılabilir. Öğrenciler geçerli hipotezlerden yola çıkarak birden fazla prizmadan oluşan sistemlerde tek renkli ışığın izleyeceği yolu belirler. Gruplar, süreci sınıf arkadaşlarına anlatır. Öğretmen çalışma kâğıdını dereceli puanlama anahtarı ile değerlendirebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-032",
+      "official_code": "FİZ.11.3.9",
+      "official_text": "Merceklerin özelliklerine ilişkin karşılaştırma yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-8",
+        "official_title": "Mercekler",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-032-a",
+          "label": "a",
+          "official_text": "Merceklerin fiziksel özelliklerini ve ışınların merceklerde kırıldıktan sonra izlediği yola ilişkin özellikleri belirler."
+        },
+        {
+          "id": "phys11-lo-032-b",
+          "label": "b",
+          "official_text": "Yakınsak ve ıraksak merceklerin benzer özelliklerini listeler."
+        },
+        {
+          "id": "phys11-lo-032-c",
+          "label": "c",
+          "official_text": "Yakınsak ve ıraksak merceklerin farklı özelliklerini listeler."
+        }
+      ],
+      "skills": [
+        {
+          "code": "KB2.7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrencilere merceklerin kullanıldığı fotoğraf makinesi, kamera, gözlük, büyüteç gibi aygıtların görselleri sunularak ilgileri çekilir. Öğretmen merceklerin yakınsak ve ıraksak olmak üzere ikiye ayrıldığını belirterek yapıları hakkında bilgiler verebilir. Merceklerin asal ekseni, optik merkezi ve odak noktalarını simülasyon, animasyon veya deney düzeneklerini kullanarak öğrencilerin keşfetmelerini sağlar. Öğrenciler ışınların merceklerde kırıldıktan sonra izledikleri yolları çizimler yaparak belirler. Merceklerin yapılarına ve merceklerde kırılma yasalarına ilişkin özellikleri belirler. Öğrenciler nitelik sıralama, anlam çözümleme tablosu veya sınıflandırma tablosu kullanarak yakınsak ve ıraksak merceklerin benzerlik ve farklılıklarını listeler. Öğretmen, yapılan çizim ve listeleri dereceli puanlama anahtarı kullanarak değerlendirebilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "phys11-lo-033",
+      "official_code": "FİZ.11.3.10",
+      "official_text": "Merceklerde görüntü oluşumu ile ilgili deney yapabilme",
+      "subject": "physics",
+      "grade": 11,
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "unit_id": "phys11-unit-3",
+      "unit": "OPTİK",
+      "subtopic": {
+        "topic_id": "phys11-topic-3-8",
+        "official_title": "Mercekler",
+        "mapping_method": "derived_from_titles",
+        "confidence": "HIGH"
+      },
+      "process_components": [
+        {
+          "id": "phys11-lo-033-a",
+          "label": "a",
+          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili deney tasarlar."
+        },
+        {
+          "id": "phys11-lo-033-b",
+          "label": "b",
+          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+        }
+      ],
+      "skills": [
+        {
+          "code": "FBAB7",
+          "mapping_method": "explicit_in_outcome_text",
+          "confidence": "HIGH"
+        }
+      ],
+      "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılarak merceklerde cismin yerine göre görüntünün yeri ve özelliklerini bulabilecekleri bir deney tasarlar. Öğretmen simülasyon veya animasyon kullanarak ışınlarla görüntü oluşumunu gösterebilir. Öğrenciler deney düzeneklerindeki cisimlerin bulunduğu yere göre görüntü çizimlerini yapar. Elde edilen sonuçları kullanarak tablo oluşturur. Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden merceklerde görüntü oluşumunu analiz eder. Öğretmen merceklerde asal eksen üzerinde ve herhangi bir noktadaki cisimlerin görüntülerinin özelliklerini içeren farklı madde türlerinden oluşan testi kullanarak değerlendirme yapabilir.",
+      "official_scope_constraints": [],
+      "concepts": [],
+      "prerequisites": [],
+      "mathematical_prerequisites": [],
+      "measurable_behaviors": [],
+      "common_misconceptions": [],
+      "assessment_implications": [],
+      "pending_fields": [
+        "concepts",
+        "prerequisites",
+        "mathematical_prerequisites",
+        "measurable_behaviors",
+        "common_misconceptions",
+        "assessment_implications"
+      ],
+      "sources": [
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_code",
+            "official_text",
+            "process_components",
+            "unit"
+          ]
+        },
+        {
+          "source_id": "src-tymm-fiz11-unite3",
+          "fields": [
+            "official_teaching_practice",
+            "official_scope_constraints"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    }
+  ]
+}

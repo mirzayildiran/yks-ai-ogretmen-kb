@@ -1,0 +1,666 @@
+{
+  "ders": "Fizik",
+  "sinif": 11,
+  "model": "Türkiye Yüzyılı Maarif Modeli",
+  "kaynak": "MEB TYMM resmi sitesi (tymm.meb.gov.tr)",
+  "toplam_ders_saati": 138,
+  "uniteler": [
+    {
+      "unite_no": 1,
+      "baslik": "Kuvvet Ve Hareket Teması",
+      "kaynak_url": "https://tymm.meb.gov.tr/fizik-dersi/unite/243",
+      "amac": "Bu ünitede öğrencilerin serbest düşmeye yönelik matematiksel hesaplamaları yapmaları, matematiksel modelleri ve grafiksel dönüşümleri iki boyutta sabit ivmeli harekete yönelik problem durumlarına çözüm getirmek için kullanabilmeleri, Newton'ın Hareket Yasalarını açıklamaları, bir cisme etki eden kuvvetleri serbest cisim diyagramında göstermeleri, statik ve kinetik sürtünme kuvvetinin bağlı olduğu değişkenleri gözlemleyerek sürtünme kuvvetinin matematiksel modelini oluşturmaları, limit hızı tanımlamaları ve limit hıza ait değişkenleri belirlemeleri, çembersel hareketin temel kavramları arasındaki ilişkileri açıklamaları amaçlanmaktadır.",
+      "ders_saati": 54,
+      "Alan Becerileri": [
+        "FBAB8. Bilimsel Çıkarım Yapma",
+        "FBAB10. Tümevarımsal Akıl Yürütme",
+        "FBAB12. Kanıt Kullanma"
+      ],
+      "Kavramsal Beceriler": [
+        "KB2.7. Karşılaştırma",
+        "KB2.14. Yorumlama",
+        "KB2.16. Muhakeme (Akıl Yürütme) (KB2.16.3. Analojik Akıl Yürütme)"
+      ],
+      "Eğilimler": [
+        "E1.2. Bağımsızlık",
+        "E1.3. Azim ve Kararlılık",
+        "E1.6. Seçicilik",
+        "E2.5. Oyunseverlik",
+        "E3.1. Muhakeme",
+        "E3.2. Odaklanma",
+        "E3.3. Yaratıcılık",
+        "E3.5. Açık Fikirlilik",
+        "E3.6. Analitiklik",
+        "E3.10. Eleştirel Bakma"
+      ],
+      "Sosyal-Duygusal Öğrenme Becerileri": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB2.3. Sosyal Farkındalık"
+      ],
+      "Değerler": [
+        "D3. Çalışkanlık",
+        "D4. Dostluk",
+        "D12. Sabır",
+        "D14. Saygı"
+      ],
+      "Okuryazarlık Becerileri": [
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı",
+        "OB9. Sanat Okuryazarlığı"
+      ],
+      "Disiplinler Arası İlişkiler": [
+        "Astronomi ve Uzay Bilimleri",
+        "Beden Eğitimi",
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "Beceriler Arası İlişkiler": [
+        "KB2.3. Özetleme",
+        "KB2.18. Tartışma",
+        "KB3.2. Problem Çözme"
+      ],
+      "icerik_cercevesi": [
+        "Serbest Düşme",
+        "İki Boyutta Sabit İvmeli Hareket",
+        "Newton Hareket Yasaları",
+        "Sürtünme Kuvveti",
+        "Limit Hız",
+        "Çembersel Hareket"
+      ],
+      "anahtar_kavramlar": [
+        "serbest düşme",
+        "eylemsizlik",
+        "etki-tepki kuvvetleri",
+        "serbest cisim diyagramı",
+        "sürtünme kuvveti",
+        "statik sürtünme kuvveti",
+        "kinetik sürtünme kuvveti",
+        "limit hız",
+        "düzgün çembersel hareket",
+        "çizgisel sürat",
+        "açısal hız",
+        "çizgisel hız",
+        "merkezcil ivme",
+        "açısal ivme",
+        "merkezcil kuvvet"
+      ],
+      "olcme_degerlendirme": "Öğrenme çıktıları; poster, kısa rapor, çıkış kartı, çalışma yaprağı, açık uçlu maddelerden oluşan test, yapılandırılmış grid, bilgi görseli, kısa film veya animasyon kullanılarak değerlendirilebilir. Öğrencilerden serbest düşme hareketi yapan cisimlerin ivme ve hız değişimlerini gösteren bir poster hazırlaması istenebilir. Bu poster dereceli puanlama anahtarı ve öz değerlendirme formu ile değerlendirilebilir. Matematiksel model kullanılarak yapılan hesaplama, grafik çizimi, grafikten değer bulma ve grafik verilerini yorumlayabilmeleri amacı ile öğrencilere sınıfta kısa rapor yazdırılabilir. Rapor, analitik dereceli puanlama anahtarı ile değerlendirilebilir. Newton'ın Hareket Yasalarına örnek verebilmesi için çıkış kartı verilebilir. Newton'ın Hareket Yasalarını serbest cisim diyagramını kullanarak yorumlayabilmeleri için bir çalışma yaprağı verilebilir. Statik ve kinetik sürtünme kuvvetlerine yönelik karşılaştırabilme yapmaları için yapılandırılmış grid verilebilir. Sürtünme kuvvetinin hesaplanmasına yönelik farklı soru türlerinden oluşan bir test verilebilir. Çıkış kartı, çalışma yaprağı, test ve yapılandırılmış grid puanlama anahtarı ile değerlendirilebilir. Limit hızı etkileyen faktörler hakkında bilgi görseli hazırlanması ve düzgün çembersel hareket ile vektörler hakkında kavramları göstermek için kısa bir film çekilmesi ya da animasyon hazırlanması performans görevleri olarak verilebilir. Performans görevleri dereceli puanlama anahtarı ile değerlendirilebilir. Matematiksel hesaplamaları yapmaları için açık uçlu test verilebilir. Açık uçlu test dereceli puanlama anahtarı ile değerlendirilebilir. Değerlendirmelerde öz değerlendirme, akran değerlendirme veya grup değerlendirmesi yapılarak çeşitlilik sağlanabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "temel_kabuller": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+      "on_degerlendirme": "Hız, ivme, ağırlık, periyot ve frekans kavramına yönelik soru cevap etkinliği yapılarak bu kavramlar hatırlatılabilir.",
+      "kopru_kurma": "Hareketli araçlar içindeki yolcuların hız değişimi sırasında yaşadıkları, aynı kuvvet etkisinde kalan farklı kütleli cisimlerin hızlanması ya da yavaşlamasındaki farklılıklara yönelik gözlemler ve futbolda topa vurma sonucunda ayağa etki eden kuvvet gibi yaşantılar üzerinden örnekler verilerek bu örnekler serbest düşme ve Newton'ın Hareket Yasaları ile ilişkilendirilebilir.",
+      "ogrenme_ciktilari": [
+        {
+          "kod": "FİZ.11.1.1",
+          "cikti": "Serbest düşme hareketi yapan cisimlerin ivmesine yönelik tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Serbest düşme hareketi yapan cisimleri gözlemleyerek ivme ve hız değişimleri arasındaki ilişkiyi bulur.",
+            "b) Serbest düşme hareketi yapan cisimlerin ivmesi hakkında genelleme yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar. Öğrencilerden görsellerdeki cisimlerin hareketini gözlemleyerek sınıf tartışması ile serbest düşen cisimlerin ivmesine ilişkin açıklama getirmesi istenir. Öğrenciler tartışma sırasında kendi iddialarını ve destekleyicilerini açıklar varsa akranlarının karşıt iddialarına yönelik çürütücülerini belirterek yer çekimi ivmesi ile hız değişimi arasındaki ilişkiye yönelik fikir birliği ile çıkarımda bulunur. Serbest düşme hareketi yapan cisimlerin ivmeleriyle ilgili genelleme yapar. Yer çekimi ivmesi sabit kabul edilir. Öğrencilerden serbest düşme hareketi ile ilgili poster hazırlayarak sunmaları istenebilir.",
+          "kapsam_sinirlari": [
+            "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar.",
+            "Yer çekimi ivmesi sabit kabul edilir."
+          ]
+        },
+        {
+          "kod": "FİZ.11.1.2",
+          "cikti": "Serbest düşme hareketi ile ilgili kanıt kullanabilme",
+          "surec_bilesenleri": [
+            "a) Serbest düşme hareketi ile ilgili verileri toplayarak kaydeder.",
+            "b) Serbest düşme hareketi ile ilgili veri setleri oluşturur.",
+            "c) Serbest düşme hareketini verilere dayalı olarak açıklar."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler, deney ya da dijital içerikler yolu ile düşey doğrultuda ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini gözlemleyerek hız, ivme, konum, zaman ve yer değiştirme ile ilgili verileri toplayıp kaydeder. Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur. Ön öğrenmelerindeki ivmeli hareket grafiklerini dikkate alarak oluşturduğu veri setleri üzerinden hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer. Düşeyde serbest düşen cisimlerin hareketini grafiklere ve veriye dayalı olarak açıklar . Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır. Öğrenciler düşey düzlemde ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini açıklayacakları kısa rapor hazırlayabilir.",
+          "kapsam_sinirlari": [
+            "Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur.",
+            "Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır."
+          ]
+        },
+        {
+          "kod": "FİZ.11.1.3",
+          "cikti": "İki boyutta sabit ivmeli hareket ile ilgili tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) İki boyutta sabit ivmeli hareketin bileşenleri ile sabit hızlı ve sabit ivmeli hareket arasındaki ilişkiyi bulur.",
+            "b) İki boyutta sabit ivmeli harekete yönelik genelleme yapar."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler, iki boyutta sabit ivmeyle hareket eden cisimlerin hareketlerini animasyon, simülasyon ya da video gibi dijital içerikler yolu ile gözlemler . Öğrenciler, öğretmen rehberliğinde gruplar oluşturup küçük grup tartışmalarında akranlarıyla iletişim kurarak hareketin bileşenlerini yatay ve düşey eksende ayrı ayrı ele alır. Öğretmen, öğrencilerin trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine yönelik farkındalık kazandırır. Öğrenciler, vektörlerin bileşenlerine ayrılarak toplanmasıyla ilgili problem çözümlerinde de trigonometrik hesaplamaları kullanabileceğini fark eder . Öğrenciler, yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden cisimlerin hareketini gözlemler. Bu hareketi yapan cisimlerin hız, ivme ve yer değiştirme değişkenlerini inceleyerek hareket bileşenlerini eksenlere göre sabit hızlı ve sabit ivmeli hareket ile ilişkilendirir . Öğretmen, her gruptan bir temsilcinin iki boyutta sabit ivmeyle hareket eden cisimlerin hareketine yönelik gruplarının iddialarını ve gerekçelerini sunmalarını isteyebilir. Grup temsilcileri, hareketin farklı boyutlardaki hız, ivme ve yer değiştirme değişkenlerine yönelik kendi gruplarının iddialarını ve gerekçelerini ifade eder; varsa akranlarının karşıt iddialarına yönelik çürütücü fikirlerini etki altında kalmadan sunar . Büyük grup tartışması neticesinde öğrenciler iki boyutta sabit ivmeli hareket eden cisimlerin hareketi ile ilgili genellemelere ulaşır. ‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır. Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
+          "kapsam_sinirlari": [
+            "‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır."
+          ]
+        },
+        {
+          "kod": "FİZ.11.1.4",
+          "cikti": "Newton'ın Hareket Yasaları ile ilgili tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkileri keşfeder.",
+            "b) Newton'ın Hareket Yasalarına yönelik genellemeler yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, İbni Sina’nın mekanik konusundaki çalışmalarını anlatan bir metin kullanarak çalışmaları hakkında farkındalık oluşturur. Öğrencilere bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkilerin gözlenebildiği bir deney yaptırılır ya da animasyon, simülasyon veya video gösterimi gibi dijital içeriklerden biri kullanılabilir. Öğrenciler deney veya dijital içeriklerdeki hareket veya olayları tartışma yöntemi ile yorumlar . Dijital içeriklerdeki hareket veya olaylara ilişkin iddialarını, destekleyicilerini ve varsa akranlarından farklı düşündüğü durumlarda çürütücülerini sunar . Öğrencilerin iddialarını ortaya koyarken ön öğrenmelerinde yer alan ivme kavramı ile ilişki kurması sağlanır . Öğrenciler, sınıf tartışması neticesinde bileşke kuvvet ve cisimlerin hareketleri arasındaki ilişkileri keşfeder. Öğrenciler, soru cevap veya beyin fırtınası gibi tekniklerle desteklenen tartışma ortamında keşfettiği ilişkiler üzerinden Newton'ın Hareket Yasalarına yönelik genellemeler yapar. Öğrencilere Newton'ın Hareket Yasalarına yönelik örnekler vermeleri için çıkış kartı verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.1.5",
+          "cikti": "Newton'ın Hareket Yasalarını serbest cisim diyagramını kullanarak yorumlayabilme",
+          "surec_bilesenleri": [
+            "a) Bir cisme etki eden kuvvetleri belirler.",
+            "b) Bir cisme etki eden kuvvetleri serbest cisim diyagramı üzerinde gösterir.",
+            "c) Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını yeniden ifade eder."
+          ],
+          "ogretme_uygulamasi": "ğretmen, birden fazla kuvvetin etkisinde kalan cisimlerle ilgili görseller gösterir. Öğrenciler görselleri yorumlayarak cisimler üzerine etki eden tüm kuvvetleri belirler . Öğrenciler belirledikleri kuvvetleri serbest cisim diyagramını kullanarak gösterir. Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını kendi cümleleriyle yeniden ifade eder. Serbest cisim diyagramı kullanmanın bir cisme etki eden net kuvvetin hesaplanması ile ilgili matematiksel problemlerin çözümündeki işlevini analitik bakış açısıyla tartışır . Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır. Sabit ivmeli hareket ile sınırlı kalınır. Serbest cisim diyagramları hakkında farklı soru türleri içeren bir çalışma yaprağı verilebilir.",
+          "kapsam_sinirlari": [
+            "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
+            "Sabit ivmeli hareket ile sınırlı kalınır."
+          ]
+        },
+        {
+          "kod": "FİZ.11.1.6",
+          "cikti": "Statik ve kinetik sürtünme kuvvetlerini karşılaştırabilme",
+          "surec_bilesenleri": [
+            "a) Statik ve kinetik sürtünme kuvvetlerine ilişkin özellikleri belirler.",
+            "b) Statik ve kinetik sürtünme kuvvetlerine ilişkin benzerlikleri listeler.",
+            "c) Statik ve kinetik sürtünme kuvvetlerine ilişkin farklılıkları listeler."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, örnek olay ya da dijital içeriklerde yer alan görselleri yorumlayarak öğrencilerin harekete zorlanmasına rağmen durmakta olan, kayarak öteleme hareketi yapmakta olan ve dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini fark etmesini sağlar. Öğrenciler, statik ve kinetik sürtünme kuvvetlerinin özelliklerini belirleyerek bunları ifade eder. Öğrenciler, soru cevap tekniğinin kullanıldığı etkileşimli ortamda görsellerde yer alan sürtünme kuvvetinin temel bileşenlerini, statik ve kinetik sürtünme kuvvetinin benzerliklerini ve farklılıklarını sorgulayarak listeler. Öğrencilere, statik ve kinetik sürtünme kuvvetlerini karşılaştırabilmeleri için yapılandırılmış grid verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.1.7",
+          "cikti": "Sürtünme kuvvetinin matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Sürtünme kuvvetinin bağlı olduğu değişkenler arasındaki ilişkiyi keşfederek matematiksel modeline ulaşır.",
+            "b) Farklı veri setleri ile hesaplamalar yaparak sürtünme kuvvetinin matematiksel modelini geneller."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler, simülasyon gibi dijital içerikler yoluyla ya da deney yardımıyla kayarak öteleme hareketinde zorlanmasına rağmen duran ve sabit hızla hareket eden cisimlere etki eden sürtünme kuvvetinin bağlı olduğu değişkenleri gözlemler . Öğrenciler, sınıf tartışması yolu ile gözlemlerine yönelik çıkarımlarını simülasyon veya deney yoluyla elde ettiği verilerle destekleyerek ifade eder . Tartışma sonucunda sürtünme kuvvetinin matematiksel modeline ulaşır. Öğretmen, sürtünmeli ortamda hareket eden cisimlere yönelik problem durumları sunabilir. Öğrencilerden dijital içerik ya da deney verilerini kullanarak sürtünme kuvveti-uygulanan kuvvet grafiğini çizmeleri istenebilir. Öğrenciler, matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar ve modeli geneller . Kayarak öteleme ve dönerek öteleme hareketlerinde sürtünme kuvvetinin yönünün belirlendiği durumlara günlük hayattan örnekler verir. Öğrencilere, sürtünme kuvveti ile ilgili hesaplamalar yapmaları için farklı soru türlerinden oluşan bir test verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.1.8",
+          "cikti": "Limit hızı etkileyen değişkenler ile ilgili bilimsel çıkarım yapabilme",
+          "surec_bilesenleri": [
+            "a) Limit hızı etkileyen değişkenleri tanımlar.",
+            "b) Limit hızı etkileyen değişkenlerle ilgili verileri toplayarak kaydeder.",
+            "c) Limit hızı etkileyen değişkenlerle ilgili verileri yorumlayarak değerlendirir."
+          ],
+          "ogretme_uygulamasi": "Profesyonel bir paraşütçünün uçaktan atlama deneyimine yönelik video üzerinden öğrencilerin paraşütçünün hareketini ve hareketine etki eden değişkenleri tartışıp yorumlaması sağlanır . Öğrencilerin yorumları alındıktan sonra öğretmen özdeş kâğıtlardan birini yatay, diğerini buruşturulmuş olmak üzere iki farklı şekilde serbest bırakarak basit gösteri deneyi gerçekleştirebilir. Yatay ve buruşturulmuş olarak bırakılan özdeş kâğıtların havada kalma süreleri arasındaki ve düşey hızları arasındaki farklılıkların nedenleri soru cevap etkinliğiyle sorgulanabilir. Sınıf tartışmasında öğrenciler kendi iddialarını ve destekleyicilerini paraşüt hareketini de kullanarak ortaya koyabilir. Yapılan tartışmalar neticesinde, öğrencilerin limit hıza etki eden değişkenleri sürtünme kuvveti ile ilişkilendirerek tanımlamaları sağlanır. Öğretmen, öğrencileri simülasyon kullanarak limit hıza etki eden değişkenlerle ilgili veri toplamaya yönlendirebilir. Öğrenciler, limit hıza etki eden değişkenlerin büyüklüğünü değiştirerek limit hızın aldığı değerleri kaydeder . Öğrenciler kendi iddialarını, tekrar eden gözlemleri ve gözlemler esnasında kaydettikleri verileri kullanarak gerekçelendirir. Kendi iddialarını ve gerekçelerini , varsa arkadaşlarının karşıt iddialarına yönelik çürütücülerini saygı çerçevesinde ve yapıcı olarak ifade eder , limit hızı etkileyen değişkenleri değerlendirir . Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır. Öğrenciler limit hızı etkileyen faktörler hakkında bilgi görseli hazırlayabilir.",
+          "kapsam_sinirlari": [
+            "Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır."
+          ]
+        },
+        {
+          "kod": "FİZ.11.1.9",
+          "cikti": "Düzgün çembersel hareket yapan cisimlerin yörüngeleri ve hız vektörleri hakkında analojik akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Düzgün çembersel hareket yapan farklı cisimlerin hareketlerini gözlemler.",
+            "b) Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder.",
+            "c) Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin benzerliklerinden yola çıkarak yörüngeleri ve hız vektörü hakkında çıkarım yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, öğrencilerin ön bilgilerinde yer alan Türksat uydularının Dünya etrafındaki dolanımı ya da lunaparklardaki dönme dolap gibi çeşitli eğlence araçlarının hareketlerini yorumlamaları için düzgün çembersel hareket yapan farklı cisimleri görsel içerikli dijital araçlar ile gösterir. Öğrenciler görsellere odaklanarak , görsellerde yer alan hareketleri inceler. Öğrenciler, soru cevap tekniği yardımıyla görsellerde yer alan hareketlilerin yörüngeleri, yörüngelerinin merkez noktaları ve hızları hakkında görüşlerini ifade ederek düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder. Öğretmen, öğrencilerin vektörel niceliklerle ilgili ön bilgilerini hatırlamalarına yardımcı olur ve birbirinden farklı düzgün çembersel hareket yapan cisimlerin herhangi bir konumdaki hız vektörlerinin yönlerini çizmelerini ister. Öğrenciler, düzgün çembersel hareket yapan cisimlerin hareketlerindeki benzerliklerden yola çıkarak hız vektörü ile yörüngelerinin yarıçap vektörünün yönlerine yönelik çıkarımda bulunur. Öğrenciler hız ve yarıçap vektörünün yönlerine yönelik açık uçlu sorulardan oluşan çalışma yaprağı ile değerlendirilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.1.10",
+          "cikti": "Düzgün çembersel hareketin değişkenleri arasındaki ilişkilerin matematiksel olarak modellenmesine ilişkin tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Düzgün çembersel hareketin değişkenlerini keşfederek aralarındaki ilişkileri matematiksel olarak modeller.",
+            "b) Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Düzgün çembersel hareketle ilgili temel kavramları (çizgisel sürat, açısal hız, çizgisel hız, merkezcil ivme, açısal ivme ve merkezcil kuvvet) içeren video veya animasyon izletebilir. Öğretmen, öğrencilerden düzgün çembersel hareketin temel değişkenlerinden en az iki tanesinin karşılıklı etkileşimini gösteren drama etkinliği yapmalarını ister. Öğrencilerden, akranlarına değişkenleri doğru aktarabilmek için hazırlayacakları senaryo üzerinde tartışarak görüş birliğine varmaları istenir . Öğretmen, canlandırma etkinliği öncesinde gruplar tarafından hazırlanan bütün senaryoları inceleyerek temel değişkenlerin tamamının senaryolar kapsamında yer aldığından emin olur. Öğrenciler hazırladıkları senaryoları canlandırır . Öğrenciler, canlandırma etkinlikleri sonrasında gruplar arası tartışma yolu ile değişkenlere ve değişkenler arasındaki ilişkiye yönelik iddialarını, gerekçelerini ve varsa karşıt iddialara sahip olan arkadaşlarına yönelik çürütücülerini saygı çerçevesinde ifade eder . Gruplar arası tartışma ile öğrenciler değişkenler arasındaki ilişkileri keşfederek bu ilişkileri matematiksel olarak modeller. Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller. Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır. Düzgün çembersel hareket ile ilgili değişkenleri göstermek için bir kısa film çekilmesi ya da animasyon hazırlanması performans görevi olarak verilebilir. Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir.",
+          "kapsam_sinirlari": [
+            "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+          ]
+        }
+      ],
+      "zenginlestirme": [
+        "Farklı çekim ivmesine sahip uydu ve gezegenlerdeki serbest düşme hareketine yönelik problem durumları ele alınabilir. Serbest düşme hareketinde farklı yüksekliklerdeki konumlardan çeşitli açılarla atılan cisimlerin hareketleriyle ilgili hesaplamalar yapılabilir. Hareketli referanslardan farklı açılarla atılan cisimlerin hareketine yönelik problem durumları ele alınabilir. Eğimli virajda yol alan araçlara etki eden statik sürtünme kuvvetinin matematiksel hesaplamaları yapılabilir. Türkiye’de ve dünyada araç kazalarının sebepleri arasında “viraj güvenliği”nin yeri ve kazalardaki istatistik oranları araştırılabilir. Araçlarda kullanılan fren sistemleri incelenerek ABS fren sisteminin avantajlarının, statik ve kinetik sürtünme kuvvetleri arasındaki farklarla ilişkilendirilerek açıklanması istenebilir.",
+        "Farklı açılarla atılan cisimlerin hareketini dikkate alan basit malzemeleri kullanarak bir oyun tasarlamaları istenebilir. Virajlarda güvenli sürüş yapmak için gereken önlemler ile Newton'ın Hareket Yasaları, sürtünme kuvveti ve çembersel hareket konu başlıkları ilişkilendirilerek araba lastiği tasarım önerisi oluşturulabilir.",
+        "Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde sık kullanılan açı değerlerinin dışında başka açılar verilerek hesap makinesi ya da dinamik matematik uygulamalarının kullanımı teşvik edilebilir. Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde en az iki vektörün toplanması sağlanabilir. Newton'ın Hareket Yasaları, Bernoulli İlkesi, sürtünme kuvveti ve düzgün çembersel hareket konuları ile ilişkilendirerek yarış arabası tasarımı yapılabilir."
+      ],
+      "destekleme": [
+        "Serbest düşme gibi konular için basit veri toplama etkinlikleri ve bu verileri kullanarak temel matematiksel modellere ulaşmaları için basılı öğretim materyalleri sağlanabilir. Trigonometrik hesaplamaların kullanıldığı bileşenlerine ayırarak toplama işleminde sadece bir vektör kullanılabilir. Bu vektörün bileşenleri trigonometrik hesaplamalar ile bulunabilir. Bu bileşenler toplanarak vektörün kendisine ulaşılabilir. Trigonometrik hesaplamalarda sadece özel üçgenlerden yararlanılan vektörler kullanılabilir. Newton'ın Hareket Yasalarına yönelik problem çözümlerinde yalnızca tek cisim içeren örnekler tercih edilebilir. Sürtünme kuvvetinin hesaplanmasına yönelik örnek problem durumlarında yatay zemindeki cisimlere kendi ağırlıkları ve zemin tarafından uygulanan tepki kuvvetleri dışında herhangi bir düşey kuvvetin uygulanmadığı örnekler kullanılabilir. Limit hız ile ilgili örnek ve açıklamalarda yağmur damlasının ve paraşütle atlayan kişinin hareketi ile sınırlı kalınarak limit hız konusu sadece kavramsal düzeyde verilebilir."
+      ],
+      "guncelleme_tarihi": "05.08.2026"
+    },
+    {
+      "unite_no": 2,
+      "baslik": "Elektrik Ve Manyetizma Teması",
+      "kaynak_url": "https://tymm.meb.gov.tr/fizik-dersi/unite/248",
+      "amac": "Bu ünitede öğrencilerin elektrik motorları ve elektrik jeneratörleri arasındaki ilişki ile transformatörlerin yapısı ve kullanımı hakkında çıkarım yapmaları amaçlanmaktadır.",
+      "ders_saati": 48,
+      "Alan Becerileri": [
+        "FBAB1. Bilimsel Gözlem",
+        "FBAB8. Bilimsel Çıkarım",
+        "FBAB10. Tümevarımsal Akıl Yürütme"
+      ],
+      "Kavramsal Beceriler": [
+        "KB2.4. Çözümleme",
+        "KB2.6. Bilgi Toplama",
+        "KB2.15. Yansıtma"
+      ],
+      "Eğilimler": [
+        "E1.1. Merak",
+        "E3.6. Analitiklik"
+      ],
+      "Sosyal-Duygusal Öğrenme Becerileri": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB1.2. Kendini Düzenleme (Öz Düzenleme)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB2.3 Sosyal Farkındalık"
+      ],
+      "Değerler": [
+        "D17.Tasarruf",
+        "D19. Vatanseverlik"
+      ],
+      "Okuryazarlık Becerileri": [
+        "OB1. Bilgi Okuryazarlığı",
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı",
+        "OB8. Sürdürülebilirlik"
+      ],
+      "Disiplinler Arası İlişkiler": [
+        "Biyoloji",
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "Beceriler Arası İlişkiler": [
+        "KB2.10. Çıkarım Yapma",
+        "KB2.12. Mevcut Bilgiye/Veriye Dayalı Tahmin Etme",
+        "KB2.19. Mantıksal Denetleme",
+        "KB3.2. Problem Çözme"
+      ],
+      "icerik_cercevesi": [
+        "Elektriksel Kuvvet ve Elektriksel Alan",
+        "Manyetik Alan ve Manyetik Kuvvet",
+        "İndüksiyon Akımı",
+        "Transformatörler"
+      ],
+      "anahtar_kavramlar": [
+        "elektriksel kuvvet",
+        "elektriksel alan",
+        "manyetik alan",
+        "manyetik kuvvet",
+        "manyetik akı",
+        "indüksiyon akımı",
+        "indüksiyon gerilimi",
+        "alternatif akım",
+        "transformatör"
+      ],
+      "olcme_degerlendirme": "Öğrenme çıktıları; soru kutusu, test (açık uçlu maddeler), sunu, çıkış kartı, deney tasarlama, çalışma yaprağı, basit elektrik motoru tasarlama, bilgi görseli kullanılarak değerlendirilebilir. Elektrik yükleri arasındaki kuvvetin matematiksel modeline ulaşmaları için farklı madde türlerinden oluşan bir soru kutusu hazırlama ve elektriksel alanın matematiksel modelini tanımlayabilmeleri için açık uçlu maddelerden oluşan bir test verilebilir. Faraday kafesi ve kullanım alanları ile ilgili bir performans görevi verilebilir. Mıknatısların oluşturduğu manyetik alan ve özellikleri manyetik alan çizgileriyle sorgulamak için bir çıkış kartı verilebilir. Ørsted'in deneyi ile benzerlik gösteren bir deney tasarlama performans görevi verilebilir. Akım makarasının merkez ekseninde oluşan manyetik alan ve elektromıknatısların kullanım alanları ile ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir. Manyetik alanda akım geçen tele etki eden manyetik kuvvet ve büyüklüğünü etkileyen faktörler hakkında deney ve basit bir elektrik motoru tasarlamaları ile ilgili performans görevleri verilebilir. Manyetik akı ile değişkenleri ve indüksiyon akımının matematiksel modeline ulaşabilmeleri için açık uçlu maddelerden oluşan bir test verilebilir. İndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir. Transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları performans görevi olarak istenebilir. Öğrenciler soru kutusu, test, çıkış kartı, çalışma yaprağı, puanlama anahtarı ile değerlendirilebilir. Performans görevleri dereceli puanlama anahtarı ile değerlendirilebilir. Değerlendirmelerde öz/akran/grup değerlendirmesi yapılarak çeşitlilik sağlanabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "temel_kabuller": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+      "on_degerlendirme": "Öğrencinin elektrik yüklerinin etkileşimini ve çeşitlerini açıklayabilmeleri amacıyla ön bilgilerine dayalı kavram haritası hazırlanabilir. Soru cevap tekniği ile öğrencilerin mıknatısların kutuplarının davranışı ile ilgili hazır bulunuşluk düzeyleri tespit edilebilir. Dünya'nın manyetik alanı yardımıyla yapılabilecek etkinlikler ve manyetik alan yardımıyla yön bulabilen canlıların varlığı ile ilgili ön bilgilerini ölçmek amacıyla eşleştirme soruları sorulabilir.",
+      "kopru_kurma": "Öğrencilerin fen bilimleri dersinde öğrendikleri elektrostatikle ilgili bilgileri elektriksel kuvvet ve elektriksel alan ile ilişkilendirilebilir. Öğrenciler fen bilimleri dersinde öğrenmiş oldukları mıknatısların etkileşimini manyetik alan çizgileriyle ilişkilendirilebilir. Dünya'nın manyetik alanını da manyetik alan çizgileriyle incelenebilir.",
+      "ogrenme_ciktilari": [
+        {
+          "kod": "FİZ.11.2.1",
+          "cikti": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeline yönelik tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Elektrik yükleri arasındaki elektriksel kuvvetin bağlı olduğu değişkenler arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+            "b) Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeli üzerinden genellemeler yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen bu çıktının öğretiminde 5E öğrenme modelinden yararlanabilir. Öğretmen, öğrencilere otomobillerin üretim aşamasında homojen olarak boyanması veya fotokopi makinelerinde bir metnin çoğaltılması ile ilgili sorular sorabilir. Öğretmen elektriksel kuvvetin günlük hayattaki rolünden bahsederek bu tür uygulamalarda elektriksel kuvvetin önemini vurgulayabilir. Öğrencilerin konuya yönelik ilgileri çekilir ve yeni öğreneceği bilgilere ihtiyaçları olduğunu fark etmeleri sağlanır . Öğretmen rehberliğinde öğrenciler gruplara ayrılır . Öğrencilere noktasal yükler arasındaki elektriksel kuvvetin büyüklüğünün bağlı olduğu faktörlere yönelik sorular sorularak gruplardan iş birliği ile hipotezler oluşturmaları istenir. Gruplar etkileşimli bir simülasyon aracılığıyla veri toplayarak tablo şeklinde kaydedebilir. Gruplardan tablodaki verilere dayalı olarak grafikler oluşturmaları, grafikleri kullanarak hipotezlerini desteklemeleri veya yanlışlamaları istenebilir. Gruplar simülasyon, tablo ve grafikler üzerinden topladıkları verilerden yararlanarak ve fikir alışverişinde bulunarak elektriksel kuvvetin bağlı olduğu faktörler arasındaki ilişkiyi keşfeder ve bu ilişkiyi matematiksel olarak modeller . Öğretmen Coulomb sabitinden bahsederek öğrencilerin yaptıkları çıkarımları açıklayan matematiksel modelin Coulomb Yasası olarak adlandırıldığını belirtir. Gruplar elektrik yüklü bir yalıtkanı belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir. Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin Coulomb Yasası'nı kavrama durumları, farklı madde türlerinden oluşan bir soru kutusu hazırlanarak değerlendirilebilir.",
+          "kapsam_sinirlari": [
+            "Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir.",
+            "Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller."
+          ]
+        },
+        {
+          "kod": "FİZ.11.2.2",
+          "cikti": "Elektriksel alanın matematiksel modeline yönelik tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Elektrik yüklerinin oluşturduğu elektriksel alana ilişkin keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+            "b) Elektrik yüklerinin oluşturduğu elektriksel alanın matematiksel modeli üzerinden genellemeler yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen elektrik yüklerinin oluşturduğu elektriksel alanı açıklamak için 5E öğrenme modelinden yararlanabilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak elektriksel alanın bağlı olduğu faktörler hakkında sorular sorar . Gruplar hipotezlerini oluşturarak not edebilir. Öğrenciler hipotezlerini test edebilecekleri bir simülasyon aracılığıyla ölçümler yaparak verileri tablo şeklinde kaydeder. Öğrenciler, toplanan verilerle oluşturulan grafikleri kullanarak elektriksel alanın bağlı olduğu faktörleri keşfeder ve elektriksel alana ilişkin buldukları ilişkileri öğretmen rehberliğinde matematiksel olarak modeller. Gruplar elektrik yüklü yalıtkan çubuğu belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir. Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin elektriksel alanı kavrama durumları, farklı madde türlerinin bulunduğu soru kutusu yardımıyla değerlendirilebilir.",
+          "kapsam_sinirlari": [
+            "Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir.",
+            "Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller."
+          ]
+        },
+        {
+          "kod": "FİZ.11.2.3",
+          "cikti": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgi toplayabilme",
+          "surec_bilesenleri": [
+            "a) Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+            "b) Belirlediği kaynağı kullanarak Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgileri bulur.",
+            "c) Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri doğrular.",
+            "ç) Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri kaydeder."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, yolculuk sırasında uçaklara ve kara ulaşım araçlarına yıldırım çarpınca yolcuların etkilenmemesinin, cep telefonlarının asansör içerisinde genellikle baz istasyonuyla bağlantısının kesilmesi ya da MR cihazlarının bulunduğu odaların metal kaplı olmasının nedenleri gibi günlük hayattan örneklerle öğrencilerin dikkatlerini çekebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılır . Öğrenciler konu hakkındaki bilgilere ulaşabilmek için kullanacağı kaynakları (genel ağ, kütüphaneler, dergiler vb.) belirler. Gruplar belirledikleri kaynaklar yoluyla Faraday kafesi ve kullanım alanlarına yönelik bilgilere ulaşır . Faraday kafesi ve kullanım alanları hakkında derle nen bilgiler sınıfla paylaşılır. Öğrenciler tartışma ortamında topladıkları bilgileri doğrular. Doğruluğu teyit edilen bilgilerden yararlanarak Faraday kafesi ve kullanım alanları ile ilgili sunum hazırlayabilir . Öz değerlendirme veya akran değerlendirme formu ile değerlendirme yapılabilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.4",
+          "cikti": "Mıknatısların birbiriyle etkileşimine yönelik bilimsel gözlem yapabilme",
+          "surec_bilesenleri": [
+            "a) Mıknatısların birbiriyle etkileşimiyle ilgili nitelikleri tanımlar.",
+            "b) Mıknatısların birbiriyle etkileşimiyle ilgili verileri toplayarak kaydeder.",
+            "c) Mıknatısların birbiriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen öğrencilere kuşların göç yollarındaki önemli uğrak noktalarından birinin de Türkiye olduğunu vurgulayarak , göç sırasında kuşların veya balina ve yunus gibi hayvanların yön bulma yetenekleri hakkında sorular sorar. Cevaplardan sonra insanların yönlerini bulma yöntemleri hakkında da sorular sorabilir. Bilim ve medeniyet tarihinde yer alan bilim insanlarının pusula ile ilgili yaptıkları çalışmalar hakkında bilgi verebilir. Öğrenciler pusulanın çalışma prensibinden yola çıkarak mıknatısların birbirleriyle etkileşimi ile ilgili nitelikleri tanımlar. Mıknatıs isminin Manisa ili ile olan ilişkisi de vurgulanabilir. Öğrenciler mıknatısların etkileşimlerinin manyetik alan çizgileriyle temsil edilebileceğini gözlemleyebilecekleri bir deney tasarlar . Öğrenciler, tasarladıkları deney düzeneği üzerinden manyetik alan büyüklüğüyle alan çizgilerinin sıklığı arasındaki ilişkiyle ilgili verileri toplayıp kaydeder. Öğrenciler mıknatısların birbirleriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar. Öğretmen Dünya'nın manyetik alanının ve manyetik alan büyüklüğünün manyetik alan çizgileriyle açıklanabileceğini ifade eder. Mıknatısların oluşturduğu manyetik alan ve özelliklerini sorgulamak için bir çıkış kartı verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.5",
+          "cikti": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli bulur.",
+            "b) Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli geneller."
+          ],
+          "ogretme_uygulamasi": "Öğretmen okul bahçesinde öğrencilere pusula kullanılan oryantiring (yönbul) gibi bir yarışa veya arama kurtarma faaliyetlerine dayalı bir etkinlik yaptırabilir. Öğrencilere bu tür yarışlarda veya arama kurtarma faaliyetlerinde pusulaların her yerde doğru çalışıp çalışmadığı sorulabilir. Ørsted’in, üzerinden akım geçen bir iletken ve pusula ile yaptığı çalışmalardan bahsedilebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak Ørsted’in deneyi ile benzerlik gösteren bir deney tasarlar . Manyetik alanın iletkene olan uzaklığı ve elektrik akımının büyüklüğünün değişimi hakkında öğrenci görüşleri alınarak hipotezler kurulur.Öğretmen manyetik alan katsayısı ve sağ el kuralı ile ilgili bilgi verir. Öğrenciler, deney düzeneği üzerinden hipotezlerini test eder . Manyetik alanın, iletkene olan uzaklığı ve elektrik akımının değişimi ile ilişkisini keşfeder ve matematiksel olarak modeller. Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller. Öğrencilere, tasarladıkları deneyle ilgili öz değerlendirme formu verilebilir.",
+          "kapsam_sinirlari": [
+            "Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller."
+          ]
+        },
+        {
+          "kod": "FİZ.11.2.6",
+          "cikti": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Akım makarasının merkez ekseninde oluşan manyetik alana ilişkin keşfettiği ilişkiyi matematiksel olarak modeller.",
+            "b) Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeli üzerinden genelleme yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, düz bir iletken yerine akım makarası kullanılması durumunda oluşacak manyetik alanın yönü ve büyüklüğüne yönelik sorular sorabilir. Akım makarasından geçen akım, sarım sayısı ve akım makarasının boyunda yapılacak değişiklikler sonucu merkez ekseninde oluşan manyetik alandaki değişim hakkında Sokratik sorgulama yöntemini kullanarak öğrencilerin görüşlerini alabilir ve hipotez oluşturmalarını isteyebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak vve hipotezlerini test edecekleri deneyler tasarlayarak veri toplar. Öğrenciler veri analizine dayalı olarak manyetik alanın büyüklüğünün akım ve uzunlukla olan ilişkisini keşfederek matematiksel modele ulaşır. Matematiksel modele dayanarak akım makarasının merkez ekseninde oluşan manyetik alana yönelik genelleme yapar.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.7",
+          "cikti": "Elektromıknatısların kullanım alanlarına ilişkin bilgi toplayabilme",
+          "surec_bilesenleri": [
+            "a) Elektromıknatısların kullanım alanlarıyla ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+            "b) Belirlediği kaynağı kullanarak elektromıknatısların kullanım alanlarıyla ilgili bilgileri bulur.",
+            "c) Elektromıknatısların kullanım alanlarıyla ilgili ulaştığı bilgilerin doğru olup olmadığını belirler.",
+            "ç) Elektromıknatısların günlük hayattaki kullanım alanlarıyla ilgili ulaştığı bilgileri kaydeder."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Gruplar elektromıknatıslar hakkındaki bilgilere ulaşabilmek için kullanacağı genel ağ, kütüphaneler, dergiler ve uzman kişiler gibi kaynakları belirler. Gruplar belirledikleri güvenilir kaynaklar yoluyla elektromıknatısların kullanım alanlarına yönelik bilgilere ulaşır . Öğrenciler, elektromıknatısların kullanım alanları hakkında topladıkları bilgileri akranlarıyla paylaşır. Öğretmen yönlendirici sorular içeren tartışma ortamı sağlayabilir. Öğrenciler toplanan bilgilerin doğru olup olmadıklarını tartışarak belirler . Öğretmen, öğrencilerden yönlendirici sorular yardımıyla doğruluğu belirlenen bilgileri kaydederek elektromıknatısların kullanım alanları ile ilgili sunum hazırlamalarını ister. Akım makarasının merkez ekseninde oluşan manyetik alanla ve elektromıknatısların kullanım alanlarıyla ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.8",
+          "cikti": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel modele yönelik tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Manyetik alanda akım geçen düz bir tele etki eden kuvvetin etmenleri arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+            "b) Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel model üzerinden genelleme yapar."
+          ],
+          "ogretme_uygulamasi": "Öğrencilere, üzerinden akım geçen bir telin çevresinde manyetik alan oluşturduğu hatırlatılır. Öğrencilere, üzerinden akım geçen düz bir tel manyetik alana bırakıldığında manyetik alanın tele etkileri sorulur . Öğretmen manyetik alan içerisindeki akım geçen tele etki eden manyetik kuvvetin telin içerisinde hareketli yüklü parçacıklara etki eden kuvvetten kaynaklandığını vurgular. Öğrencilere iletken bir tel üzerinde manyetik kuvvet oluşmasını sağlayan etmenler hakkında sorular sorulur . Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Gruplar manyetik alanda akım geçen tele etki eden manyetik kuvvet ve büyüklüğünü etkileyen faktörler hakkında bir deney tasarlayarak veri toplar. Veri analizine dayalı olarak manyetik kuvvet ve büyüklüğünü etkileyen etmenler arasındaki ilişkiyi keşfeder ve matematiksel modele ulaşır. Öğrenciler manyetik alanda akım geçen tele etki eden manyetik kuvvetin büyüklüğünü etkileyen değişkenlere bağlı matematiksel modeli oluşturabilir. Öğretmen manyetik kuvvetin vektörel olduğundan bahsederek sağ el kuralını açıklar. Öğrenciler her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler üzerinden, manyetik kuvvet ile değişkenler arasındaki ilişkiyi geneller. Öğrencilerin grup içindeki performanslarını ölçmek üzere öz veya akran değerlendirme formu verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.9",
+          "cikti": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini elektrik motorlarının çalışma prensibine yansıtabilme",
+          "surec_bilesenleri": [
+            "a) Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini gözden geçirir.",
+            "b) Deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen telin bir eksen etrafında dönmesi hakkında çıkarım yapar.",
+            "c) Yaptığı çıkarımları elektrik motorlarının çalışma prensibi açısından değerlendirir."
+          ],
+          "ogretme_uygulamasi": "Öğretmen öğrencilere fosil yakıtlı araçların yerlerini elektrikli araçların almaya başladığını ve Türkiye’nin de bu alanda girişimleri olduğunu söyler. Bu konuda güncel ve dikkat çekici haber metinleri öğrencilere gösterilebilir. Öğrencilere elektrikli motorların çalışma prensibi hakkında fikirleri olup olmadığı sorulabilir. Manyetik alandaki akım geçen düz tele etki eden kuvvet ile ilgili önceki bilgi ve deneyimleri hatırlatılır . Öğrenciler öğretmen rehberliğinde gruplara ayrılır . Gruplara elektrik motorlarının iç yapıları ile ilgili görseller dağıtılabilir. Öğrenciler inceledikleri görsellere ve deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen şeklindeki telin bir eksen etrafında dönmesi hakkında çıkarım yapar. Öğrenciler çıkarımlara dayanarak basit bir elektrik motoru tasarlayıp çalıştırır. Görsellerden faydalanarak veya yaptıkları tasarımı kullanarak elektrik motorlarını, çalışma prensibi açısından değerlendirir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.10",
+          "cikti": "Manyetik akıya etki eden etmenleri çözümleyebilme",
+          "surec_bilesenleri": [
+            "a) Manyetik akıya etki eden etmenleri belirler.",
+            "b) Manyetik akıya etki eden etmenler arasındaki ilişkiyi belirler."
+          ],
+          "ogretme_uygulamasi": "Öğretmen manyetik akı kavramını kavramsal olarak açıklar. Püskürtme boya ile kâğıt üzerine bir kez boya püskürterek manyetik akı ve püskürtülen boyanın tanecik yoğunluğu arasında analoji kurulabilir. Öğrencilerin analojideki boyanın tanecik yoğunluğunu etkileyebilecek etmenler üzerine düşünmeleri istenebilir. Öğretmen, öğrencilerin manyetik alanın boya gibi taneciklerden oluşmadığını fark etmelerini sağlar. Öğrenciler analojiden yola çıkarak manyetik akıya etki eden etmenleri belirler. Öğrenciler manyetik akının manyetik alanın büyüklüğü ve yüzey alanının büyüklüğü ile olan ilişkisini belirler .",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.11",
+          "cikti": "İndüksiyon geriliminin matematiksel modeline ilişkin tümevarımsal akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) İndüksiyon geriliminin oluşmasında keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+            "b) İndüksiyon geriliminin matematiksel modeli üzerinden genellemeler yapar."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, öğrencilere Türkiye’de Atatürk Barajı ve Keban Barajı gibi elektrik üreten hidroelektrik santrallerin olduğunu belirterek suyun mekanik enerjisinin elektrik enerjisine dönüştürülmesine yönelik sorular sorar . Öğretmen barajlarda olduğu gibi öğrencilerin de mekanik enerjiyle elektrik üretebileceklerini belirtebilir. Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Öğrenciler mekanik enerjiden elektrik üretebilecekleri basit araç gereçle yapılabilen bir düzenek tasarlar . TTasarladığı düzenek üzerinden indüksiyon akımı oluşturabilir ve indüksiyon akımını etkileyen etmenleri tespit edebilir. Öğrenciler birim zamandaki manyetik akı değişiminin indüksiyon akımını oluşturduğunu fark eder. İndüksiyon akımının indüksiyon gerilimi ile birlikte oluştuğunu keşfederek indüksiyon geriliminin matematiksel modeline ulaşır. Oluşturduğu matematiksel modeli örnekler üzerinden geneller. Öğretmen, manyetik akı ve indüksiyon akımı ile ilgili dijital içerikler kullanarak öğrencilerden yaptıkları genellemeleri dijital içeriklerdeki gözlemleri ile karşılaştırarak değerlendirmelerini isteyebilir. Manyetik akı ve indüksiyon geriliminin matematiksel modeline yönelik açık uçlu maddelerden oluşan bir test verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.12",
+          "cikti": "İndüklenme sonucu oluşan alternatif (değişken) akım hakkında bilimsel çıkarım yapabilme",
+          "surec_bilesenleri": [
+            "a) İndüklenme sonucu oluşan alternatif akımı etkileyen etmenleri belirler.",
+            "b) İndüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişkiyi belirlemek üzere veri toplayarak kaydeder.",
+            "c) İndüklenme sonucu oluşan alternatif akımı topladığı verilerden yola çıkarak yorumlayıp değerlendirir."
+          ],
+          "ogretme_uygulamasi": "Öğrencilere indüksiyon akımıyla ilgili önceki öğrenmeleri hatırlatılabilir. Öğrencilerin manyetik alandaki tel çerçeve bir tam turunu tamamlarken akımın büyüklüğü ve yönünün değişimini sorgulaması sağlanır. Öğretmen zamanla değişkenlik gösteren bu akımın alternatif (değişken) akım olarak adlandırıldığını ifade eder. Öğrenciler alternatif akımı etkileyen etmenleri öğretmenin yönlendirici soruları yardımıyla belirler. Öğrenciler indüksiyon akımının oluşturulabileceği bir deney tasarlar . Deney sırasında LED lambanın parlaklığını gözlemleyerek indüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişki ile ilgili verileri kaydeder. Kaydettikleri verilere dayalı olarak öğrenciler indüklenme sonucu oluşan alternatif akımı yorumlayarak değerlendirir . İİndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.2.13",
+          "cikti": "Transformatörün yapısı ve kullanım alanlarına yönelik bilimsel çıkarım yapabilme",
+          "surec_bilesenleri": [
+            "a) Transformatörün niteliklerini deney yaparak tanımlar.",
+            "b) Transformatörlerin kullanım alanlarına yönelik topladığı verileri kaydeder.",
+            "c) Elde ettiği verilerden yola çıkarak transformatörün kullanım alanlarındaki rolünü yorumlar ve değerlendirir."
+          ],
+          "ogretme_uygulamasi": "Öğretmen, elektrik üretim santrallerinde üretilen elektriğin taşınması sırasında harcanan elektrik enerjisi miktarının iletkenlerin direncine bağlı olarak değiştiğini belirtir . Öğrencilere bu kaybı azaltmanın en verimli yolları sorularak verilen cevaplar doğrultusunda toplum yararına en verimli yolun, elektriğin en düşük akımlarla taşınması olduğu sonucuna varmaları sağlanır . Öğretmen transformatörü tanıtarak tartışma ortamı oluşturur. Tartışma sonucunda öğrenciler transformatörün birincil gerilim, birincil akım, ikincil gerilim, ikincil akım ve sarım sayısı gibi niteliklerini tanımlar. Öğrenciler bu nitelikler arasındaki ilişkileri deneylerle veri toplayarak ortaya koyar ve verileri kaydeder. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır. Matematiksel işlemlerden kaçınılır. Öğrenciler transformatörlerin kullanım alanlarını araştırarak kullanım alanlarındaki rolünü yorumlar ve değerlendirir. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir. Öğrencilerden performans görevi olarak transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları istenebilir.",
+          "kapsam_sinirlari": [
+            "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır.",
+            "Matematiksel işlemlerden kaçınılır."
+          ]
+        }
+      ],
+      "zenginlestirme": [
+        "Ferromanyetik, diyamanyetik ve paramanyetik maddelerin özellikleri ve manyetik alanla etkileşimleri araştırılabilir. Yüksek gerilim hatları ve trafoların etrafında oluşan manyetik alanın veya elektrikli cihazlar kullanılırken oluşan manyetik alanın sağlığa etkileri araştırılabilir.",
+        "Elektrik jeneratörlerinde manyetik akı değişimiyle elektrik elde edilmesine ve cevher tespitinde metal dedektörlerin kullanılmasına yönelik uygulamalara yer verilebilir.",
+        "STEM basamaklarını uygulayarak transformatörlerde elektrik gerilimini yükseltip alçaltma işlemine dayalı bir düzenek kurulabilir."
+      ],
+      "destekleme": [
+        "Deney tasarlama, veri toplama, veri işleme ve sonuca varma süreçlerinde deneyin yapılışına dönük adım adım yönergeler ve hazır veri toplama şablonları kullanılabilir."
+      ],
+      "guncelleme_tarihi": "05.08.2026"
+    },
+    {
+      "unite_no": 3,
+      "baslik": "Optik Teması",
+      "kaynak_url": "https://tymm.meb.gov.tr/fizik-dersi/unite/259",
+      "amac": "Bu ünitede öğrencilerin ışık şiddeti, ışık akısı ve aydınlanma kavramlarını tanımlamaları, düzlem aynaları kullanarak model oluşturmaları, küresel aynaların ve merceklerin yapılarını karşılaştırmaları, küresel aynalarda ve merceklerde görüntü oluşumu ile ilgili deney yapmaları, ışığın saydam ortamlardaki davranışını kullanarak deney düzeneği oluşturmaları, görünür derinliği gözlemlemeleri, fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanlarına ilişkin bilgi toplamaları, prizmalar ve prizmalar ile kurulan optik sistemler hakkında çıkarım yapmaları amaçlanmaktadır.",
+      "ders_saati": 36,
+      "Alan Becerileri": [
+        "FBAB1. Bilimsel Gözlem",
+        "FBAB7. Deney Yapma",
+        "FBAB8. Bilimsel Çıkarım Yapma",
+        "FBAB9. Bilimsel Model Oluşturma",
+        "FBAB11. Tümdengelimsel Akıl Yürütme"
+      ],
+      "Kavramsal Beceriler": [
+        "KB2.6. Bilgi Toplama",
+        "KB2.7. Karşılaştırma"
+      ],
+      "Eğilimler": [
+        "E1.1. Merak",
+        "E1.3. Azim ve Kararlılık",
+        "E1.5. Kendine Güvenme (Öz Güven)",
+        "E3.1. Muhakeme",
+        "E3.3. Yaratıcılık",
+        "E3.4. Gerçeği Arama",
+        "E3.5. Açık Fikirlilik",
+        "E3.6. Analitiklik",
+        "E3.7. Sistematiklik",
+        "E3.8. Soru Sorma"
+      ],
+      "Sosyal-Duygusal Öğrenme Becerileri": [
+        "SDB1.1. Kendini Tanıma (Öz Farkındalık)",
+        "SDB1.2. Kendini Düzenleme (Öz Düzenleme)",
+        "SDB2.1. İletişim",
+        "SDB2.2. İş Birliği",
+        "SDB3.1. Uyum",
+        "SDB3.2. Esneklik",
+        "SDB3.3. Sorumlu Karar Verme"
+      ],
+      "Değerler": [
+        "D1. Adalet",
+        "D3. Çalışkanlık",
+        "D16. Sorumluluk",
+        "D17. Tasarruf",
+        "D19. Vatanseverlik"
+      ],
+      "Okuryazarlık Becerileri": [
+        "OB1. Bilgi Okuryazarlığı",
+        "OB4. Görsel Okuryazarlık",
+        "OB7. Veri Okuryazarlığı"
+      ],
+      "Disiplinler Arası İlişkiler": [
+        "Görsel Sanatlar",
+        "Matematik"
+      ],
+      "Beceriler Arası İlişkiler": [
+        "KB2.11. Gözleme Dayalı Tahmin Etme",
+        "KB2.12. Mevcut Bilgiye/Veriye Dayalı Tahmin Etme",
+        "KB2.14. Yorumlama",
+        "KB2.15. Yansıtma",
+        "KB3.1. Karar Verme",
+        "KB3.2. Problem Çözme"
+      ],
+      "icerik_cercevesi": [
+        "Işık Şiddeti, Işık Akısı ve Aydınlanma",
+        "Düzlem Aynalar",
+        "Küresel Aynalar",
+        "Kırılma",
+        "Görünür Derinlik",
+        "Fiber Optik",
+        "Prizmalar",
+        "Mercekler"
+      ],
+      "anahtar_kavramlar": [
+        "ışık şiddeti",
+        "ışık akısı",
+        "aydınlanma",
+        "merkez",
+        "tepe noktası",
+        "asal eksen",
+        "ortamın ışığı kırma indisi",
+        "Snell Yasası",
+        "tam yansıma",
+        "sınır açısı",
+        "görünür derinlik",
+        "fiber optik"
+      ],
+      "olcme_degerlendirme": "Öğrenme çıktıları; çalışma yaprağı, ürün veya model tasarlama, çizimler, tablo oluşturma, farklı madde türleri içeren testler, poster veya slayt gösterisi kullanılarak değerlendirilebilir. Işık şiddeti, ışık akısı ve aydınlanma kavramlarını veri setini kullanarak tanımlamaya yönelik kavram haritası hazırlama ve bu kavramların operasyonel tanımlarını açıklamaya yönelik açık uçlu sorular içeren bir çalışma yaprağı verilebilir. Düzlem aynada yansıma ve görüntü oluşumunun kurallarını kullanarak bir günlük hayat problemine çözüm olabilecek ürün ya da model tasarlamaya yönelik bir performans görevi verilebilir. Öz ve akran değerlendirme formu ve problem tanımlama, bilgi toplama, sınırlılıkları belirleme, özgün ürün ortaya koyma basamaklarını içeren dereceli puanlama anahtarı ile değerlendirilebilir. Küresel aynaların yapılarına ilişkin yapılan karşılaştırmaları listelemek için kullanılabilecek nitelik sıralama, anlam çözümleme veya sınıflandırma tabloları ile yapılan çizimlerin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Küresel aynalardaki deney sürecine yönelik kontrol listesi, öz ve akran değerlendirme formları ile küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapılabilir. Işığın saydam ortamlardaki davranışını açıklamaya yönelik deney düzeneği tasarlanması istenir. Hazırlanan deney düzeneğinin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Görünür derinlikte cismin bulunduğu gerçek derinlik ile görünür derinliğin ortamların kırıcılık indislerine bağlı olarak farklı olduğunu değerlendirmede açık uçlu maddelerden oluşan bir test kullanılabilir. Açık uçlu maddeler puanlama anahtarlarıyla değerlendirilebilir. Fiber optik malzemelerin yapısı ve kullanım alanlarına ilişkin hazırlanan poster veya slayt gösterisinin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Prizmalarda tek renkli ışığın izlediği yola ilişkin hipotezlerin olduğu çalışma kâğıdının değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Gözlemlere dayanarak merceklerde ışının hareketine ilişkin çizimler yapmaları; nitelik sıralama, anlam çözümleme tablosu veya sınıflandırma tablosu kullanılarak yakınsak ve ıraksak merceklerin benzer ve farklı özelliklerini listelemeleri istenebilir. Hazırlanan çizim ve listelerin değerlendirilmesinde dereceli puanlama anahtarından yararlanılabilir. Merceklerde farklı yerlerde olan cisimlerin görüntülerinin özelliklerini içeren farklı türde sorulardan oluşan testi kullanarak değerlendirme yapılabilir. Performans görevi ile yazılı yoklamalar sonuç değerlendirmede kullanılabilir.",
+      "temel_kabuller": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+      "on_degerlendirme": "Işın, ışık ve aydınlanma kavramlarına ilişkin ve düzlem ayna, küresel ayna ve merceklerin temel özellikleri hakkında sorular sorulabilir.",
+      "kopru_kurma": "Günlük hayatta kullanılan düzlem ayna, küresel ayna, mercek ve optik araçlarla kurulan sistemler arasında ilişki kurulabilir.",
+      "ogrenme_ciktilari": [
+        {
+          "kod": "FİZ.11.3.1",
+          "cikti": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarına ilişkin bilimsel çıkarım yapabilme",
+          "surec_bilesenleri": [
+            "a) Işık şiddeti, ışık akısı ve aydınlanma kavramlarının tanımlarını yapar.",
+            "b) Işık şiddeti, ışık akısı ve aydınlanma kavramları ile ilgili veri setlerini inceler.",
+            "c) Veri setlerini kullanarak ışık şiddeti, ışık akısı ve aydınlanma kavramlarını yorumlayarak değerlendirir."
+          ],
+          "ogretme_uygulamasi": "Öğretmen ışık şiddeti, ışık akısı ve aydınlanmanın ölçülebilen nicelikler olduğunu belirtebilir. Öğretmen öğrencilere evde, okulda sınıf veya koridorlarda bulunan mevcut ışık kaynakları ile daha fazla aydınlanmanın sağlanmasına ilişkin sorular sorarak aydınlanma kavramını öğrencilerin tartışmalarını sağlar . Öğretmen sınıfa üzerinde ampulün lümen değerinin yazılı olduğu bir ampul kutusu getirerek, lümen niceliğini gösterip bu niceliğin anlamını sorabilir. Öğretmen, öğrencilere elektrik konusundaki ampulün gücü ile enerjisi arasındaki ilişkiye yönelik ön bilgilerini hatırlatabilir. Püskürtme boya ve kâğıt kullanarak analojik bir etkinlik yapabilir. Etkinlikte belli uzaklıklardan kâğıt üzerine boya püskürtülerek boyanın kâğıt üzerinde oluşturduğu koyuluk gözlemlenebilir. Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını tanımlar. Öğrenciler simülasyon veya deney düzenekleri kullanarak bu kavramlarla ilgili veri setleri oluşturur veya öğretmen hazır veri setleri verebilir . Öğrenciler ışık şiddetinin ışık akısı ve aydınlanma kavramları ile ilişkisi ve bu kavramların bağlı olduğu etmenleri belirlemek için veri setlerini analitik bakış açısıyla inceler . Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını bağlı oldukları etmenlere göre yorumlar ve değerlendirir . Öğretmen farklı veri setleri üzerinden ışık akısı, ışık şiddeti ve aydınlanma hakkında açık uçlu sorulardan oluşan bir çalışma kâğıdı kullanarak değerlendirme yapabilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.2",
+          "cikti": "Düzlem aynaları kullanarak bilimsel model oluşturabilme",
+          "surec_bilesenleri": [
+            "a) Düzlem aynaları kullanarak bir model önerir.",
+            "b) Düzlem aynaları kullanarak önerdiği modeli yeni durumlara uyarlayarak geliştirir."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler günlük hayatta veya geçmiş öğrenmelerinde karşılaştıkları bilgiyi kullanarak düzlem aynada yansıma ve görüntü oluşumunun kurallarını açıklar . Öğrenciler öğretmen rehberliğinde gruplara ayrılarak performans görevi çerçevesinde düzlem aynalarda STEM yaklaşımına uygun bilgi temelli hayat problemi belirler . Problemin çözümüne ilişkin bir ürün veya model tasarlamak için bilgi toplar ve sınırlılıklarını belirler. Öğrenciler modeller ile ilgili özgün ve yaratıcı fikirlerini çizim yaparak grup arkadaşları ile tartışırlar . Grup üyeleri sorumluluklarını yerine getirerek ortaklaşa karar verdikleri ürünü sınıf arkadaşlarına bir model olarak önerir . Önerilen modelin günlük hayattaki farklı problem durumlarının çözümüne yönelik geliştirilmesi üzerine sınıf tartışması yaparlar . Öğrenciler sınıf tartışmasında yapılan dönütler doğrultusunda ürünü yeni durumlara da uyarlanacak şekilde geliştirmek üzere etkileşim kurar . Öğretmen öğrencilerden model veya ürünü geliştirme sırasında öz değerlendirme yapabilecekleri ve kendi öğrenme durumlarını geliştirmeye yönelik bir formu doldurmalarını isteyebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.3",
+          "cikti": "Küresel aynaların özelliklerine ilişkin karşılaştırma yapabilme",
+          "surec_bilesenleri": [
+            "a) Küresel aynaların fiziksel özelliklerini ve ışınların küresel aynalarda yansıdıktan sonra izlediği yolu belirler.",
+            "b) Çukur ve tümsek aynaların benzer özelliklerini listeler.",
+            "c) Çukur ve tümsek aynaların farklı özelliklerini listeler."
+          ],
+          "ogretme_uygulamasi": "Öğretmen öğrencilere küresel ve silindirik yansıtıcı yüzeye sahip cisimlerin (çanak anten, araba farı, arabaların dikiz aynası, elektrikli ısıtıcının yansıtıcı yüzeyi, termosun iç yüzeyi vb.) fotoğraflarını gösterir. Bu süreçte soru cevap veya beyin fırtınası gibi yöntem ve tekniklerle öğrencilerin etkileşim kurmaları sağlanarak yüzeyler arasındaki farkları belirlemeleri istenir . Belirlenen benzerlikler ve farklılıklar not edilebilir. Öğrencilerin küresel aynaların silindirik aynalardan farklı özelliklere sahip olduğu çıkarımını yapmaları sağlanabilir. Öğretmen küresel aynaların çukur ve tümsek aynalar olmak üzere ikiye ayrıldığını belirtir. Öğrenciler simülasyon, animasyon veya deney düzeneklerini kullanarak asal eksen, tepe noktası, odak noktası ve merkez noktası çizimlerini kararlılıkla hareket ederek yapar . Öğrenciler ışınların küresel aynalardan yansıdıktan sonra izledikleri yolu, ilgili çizimleri yaparak belirler . Öğrenciler küresel aynaların yapılarına ve küresel aynalarda yansıma yasalarına ilişkin özellikleri belirler. Nitelik sıralama, anlam çözümleme veya sınıflandırma tablolarını kullanarak çukur ve tümsek aynaların benzer ve farklı özelliklerini listeler . Öğretmen öğrencilerin yaptıkları çizim ve tabloları dereceli puanlama anahtarı kullanarak değerlendirebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.4",
+          "cikti": "Küresel aynalarda görüntü oluşumu ile ilgili deney yapabilme",
+          "surec_bilesenleri": [
+            "a) Küresel aynalarda görüntü oluşumu ile ilgili bir deney tasarlar.",
+            "b) Küresel aynalarda görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır . Öğrenciler grup hâlinde adil görev paylaşımı yaparak küresel aynalarda cismin bulunduğu yere göre görüntünün yeri ve özelliklerini belirleyebilecekleri bir deney tasarlar . Simülasyon, animasyon veya hazır görseller kullanılarak görüntü oluşumu gösterilebilir. Öğrenciler deney düzeneklerindeki cisim ve görüntü yerlerine göre çizimlerini yapar, elde ettiği verileri kullanarak tablo oluşturur . Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden küresel aynalarda cismin yerine göre görüntünün yeri ve özellikleri hakkında analizler yapar . Öğretmen küresel aynalardaki deney sürecine yönelik kontrol listesi ve küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapabilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.5",
+          "cikti": "Işığın saydam ortamlardaki davranışını kullanarak deney yapabilme",
+          "surec_bilesenleri": [
+            "a) Işığın saydam ortamlardaki davranışı ile ilgili deney tasarlar.",
+            "b) Işığın saydam ortamlardaki davranışı ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          ],
+          "ogretme_uygulamasi": "Serap olayı ve su dolu bardağın içindeki kaşığın kırık görünmesine ilişkin görsel ve sorular ile öğrencilerin dikkati çekilebilir. Öğrenciler bu olaylara ilişkin sorular sorar . Öğretmen deney düzenekleri kullanarak ortamın ışığı kırma indisini tanımlayabilir, kırılma olayı ve Snell Yasası ile sınır açısı ve tam yansıma olaylarını açıklar. Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir . Grup üyeleri yardımlaşarak kırılma yasalarına ilişkin farklı bir deney tasarlar . Oluşturulan deney düzeneğinde saydam ortamın özellikleri ve tek renkli ışığın gelme açısına ilişkin araştırma problemi belirlenebilir. Farklı saydam ortamlar için gelme açısı ve kırılma açısı değişkenlerine ilişkin veriler toplanarak tablo oluşturulabilir. Kırılma açısının bağlı olduğu değişkenler tablodaki veriler kullanılarak analiz edilir . Öğretmen deney düzeneklerini dereceli puanlama anahtarını kullanarak değerlendirebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.6",
+          "cikti": "Saydam ortamlarda görünür derinliğin, gerçek derinlik ve ortamların ışığı kırma indislerine bağlı olarak değiştiğine ilişkin bilimsel gözlem yapabilme",
+          "surec_bilesenleri": [
+            "a) Görünür derinliği etkileyen gerçek derinlik ve ortamların ışığı kırma indisini tanımlar.",
+            "b) Görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değiştiğini gözlemleyerek kaydeder.",
+            "c) Gözlemlerine dayalı olarak görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değişimini açıklar."
+          ],
+          "ogretme_uygulamasi": "Günlük hayattan görünür derinliğe ilişkin örneklerin fotoğraf ya da videoları sınıf ile paylaşılabilir. Öğrenciler kullanılan görsellerdeki cisimlerin gerçek derinlikleri ile görünür derinliklerinin farklı olmasının nedenlerini sorgular . IIşığı kırma indisleri farklı olan ortamlardaki cisimlerin görünür derinlikleri üzerine yapılan tahminler, soru cevap veya beyin fırtınası gibi tekniklerden biri kullanılarak not edilebilir. Öğrenciler görünür derinliği etkileyen ortamların sahip oldukları farklı kırıcılık indisleri ve cismin bulunduğu gerçek derinlik değişkenlerini tanımlar. Görünür derinliğe ilişkin düzenekler su, sıvı yağ, cam gibi ortamlar; bozuk para ve kalem gibi malzemeler kullanılarak sınıf ortamında kurulabilir. Öğrenciler bu düzeneklerdeki cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi gözlemleyerek kaydeder. Yapılan gözlemler üzerinden öğrenciler ortamların ışığı kırma indisi ve cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi açıklar . Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır. Öğretmen açık uçlu sorulardan oluşan bir test veya gözlem formu ile değerlendirme yapabilir.",
+          "kapsam_sinirlari": [
+            "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır."
+          ]
+        },
+        {
+          "kod": "FİZ.11.3.7",
+          "cikti": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanlarına ilişkin bilgi toplayabilme",
+          "surec_bilesenleri": [
+            "a) Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+            "b) Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için belirlediği araçları kullanarak bilgi toplar.",
+            "c) Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında toplanan bilgiyi doğrular.",
+            "ç) Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında ulaşılan bilgileri kaydeder."
+          ],
+          "ogretme_uygulamasi": "Öğretmen genel ağ alt yapısında fiber optik malzemelerin kullanıldığını belirtilebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili araştırma planlar. Öğrenciler uygun düşünme ve öğrenme stratejisi seçip kütüphane, genel ağ, uzman kişiler ve kurumlar gibi kaynaklardan birini belirler . Öğrenciler fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında bilgi toplar ve kaydeder. Yaptıkları araştırma sonuçları ile poster veya slayt gösterisi şeklinde bir sunum hazırlayabilir. Gruplar fiber optik malzemelerin tam yansıma olayı ile çalışmasına odaklanıp sunumlarını sınıf arkadaşları ile paylaşarak toplanan bilgileri tartışır . Grupların ulaştıkları bilgiler tartışma sırasında birbirleri ile karşılaştırılarak doğrulanır . Öğrencilerin fiber optik kabloların yapısı, çalışma prensibi ve kullanım alanları ile ilgili hazırladıkları sunum dereceli puanlama anahtarı ile değerlendirilebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.8",
+          "cikti": "Prizmalar ve prizmalar ile kurulan birleşik sistemlerde ışığın izlediği yola ilişkin tümdengelimsel akıl yürütebilme",
+          "surec_bilesenleri": [
+            "a) Kırılma yasalarının prizmalar için kullanılabilir olduğuna dair hipotez kurarak test eder.",
+            "b) Geçerli hipotezleri kullanarak prizmalar ile oluşturulmuş birleşik sistemlerde tek renkli ışığın izleyeceği yolu açıklar."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır . Öğretmen gruplara birer çalışma yaprağı verebilir. Öğrencilerden çalışma yaprağında ışığın kırılma sırasındaki davranışlarını listelemeleri için nitelik sıralaması yapmaları, sınıflandırma tablosu oluşturmaları veya anlam çözümleme tablosu hazırlamaları istenebilir. Öğretmen, öğrencilere prizma dağıtıp öğrencilerden prizmaları şekil, büyüklük ve yapıldığı malzeme gibi özelliklerini dikkate alarak incelemelerini isteyebilir. Öğrenciler çalışma yaprağındaki ilgili bölüme prizmanın özelliklerini yazabilir ve şeklini çizebilir. Gruplar ekip çalışması ile ışığın prizma içinde izlediği yola ilişkin hipotezlerini çizerek gösterir veya yazar . Öğrenciler hipotezlerini simülasyon veya deney düzeneği ile test eder. Hipotezlerinin doğru olup olmadığına karar vererek sonuçlarını çalışma kâğıdına yazar . Prizmalar ile oluşturulmuş birleşik sistemlere geçiş yapılabilir. Öğrenciler geçerli hipotezlerden yola çıkarak birden fazla prizmadan oluşan sistemlerde tek renkli ışığın izleyeceği yolu belirler . Gruplar, süreci sınıf arkadaşlarına anlatır. Öğretmen çalışma kâğıdını dereceli puanlama anahtarı ile değerlendirebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.9",
+          "cikti": "Merceklerin özelliklerine ilişkin karşılaştırma yapabilme",
+          "surec_bilesenleri": [
+            "a) Merceklerin fiziksel özelliklerini ve ışınların merceklerde kırıldıktan sonra izlediği yola ilişkin özellikleri belirler.",
+            "b) Yakınsak ve ıraksak merceklerin benzer özelliklerini listeler.",
+            "c) Yakınsak ve ıraksak merceklerin farklı özelliklerini listeler."
+          ],
+          "ogretme_uygulamasi": "Öğrencilere merceklerin kullanıldığı fotoğraf makinesi, kamera, gözlük, büyüteç gibi aygıtların görselleri sunularak ilgileri çekilir. Öğretmen merceklerin yakınsak ve ıraksak olmak üzere ikiye ayrıldığını belirterek yapıları hakkında bilgiler verebilir. Merceklerin asal ekseni, optik merkezi ve odak noktalarını simülasyon, animasyon veya deney düzeneklerini kullanarak öğrencilerin keşfetmelerini sağlar. Öğrenciler ışınların merceklerde kırıldıktan sonra izledikleri yolları çizimler yaparak belirler . Merceklerin yapılarına ve merceklerde kırılma yasalarına ilişkin özellikleri belirler. Öğrenciler nitelik sıralama, anlam çözümleme tablosu veya sınıflandırma tablosu kullanarak yakınsak ve ıraksak merceklerin benzerlik ve farklılıklarını listeler . Öğretmen, yapılan çizim ve listeleri dereceli puanlama anahtarı kullanarak değerlendirebilir.",
+          "kapsam_sinirlari": []
+        },
+        {
+          "kod": "FİZ.11.3.10",
+          "cikti": "Merceklerde görüntü oluşumu ile ilgili deney yapabilme",
+          "surec_bilesenleri": [
+            "a) Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili deney tasarlar.",
+            "b) Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          ],
+          "ogretme_uygulamasi": "Öğrenciler öğretmen rehberliğinde gruplara ayrılarak merceklerde cismin yerine göre görüntünün yeri ve özelliklerini bulabilecekleri bir deney tasarlar . Öğretmen simülasyon veya animasyon kullanarak ışınlarla görüntü oluşumunu gösterebilir. Öğrenciler deney düzeneklerindeki cisimlerin bulunduğu yere göre görüntü çizimlerini yapar. Elde edilen sonuçları kullanarak tablo oluşturur . Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden merceklerde görüntü oluşumunu analiz eder . Öğretmen merceklerde asal eksen üzerinde ve herhangi bir noktadaki cisimlerin görüntülerinin özelliklerini içeren farklı madde türlerinden oluşan testi kullanarak değerlendirme yapabilir.",
+          "kapsam_sinirlari": []
+        }
+      ],
+      "zenginlestirme": [
+        "Kırılma olayında paralel ortamlarda kayma miktarını belirleyen değişkenler incelenebilir. Aydınlatma sistemlerinde kırılmanın kullanımı, refraktometre cihazının çalışma prensibi ve kullanım alanları araştırılabilir. Fiber optik hatlarda yaşanan sorunlara ilişkin araştırma yaparak çözüm önerileri geliştirilebilir. İbnülheysem'in optik bilimi adına yapmış olduğu çalışmalar ve “optik ve mekanik analojisi” araştırılabilir.",
+        "Mercek ve ayna sistemlerinin bütünleşik kullanıldığı sistemler araştırılarak bu sistemlere ilişkin bir model geliştirilebilir.",
+        "Teleskop, mikroskop, dürbün gibi optik sistemlerden birini belirleyerek bunların tarihsel serüvenleri, diğer bilim alanlarındaki kullanımları ve çalışma ilkeleri hakkında sunum hazırlanabilir. Sunumlarda Kemâleddin el-Fârisî ile Freibergli Theodoric'in yaptıkları çalışmalara yer vermeleri istenebilir."
+      ],
+      "destekleme": [
+        "Küresel aynalarda hazır verilen model üzerinde incelemeler yapılabilir. Kırılma yasalarına ilişkin hazır deney düzeneği verilebilir. Fiber optik sistemler için bilgiler öğretmen tarafından verilebilir. Prizmalar ve merceklerde hazır modeller üzerinden incelemeler yapılabilir."
+      ],
+      "guncelleme_tarihi": "05.08.2026"
+    }
+  ]
+}
