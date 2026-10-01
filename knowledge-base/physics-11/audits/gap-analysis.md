@@ -47,7 +47,7 @@
 | İçerik başlığı adları | Web: "Newton Hareket Yasaları", "Çembersel Hareket" | PDF esas: "Newton'ın ...", "Düzgün Çembersel ...". |
 | Kod | Web sayfasında "FİZ.11.4.10" | PDF: FİZ.11.3.10. |
 | Kitap numaralandırması | 1.6 alt başlıkları "1.4.x" | 1.6.1 / 1.6.2 olarak kaydedildi. |
-| Program ve ders kitabı (ikisi de Tier 1) | Program 11 çıktıda hesaplamayı dışlıyor; kitap 12 formül ve sayısal alıştırma veriyor | İkisi de kayıtlı: `program_calc_status` + `textbook_vs_program_conflict`. |
+| Program ve ders kitabı (ikisi de Tier 1) | Program 6 çıktıda hesaplamayı dışlıyor, 1 çıktıyı kavramsal tutuyor; kitap bu 7 çıktıda 12 formül ve sayısal alıştırma veriyor | İkisi de kayıtlı: `program_calc_status` + `textbook_vs_program_conflict`. |
 | Ders kitabı ve fizik | Tablo 1.2'de k "boyutsuz" | Boyut analiziyle reddedildi; doğru birim kg/m³. |
 | Ders kitabı iç tutarlılığı | s. 116 eğimli viraj alt indisleri ters | Sonuç formülü doğru; not düşüldü. |
 
