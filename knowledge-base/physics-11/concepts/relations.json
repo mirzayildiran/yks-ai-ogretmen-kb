@@ -1,0 +1,1998 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "generated_by": "scripts/build_concepts.py",
+  "generated_at": "2026-10-01",
+  "count": 220,
+  "relation_types": {
+    "REQUIRES": "A'yı anlamak için B gerekir (tersi PREREQUISITE_OF, türetilir, saklanmaz)",
+    "PART_OF": "A, B'nin parçası/öğesidir",
+    "SPECIAL_CASE_OF": "A, B'nin özel durumudur",
+    "CAUSES": "A, B'yi oluşturur/doğurur",
+    "USED_IN": "A, B'de araç olarak kullanılır",
+    "RELATED_TO": "Yönsüz ilgi (karşılaştırma, karıştırılma, analoji)"
+  },
+  "relations": [
+    {
+      "id": "phys11-rel-001",
+      "source": "phys11-c-vektor-bilesenleri",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Bileşenlere ayırma vektör kavramına dayanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-002",
+      "source": "phys11-c-vektor-bilesenleri",
+      "type": "REQUIRES",
+      "target": "phys11-c-trigonometrik-oranlar",
+      "rationale": "Bileşenler sin/cos ile hesaplanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-003",
+      "source": "phys11-c-yer-degistirme",
+      "type": "REQUIRES",
+      "target": "phys11-c-konum",
+      "rationale": "Yer değiştirme konum farkıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-004",
+      "source": "phys11-c-yer-degistirme",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Yer değiştirme vektöreldir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-005",
+      "source": "phys11-c-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-yer-degistirme",
+      "rationale": "Hız birim zamandaki yer değiştirmedir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-006",
+      "source": "phys11-c-surat",
+      "type": "RELATED_TO",
+      "target": "phys11-c-hiz",
+      "rationale": "Sürat skaler, hız vektörel karşılığıdır; sık karıştırılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-007",
+      "source": "phys11-c-surat",
+      "type": "REQUIRES",
+      "target": "phys11-c-skaler-nicelik",
+      "rationale": "Sürat skalerdir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-008",
+      "source": "phys11-c-ivme",
+      "type": "REQUIRES",
+      "target": "phys11-c-hiz",
+      "rationale": "İvme hız değişimidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-009",
+      "source": "phys11-c-sabit-hizli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-hiz",
+      "rationale": "Sabit hızlı hareket hız kavramına dayanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-010",
+      "source": "phys11-c-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-ivme",
+      "rationale": "Sabit ivmeli hareket ivme kavramına dayanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-011",
+      "source": "phys11-c-hareket-grafikleri",
+      "type": "REQUIRES",
+      "target": "phys11-c-grafik-egim-alan",
+      "rationale": "Grafiklerden eğim ve alanla bilgi çıkarılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-012",
+      "source": "phys11-c-hareket-grafikleri",
+      "type": "REQUIRES",
+      "target": "phys11-c-sabit-ivmeli-hareket",
+      "rationale": "Grafikler sabit hızlı/ivmeli hareketi gösterir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-013",
+      "source": "phys11-c-agirlik",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Ağırlık bir kuvvettir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-014",
+      "source": "phys11-c-agirlik",
+      "type": "REQUIRES",
+      "target": "phys11-c-kutle",
+      "rationale": "G = m·g.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-015",
+      "source": "phys11-c-frekans",
+      "type": "REQUIRES",
+      "target": "phys11-c-periyot",
+      "rationale": "f = 1/T.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-016",
+      "source": "phys11-c-manyetik-kutup",
+      "type": "PART_OF",
+      "target": "phys11-c-miknatis",
+      "rationale": "Kutuplar mıknatısın parçasıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-017",
+      "source": "phys11-c-odak-noktasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik",
+      "rationale": "Odak, ışınların toplandığı noktadır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-018",
+      "source": "phys11-c-yansima",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik",
+      "rationale": "Yansıma ışığın davranışıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-019",
+      "source": "phys11-c-kirilma",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik",
+      "rationale": "Kırılma ışığın davranışıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-020",
+      "source": "phys11-c-potansiyel-fark",
+      "type": "RELATED_TO",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "Gerilim devrede akımı oluşturur (Ohm).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-021",
+      "source": "phys11-c-direnc",
+      "type": "REQUIRES",
+      "target": "phys11-c-potansiyel-fark",
+      "rationale": "R = V/I.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-022",
+      "source": "phys11-c-direnc",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "R = V/I.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-023",
+      "source": "phys11-c-elektrik-akimi",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-yuku",
+      "rationale": "Akım birim zamanda geçen yüktür.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-024",
+      "source": "phys11-c-serbest-dusme",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-sabit-ivmeli-hareket",
+      "rationale": "Serbest düşme, ivmesi g olan bir boyutlu sabit ivmeli harekettir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-025",
+      "source": "phys11-c-serbest-dusme",
+      "type": "REQUIRES",
+      "target": "phys11-c-yer-cekimi-ivmesi",
+      "rationale": "Hareketin ivmesi g'dir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-026",
+      "source": "phys11-c-serbest-dusme",
+      "type": "REQUIRES",
+      "target": "phys11-c-hareket-grafikleri",
+      "rationale": "FİZ.11.1.2 x-t, v-t, a-t grafiklerini ister.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-027",
+      "source": "phys11-c-yer-cekimi-ivmesi",
+      "type": "REQUIRES",
+      "target": "phys11-c-ivme",
+      "rationale": "g bir ivmedir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-028",
+      "source": "phys11-c-yer-cekimi-ivmesi",
+      "type": "RELATED_TO",
+      "target": "phys11-c-agirlik",
+      "rationale": "G = m·g.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-029",
+      "source": "phys11-c-hava-direnci",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-surtunme-kuvveti",
+      "rationale": "Program limit hızı sürtünme kuvvetiyle ilişkilendirir; akışkan sürtünmesidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-030",
+      "source": "phys11-c-hava-direnci",
+      "type": "RELATED_TO",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Serbest düşmede ihmal edilir (resmî varsayım).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-031",
+      "source": "phys11-c-tepe-noktasi-hareket",
+      "type": "PART_OF",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Yukarı yönlü serbest düşmenin özel anı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-032",
+      "source": "phys11-c-tepe-noktasi-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-ivme",
+      "rationale": "Tepede v=0 iken a=g olduğunu anlamak ivme kavramını gerektirir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-033",
+      "source": "phys11-c-maksimum-yukseklik",
+      "type": "PART_OF",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Yukarı yönlü serbest düşmenin büyüklüğü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-034",
+      "source": "phys11-c-maksimum-yukseklik",
+      "type": "USED_IN",
+      "target": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "rationale": "Düşey bileşenden bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-035",
+      "source": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektor-bilesenleri",
+      "rationale": "Hız bileşenlerine ayrılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-036",
+      "source": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-sabit-hizli-hareket",
+      "rationale": "Yatay bileşen sabit hızlıdır (FİZ.11.1.3 a).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-037",
+      "source": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Düşey bileşen serbest düşmedir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-038",
+      "source": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-bilesenlerin-bagimsizligi",
+      "rationale": "Bileşenler ayrı ayrı incelenir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-039",
+      "source": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-trigonometrik-oranlar",
+      "rationale": "Programda trigonometrik hesap açıkça var.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-040",
+      "source": "phys11-c-bilesenlerin-bagimsizligi",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektor-bilesenleri",
+      "rationale": "Bağımsızlık bileşen kavramına dayanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-041",
+      "source": "phys11-c-parabolik-yorunge",
+      "type": "PART_OF",
+      "target": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "rationale": "Hareketin yörüngesidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-042",
+      "source": "phys11-c-menzil",
+      "type": "PART_OF",
+      "target": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "rationale": "Hareketin büyüklüğüdür.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-043",
+      "source": "phys11-c-menzil",
+      "type": "REQUIRES",
+      "target": "phys11-c-ucus-suresi",
+      "rationale": "Menzil = yatay hız × uçuş süresi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-044",
+      "source": "phys11-c-ucus-suresi",
+      "type": "PART_OF",
+      "target": "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+      "rationale": "Hareketin büyüklüğüdür.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-045",
+      "source": "phys11-c-ucus-suresi",
+      "type": "REQUIRES",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Düşey hareketten bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-046",
+      "source": "phys11-c-bileske-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Kuvvetlerin toplamıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-047",
+      "source": "phys11-c-bileske-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Vektörel toplamadır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-048",
+      "source": "phys11-c-eylemsizlik",
+      "type": "REQUIRES",
+      "target": "phys11-c-kutle",
+      "rationale": "Eylemsizliğin ölçüsü kütledir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-049",
+      "source": "phys11-c-newton-birinci-yasa",
+      "type": "REQUIRES",
+      "target": "phys11-c-bileske-kuvvet",
+      "rationale": "F_net = 0 koşulu.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-050",
+      "source": "phys11-c-newton-birinci-yasa",
+      "type": "REQUIRES",
+      "target": "phys11-c-eylemsizlik",
+      "rationale": "Eylemsizlik ilkesidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-051",
+      "source": "phys11-c-newton-ikinci-yasa",
+      "type": "REQUIRES",
+      "target": "phys11-c-bileske-kuvvet",
+      "rationale": "F_net = m·a.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-052",
+      "source": "phys11-c-newton-ikinci-yasa",
+      "type": "REQUIRES",
+      "target": "phys11-c-ivme",
+      "rationale": "F_net = m·a.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-053",
+      "source": "phys11-c-newton-ikinci-yasa",
+      "type": "REQUIRES",
+      "target": "phys11-c-kutle",
+      "rationale": "F_net = m·a.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-054",
+      "source": "phys11-c-etki-tepki",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Kuvvet çiftidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-055",
+      "source": "phys11-c-serbest-cisim-diyagrami",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Kuvvetleri gösterir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-056",
+      "source": "phys11-c-serbest-cisim-diyagrami",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Kuvvetler vektör olarak çizilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-057",
+      "source": "phys11-c-serbest-cisim-diyagrami",
+      "type": "USED_IN",
+      "target": "phys11-c-newton-ikinci-yasa",
+      "rationale": "FİZ.11.1.5: Newton yasaları diyagramla yeniden ifade edilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-058",
+      "source": "phys11-c-normal-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Bir temas kuvvetidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-059",
+      "source": "phys11-c-normal-kuvvet",
+      "type": "RELATED_TO",
+      "target": "phys11-c-etki-tepki",
+      "rationale": "Cismin yüzeye bastırması ile yüzeyin tepkisi bir etki-tepki çiftidir; normal kuvvet ağırlığın tepkisi değildir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-060",
+      "source": "phys11-c-gerilme-kuvveti",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Bir temas kuvvetidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-061",
+      "source": "phys11-c-bagli-cisim-sistemi",
+      "type": "REQUIRES",
+      "target": "phys11-c-newton-ikinci-yasa",
+      "rationale": "Sistem ivmesi F_net/m_toplam.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-062",
+      "source": "phys11-c-bagli-cisim-sistemi",
+      "type": "REQUIRES",
+      "target": "phys11-c-serbest-cisim-diyagrami",
+      "rationale": "Her cisim ayrı ayrı incelenir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-063",
+      "source": "phys11-c-bagli-cisim-sistemi",
+      "type": "REQUIRES",
+      "target": "phys11-c-gerilme-kuvveti",
+      "rationale": "Cisimler iple bağlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-064",
+      "source": "phys11-c-egik-duzlem",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektor-bilesenleri",
+      "rationale": "Ağırlık bileşenlerine ayrılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-065",
+      "source": "phys11-c-egik-duzlem",
+      "type": "REQUIRES",
+      "target": "phys11-c-serbest-cisim-diyagrami",
+      "rationale": "Kuvvetler diyagramla gösterilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-066",
+      "source": "phys11-c-egik-duzlem",
+      "type": "REQUIRES",
+      "target": "phys11-c-agirlik",
+      "rationale": "Ağırlığın bileşenleri kullanılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-067",
+      "source": "phys11-c-surtunme-kuvveti",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Bir temas kuvvetidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-068",
+      "source": "phys11-c-surtunme-kuvveti",
+      "type": "REQUIRES",
+      "target": "phys11-c-normal-kuvvet",
+      "rationale": "Büyüklüğü normal kuvvete bağlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-069",
+      "source": "phys11-c-statik-surtunme",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-surtunme-kuvveti",
+      "rationale": "Sürtünmenin bir türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-070",
+      "source": "phys11-c-kinetik-surtunme",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-surtunme-kuvveti",
+      "rationale": "Sürtünmenin bir türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-071",
+      "source": "phys11-c-maksimum-statik-surtunme",
+      "type": "PART_OF",
+      "target": "phys11-c-statik-surtunme",
+      "rationale": "Statik sürtünmenin üst sınırı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-072",
+      "source": "phys11-c-surtunme-katsayisi",
+      "type": "USED_IN",
+      "target": "phys11-c-maksimum-statik-surtunme",
+      "rationale": "f_s,max = k_s·N; nicel model FİZ.11.1.7'de, nitel karşılaştırma FİZ.11.1.6'da.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-073",
+      "source": "phys11-c-surtunme-katsayisi",
+      "type": "USED_IN",
+      "target": "phys11-c-kinetik-surtunme",
+      "rationale": "f_k = k·N; nicel model FİZ.11.1.7'de.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-074",
+      "source": "phys11-c-surtunme-katsayisi",
+      "type": "PART_OF",
+      "target": "phys11-c-surtunme-kuvveti",
+      "rationale": "Sürtünmenin matematiksel modelinin parçası (FİZ.11.1.7).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-075",
+      "source": "phys11-c-kayarak-oteleme",
+      "type": "RELATED_TO",
+      "target": "phys11-c-kinetik-surtunme",
+      "rationale": "Kayan cisme kinetik sürtünme etki eder.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-076",
+      "source": "phys11-c-donerek-oteleme",
+      "type": "RELATED_TO",
+      "target": "phys11-c-statik-surtunme",
+      "rationale": "Kaymadan yuvarlanmada sürtünme statiktir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-077",
+      "source": "phys11-c-limit-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-hava-direnci",
+      "rationale": "Direnç kuvveti ağırlığa eşitlenince oluşur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-078",
+      "source": "phys11-c-limit-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-agirlik",
+      "rationale": "Direnç = ağırlık koşulu.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-079",
+      "source": "phys11-c-limit-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-newton-birinci-yasa",
+      "rationale": "Bileşke kuvvet sıfır → sabit hız.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-080",
+      "source": "phys11-c-limit-hiz",
+      "type": "RELATED_TO",
+      "target": "phys11-c-serbest-dusme",
+      "rationale": "Hava direnci ihmal edilmezse serbest düşme limit hıza ulaşır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-081",
+      "source": "phys11-c-kesit-alani",
+      "type": "USED_IN",
+      "target": "phys11-c-hava-direnci",
+      "rationale": "Direnç kuvvetini etkileyen değişkendir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-082",
+      "source": "phys11-c-duzgun-cembersel-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-cizgisel-hiz",
+      "rationale": "Hız teğet ve sabit büyüklükte.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-083",
+      "source": "phys11-c-duzgun-cembersel-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-periyot",
+      "rationale": "Hareket periyodiktir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-084",
+      "source": "phys11-c-duzgun-cembersel-hareket",
+      "type": "REQUIRES",
+      "target": "phys11-c-yaricap-vektoru",
+      "rationale": "FİZ.11.1.9: hız ve yarıçap vektörü yönleri.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-085",
+      "source": "phys11-c-cizgisel-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-hiz",
+      "rationale": "Hızın çembersel harekette adı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-086",
+      "source": "phys11-c-cizgisel-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Yönü sürekli değişen vektör.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-087",
+      "source": "phys11-c-cizgisel-surat",
+      "type": "REQUIRES",
+      "target": "phys11-c-surat",
+      "rationale": "Çizgisel hızın büyüklüğü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-088",
+      "source": "phys11-c-cizgisel-surat",
+      "type": "REQUIRES",
+      "target": "phys11-c-periyot",
+      "rationale": "v = 2πr/T.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-089",
+      "source": "phys11-c-acisal-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-periyot",
+      "rationale": "ω = 2π/T.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-090",
+      "source": "phys11-c-acisal-hiz",
+      "type": "REQUIRES",
+      "target": "phys11-c-frekans",
+      "rationale": "ω = 2πf.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-091",
+      "source": "phys11-c-acisal-ivme",
+      "type": "REQUIRES",
+      "target": "phys11-c-acisal-hiz",
+      "rationale": "Açısal hızın değişimi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-092",
+      "source": "phys11-c-acisal-ivme",
+      "type": "RELATED_TO",
+      "target": "phys11-c-duzgun-cembersel-hareket",
+      "rationale": "Düzgün çembersel harekette sıfırdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-093",
+      "source": "phys11-c-merkezcil-ivme",
+      "type": "REQUIRES",
+      "target": "phys11-c-cizgisel-hiz",
+      "rationale": "Hız yönünün değişiminden doğar.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-094",
+      "source": "phys11-c-merkezcil-ivme",
+      "type": "REQUIRES",
+      "target": "phys11-c-ivme",
+      "rationale": "Bir ivmedir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-095",
+      "source": "phys11-c-merkezcil-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-merkezcil-ivme",
+      "rationale": "F = m·a_m.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-096",
+      "source": "phys11-c-merkezcil-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-newton-ikinci-yasa",
+      "rationale": "Newton'ın 2. yasasının çembersel hareketteki uygulaması.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-097",
+      "source": "phys11-c-merkezcil-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-bileske-kuvvet",
+      "rationale": "Merkezcil kuvvet bileşke kuvvettir, ayrı bir kuvvet değildir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-098",
+      "source": "phys11-c-yatay-duzlemde-cembersel",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-duzgun-cembersel-hareket",
+      "rationale": "Programdaki problem türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-099",
+      "source": "phys11-c-yatay-duzlemde-cembersel",
+      "type": "REQUIRES",
+      "target": "phys11-c-merkezcil-kuvvet",
+      "rationale": "Merkezcil kuvvet analizi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-100",
+      "source": "phys11-c-dusey-duzlemde-cembersel",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-duzgun-cembersel-hareket",
+      "rationale": "Programdaki problem türü (program 'düşey düzlemde düzgün çembersel hareket' der).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-101",
+      "source": "phys11-c-dusey-duzlemde-cembersel",
+      "type": "REQUIRES",
+      "target": "phys11-c-merkezcil-kuvvet",
+      "rationale": "Tepe/dip noktalarında kuvvet analizi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-102",
+      "source": "phys11-c-dusey-duzlemde-cembersel",
+      "type": "REQUIRES",
+      "target": "phys11-c-agirlik",
+      "rationale": "Ağırlık merkezcil kuvvete katkı verir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-103",
+      "source": "phys11-c-dusey-duzlemde-cembersel",
+      "type": "REQUIRES",
+      "target": "phys11-c-gerilme-kuvveti",
+      "rationale": "İp gerilmesi analizi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-104",
+      "source": "phys11-c-yatay-viraj",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-yatay-duzlemde-cembersel",
+      "rationale": "Yolda yatay çembersel hareket.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-105",
+      "source": "phys11-c-yatay-viraj",
+      "type": "REQUIRES",
+      "target": "phys11-c-statik-surtunme",
+      "rationale": "Merkezcil kuvveti statik sürtünme sağlar.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-106",
+      "source": "phys11-c-egimli-viraj",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-duzgun-cembersel-hareket",
+      "rationale": "Programdaki problem türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-107",
+      "source": "phys11-c-egimli-viraj",
+      "type": "REQUIRES",
+      "target": "phys11-c-merkezcil-kuvvet",
+      "rationale": "Merkezcil kuvvet analizi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-108",
+      "source": "phys11-c-egimli-viraj",
+      "type": "REQUIRES",
+      "target": "phys11-c-normal-kuvvet",
+      "rationale": "Normal kuvvetin yatay bileşeni katkı verir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-109",
+      "source": "phys11-c-egimli-viraj",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektor-bilesenleri",
+      "rationale": "Kuvvetler bileşenlerine ayrılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-110",
+      "source": "phys11-c-elektriksel-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-yuku",
+      "rationale": "Yükler arası etkileşimdir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-111",
+      "source": "phys11-c-elektriksel-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Bir kuvvettir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-112",
+      "source": "phys11-c-coulomb-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektriksel-kuvvet",
+      "rationale": "Kuvvetin matematiksel modelidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-113",
+      "source": "phys11-c-coulomb-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-noktasal-yuk",
+      "rationale": "Noktasal yükler için geçerlidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-114",
+      "source": "phys11-c-coulomb-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-ters-kare-iliskisi",
+      "rationale": "F ∝ 1/d².",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-115",
+      "source": "phys11-c-coulomb-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-oran-oranti",
+      "rationale": "Programda yorum oran-orantıyla yapılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-116",
+      "source": "phys11-c-coulomb-sabiti",
+      "type": "PART_OF",
+      "target": "phys11-c-coulomb-yasasi",
+      "rationale": "Yasadaki sabittir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-117",
+      "source": "phys11-c-noktasal-yuk",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-yuku",
+      "rationale": "Bir yük modelidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-118",
+      "source": "phys11-c-elektroskop",
+      "type": "USED_IN",
+      "target": "phys11-c-coulomb-yasasi",
+      "rationale": "Programdaki uygulamada gözlem aracıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-119",
+      "source": "phys11-c-elektriksel-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektriksel-kuvvet",
+      "rationale": "Birim yük başına kuvvettir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-120",
+      "source": "phys11-c-elektriksel-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Vektöreldir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-121",
+      "source": "phys11-c-elektriksel-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-ters-kare-iliskisi",
+      "rationale": "E ∝ 1/d².",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-122",
+      "source": "phys11-c-elektriksel-alan-cizgileri",
+      "type": "PART_OF",
+      "target": "phys11-c-elektriksel-alan",
+      "rationale": "Alanın gösterimidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-123",
+      "source": "phys11-c-bileske-elektriksel-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektriksel-alan",
+      "rationale": "Alanların toplamıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-124",
+      "source": "phys11-c-bileske-elektriksel-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Vektörel toplamadır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-125",
+      "source": "phys11-c-faraday-kafesi",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektriksel-alan",
+      "rationale": "İç bölgede alanın sıfır olması.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-126",
+      "source": "phys11-c-manyetik-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-miknatis",
+      "rationale": "Mıknatısların alanıyla tanıtılır (FİZ.11.2.4).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-127",
+      "source": "phys11-c-manyetik-alan",
+      "type": "REQUIRES",
+      "target": "phys11-c-vektorel-nicelik",
+      "rationale": "Vektöreldir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-128",
+      "source": "phys11-c-manyetik-alan-cizgileri",
+      "type": "PART_OF",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Alanın gösterimidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-129",
+      "source": "phys11-c-dunyanin-manyetik-alani",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Bir manyetik alan örneğidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-130",
+      "source": "phys11-c-pusula",
+      "type": "USED_IN",
+      "target": "phys11-c-dunyanin-manyetik-alani",
+      "rationale": "Yön bulmada kullanılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-131",
+      "source": "phys11-c-pusula",
+      "type": "USED_IN",
+      "target": "phys11-c-oersted-deneyi",
+      "rationale": "Deneyde akımın alanını gösterir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-132",
+      "source": "phys11-c-elektrik-akimi",
+      "type": "CAUSES",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Akım geçen iletken çevresinde manyetik alan oluşur (Ørsted).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-133",
+      "source": "phys11-c-oersted-deneyi",
+      "type": "RELATED_TO",
+      "target": "phys11-c-duz-telin-manyetik-alani",
+      "rationale": "Düz telin alanını keşfettiren deneydir (FİZ.11.2.5).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-134",
+      "source": "phys11-c-duz-telin-manyetik-alani",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "Kaynağı akımdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-135",
+      "source": "phys11-c-duz-telin-manyetik-alani",
+      "type": "REQUIRES",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Bir manyetik alandır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-136",
+      "source": "phys11-c-duz-telin-manyetik-alani",
+      "type": "REQUIRES",
+      "target": "phys11-c-sag-el-kurali",
+      "rationale": "Yönü sağ el kuralıyla bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-137",
+      "source": "phys11-c-duz-telin-manyetik-alani",
+      "type": "REQUIRES",
+      "target": "phys11-c-oran-oranti",
+      "rationale": "B ∝ I/d yorumu.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-138",
+      "source": "phys11-c-manyetik-alan-katsayisi",
+      "type": "PART_OF",
+      "target": "phys11-c-duz-telin-manyetik-alani",
+      "rationale": "Bağıntıdaki sabittir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-139",
+      "source": "phys11-c-akim-makarasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-duz-telin-manyetik-alani",
+      "rationale": "Sarımların alanlarının toplamıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-140",
+      "source": "phys11-c-akim-makarasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-sarim-sayisi",
+      "rationale": "Alan sarım sayısına bağlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-141",
+      "source": "phys11-c-akim-makarasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-sag-el-kurali",
+      "rationale": "Kutupları sağ el kuralıyla bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-142",
+      "source": "phys11-c-elektromiknatis",
+      "type": "REQUIRES",
+      "target": "phys11-c-akim-makarasi",
+      "rationale": "Akım makarasının uygulamasıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-143",
+      "source": "phys11-c-manyetik-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Alan kuvvet uygular.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-144",
+      "source": "phys11-c-manyetik-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuvvet",
+      "rationale": "Bir kuvvettir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-145",
+      "source": "phys11-c-tele-etki-eden-manyetik-kuvvet",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-manyetik-kuvvet",
+      "rationale": "Manyetik kuvvetin akım geçen teldeki durumu.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-146",
+      "source": "phys11-c-tele-etki-eden-manyetik-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "F = B·I·L.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-147",
+      "source": "phys11-c-tele-etki-eden-manyetik-kuvvet",
+      "type": "REQUIRES",
+      "target": "phys11-c-sag-el-kurali",
+      "rationale": "Yönü sağ el kuralıyla bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-148",
+      "source": "phys11-c-elektrik-motoru",
+      "type": "REQUIRES",
+      "target": "phys11-c-tele-etki-eden-manyetik-kuvvet",
+      "rationale": "FİZ.11.2.9: tele etki eden kuvvetten motora.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-149",
+      "source": "phys11-c-elektrik-motoru",
+      "type": "REQUIRES",
+      "target": "phys11-c-enerji-donusumu",
+      "rationale": "Elektrik → mekanik enerji.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-150",
+      "source": "phys11-c-manyetik-aki",
+      "type": "REQUIRES",
+      "target": "phys11-c-manyetik-alan",
+      "rationale": "Φ = B·A.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-151",
+      "source": "phys11-c-manyetik-aki",
+      "type": "CAUSES",
+      "target": "phys11-c-induksiyon-gerilimi",
+      "rationale": "Akının zamanla değişimi indüksiyon gerilimi oluşturur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-152",
+      "source": "phys11-c-faraday-induksiyon-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-manyetik-aki",
+      "rationale": "ε = −N·ΔΦ/Δt.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-153",
+      "source": "phys11-c-faraday-induksiyon-yasasi",
+      "type": "PART_OF",
+      "target": "phys11-c-induksiyon-gerilimi",
+      "rationale": "İndüksiyon geriliminin matematiksel modelidir (FİZ.11.2.11).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-154",
+      "source": "phys11-c-induksiyon-gerilimi",
+      "type": "REQUIRES",
+      "target": "phys11-c-potansiyel-fark",
+      "rationale": "Bir gerilimdir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-155",
+      "source": "phys11-c-induksiyon-gerilimi",
+      "type": "CAUSES",
+      "target": "phys11-c-induksiyon-akimi",
+      "rationale": "Kapalı devrede akım oluşturur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-156",
+      "source": "phys11-c-induksiyon-akimi",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "Bir akımdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-157",
+      "source": "phys11-c-lenz-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-induksiyon-akimi",
+      "rationale": "İndüksiyon akımının yönünü verir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-158",
+      "source": "phys11-c-lenz-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-manyetik-aki",
+      "rationale": "Akı değişimine karşı koyar.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-159",
+      "source": "phys11-c-alternatif-akim",
+      "type": "REQUIRES",
+      "target": "phys11-c-induksiyon-akimi",
+      "rationale": "FİZ.11.2.12: indüklenme sonucu oluşan alternatif akım.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-160",
+      "source": "phys11-c-alternatif-akim",
+      "type": "REQUIRES",
+      "target": "phys11-c-periyot",
+      "rationale": "Periyodik değişir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-161",
+      "source": "phys11-c-etkin-deger",
+      "type": "PART_OF",
+      "target": "phys11-c-alternatif-akim",
+      "rationale": "Alternatif akımın büyüklük ölçüsü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-162",
+      "source": "phys11-c-jenerator",
+      "type": "REQUIRES",
+      "target": "phys11-c-induksiyon-gerilimi",
+      "rationale": "Akı değişimiyle gerilim üretir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-163",
+      "source": "phys11-c-jenerator",
+      "type": "REQUIRES",
+      "target": "phys11-c-enerji-donusumu",
+      "rationale": "Mekanik → elektrik enerjisi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-164",
+      "source": "phys11-c-jenerator",
+      "type": "RELATED_TO",
+      "target": "phys11-c-elektrik-motoru",
+      "rationale": "Ünite amacı: motor ve jeneratör arasındaki ilişki (ters işlevli düzenekler).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-165",
+      "source": "phys11-c-jenerator",
+      "type": "CAUSES",
+      "target": "phys11-c-alternatif-akim",
+      "rationale": "Dönen çerçevede alternatif akım oluşur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-166",
+      "source": "phys11-c-transformator",
+      "type": "REQUIRES",
+      "target": "phys11-c-induksiyon-gerilimi",
+      "rationale": "Sarımlar arası indüksiyonla çalışır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-167",
+      "source": "phys11-c-transformator",
+      "type": "REQUIRES",
+      "target": "phys11-c-alternatif-akim",
+      "rationale": "Değişen akı için alternatif akım gerekir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-168",
+      "source": "phys11-c-transformator",
+      "type": "REQUIRES",
+      "target": "phys11-c-sarim-sayisi",
+      "rationale": "Gerilim oranı sarım oranına bağlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-169",
+      "source": "phys11-c-birincil-ikincil-sarim",
+      "type": "PART_OF",
+      "target": "phys11-c-transformator",
+      "rationale": "Transformatörün parçalarıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-170",
+      "source": "phys11-c-iletimde-enerji-kaybi",
+      "type": "REQUIRES",
+      "target": "phys11-c-direnc",
+      "rationale": "Kayıp hattın direncinde olur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-171",
+      "source": "phys11-c-iletimde-enerji-kaybi",
+      "type": "REQUIRES",
+      "target": "phys11-c-elektrik-akimi",
+      "rationale": "Kayıp akımla artar.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-172",
+      "source": "phys11-c-transformator",
+      "type": "USED_IN",
+      "target": "phys11-c-iletimde-enerji-kaybi",
+      "rationale": "Gerilimi yükseltip akımı düşürerek kaybı azaltır (FİZ.11.2.13 uygulaması).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-173",
+      "source": "phys11-c-isik-siddeti",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik",
+      "rationale": "Işık kaynağının özelliğidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-174",
+      "source": "phys11-c-isik-akisi",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik-siddeti",
+      "rationale": "Akı, şiddetle ilişkilidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-175",
+      "source": "phys11-c-isik-akisi",
+      "type": "REQUIRES",
+      "target": "phys11-c-skaler-nicelik",
+      "rationale": "Skalerdir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-176",
+      "source": "phys11-c-aydinlanma",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik-akisi",
+      "rationale": "Birim alana düşen akıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-177",
+      "source": "phys11-c-aydinlanma",
+      "type": "REQUIRES",
+      "target": "phys11-c-ters-kare-iliskisi",
+      "rationale": "Noktasal kaynakta E ∝ 1/d².",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-178",
+      "source": "phys11-c-yansima-yasalari",
+      "type": "REQUIRES",
+      "target": "phys11-c-yansima",
+      "rationale": "Yansımanın yasalarıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-179",
+      "source": "phys11-c-duzlem-ayna",
+      "type": "REQUIRES",
+      "target": "phys11-c-yansima-yasalari",
+      "rationale": "Görüntü yansıma yasalarıyla bulunur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-180",
+      "source": "phys11-c-duzlem-ayna",
+      "type": "REQUIRES",
+      "target": "phys11-c-goruntu",
+      "rationale": "Sanal görüntü oluşturur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-181",
+      "source": "phys11-c-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-isik",
+      "rationale": "Işınların kesişiminden oluşur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-182",
+      "source": "phys11-c-gorus-alani",
+      "type": "PART_OF",
+      "target": "phys11-c-duzlem-ayna",
+      "rationale": "Düzlem ayna problem türüdür.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-183",
+      "source": "phys11-c-kuresel-ayna",
+      "type": "REQUIRES",
+      "target": "phys11-c-yansima-yasalari",
+      "rationale": "Yansıma yasaları geçerlidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-184",
+      "source": "phys11-c-cukur-ayna",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Küresel ayna türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-185",
+      "source": "phys11-c-tumsek-ayna",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Küresel ayna türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-186",
+      "source": "phys11-c-asal-eksen",
+      "type": "PART_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Aynanın geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-187",
+      "source": "phys11-c-asal-eksen",
+      "type": "PART_OF",
+      "target": "phys11-c-mercek",
+      "rationale": "Merceğin geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-188",
+      "source": "phys11-c-ayna-tepe-noktasi",
+      "type": "PART_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Aynanın geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-189",
+      "source": "phys11-c-egrilik-merkezi",
+      "type": "PART_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Aynanın geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-190",
+      "source": "phys11-c-odak-noktasi",
+      "type": "PART_OF",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Aynanın geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-191",
+      "source": "phys11-c-odak-noktasi",
+      "type": "PART_OF",
+      "target": "phys11-c-mercek",
+      "rationale": "Merceğin geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-192",
+      "source": "phys11-c-odak-uzakligi",
+      "type": "REQUIRES",
+      "target": "phys11-c-odak-noktasi",
+      "rationale": "Odağın uzaklığıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-193",
+      "source": "phys11-c-ozel-isinlar",
+      "type": "REQUIRES",
+      "target": "phys11-c-odak-noktasi",
+      "rationale": "Kurallar odağa göre tanımlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-194",
+      "source": "phys11-c-ozel-isinlar",
+      "type": "REQUIRES",
+      "target": "phys11-c-asal-eksen",
+      "rationale": "Kurallar asal eksene göre tanımlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-195",
+      "source": "phys11-c-kuresel-aynada-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-kuresel-ayna",
+      "rationale": "Küresel ayna gerekir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-196",
+      "source": "phys11-c-kuresel-aynada-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-ozel-isinlar",
+      "rationale": "Görüntü özel ışınlarla çizilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-197",
+      "source": "phys11-c-kuresel-aynada-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-goruntu",
+      "rationale": "Gerçek/sanal ayrımı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-198",
+      "source": "phys11-c-kirma-indisi",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirilma",
+      "rationale": "Kırılmanın niceliğidir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-199",
+      "source": "phys11-c-snell-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirma-indisi",
+      "rationale": "n₁ sin θ₁ = n₂ sin θ₂.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-200",
+      "source": "phys11-c-snell-yasasi",
+      "type": "REQUIRES",
+      "target": "phys11-c-trigonometrik-oranlar",
+      "rationale": "Sinüs kullanılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-201",
+      "source": "phys11-c-sinir-acisi",
+      "type": "REQUIRES",
+      "target": "phys11-c-snell-yasasi",
+      "rationale": "Kırılma açısı 90° koşulu.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-202",
+      "source": "phys11-c-tam-yansima",
+      "type": "REQUIRES",
+      "target": "phys11-c-sinir-acisi",
+      "rationale": "Gelme açısı sınır açısını aşınca oluşur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-203",
+      "source": "phys11-c-gorunur-derinlik",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirilma",
+      "rationale": "Kırılmanın sonucudur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-204",
+      "source": "phys11-c-gorunur-derinlik",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirma-indisi",
+      "rationale": "Ortamların indisine bağlıdır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-205",
+      "source": "phys11-c-gercek-derinlik",
+      "type": "RELATED_TO",
+      "target": "phys11-c-gorunur-derinlik",
+      "rationale": "Karşılaştırılır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-206",
+      "source": "phys11-c-fiber-optik",
+      "type": "REQUIRES",
+      "target": "phys11-c-tam-yansima",
+      "rationale": "Tam yansımayla çalışır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-207",
+      "source": "phys11-c-prizma",
+      "type": "REQUIRES",
+      "target": "phys11-c-snell-yasasi",
+      "rationale": "FİZ.11.3.8: kırılma yasaları prizmaya uygulanır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-208",
+      "source": "phys11-c-prizma",
+      "type": "REQUIRES",
+      "target": "phys11-c-tek-renkli-isik",
+      "rationale": "Programda tek renkli ışıkla sınırlı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-209",
+      "source": "phys11-c-prizma",
+      "type": "RELATED_TO",
+      "target": "phys11-c-tam-yansima",
+      "rationale": "Prizmalarda tam yansıma oluşabilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-210",
+      "source": "phys11-c-sapma-acisi",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirilma",
+      "rationale": "Kırılmanın sonucudur.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-211",
+      "source": "phys11-c-sapma-acisi",
+      "type": "PART_OF",
+      "target": "phys11-c-prizma",
+      "rationale": "Prizma problemlerinin büyüklüğüdür.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-212",
+      "source": "phys11-c-mercek",
+      "type": "REQUIRES",
+      "target": "phys11-c-kirilma",
+      "rationale": "Kırılmayla çalışır.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-213",
+      "source": "phys11-c-yakinsak-mercek",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-mercek",
+      "rationale": "Mercek türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-214",
+      "source": "phys11-c-iraksak-mercek",
+      "type": "SPECIAL_CASE_OF",
+      "target": "phys11-c-mercek",
+      "rationale": "Mercek türü.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-215",
+      "source": "phys11-c-optik-merkez",
+      "type": "PART_OF",
+      "target": "phys11-c-mercek",
+      "rationale": "Merceğin geometrik öğesi.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-216",
+      "source": "phys11-c-mercekte-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-mercek",
+      "rationale": "Mercek gerekir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-217",
+      "source": "phys11-c-mercekte-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-ozel-isinlar",
+      "rationale": "Görüntü özel ışınlarla çizilir.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-218",
+      "source": "phys11-c-mercekte-goruntu",
+      "type": "REQUIRES",
+      "target": "phys11-c-goruntu",
+      "rationale": "Gerçek/sanal ayrımı.",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-219",
+      "source": "phys11-c-cukur-ayna",
+      "type": "RELATED_TO",
+      "target": "phys11-c-yakinsak-mercek",
+      "rationale": "Benzer görüntü özellikleri (toplayıcı).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    },
+    {
+      "id": "phys11-rel-220",
+      "source": "phys11-c-tumsek-ayna",
+      "type": "RELATED_TO",
+      "target": "phys11-c-iraksak-mercek",
+      "rationale": "Benzer görüntü özellikleri (dağıtıcı, hep sanal-küçük-düz).",
+      "confidence": "MEDIUM",
+      "status": "ai_authored_pending_expert_review"
+    }
+  ]
+}

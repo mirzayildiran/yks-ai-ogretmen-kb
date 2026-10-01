@@ -73,8 +73,72 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-yer-cekimi-ivmesi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "ivme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kutle",
+          "via_concepts": [
+            "kutle"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_origin"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -95,9 +159,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -142,7 +203,42 @@
           "printed_page": 16,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-hiz",
+        "phys11-c-ivme",
+        "phys11-c-sabit-ivmeli-hareket",
+        "phys11-c-kutle"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-002",
@@ -237,9 +333,134 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-serbest-dusme",
+        "phys11-c-yer-cekimi-ivmesi",
+        "phys11-c-tepe-noktasi-hareket",
+        "phys11-c-maksimum-yukseklik"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.1",
+          "id": "phys11-lo-001",
+          "via_concepts": [
+            "serbest-dusme → yer-cekimi-ivmesi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "konum"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "konum"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "yer-degistirme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "yer-degistirme"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "ivme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "hareket-grafikleri"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-grafik-egim-alan",
+          "name": "Grafikte eğim ve alan",
+          "note": "Fizik 10. sınıfta (FİZ.10.1.1) eğim ve alan olarak işlenir.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-002-a",
@@ -266,9 +487,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -313,7 +531,45 @@
           "printed_page": 20,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-grafik-egim-alan",
+        "phys11-c-konum",
+        "phys11-c-yer-degistirme",
+        "phys11-c-hiz",
+        "phys11-c-ivme",
+        "phys11-c-sabit-ivmeli-hareket",
+        "phys11-c-hareket-grafikleri"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-003",
@@ -397,9 +653,166 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-yer-cekimi-ivmesi",
+        "phys11-c-tepe-noktasi-hareket",
+        "phys11-c-maksimum-yukseklik",
+        "phys11-c-iki-boyutta-sabit-ivmeli-hareket",
+        "phys11-c-bilesenlerin-bagimsizligi",
+        "phys11-c-parabolik-yorunge",
+        "phys11-c-menzil",
+        "phys11-c-ucus-suresi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.1",
+          "id": "phys11-lo-001",
+          "via_concepts": [
+            "iki-boyutta-sabit-ivmeli-hareket → serbest-dusme",
+            "ucus-suresi → serbest-dusme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.3",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.4",
+          "via_concepts": [
+            "vektor-bilesenleri"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "yer-degistirme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "yer-degistirme"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "hiz"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "ivme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.1",
+          "via_concepts": [
+            "sabit-hizli-hareket"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "hareket-grafikleri"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-trigonometrik-oranlar",
+          "name": "Trigonometrik oranlar (sin, cos, tan)",
+          "note": "FİZ.11.1.3 öğretme uygulaması trigonometri ön bilgisini varsayar ('trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak'). Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "concept_id": "phys11-c-grafik-egim-alan",
+          "name": "Grafikte eğim ve alan",
+          "note": "Fizik 10. sınıfta (FİZ.10.1.1) eğim ve alan olarak işlenir.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-003-a",
@@ -424,9 +837,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -471,7 +881,48 @@
           "printed_page": 30,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-vektorel-nicelik",
+        "phys11-c-vektor-bilesenleri",
+        "phys11-c-trigonometrik-oranlar",
+        "phys11-c-grafik-egim-alan",
+        "phys11-c-yer-degistirme",
+        "phys11-c-hiz",
+        "phys11-c-ivme",
+        "phys11-c-sabit-hizli-hareket",
+        "phys11-c-sabit-ivmeli-hareket",
+        "phys11-c-hareket-grafikleri"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-004",
@@ -522,8 +973,45 @@
       ],
       "official_teaching_practice": "Öğretmen, İbni Sina’nın mekanik konusundaki çalışmalarını anlatan bir metin kullanarak çalışmaları hakkında farkındalık oluşturur. Öğrencilere bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkilerin gözlenebildiği bir deney yaptırılır ya da animasyon, simülasyon veya video gösterimi gibi dijital içeriklerden biri kullanılabilir. Öğrenciler deney veya dijital içeriklerdeki hareket veya olayları tartışma yöntemi ile yorumlar. Dijital içeriklerdeki hareket veya olaylara ilişkin iddialarını, destekleyicilerini ve varsa akranlarından farklı düşündüğü durumlarda çürütücülerini sunar. Öğrencilerin iddialarını ortaya koyarken ön öğrenmelerinde yer alan ivme kavramı ile ilişki kurması sağlanır. Öğrenciler, sınıf tartışması neticesinde bileşke kuvvet ve cisimlerin hareketleri arasındaki ilişkileri keşfeder. Öğrenciler, soru cevap veya beyin fırtınası gibi tekniklerle desteklenen tartışma ortamında keşfettiği ilişkiler üzerinden Newton'ın Hareket Yasalarına yönelik genellemeler yapar. Öğrencilere Newton'ın Hareket Yasalarına yönelik örnekler vermeleri için çıkış kartı verilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-bileske-kuvvet",
+        "phys11-c-eylemsizlik",
+        "phys11-c-newton-birinci-yasa",
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-etki-tepki"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "ivme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.5",
+          "via_concepts": [
+            "kuvvet"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kutle",
+          "via_concepts": [
+            "kutle"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_origin"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -549,9 +1037,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -596,7 +1081,41 @@
           "printed_page": 40,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-ivme",
+        "phys11-c-kuvvet",
+        "phys11-c-kutle"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-005",
@@ -675,8 +1194,73 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-bileske-kuvvet",
+        "phys11-c-newton-birinci-yasa",
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-etki-tepki",
+        "phys11-c-serbest-cisim-diyagrami",
+        "phys11-c-normal-kuvvet",
+        "phys11-c-gerilme-kuvveti",
+        "phys11-c-bagli-cisim-sistemi",
+        "phys11-c-egik-duzlem"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.4",
+          "id": "phys11-lo-004",
+          "via_concepts": [
+            "bagli-cisim-sistemi → newton-ikinci-yasa",
+            "newton-birinci-yasa → bileske-kuvvet",
+            "newton-birinci-yasa → eylemsizlik",
+            "newton-ikinci-yasa → bileske-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.2",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.1.3",
+          "via_concepts": [
+            "sabit-ivmeli-hareket"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.5",
+          "via_concepts": [
+            "kuvvet"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-agirlik",
+          "via_concepts": [
+            "agirlik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -709,9 +1293,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -756,7 +1337,41 @@
           "printed_page": 53,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-sabit-ivmeli-hareket",
+        "phys11-c-kuvvet",
+        "phys11-c-agirlik"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-006",
@@ -827,8 +1442,27 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-surtunme-kuvveti",
+        "phys11-c-statik-surtunme",
+        "phys11-c-kinetik-surtunme",
+        "phys11-c-maksimum-statik-surtunme",
+        "phys11-c-kayarak-oteleme",
+        "phys11-c-donerek-oteleme"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.5",
+          "id": "phys11-lo-005",
+          "via_concepts": [
+            "surtunme-kuvveti → normal-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -861,9 +1495,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -908,7 +1539,37 @@
           "printed_page": 65,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-007",
@@ -976,9 +1637,71 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-normal-kuvvet",
+        "phys11-c-egik-duzlem",
+        "phys11-c-surtunme-kuvveti",
+        "phys11-c-statik-surtunme",
+        "phys11-c-kinetik-surtunme",
+        "phys11-c-maksimum-statik-surtunme",
+        "phys11-c-surtunme-katsayisi",
+        "phys11-c-kayarak-oteleme",
+        "phys11-c-donerek-oteleme"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.4",
+          "id": "phys11-lo-004",
+          "via_concepts": [
+            "newton-ikinci-yasa → bileske-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.5",
+          "id": "phys11-lo-005",
+          "via_concepts": [
+            "egik-duzlem → serbest-cisim-diyagrami",
+            "surtunme-kuvveti → normal-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.6",
+          "id": "phys11-lo-006",
+          "via_concepts": [
+            "kinetik-surtunme → surtunme-kuvveti",
+            "statik-surtunme → surtunme-kuvveti"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-oran-oranti",
+          "name": "Doğru ve ters orantı",
+          "note": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "concept_id": "phys11-c-grafik-egim-alan",
+          "name": "Grafikte eğim ve alan",
+          "note": "Fizik 10. sınıfta (FİZ.10.1.1) eğim ve alan olarak işlenir.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-007-a",
@@ -1003,9 +1726,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1050,7 +1770,40 @@
           "printed_page": 70,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-oran-oranti",
+        "phys11-c-grafik-egim-alan"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-008",
@@ -1121,8 +1874,70 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-hava-direnci",
+        "phys11-c-newton-birinci-yasa",
+        "phys11-c-surtunme-kuvveti",
+        "phys11-c-limit-hiz",
+        "phys11-c-kesit-alani"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.4",
+          "id": "phys11-lo-004",
+          "via_concepts": [
+            "limit-hiz → newton-birinci-yasa",
+            "newton-birinci-yasa → bileske-kuvvet",
+            "newton-birinci-yasa → eylemsizlik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.5",
+          "id": "phys11-lo-005",
+          "via_concepts": [
+            "surtunme-kuvveti → normal-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.6",
+          "id": "phys11-lo-006",
+          "via_concepts": [
+            "hava-direnci → surtunme-kuvveti"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kutle",
+          "via_concepts": [
+            "kutle"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_origin"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-agirlik",
+          "via_concepts": [
+            "agirlik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -1150,9 +1965,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1197,7 +2009,40 @@
           "printed_page": 86,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-kutle",
+        "phys11-c-agirlik"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-009",
@@ -1259,8 +2104,33 @@
       ],
       "official_teaching_practice": "Öğretmen, öğrencilerin ön bilgilerinde yer alan Türksat uydularının Dünya etrafındaki dolanımı ya da lunaparklardaki dönme dolap gibi çeşitli eğlence araçlarının hareketlerini yorumlamaları için düzgün çembersel hareket yapan farklı cisimleri görsel içerikli dijital araçlar ile gösterir. Öğrenciler görsellere odaklanarak, görsellerde yer alan hareketleri inceler. Öğrenciler, soru cevap tekniği yardımıyla görsellerde yer alan hareketlilerin yörüngeleri, yörüngelerinin merkez noktaları ve hızları hakkında görüşlerini ifade ederek düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder. Öğretmen, öğrencilerin vektörel niceliklerle ilgili ön bilgilerini hatırlamalarına yardımcı olur ve birbirinden farklı düzgün çembersel hareket yapan cisimlerin herhangi bir konumdaki hız vektörlerinin yönlerini çizmelerini ister. Öğrenciler, düzgün çembersel hareket yapan cisimlerin hareketlerindeki benzerliklerden yola çıkarak hız vektörü ile yörüngelerinin yarıçap vektörünün yönlerine yönelik çıkarımda bulunur. Öğrenciler hız ve yarıçap vektörünün yönlerine yönelik açık uçlu sorulardan oluşan çalışma yaprağı ile değerlendirilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-duzgun-cembersel-hareket",
+        "phys11-c-yaricap-vektoru",
+        "phys11-c-cizgisel-hiz"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.3",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -1293,9 +2163,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1340,7 +2207,39 @@
           "printed_page": 95,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-vektorel-nicelik"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-010",
@@ -1408,9 +2307,147 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-bileske-kuvvet",
+        "phys11-c-newton-ikinci-yasa",
+        "phys11-c-gerilme-kuvveti",
+        "phys11-c-statik-surtunme",
+        "phys11-c-duzgun-cembersel-hareket",
+        "phys11-c-cizgisel-hiz",
+        "phys11-c-cizgisel-surat",
+        "phys11-c-acisal-hiz",
+        "phys11-c-acisal-ivme",
+        "phys11-c-merkezcil-ivme",
+        "phys11-c-merkezcil-kuvvet",
+        "phys11-c-yatay-duzlemde-cembersel",
+        "phys11-c-dusey-duzlemde-cembersel",
+        "phys11-c-yatay-viraj",
+        "phys11-c-egimli-viraj"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.4",
+          "id": "phys11-lo-004",
+          "via_concepts": [
+            "merkezcil-kuvvet → bileske-kuvvet",
+            "merkezcil-kuvvet → newton-ikinci-yasa",
+            "newton-ikinci-yasa → bileske-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.5",
+          "id": "phys11-lo-005",
+          "via_concepts": [
+            "dusey-duzlemde-cembersel → gerilme-kuvveti",
+            "egimli-viraj → normal-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.6",
+          "id": "phys11-lo-006",
+          "via_concepts": [
+            "statik-surtunme → surtunme-kuvveti",
+            "yatay-viraj → statik-surtunme"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.1.9",
+          "id": "phys11-lo-009",
+          "via_concepts": [
+            "dusey-duzlemde-cembersel → duzgun-cembersel-hareket",
+            "duzgun-cembersel-hareket → cizgisel-hiz",
+            "duzgun-cembersel-hareket → yaricap-vektoru",
+            "egimli-viraj → duzgun-cembersel-hareket",
+            "merkezcil-ivme → cizgisel-hiz",
+            "yatay-duzlemde-cembersel → duzgun-cembersel-hareket"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "skaler-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.6",
+          "via_concepts": [
+            "surat"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-agirlik",
+          "via_concepts": [
+            "agirlik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.1",
+          "via_concepts": [
+            "periyot"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.2",
+          "via_concepts": [
+            "periyot"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.2",
+          "via_concepts": [
+            "frekans"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-oran-oranti",
+          "name": "Doğru ve ters orantı",
+          "note": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-010-a",
@@ -1439,9 +2476,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1486,7 +2520,44 @@
           "printed_page": 101,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-skaler-nicelik",
+        "phys11-c-oran-oranti",
+        "phys11-c-surat",
+        "phys11-c-agirlik",
+        "phys11-c-periyot",
+        "phys11-c-frekans"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "hız",
+            "concept_id": "phys11-c-hiz"
+          },
+          {
+            "phrase": "ivme",
+            "concept_id": "phys11-c-ivme"
+          },
+          {
+            "phrase": "ağırlık",
+            "concept_id": "phys11-c-agirlik"
+          },
+          {
+            "phrase": "periyot",
+            "concept_id": "phys11-c-periyot"
+          },
+          {
+            "phrase": "frekans",
+            "concept_id": "phys11-c-frekans"
+          },
+          {
+            "phrase": "ilgili hesaplamaları yapabildikleri",
+            "concept_id": null
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-011",
@@ -1546,9 +2617,60 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-elektriksel-kuvvet",
+        "phys11-c-coulomb-yasasi",
+        "phys11-c-coulomb-sabiti",
+        "phys11-c-noktasal-yuk"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.5",
+          "via_concepts": [
+            "kuvvet"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-elektrik-yuku",
+          "via_concepts": [
+            "elektrik-yuku"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-elektroskop",
+          "via_concepts": [
+            "elektroskop"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-oran-oranti",
+          "name": "Doğru ve ters orantı",
+          "note": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "concept_id": "phys11-c-ters-kare-iliskisi",
+          "name": "Ters kare ilişkisi",
+          "note": "Coulomb ve aydınlanma modellerinde kullanılır. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-011-a",
@@ -1573,9 +2695,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1620,7 +2739,39 @@
           "printed_page": 155,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-oran-oranti",
+        "phys11-c-ters-kare-iliskisi",
+        "phys11-c-kuvvet",
+        "phys11-c-elektrik-yuku",
+        "phys11-c-elektroskop"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-012",
@@ -1680,9 +2831,74 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-noktasal-yuk",
+        "phys11-c-elektriksel-alan",
+        "phys11-c-elektriksel-alan-cizgileri",
+        "phys11-c-bileske-elektriksel-alan"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.1",
+          "id": "phys11-lo-011",
+          "via_concepts": [
+            "elektriksel-alan → elektriksel-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.3",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-elektrik-yuku",
+          "via_concepts": [
+            "elektrik-yuku"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-elektroskop",
+          "via_concepts": [
+            "elektroskop"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-ters-kare-iliskisi",
+          "name": "Ters kare ilişkisi",
+          "note": "Coulomb ve aydınlanma modellerinde kullanılır. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-012-a",
@@ -1711,9 +2927,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1758,7 +2971,38 @@
           "printed_page": 166,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-vektorel-nicelik",
+        "phys11-c-ters-kare-iliskisi",
+        "phys11-c-elektrik-yuku",
+        "phys11-c-elektroskop"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-013",
@@ -1831,8 +3075,34 @@
       ],
       "official_teaching_practice": "Öğretmen, yolculuk sırasında uçaklara ve kara ulaşım araçlarına yıldırım çarpınca yolcuların etkilenmemesinin, cep telefonlarının asansör içerisinde genellikle baz istasyonuyla bağlantısının kesilmesi ya da MR cihazlarının bulunduğu odaların metal kaplı olmasının nedenleri gibi günlük hayattan örneklerle öğrencilerin dikkatlerini çekebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğrenciler konu hakkındaki bilgilere ulaşabilmek için kullanacağı kaynakları (genel ağ, kütüphaneler, dergiler vb.) belirler. Gruplar belirledikleri kaynaklar yoluyla Faraday kafesi ve kullanım alanlarına yönelik bilgilere ulaşır. Faraday kafesi ve kullanım alanları hakkında derlenen bilgiler sınıfla paylaşılır. Öğrenciler tartışma ortamında topladıkları bilgileri doğrular. Doğruluğu teyit edilen bilgilerden yararlanarak Faraday kafesi ve kullanım alanları ile ilgili sunum hazırlayabilir. Öz değerlendirme veya akran değerlendirme formu ile değerlendirme yapılabilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-elektriksel-alan",
+        "phys11-c-faraday-kafesi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.1",
+          "id": "phys11-lo-011",
+          "via_concepts": [
+            "elektriksel-alan → elektriksel-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.2",
+          "id": "phys11-lo-012",
+          "via_concepts": [
+            "faraday-kafesi → elektriksel-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -1867,9 +3137,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -1914,7 +3181,33 @@
           "printed_page": 178,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-014",
@@ -1976,8 +3269,43 @@
       ],
       "official_teaching_practice": "Öğretmen öğrencilere kuşların göç yollarındaki önemli uğrak noktalarından birinin de Türkiye olduğunu vurgulayarak, göç sırasında kuşların veya balina ve yunus gibi hayvanların yön bulma yetenekleri hakkında sorular sorar. Cevaplardan sonra insanların yönlerini bulma yöntemleri hakkında da sorular sorabilir. Bilim ve medeniyet tarihinde yer alan bilim insanlarının pusula ile ilgili yaptıkları çalışmalar hakkında bilgi verebilir. Öğrenciler pusulanın çalışma prensibinden yola çıkarak mıknatısların birbirleriyle etkileşimi ile ilgili nitelikleri tanımlar. Mıknatıs isminin Manisa ili ile olan ilişkisi de vurgulanabilir. Öğrenciler mıknatısların etkileşimlerinin manyetik alan çizgileriyle temsil edilebileceğini gözlemleyebilecekleri bir deney tasarlar. Öğrenciler, tasarladıkları deney düzeneği üzerinden manyetik alan büyüklüğüyle alan çizgilerinin sıklığı arasındaki ilişkiyle ilgili verileri toplayıp kaydeder. Öğrenciler mıknatısların birbirleriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar. Öğretmen Dünya'nın manyetik alanının ve manyetik alan büyüklüğünün manyetik alan çizgileriyle açıklanabileceğini ifade eder. Mıknatısların oluşturduğu manyetik alan ve özelliklerini sorgulamak için bir çıkış kartı verilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-alan",
+        "phys11-c-manyetik-alan-cizgileri",
+        "phys11-c-dunyanin-manyetik-alani"
+      ],
+      "prerequisites": [
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-miknatis",
+          "via_concepts": [
+            "miknatis"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-manyetik-kutup",
+          "via_concepts": [
+            "manyetik-kutup"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-pusula",
+          "via_concepts": [
+            "pusula"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2010,9 +3338,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2057,7 +3382,37 @@
           "printed_page": 186,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-miknatis",
+        "phys11-c-manyetik-kutup",
+        "phys11-c-pusula"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-015",
@@ -2125,9 +3480,55 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-alan",
+        "phys11-c-oersted-deneyi",
+        "phys11-c-duz-telin-manyetik-alani",
+        "phys11-c-sag-el-kurali",
+        "phys11-c-manyetik-alan-katsayisi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.4",
+          "id": "phys11-lo-014",
+          "via_concepts": [
+            "duz-telin-manyetik-alani → manyetik-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.2",
+          "via_concepts": [
+            "elektrik-akimi"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-pusula",
+          "via_concepts": [
+            "pusula"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-oran-oranti",
+          "name": "Doğru ve ters orantı",
+          "note": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-015-a",
@@ -2152,9 +3553,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2199,7 +3597,37 @@
           "printed_page": 198,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-oran-oranti",
+        "phys11-c-elektrik-akimi",
+        "phys11-c-pusula"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-016",
@@ -2250,8 +3678,37 @@
       ],
       "official_teaching_practice": "Öğretmen, düz bir iletken yerine akım makarası kullanılması durumunda oluşacak manyetik alanın yönü ve büyüklüğüne yönelik sorular sorabilir. Akım makarasından geçen akım, sarım sayısı ve akım makarasının boyunda yapılacak değişiklikler sonucu merkez ekseninde oluşan manyetik alandaki değişim hakkında Sokratik sorgulama yöntemini kullanarak öğrencilerin görüşlerini alabilir ve hipotez oluşturmalarını isteyebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak ve hipotezlerini test edecekleri deneyler tasarlayarak veri toplar. Öğrenciler veri analizine dayalı olarak manyetik alanın büyüklüğünün akım ve uzunlukla olan ilişkisini keşfederek matematiksel modele ulaşır. Matematiksel modele dayanarak akım makarasının merkez ekseninde oluşan manyetik alana yönelik genelleme yapar.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-alan",
+        "phys11-c-sag-el-kurali",
+        "phys11-c-manyetik-alan-katsayisi",
+        "phys11-c-akim-makarasi",
+        "phys11-c-sarim-sayisi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.5",
+          "id": "phys11-lo-015",
+          "via_concepts": [
+            "akim-makarasi → duz-telin-manyetik-alani",
+            "akim-makarasi → sag-el-kurali"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.2",
+          "via_concepts": [
+            "elektrik-akimi"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2277,9 +3734,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2324,7 +3778,35 @@
           "printed_page": 207,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-elektrik-akimi"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-017",
@@ -2397,8 +3879,36 @@
       ],
       "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Gruplar elektromıknatıslar hakkındaki bilgilere ulaşabilmek için kullanacağı genel ağ, kütüphaneler, dergiler ve uzman kişiler gibi kaynakları belirler. Gruplar belirledikleri güvenilir kaynaklar yoluyla elektromıknatısların kullanım alanlarına yönelik bilgilere ulaşır. Öğrenciler, elektromıknatısların kullanım alanları hakkında topladıkları bilgileri akranlarıyla paylaşır. Öğretmen yönlendirici sorular içeren tartışma ortamı sağlayabilir. Öğrenciler toplanan bilgilerin doğru olup olmadıklarını tartışarak belirler. Öğretmen, öğrencilerden yönlendirici sorular yardımıyla doğruluğu belirlenen bilgileri kaydederek elektromıknatısların kullanım alanları ile ilgili sunum hazırlamalarını ister. Akım makarasının merkez ekseninde oluşan manyetik alanla ve elektromıknatısların kullanım alanlarıyla ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-akim-makarasi",
+        "phys11-c-elektromiknatis"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.5",
+          "id": "phys11-lo-015",
+          "via_concepts": [
+            "akim-makarasi → duz-telin-manyetik-alani",
+            "akim-makarasi → sag-el-kurali"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.6",
+          "id": "phys11-lo-016",
+          "via_concepts": [
+            "akim-makarasi → sarim-sayisi",
+            "elektromiknatis → akim-makarasi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2438,9 +3948,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2485,7 +3992,33 @@
           "printed_page": 213,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-018",
@@ -2553,9 +4086,85 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-alan",
+        "phys11-c-sag-el-kurali",
+        "phys11-c-manyetik-kuvvet",
+        "phys11-c-tele-etki-eden-manyetik-kuvvet"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.4",
+          "id": "phys11-lo-014",
+          "via_concepts": [
+            "manyetik-kuvvet → manyetik-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.5",
+          "id": "phys11-lo-015",
+          "via_concepts": [
+            "tele-etki-eden-manyetik-kuvvet → sag-el-kurali"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.3",
+          "via_concepts": [
+            "vektorel-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.5",
+          "via_concepts": [
+            "kuvvet"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.2",
+          "via_concepts": [
+            "elektrik-akimi"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-oran-oranti",
+          "name": "Doğru ve ters orantı",
+          "note": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-018-a",
@@ -2575,9 +4184,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2622,7 +4228,38 @@
           "printed_page": 218,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-vektorel-nicelik",
+        "phys11-c-oran-oranti",
+        "phys11-c-kuvvet",
+        "phys11-c-elektrik-akimi"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-019",
@@ -2684,8 +4321,54 @@
       ],
       "official_teaching_practice": "Öğretmen öğrencilere fosil yakıtlı araçların yerlerini elektrikli araçların almaya başladığını ve Türkiye’nin de bu alanda girişimleri olduğunu söyler. Bu konuda güncel ve dikkat çekici haber metinleri öğrencilere gösterilebilir. Öğrencilere elektrikli motorların çalışma prensibi hakkında fikirleri olup olmadığı sorulabilir. Manyetik alandaki akım geçen düz tele etki eden kuvvet ile ilgili önceki bilgi ve deneyimleri hatırlatılır. Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Gruplara elektrik motorlarının iç yapıları ile ilgili görseller dağıtılabilir. Öğrenciler inceledikleri görsellere ve deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen şeklindeki telin bir eksen etrafında dönmesi hakkında çıkarım yapar. Öğrenciler çıkarımlara dayanarak basit bir elektrik motoru tasarlayıp çalıştırır. Görsellerden faydalanarak veya yaptıkları tasarımı kullanarak elektrik motorlarını, çalışma prensibi açısından değerlendirir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-kuvvet",
+        "phys11-c-elektrik-motoru"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.4",
+          "id": "phys11-lo-014",
+          "via_concepts": [
+            "manyetik-kuvvet → manyetik-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.8",
+          "id": "phys11-lo-018",
+          "via_concepts": [
+            "elektrik-motoru → tele-etki-eden-manyetik-kuvvet"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.2.3",
+          "via_concepts": [
+            "enerji-donusumu"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.2.4",
+          "via_concepts": [
+            "enerji-donusumu"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2713,9 +4396,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2760,7 +4440,35 @@
           "printed_page": 229,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-enerji-donusumu"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-020",
@@ -2820,8 +4528,23 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-manyetik-alan",
+        "phys11-c-manyetik-aki"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.4",
+          "id": "phys11-lo-014",
+          "via_concepts": [
+            "manyetik-aki → manyetik-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2842,9 +4565,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -2889,7 +4609,33 @@
           "printed_page": 236,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-021",
@@ -2940,8 +4686,70 @@
       ],
       "official_teaching_practice": "Öğretmen, öğrencilere Türkiye’de Atatürk Barajı ve Keban Barajı gibi elektrik üreten hidroelektrik santrallerin olduğunu belirterek suyun mekanik enerjisinin elektrik enerjisine dönüştürülmesine yönelik sorular sorar. Öğretmen barajlarda olduğu gibi öğrencilerin de mekanik enerjiyle elektrik üretebileceklerini belirtebilir. Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Öğrenciler mekanik enerjiden elektrik üretebilecekleri basit araç gereçle yapılabilen bir düzenek tasarlar. Tasarladığı düzenek üzerinden indüksiyon akımı oluşturabilir ve indüksiyon akımını etkileyen etmenleri tespit edebilir. Öğrenciler birim zamandaki manyetik akı değişiminin indüksiyon akımını oluşturduğunu fark eder. İndüksiyon akımının indüksiyon gerilimi ile birlikte oluştuğunu keşfederek indüksiyon geriliminin matematiksel modeline ulaşır. Oluşturduğu matematiksel modeli örnekler üzerinden geneller. Öğretmen, manyetik akı ve indüksiyon akımı ile ilgili dijital içerikler kullanarak öğrencilerden yaptıkları genellemeleri dijital içeriklerdeki gözlemleri ile karşılaştırarak değerlendirmelerini isteyebilir. Manyetik akı ve indüksiyon geriliminin matematiksel modeline yönelik açık uçlu maddelerden oluşan bir test verilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-sarim-sayisi",
+        "phys11-c-manyetik-aki",
+        "phys11-c-induksiyon-gerilimi",
+        "phys11-c-induksiyon-akimi",
+        "phys11-c-faraday-induksiyon-yasasi",
+        "phys11-c-lenz-yasasi",
+        "phys11-c-jenerator"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.4",
+          "id": "phys11-lo-014",
+          "via_concepts": [
+            "manyetik-aki → manyetik-alan"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.10",
+          "id": "phys11-lo-020",
+          "via_concepts": [
+            "faraday-induksiyon-yasasi → manyetik-aki",
+            "lenz-yasasi → manyetik-aki"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.2.3",
+          "via_concepts": [
+            "enerji-donusumu"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.2.4",
+          "via_concepts": [
+            "enerji-donusumu"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.1",
+          "via_concepts": [
+            "potansiyel-fark"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -2967,9 +4775,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3014,7 +4819,36 @@
           "printed_page": 242,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-enerji-donusumu",
+        "phys11-c-potansiyel-fark"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-022",
@@ -3076,8 +4910,57 @@
       ],
       "official_teaching_practice": "Öğrencilere indüksiyon akımıyla ilgili önceki öğrenmeleri hatırlatılabilir. Öğrencilerin manyetik alandaki tel çerçeve bir tam turunu tamamlarken akımın büyüklüğü ve yönünün değişimini sorgulaması sağlanır. Öğretmen zamanla değişkenlik gösteren bu akımın alternatif (değişken) akım olarak adlandırıldığını ifade eder. Öğrenciler alternatif akımı etkileyen etmenleri öğretmenin yönlendirici soruları yardımıyla belirler. Öğrenciler indüksiyon akımının oluşturulabileceği bir deney tasarlar. Deney sırasında LED lambanın parlaklığını gözlemleyerek indüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişki ile ilgili verileri kaydeder. Kaydettikleri verilere dayalı olarak öğrenciler indüklenme sonucu oluşan alternatif akımı yorumlayarak değerlendirir. İndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-induksiyon-gerilimi",
+        "phys11-c-induksiyon-akimi",
+        "phys11-c-jenerator",
+        "phys11-c-alternatif-akim",
+        "phys11-c-etkin-deger"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.11",
+          "id": "phys11-lo-021",
+          "via_concepts": [
+            "alternatif-akim → induksiyon-akimi",
+            "jenerator → induksiyon-gerilimi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.1",
+          "via_concepts": [
+            "periyot"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.2",
+          "via_concepts": [
+            "periyot"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.4.2",
+          "via_concepts": [
+            "frekans"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -3110,9 +4993,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3157,7 +5037,36 @@
           "printed_page": 253,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-periyot",
+        "phys11-c-frekans"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-023",
@@ -3236,8 +5145,77 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-sarim-sayisi",
+        "phys11-c-transformator",
+        "phys11-c-birincil-ikincil-sarim",
+        "phys11-c-iletimde-enerji-kaybi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.6",
+          "id": "phys11-lo-016",
+          "via_concepts": [
+            "transformator → sarim-sayisi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.11",
+          "id": "phys11-lo-021",
+          "via_concepts": [
+            "transformator → induksiyon-gerilimi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.2.12",
+          "id": "phys11-lo-022",
+          "via_concepts": [
+            "transformator → alternatif-akim"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.1",
+          "via_concepts": [
+            "potansiyel-fark"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.1",
+          "via_concepts": [
+            "direnc"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 10,
+          "code": "FİZ.10.3.3",
+          "via_concepts": [
+            "direnc"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -3274,9 +5252,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3321,7 +5296,36 @@
           "printed_page": 263,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-potansiyel-fark",
+        "phys11-c-direnc"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "elektriklenme çeşitlerini",
+            "concept_id": "phys11-c-elektrik-yuku"
+          },
+          {
+            "phrase": "elektroskop",
+            "concept_id": "phys11-c-elektroskop"
+          },
+          {
+            "phrase": "mıknatısların kutuplarını",
+            "concept_id": "phys11-c-manyetik-kutup"
+          },
+          {
+            "phrase": "mıknatısların etkileşimini",
+            "concept_id": "phys11-c-miknatis"
+          },
+          {
+            "phrase": "pusula kullanımını",
+            "concept_id": "phys11-c-pusula"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-024",
@@ -3383,9 +5387,42 @@
       ],
       "official_teaching_practice": "Öğretmen ışık şiddeti, ışık akısı ve aydınlanmanın ölçülebilen nicelikler olduğunu belirtebilir. Öğretmen öğrencilere evde, okulda sınıf veya koridorlarda bulunan mevcut ışık kaynakları ile daha fazla aydınlanmanın sağlanmasına ilişkin sorular sorarak aydınlanma kavramını öğrencilerin tartışmalarını sağlar. Öğretmen sınıfa üzerinde ampulün lümen değerinin yazılı olduğu bir ampul kutusu getirerek, lümen niceliğini gösterip bu niceliğin anlamını sorabilir. Öğretmen, öğrencilere elektrik konusundaki ampulün gücü ile enerjisi arasındaki ilişkiye yönelik ön bilgilerini hatırlatabilir. Püskürtme boya ve kâğıt kullanarak analojik bir etkinlik yapabilir. Etkinlikte belli uzaklıklardan kâğıt üzerine boya püskürtülerek boyanın kâğıt üzerinde oluşturduğu koyuluk gözlemlenebilir. Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını tanımlar. Öğrenciler simülasyon veya deney düzenekleri kullanarak bu kavramlarla ilgili veri setleri oluşturur veya öğretmen hazır veri setleri verebilir. Öğrenciler ışık şiddetinin ışık akısı ve aydınlanma kavramları ile ilişkisi ve bu kavramların bağlı olduğu etmenleri belirlemek için veri setlerini analitik bakış açısıyla inceler. Öğrenciler ışık şiddeti, ışık akısı ve aydınlanma kavramlarını bağlı oldukları etmenlere göre yorumlar ve değerlendirir. Öğretmen farklı veri setleri üzerinden ışık akısı, ışık şiddeti ve aydınlanma hakkında açık uçlu sorulardan oluşan bir çalışma kâğıdı kullanarak değerlendirme yapabilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-isik-siddeti",
+        "phys11-c-isik-akisi",
+        "phys11-c-aydinlanma"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 9,
+          "code": "FİZ.9.2.2",
+          "via_concepts": [
+            "skaler-nicelik"
+          ],
+          "confidence": "HIGH",
+          "derived_from": "prior_concept_mapping"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-isik",
+          "via_concepts": [
+            "isik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-ters-kare-iliskisi",
+          "name": "Ters kare ilişkisi",
+          "note": "Coulomb ve aydınlanma modellerinde kullanılır. Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-024-a",
@@ -3417,9 +5454,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3464,7 +5498,53 @@
           "printed_page": 302,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-skaler-nicelik",
+        "phys11-c-ters-kare-iliskisi",
+        "phys11-c-isik"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-025",
@@ -3515,8 +5595,24 @@
       ],
       "official_teaching_practice": "Öğrenciler günlük hayatta veya geçmiş öğrenmelerinde karşılaştıkları bilgiyi kullanarak düzlem aynada yansıma ve görüntü oluşumunun kurallarını açıklar. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak performans görevi çerçevesinde düzlem aynalarda STEM yaklaşımına uygun bilgi temelli hayat problemi belirler. Problemin çözümüne ilişkin bir ürün veya model tasarlamak için bilgi toplar ve sınırlılıklarını belirler. Öğrenciler modeller ile ilgili özgün ve yaratıcı fikirlerini çizim yaparak grup arkadaşları ile tartışırlar. Grup üyeleri sorumluluklarını yerine getirerek ortaklaşa karar verdikleri ürünü sınıf arkadaşlarına bir model olarak önerir. Önerilen modelin günlük hayattaki farklı problem durumlarının çözümüne yönelik geliştirilmesi üzerine sınıf tartışması yaparlar. Öğrenciler sınıf tartışmasında yapılan dönütler doğrultusunda ürünü yeni durumlara da uyarlanacak şekilde geliştirmek üzere etkileşim kurar. Öğretmen öğrencilerden model veya ürünü geliştirme sırasında öz değerlendirme yapabilecekleri ve kendi öğrenme durumlarını geliştirmeye yönelik bir formu doldurmalarını isteyebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-yansima-yasalari",
+        "phys11-c-duzlem-ayna",
+        "phys11-c-goruntu",
+        "phys11-c-gorus-alani"
+      ],
+      "prerequisites": [
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-yansima",
+          "via_concepts": [
+            "yansima"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -3542,9 +5638,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3589,7 +5682,51 @@
           "printed_page": 312,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-yansima"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-026",
@@ -3651,8 +5788,60 @@
       ],
       "official_teaching_practice": "Öğretmen öğrencilere küresel ve silindirik yansıtıcı yüzeye sahip cisimlerin (çanak anten, araba farı, arabaların dikiz aynası, elektrikli ısıtıcının yansıtıcı yüzeyi, termosun iç yüzeyi vb.) fotoğraflarını gösterir. Bu süreçte soru cevap veya beyin fırtınası gibi yöntem ve tekniklerle öğrencilerin etkileşim kurmaları sağlanarak yüzeyler arasındaki farkları belirlemeleri istenir. Belirlenen benzerlikler ve farklılıklar not edilebilir. Öğrencilerin küresel aynaların silindirik aynalardan farklı özelliklere sahip olduğu çıkarımını yapmaları sağlanabilir. Öğretmen küresel aynaların çukur ve tümsek aynalar olmak üzere ikiye ayrıldığını belirtir. Öğrenciler simülasyon, animasyon veya deney düzeneklerini kullanarak asal eksen, tepe noktası, odak noktası ve merkez noktası çizimlerini kararlılıkla hareket ederek yapar. Öğrenciler ışınların küresel aynalardan yansıdıktan sonra izledikleri yolu, ilgili çizimleri yaparak belirler. Öğrenciler küresel aynaların yapılarına ve küresel aynalarda yansıma yasalarına ilişkin özellikleri belirler. Nitelik sıralama, anlam çözümleme veya sınıflandırma tablolarını kullanarak çukur ve tümsek aynaların benzer ve farklı özelliklerini listeler. Öğretmen öğrencilerin yaptıkları çizim ve tabloları dereceli puanlama anahtarı kullanarak değerlendirebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-yansima-yasalari",
+        "phys11-c-kuresel-ayna",
+        "phys11-c-cukur-ayna",
+        "phys11-c-tumsek-ayna",
+        "phys11-c-asal-eksen",
+        "phys11-c-ayna-tepe-noktasi",
+        "phys11-c-egrilik-merkezi",
+        "phys11-c-odak-uzakligi",
+        "phys11-c-ozel-isinlar"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.2",
+          "id": "phys11-lo-025",
+          "via_concepts": [
+            "kuresel-ayna → yansima-yasalari"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-isik",
+          "via_concepts": [
+            "isik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-yansima",
+          "via_concepts": [
+            "yansima"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-odak-noktasi",
+          "via_concepts": [
+            "odak-noktasi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -3680,9 +5869,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3727,7 +5913,53 @@
           "printed_page": 323,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-isik",
+        "phys11-c-yansima",
+        "phys11-c-odak-noktasi"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-027",
@@ -3778,8 +6010,43 @@
       ],
       "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğrenciler grup hâlinde adil görev paylaşımı yaparak küresel aynalarda cismin bulunduğu yere göre görüntünün yeri ve özelliklerini belirleyebilecekleri bir deney tasarlar. Simülasyon, animasyon veya hazır görseller kullanılarak görüntü oluşumu gösterilebilir. Öğrenciler deney düzeneklerindeki cisim ve görüntü yerlerine göre çizimlerini yapar, elde ettiği verileri kullanarak tablo oluşturur. Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden küresel aynalarda cismin yerine göre görüntünün yeri ve özellikleri hakkında analizler yapar. Öğretmen küresel aynalardaki deney sürecine yönelik kontrol listesi ve küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapabilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-goruntu",
+        "phys11-c-kuresel-ayna",
+        "phys11-c-cukur-ayna",
+        "phys11-c-tumsek-ayna",
+        "phys11-c-ozel-isinlar",
+        "phys11-c-kuresel-aynada-goruntu"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.2",
+          "id": "phys11-lo-025",
+          "via_concepts": [
+            "kuresel-ayna → yansima-yasalari",
+            "kuresel-aynada-goruntu → goruntu"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.3",
+          "id": "phys11-lo-026",
+          "via_concepts": [
+            "cukur-ayna → kuresel-ayna",
+            "kuresel-aynada-goruntu → kuresel-ayna",
+            "kuresel-aynada-goruntu → ozel-isinlar",
+            "ozel-isinlar → asal-eksen",
+            "tumsek-ayna → kuresel-ayna"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -3805,9 +6072,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3852,7 +6116,49 @@
           "printed_page": 333,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-028",
@@ -3903,9 +6209,34 @@
       ],
       "official_teaching_practice": "Serap olayı ve su dolu bardağın içindeki kaşığın kırık görünmesine ilişkin görsel ve sorular ile öğrencilerin dikkati çekilebilir. Öğrenciler bu olaylara ilişkin sorular sorar. Öğretmen deney düzenekleri kullanarak ortamın ışığı kırma indisini tanımlayabilir, kırılma olayı ve Snell Yasası ile sınır açısı ve tam yansıma olaylarını açıklar. Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Grup üyeleri yardımlaşarak kırılma yasalarına ilişkin farklı bir deney tasarlar. Oluşturulan deney düzeneğinde saydam ortamın özellikleri ve tek renkli ışığın gelme açısına ilişkin araştırma problemi belirlenebilir. Farklı saydam ortamlar için gelme açısı ve kırılma açısı değişkenlerine ilişkin veriler toplanarak tablo oluşturulabilir. Kırılma açısının bağlı olduğu değişkenler tablodaki veriler kullanılarak analiz edilir. Öğretmen deney düzeneklerini dereceli puanlama anahtarını kullanarak değerlendirebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
-      "mathematical_prerequisites": [],
+      "concepts": [
+        "phys11-c-kirma-indisi",
+        "phys11-c-snell-yasasi",
+        "phys11-c-sinir-acisi",
+        "phys11-c-tam-yansima",
+        "phys11-c-sapma-acisi"
+      ],
+      "prerequisites": [
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kirilma",
+          "via_concepts": [
+            "kirilma"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
+      "mathematical_prerequisites": [
+        {
+          "concept_id": "phys11-c-trigonometrik-oranlar",
+          "name": "Trigonometrik oranlar (sin, cos, tan)",
+          "note": "FİZ.11.1.3 öğretme uygulaması trigonometri ön bilgisini varsayar ('trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak'). Matematik programındaki karşılığı doğrulanmadı.",
+          "official_code": null,
+          "confidence": "MEDIUM"
+        }
+      ],
       "measurable_behaviors": [
         {
           "component_id": "phys11-lo-028-a",
@@ -3925,9 +6256,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -3972,7 +6300,52 @@
           "printed_page": 343,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-trigonometrik-oranlar",
+        "phys11-c-kirilma"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-029",
@@ -4043,8 +6416,34 @@
           "source_id": "src-meb-fizik-op-2026"
         }
       ],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-kirma-indisi",
+        "phys11-c-gorunur-derinlik",
+        "phys11-c-gercek-derinlik"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.5",
+          "id": "phys11-lo-028",
+          "via_concepts": [
+            "gorunur-derinlik → kirma-indisi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kirilma",
+          "via_concepts": [
+            "kirilma"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -4077,9 +6476,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -4124,7 +6520,51 @@
           "printed_page": 354,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-kirilma"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-030",
@@ -4197,8 +6637,26 @@
       ],
       "official_teaching_practice": "Öğretmen genel ağ alt yapısında fiber optik malzemelerin kullanıldığını belirtilebilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili araştırma planlar. Öğrenciler uygun düşünme ve öğrenme stratejisi seçip kütüphane, genel ağ, uzman kişiler ve kurumlar gibi kaynaklardan birini belirler. Öğrenciler fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında bilgi toplar ve kaydeder. Yaptıkları araştırma sonuçları ile poster veya slayt gösterisi şeklinde bir sunum hazırlayabilir. Gruplar fiber optik malzemelerin tam yansıma olayı ile çalışmasına odaklanıp sunumlarını sınıf arkadaşları ile paylaşarak toplanan bilgileri tartışır. Grupların ulaştıkları bilgiler tartışma sırasında birbirleri ile karşılaştırılarak doğrulanır. Öğrencilerin fiber optik kabloların yapısı, çalışma prensibi ve kullanım alanları ile ilgili hazırladıkları sunum dereceli puanlama anahtarı ile değerlendirilebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-sinir-acisi",
+        "phys11-c-tam-yansima",
+        "phys11-c-fiber-optik"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.5",
+          "id": "phys11-lo-028",
+          "via_concepts": [
+            "fiber-optik → tam-yansima",
+            "sinir-acisi → snell-yasasi",
+            "tam-yansima → sinir-acisi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -4238,9 +6696,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -4285,7 +6740,49 @@
           "printed_page": 361,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-031",
@@ -4336,8 +6833,39 @@
       ],
       "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılır. Öğretmen gruplara birer çalışma yaprağı verebilir. Öğrencilerden çalışma yaprağında ışığın kırılma sırasındaki davranışlarını listelemeleri için nitelik sıralaması yapmaları, sınıflandırma tablosu oluşturmaları veya anlam çözümleme tablosu hazırlamaları istenebilir. Öğretmen, öğrencilere prizma dağıtıp öğrencilerden prizmaları şekil, büyüklük ve yapıldığı malzeme gibi özelliklerini dikkate alarak incelemelerini isteyebilir. Öğrenciler çalışma yaprağındaki ilgili bölüme prizmanın özelliklerini yazabilir ve şeklini çizebilir. Gruplar ekip çalışması ile ışığın prizma içinde izlediği yola ilişkin hipotezlerini çizerek gösterir veya yazar. Öğrenciler hipotezlerini simülasyon veya deney düzeneği ile test eder. Hipotezlerinin doğru olup olmadığına karar vererek sonuçlarını çalışma kâğıdına yazar. Prizmalar ile oluşturulmuş birleşik sistemlere geçiş yapılabilir. Öğrenciler geçerli hipotezlerden yola çıkarak birden fazla prizmadan oluşan sistemlerde tek renkli ışığın izleyeceği yolu belirler. Gruplar, süreci sınıf arkadaşlarına anlatır. Öğretmen çalışma kâğıdını dereceli puanlama anahtarı ile değerlendirebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-kirma-indisi",
+        "phys11-c-snell-yasasi",
+        "phys11-c-tam-yansima",
+        "phys11-c-prizma",
+        "phys11-c-tek-renkli-isik",
+        "phys11-c-sapma-acisi"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.5",
+          "id": "phys11-lo-028",
+          "via_concepts": [
+            "prizma → snell-yasasi",
+            "snell-yasasi → kirma-indisi",
+            "tam-yansima → sinir-acisi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kirilma",
+          "via_concepts": [
+            "kirilma"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -4383,9 +6911,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -4430,7 +6955,51 @@
           "printed_page": 367,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-kirilma"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-032",
@@ -4492,8 +7061,58 @@
       ],
       "official_teaching_practice": "Öğrencilere merceklerin kullanıldığı fotoğraf makinesi, kamera, gözlük, büyüteç gibi aygıtların görselleri sunularak ilgileri çekilir. Öğretmen merceklerin yakınsak ve ıraksak olmak üzere ikiye ayrıldığını belirterek yapıları hakkında bilgiler verebilir. Merceklerin asal ekseni, optik merkezi ve odak noktalarını simülasyon, animasyon veya deney düzeneklerini kullanarak öğrencilerin keşfetmelerini sağlar. Öğrenciler ışınların merceklerde kırıldıktan sonra izledikleri yolları çizimler yaparak belirler. Merceklerin yapılarına ve merceklerde kırılma yasalarına ilişkin özellikleri belirler. Öğrenciler nitelik sıralama, anlam çözümleme tablosu veya sınıflandırma tablosu kullanarak yakınsak ve ıraksak merceklerin benzerlik ve farklılıklarını listeler. Öğretmen, yapılan çizim ve listeleri dereceli puanlama anahtarı kullanarak değerlendirebilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-asal-eksen",
+        "phys11-c-odak-uzakligi",
+        "phys11-c-ozel-isinlar",
+        "phys11-c-mercek",
+        "phys11-c-yakinsak-mercek",
+        "phys11-c-iraksak-mercek",
+        "phys11-c-optik-merkez"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.3",
+          "id": "phys11-lo-026",
+          "via_concepts": [
+            "ozel-isinlar → asal-eksen"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-isik",
+          "via_concepts": [
+            "isik"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-kirilma",
+          "via_concepts": [
+            "kirilma"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        },
+        {
+          "type": "external_prior_knowledge",
+          "grade": "ortaokul",
+          "concept_id": "phys11-c-odak-noktasi",
+          "via_concepts": [
+            "odak-noktasi"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "official_basic_assumption"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -4521,9 +7140,6 @@
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -4568,7 +7184,53 @@
           "printed_page": 373,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [
+        "phys11-c-isik",
+        "phys11-c-kirilma",
+        "phys11-c-odak-noktasi"
+      ],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     },
     {
       "id": "phys11-lo-033",
@@ -4619,8 +7281,52 @@
       ],
       "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılarak merceklerde cismin yerine göre görüntünün yeri ve özelliklerini bulabilecekleri bir deney tasarlar. Öğretmen simülasyon veya animasyon kullanarak ışınlarla görüntü oluşumunu gösterebilir. Öğrenciler deney düzeneklerindeki cisimlerin bulunduğu yere göre görüntü çizimlerini yapar. Elde edilen sonuçları kullanarak tablo oluşturur. Öğrenciler deney düzenekleri, simülasyon, animasyon veya tablo üzerinden merceklerde görüntü oluşumunu analiz eder. Öğretmen merceklerde asal eksen üzerinde ve herhangi bir noktadaki cisimlerin görüntülerinin özelliklerini içeren farklı madde türlerinden oluşan testi kullanarak değerlendirme yapabilir.",
       "official_scope_constraints": [],
-      "concepts": [],
-      "prerequisites": [],
+      "concepts": [
+        "phys11-c-goruntu",
+        "phys11-c-ozel-isinlar",
+        "phys11-c-mercek",
+        "phys11-c-yakinsak-mercek",
+        "phys11-c-iraksak-mercek",
+        "phys11-c-mercekte-goruntu"
+      ],
+      "prerequisites": [
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.2",
+          "id": "phys11-lo-025",
+          "via_concepts": [
+            "mercekte-goruntu → goruntu"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.3",
+          "id": "phys11-lo-026",
+          "via_concepts": [
+            "mercekte-goruntu → ozel-isinlar",
+            "ozel-isinlar → asal-eksen"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        },
+        {
+          "type": "learning_outcome",
+          "grade": 11,
+          "code": "FİZ.11.3.9",
+          "id": "phys11-lo-032",
+          "via_concepts": [
+            "iraksak-mercek → mercek",
+            "mercekte-goruntu → mercek",
+            "yakinsak-mercek → mercek"
+          ],
+          "confidence": "MEDIUM",
+          "derived_from": "concept_graph"
+        }
+      ],
       "mathematical_prerequisites": [],
       "measurable_behaviors": [
         {
@@ -4646,9 +7352,6 @@
         }
       ],
       "pending_fields": [
-        "concepts",
-        "prerequisites",
-        "mathematical_prerequisites",
         "common_misconceptions"
       ],
       "sources": [
@@ -4693,7 +7396,49 @@
           "printed_page": 381,
           "verified_on_page": true
         }
-      ]
+      ],
+      "prior_concepts": [],
+      "unit_basic_assumptions": {
+        "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+        "items": [
+          {
+            "phrase": "ışın",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "ışık",
+            "concept_id": "phys11-c-isik"
+          },
+          {
+            "phrase": "aydınlanma",
+            "concept_id": null
+          },
+          {
+            "phrase": "düzlem ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "küresel ayna",
+            "concept_id": null
+          },
+          {
+            "phrase": "mercekleri",
+            "concept_id": null
+          },
+          {
+            "phrase": "yansıma",
+            "concept_id": "phys11-c-yansima"
+          },
+          {
+            "phrase": "kırılma",
+            "concept_id": "phys11-c-kirilma"
+          },
+          {
+            "phrase": "odak noktası",
+            "concept_id": "phys11-c-odak-noktasi"
+          }
+        ]
+      }
     }
   ],
   "global_scope_constraints": [

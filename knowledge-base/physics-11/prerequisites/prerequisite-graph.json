@@ -1,0 +1,1076 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "generated_by": "scripts/build_prerequisites.py",
+  "generated_at": "2026-10-01",
+  "intra_grade_outcome_edges": [
+    {
+      "from": "FİZ.11.1.2",
+      "to": "FİZ.11.1.1",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "serbest-dusme → yer-cekimi-ivmesi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.3",
+      "to": "FİZ.11.1.1",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "iki-boyutta-sabit-ivmeli-hareket → serbest-dusme",
+        "ucus-suresi → serbest-dusme"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.5",
+      "to": "FİZ.11.1.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "bagli-cisim-sistemi → newton-ikinci-yasa",
+        "newton-birinci-yasa → bileske-kuvvet",
+        "newton-birinci-yasa → eylemsizlik",
+        "newton-ikinci-yasa → bileske-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.6",
+      "to": "FİZ.11.1.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "surtunme-kuvveti → normal-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.7",
+      "to": "FİZ.11.1.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "newton-ikinci-yasa → bileske-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.7",
+      "to": "FİZ.11.1.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "egik-duzlem → serbest-cisim-diyagrami",
+        "surtunme-kuvveti → normal-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.7",
+      "to": "FİZ.11.1.6",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "kinetik-surtunme → surtunme-kuvveti",
+        "statik-surtunme → surtunme-kuvveti"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.8",
+      "to": "FİZ.11.1.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "limit-hiz → newton-birinci-yasa",
+        "newton-birinci-yasa → bileske-kuvvet",
+        "newton-birinci-yasa → eylemsizlik"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.8",
+      "to": "FİZ.11.1.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "surtunme-kuvveti → normal-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.8",
+      "to": "FİZ.11.1.6",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "hava-direnci → surtunme-kuvveti"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.10",
+      "to": "FİZ.11.1.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "merkezcil-kuvvet → bileske-kuvvet",
+        "merkezcil-kuvvet → newton-ikinci-yasa",
+        "newton-ikinci-yasa → bileske-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.10",
+      "to": "FİZ.11.1.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "dusey-duzlemde-cembersel → gerilme-kuvveti",
+        "egimli-viraj → normal-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.10",
+      "to": "FİZ.11.1.6",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "statik-surtunme → surtunme-kuvveti",
+        "yatay-viraj → statik-surtunme"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.1.10",
+      "to": "FİZ.11.1.9",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "dusey-duzlemde-cembersel → duzgun-cembersel-hareket",
+        "duzgun-cembersel-hareket → cizgisel-hiz",
+        "duzgun-cembersel-hareket → yaricap-vektoru",
+        "egimli-viraj → duzgun-cembersel-hareket",
+        "merkezcil-ivme → cizgisel-hiz",
+        "yatay-duzlemde-cembersel → duzgun-cembersel-hareket"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.2",
+      "to": "FİZ.11.2.1",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "elektriksel-alan → elektriksel-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.3",
+      "to": "FİZ.11.2.1",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "elektriksel-alan → elektriksel-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.3",
+      "to": "FİZ.11.2.2",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "faraday-kafesi → elektriksel-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.5",
+      "to": "FİZ.11.2.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "duz-telin-manyetik-alani → manyetik-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.6",
+      "to": "FİZ.11.2.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "akim-makarasi → duz-telin-manyetik-alani",
+        "akim-makarasi → sag-el-kurali"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.7",
+      "to": "FİZ.11.2.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "akim-makarasi → duz-telin-manyetik-alani",
+        "akim-makarasi → sag-el-kurali"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.7",
+      "to": "FİZ.11.2.6",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "akim-makarasi → sarim-sayisi",
+        "elektromiknatis → akim-makarasi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.8",
+      "to": "FİZ.11.2.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "manyetik-kuvvet → manyetik-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.8",
+      "to": "FİZ.11.2.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "tele-etki-eden-manyetik-kuvvet → sag-el-kurali"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.9",
+      "to": "FİZ.11.2.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "manyetik-kuvvet → manyetik-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.9",
+      "to": "FİZ.11.2.8",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "elektrik-motoru → tele-etki-eden-manyetik-kuvvet"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.10",
+      "to": "FİZ.11.2.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "manyetik-aki → manyetik-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.11",
+      "to": "FİZ.11.2.4",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "manyetik-aki → manyetik-alan"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.11",
+      "to": "FİZ.11.2.10",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "faraday-induksiyon-yasasi → manyetik-aki",
+        "lenz-yasasi → manyetik-aki"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.12",
+      "to": "FİZ.11.2.11",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "alternatif-akim → induksiyon-akimi",
+        "jenerator → induksiyon-gerilimi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.13",
+      "to": "FİZ.11.2.6",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "transformator → sarim-sayisi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.13",
+      "to": "FİZ.11.2.11",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "transformator → induksiyon-gerilimi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.2.13",
+      "to": "FİZ.11.2.12",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "transformator → alternatif-akim"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.3",
+      "to": "FİZ.11.3.2",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "kuresel-ayna → yansima-yasalari"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.4",
+      "to": "FİZ.11.3.2",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "kuresel-ayna → yansima-yasalari",
+        "kuresel-aynada-goruntu → goruntu"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.4",
+      "to": "FİZ.11.3.3",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "cukur-ayna → kuresel-ayna",
+        "kuresel-aynada-goruntu → kuresel-ayna",
+        "kuresel-aynada-goruntu → ozel-isinlar",
+        "ozel-isinlar → asal-eksen",
+        "tumsek-ayna → kuresel-ayna"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.6",
+      "to": "FİZ.11.3.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "gorunur-derinlik → kirma-indisi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.7",
+      "to": "FİZ.11.3.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "fiber-optik → tam-yansima",
+        "sinir-acisi → snell-yasasi",
+        "tam-yansima → sinir-acisi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.8",
+      "to": "FİZ.11.3.5",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "prizma → snell-yasasi",
+        "snell-yasasi → kirma-indisi",
+        "tam-yansima → sinir-acisi"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.9",
+      "to": "FİZ.11.3.3",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "ozel-isinlar → asal-eksen"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.10",
+      "to": "FİZ.11.3.2",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "mercekte-goruntu → goruntu"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.10",
+      "to": "FİZ.11.3.3",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "mercekte-goruntu → ozel-isinlar",
+        "ozel-isinlar → asal-eksen"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    },
+    {
+      "from": "FİZ.11.3.10",
+      "to": "FİZ.11.3.9",
+      "type": "REQUIRES_OUTCOME",
+      "via_concepts": [
+        "iraksak-mercek → mercek",
+        "mercekte-goruntu → mercek",
+        "yakinsak-mercek → mercek"
+      ],
+      "forward_in_program_order": false,
+      "derived": true,
+      "confidence": "MEDIUM"
+    }
+  ],
+  "prior_concept_to_outcome": {
+    "phys11-c-vektorel-nicelik": [
+      {
+        "code": "FİZ.9.2.2",
+        "grade": 9,
+        "official_text": "Skaler ve vektörel nicelikleri karşılaştırabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      },
+      {
+        "code": "FİZ.9.2.3",
+        "grade": 9,
+        "official_text": "Aynı doğrultu üzerinde yer alan farklı vektörlerin yön ve büyüklüklerine yönelik bilimsel çıkarım yapabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-skaler-nicelik": [
+      {
+        "code": "FİZ.9.2.2",
+        "grade": 9,
+        "official_text": "Skaler ve vektörel nicelikleri karşılaştırabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-vektor-bilesenleri": [
+      {
+        "code": "FİZ.9.2.4",
+        "grade": 9,
+        "official_text": "Vektörlerin toplanmasında kullanılan uç uca ekleme ve paralelkenar yöntemi ile bileşenlerine ayırma işlemine ilişkin tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-konum": [
+      {
+        "code": "FİZ.9.2.6",
+        "grade": 9,
+        "official_text": "Hareketin temel kavramlarının tanımlarına yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.1.1",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-yer-degistirme": [
+      {
+        "code": "FİZ.9.2.6",
+        "grade": 9,
+        "official_text": "Hareketin temel kavramlarının tanımlarına yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.1.1",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-hiz": [
+      {
+        "code": "FİZ.9.2.6",
+        "grade": 9,
+        "official_text": "Hareketin temel kavramlarının tanımlarına yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.1.1",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-surat": [
+      {
+        "code": "FİZ.9.2.6",
+        "grade": 9,
+        "official_text": "Hareketin temel kavramlarının tanımlarına yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "phys11-c-ivme": [
+      {
+        "code": "FİZ.10.1.2",
+        "grade": 10,
+        "official_text": "İvme ve hız değişimi arasındaki ilişkiye yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "phys11-c-sabit-hizli-hareket": [
+      {
+        "code": "FİZ.10.1.1",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-sabit-ivmeli-hareket": [
+      {
+        "code": "FİZ.10.1.2",
+        "grade": 10,
+        "official_text": "İvme ve hız değişimi arasındaki ilişkiye yönelik tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.1.3",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit ivmeyle hareket eden cisimlerin hareket grafiklerinden elde edilen matematiksel modelleri yorumlayabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-hareket-grafikleri": [
+      {
+        "code": "FİZ.10.1.3",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit ivmeyle hareket eden cisimlerin hareket grafiklerinden elde edilen matematiksel modelleri yorumlayabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-grafik-egim-alan": [
+      {
+        "code": "FİZ.10.1.1",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.1.3",
+        "grade": 10,
+        "official_text": "Yatay doğrultuda sabit ivmeyle hareket eden cisimlerin hareket grafiklerinden elde edilen matematiksel modelleri yorumlayabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-kuvvet": [
+      {
+        "code": "FİZ.9.2.5",
+        "grade": 9,
+        "official_text": "Doğadaki temel kuvvetleri karşılaştırabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-periyot": [
+      {
+        "code": "FİZ.10.4.1",
+        "grade": 10,
+        "official_text": "Periyodik hareketlere ilişkin deneyimlerini yansıtabilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      },
+      {
+        "code": "FİZ.10.4.2",
+        "grade": 10,
+        "official_text": "Dalgaların temel kavramlarına ilişkin operasyonel tanımlama yapabilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "phys11-c-frekans": [
+      {
+        "code": "FİZ.10.4.2",
+        "grade": 10,
+        "official_text": "Dalgaların temel kavramlarına ilişkin operasyonel tanımlama yapabilme",
+        "evidence": "official_teaching_practice",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "phys11-c-enerji-donusumu": [
+      {
+        "code": "FİZ.10.2.3",
+        "grade": 10,
+        "official_text": "Enerji biçimlerini karşılaştırabilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      },
+      {
+        "code": "FİZ.10.2.4",
+        "grade": 10,
+        "official_text": "Mekanik enerjiyi çözümleyebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-elektrik-akimi": [
+      {
+        "code": "FİZ.10.3.2",
+        "grade": 10,
+        "official_text": "Elektrik yükünün hareketi üzerinden elektrik akımı kavramını çözümleyebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-potansiyel-fark": [
+      {
+        "code": "FİZ.10.3.1",
+        "grade": 10,
+        "official_text": "Basit elektrik devresinde potansiyel fark, elektrik akımı ve direnç kavramlarının tanımına ilişkin analojik akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ],
+    "phys11-c-direnc": [
+      {
+        "code": "FİZ.10.3.1",
+        "grade": 10,
+        "official_text": "Basit elektrik devresinde potansiyel fark, elektrik akımı ve direnç kavramlarının tanımına ilişkin analojik akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      },
+      {
+        "code": "FİZ.10.3.3",
+        "grade": 10,
+        "official_text": "Ohm Yasası ile ilgili tümevarımsal akıl yürütebilme",
+        "evidence": "official_outcome_text",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "unit_basic_assumptions": {
+    "1": {
+      "official_text": "Öğrencilerin hız, ivme ve ağırlık kavramlarını bildikleri, ilgili hesaplamaları yapabildikleri, periyot ve frekans kavramlarını bildikleri kabul edilmektedir.",
+      "items": [
+        {
+          "phrase": "hız",
+          "concept_id": "phys11-c-hiz"
+        },
+        {
+          "phrase": "ivme",
+          "concept_id": "phys11-c-ivme"
+        },
+        {
+          "phrase": "ağırlık",
+          "concept_id": "phys11-c-agirlik"
+        },
+        {
+          "phrase": "periyot",
+          "concept_id": "phys11-c-periyot"
+        },
+        {
+          "phrase": "frekans",
+          "concept_id": "phys11-c-frekans"
+        },
+        {
+          "phrase": "ilgili hesaplamaları yapabildikleri",
+          "concept_id": null
+        }
+      ]
+    },
+    "2": {
+      "official_text": "Öğrencilerin elektriklenme çeşitlerini ve yüklü cisimler ile elektroskop arasındaki etkileşimi, mıknatısların kutuplarını, mıknatısların etkileşimini ve pusula kullanımını bildiği kabul edilmektedir.",
+      "items": [
+        {
+          "phrase": "elektriklenme çeşitlerini",
+          "concept_id": "phys11-c-elektrik-yuku"
+        },
+        {
+          "phrase": "elektroskop",
+          "concept_id": "phys11-c-elektroskop"
+        },
+        {
+          "phrase": "mıknatısların kutuplarını",
+          "concept_id": "phys11-c-manyetik-kutup"
+        },
+        {
+          "phrase": "mıknatısların etkileşimini",
+          "concept_id": "phys11-c-miknatis"
+        },
+        {
+          "phrase": "pusula kullanımını",
+          "concept_id": "phys11-c-pusula"
+        }
+      ]
+    },
+    "3": {
+      "official_text": "Öğrencilerin fen bilimleri dersinde geçen ışın, ışık ve aydınlanma kavramlarını bildiği, düzlem ayna, küresel ayna ve mercekleri temel özelliklerine göre sınıflandırabildiği ve yansıma, kırılma ve odak noktası kavramlarını bildiği kabul edilmektedir.",
+      "items": [
+        {
+          "phrase": "ışın",
+          "concept_id": "phys11-c-isik"
+        },
+        {
+          "phrase": "ışık",
+          "concept_id": "phys11-c-isik"
+        },
+        {
+          "phrase": "aydınlanma",
+          "concept_id": null
+        },
+        {
+          "phrase": "düzlem ayna",
+          "concept_id": null
+        },
+        {
+          "phrase": "küresel ayna",
+          "concept_id": null
+        },
+        {
+          "phrase": "mercekleri",
+          "concept_id": null
+        },
+        {
+          "phrase": "yansıma",
+          "concept_id": "phys11-c-yansima"
+        },
+        {
+          "phrase": "kırılma",
+          "concept_id": "phys11-c-kirilma"
+        },
+        {
+          "phrase": "odak noktası",
+          "concept_id": "phys11-c-odak-noktasi"
+        }
+      ]
+    }
+  },
+  "prior_outcomes_catalog": {
+    "FİZ.10.1.1": {
+      "grade": 10,
+      "official_text": "Yatay doğrultuda sabit hızlı hareket ile ilgili tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif10_unite_100.txt"
+    },
+    "FİZ.10.1.2": {
+      "grade": 10,
+      "official_text": "İvme ve hız değişimi arasındaki ilişkiye yönelik tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif10_unite_100.txt"
+    },
+    "FİZ.10.1.3": {
+      "grade": 10,
+      "official_text": "Yatay doğrultuda sabit ivmeyle hareket eden cisimlerin hareket grafiklerinden elde edilen matematiksel modelleri yorumlayabilme",
+      "unit_file": "sinif10_unite_100.txt"
+    },
+    "FİZ.10.2.1": {
+      "grade": 10,
+      "official_text": "Kuvvet-yer değiştirme grafiği kullanılarak iş ile ilgili tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif10_unite_108.txt"
+    },
+    "FİZ.10.2.2": {
+      "grade": 10,
+      "official_text": "İş, enerji ve güç kavramlarına ilişkin çıkarım yapabilme",
+      "unit_file": "sinif10_unite_108.txt"
+    },
+    "FİZ.10.2.3": {
+      "grade": 10,
+      "official_text": "Enerji biçimlerini karşılaştırabilme",
+      "unit_file": "sinif10_unite_108.txt"
+    },
+    "FİZ.10.2.4": {
+      "grade": 10,
+      "official_text": "Mekanik enerjiyi çözümleyebilme",
+      "unit_file": "sinif10_unite_108.txt"
+    },
+    "FİZ.10.2.5": {
+      "grade": 10,
+      "official_text": "Yenilenebilen ve yenilenemeyen enerji kaynaklarını karşılaştırabilme",
+      "unit_file": "sinif10_unite_108.txt"
+    },
+    "FİZ.10.3.1": {
+      "grade": 10,
+      "official_text": "Basit elektrik devresinde potansiyel fark, elektrik akımı ve direnç kavramlarının tanımına ilişkin analojik akıl yürütebilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.2": {
+      "grade": 10,
+      "official_text": "Elektrik yükünün hareketi üzerinden elektrik akımı kavramını çözümleyebilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.3": {
+      "grade": 10,
+      "official_text": "Ohm Yasası ile ilgili tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.4": {
+      "grade": 10,
+      "official_text": "Dirençlerin bağlanma türüne göre eşdeğer dirence ilişkin bilimsel çıkarım yapabilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.5": {
+      "grade": 10,
+      "official_text": "Üreteçlerin bağlanma türüne göre devreye sağladıkları potansiyel farka ilişkin bilimsel çıkarım yapabilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.6": {
+      "grade": 10,
+      "official_text": "Elektrik akımının oluşturabileceği tehlikelere karşı alınması gereken önlemlerle ilgili bilgi toplayabilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.3.7": {
+      "grade": 10,
+      "official_text": "Topraklama olayının önemini sorgulayabilme",
+      "unit_file": "sinif10_unite_111.txt"
+    },
+    "FİZ.10.4.1": {
+      "grade": 10,
+      "official_text": "Periyodik hareketlere ilişkin deneyimlerini yansıtabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.2": {
+      "grade": 10,
+      "official_text": "Dalgaların temel kavramlarına ilişkin operasyonel tanımlama yapabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.3": {
+      "grade": 10,
+      "official_text": "Dalgaları özelliklerine göre sınıflandırabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.4": {
+      "grade": 10,
+      "official_text": "Dalgaların yayılma süratini etkileyen etmenlere ilişkin bilimsel gözleme dayalı tahmin yapabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.5": {
+      "grade": 10,
+      "official_text": "Su dalgalarında yansıma ve kırılma ile ilgili tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.6": {
+      "grade": 10,
+      "official_text": "Rezonans ve depreme ilişkin kavramlar üzerinden depremi sorgulayabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.10.4.7": {
+      "grade": 10,
+      "official_text": "Depremle ilgili bilimsel model oluşturabilme",
+      "unit_file": "sinif10_unite_122.txt"
+    },
+    "FİZ.9.1.1": {
+      "grade": 9,
+      "official_text": "Fizik biliminin tanımına yönelik tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_43.txt"
+    },
+    "FİZ.9.1.2": {
+      "grade": 9,
+      "official_text": "Fizik biliminin alt dallarını sınıflandırabilme",
+      "unit_file": "sinif9_unite_43.txt"
+    },
+    "FİZ.9.1.3": {
+      "grade": 9,
+      "official_text": "Fizik bilimine katkıda bulunmuş bilim insanlarının deneyimlerini yansıtabilme",
+      "unit_file": "sinif9_unite_43.txt"
+    },
+    "FİZ.9.1.4": {
+      "grade": 9,
+      "official_text": "Bilim ve teknoloji alanında faaliyet gösteren kurum veya kuruluşlarda fizik bilimi ile ilişkili kariyer olanaklarını sorgulayabilme",
+      "unit_file": "sinif9_unite_43.txt"
+    },
+    "FİZ.9.2.1": {
+      "grade": 9,
+      "official_text": "Birimleri SI birim sisteminde verilen temel ve türetilmiş nicelikleri sınıflandırabilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.2": {
+      "grade": 9,
+      "official_text": "Skaler ve vektörel nicelikleri karşılaştırabilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.3": {
+      "grade": 9,
+      "official_text": "Aynı doğrultu üzerinde yer alan farklı vektörlerin yön ve büyüklüklerine yönelik bilimsel çıkarım yapabilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.4": {
+      "grade": 9,
+      "official_text": "Vektörlerin toplanmasında kullanılan uç uca ekleme ve paralelkenar yöntemi ile bileşenlerine ayırma işlemine ilişkin tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.5": {
+      "grade": 9,
+      "official_text": "Doğadaki temel kuvvetleri karşılaştırabilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.6": {
+      "grade": 9,
+      "official_text": "Hareketin temel kavramlarının tanımlarına yönelik tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.2.7": {
+      "grade": 9,
+      "official_text": "Hareket türlerini sınıflandırabilme",
+      "unit_file": "sinif9_unite_57.txt"
+    },
+    "FİZ.9.3.1": {
+      "grade": 9,
+      "official_text": "Basınca yönelik bilimsel çıkarımlarda bulunabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.2": {
+      "grade": 9,
+      "official_text": "Durgun sıvılarda basınca yönelik bilimsel çıkarımlarda bulunabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.3": {
+      "grade": 9,
+      "official_text": "Sıvılarda basıncın kullanıldığı günlük hayat örneklerine ilişkin sorgulama yapabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.4": {
+      "grade": 9,
+      "official_text": "Açık hava basıncına ilişkin çıkarım yapabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.5": {
+      "grade": 9,
+      "official_text": "Kaldırma kuvvetini etkileyen değişkenleri belirlemeye yönelik deney yapabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.6": {
+      "grade": 9,
+      "official_text": "Kaldırma kuvveti ile sıvılardaki basınca neden olan kuvvet arasındaki ilişkiye yönelik çıkarım yapabilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.3.7": {
+      "grade": 9,
+      "official_text": "Akışkanın geçtiği borunun kesit alanı ile akışkanın sürati ve boru çeperlerine yaptığı basınç arasındaki ilişkiye yönelik tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_65.txt"
+    },
+    "FİZ.9.4.1": {
+      "grade": 9,
+      "official_text": "İç enerjinin ısı ve sıcaklık ile arasındaki ilişki hakkında tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_82.txt"
+    },
+    "FİZ.9.4.2": {
+      "grade": 9,
+      "official_text": "Isı, öz ısı, ısı sığası ve sıcaklık farkı arasındaki matematiksel modele ilişkin tümevarımsal akıl yürütebilme",
+      "unit_file": "sinif9_unite_82.txt"
+    },
+    "FİZ.9.4.3": {
+      "grade": 9,
+      "official_text": "Hâl değiştirme sıcaklığında bulunan saf bir maddenin hâl değiştirmesi için alınan veya verilen ısı miktarının bağlı olduğu değişkenler hakkında bilimsel çıkarım yapabilme",
+      "unit_file": "sinif9_unite_82.txt"
+    },
+    "FİZ.9.4.4": {
+      "grade": 9,
+      "official_text": "Isıl denge durumu hakkında bilimsel gözlem yapabilme",
+      "unit_file": "sinif9_unite_82.txt"
+    },
+    "FİZ.9.4.5": {
+      "grade": 9,
+      "official_text": "Isı aktarım yollarını sınıflayabilme",
+      "unit_file": "sinif9_unite_82.txt"
+    },
+    "FİZ.9.4.6": {
+      "grade": 9,
+      "official_text": "Günlük hayattaki deneyimlerinden yola çıkarak katı maddelerdeki ısı iletim hızını etkileyen etmenlere yönelik yansıtma yapabilme",
+      "unit_file": "sinif9_unite_82.txt"
+    }
+  },
+  "math_notes": {
+    "trigonometrik-oranlar": "FİZ.11.1.3 öğretme uygulaması trigonometri ön bilgisini varsayar ('trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak'). Matematik programındaki karşılığı doğrulanmadı.",
+    "oran-oranti": "Hesaplamasız (oran/yorum) çıktıların temel aracı. Matematik programındaki karşılığı doğrulanmadı.",
+    "ters-kare-iliskisi": "Coulomb ve aydınlanma modellerinde kullanılır. Matematik programındaki karşılığı doğrulanmadı.",
+    "grafik-egim-alan": "Fizik 10. sınıfta (FİZ.10.1.1) eğim ve alan olarak işlenir."
+  }
+}

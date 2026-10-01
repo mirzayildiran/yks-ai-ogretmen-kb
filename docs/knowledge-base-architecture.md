@@ -58,7 +58,11 @@ Soru ailesi ── varyasyon ── çözüm yöntemi ── kısa yol (geçerli
 | Öğrenme çıktısı | `phys11-lo-<nnn>` + **ayrıca** `official_code` | `phys11-lo-011` / `FİZ.11.2.1` |
 | Süreç bileşeni | `<lo-id>-<harf>` | `phys11-lo-011-a` |
 | Kaynak | `src-<kurum>-<kısa-ad>` | `src-meb-fizik-op-2026` |
-| Sonraki varlıklar | `phys11-<tür>-<nnn>` | `phys11-concept-001`, `phys11-formula-001`, `phys11-qf-001` |
+| Beceri | `skill-<resmî kod>` | `skill-fbab10`, `skill-kb2-16-3` |
+| Kavram | `phys11-c-<slug>` (okunur, ASCII) | `phys11-c-merkezcil-kuvvet` |
+| Kavram ilişkisi | `phys11-rel-<nnn>` | `phys11-rel-042` |
+| Kapsam sınırı | `<lo-id>-scope-<n>` | `phys11-lo-023-scope-2` |
+| Sonraki varlıklar | `phys11-<tür>-<nnn>` | `phys11-formula-001`, `phys11-qf-001` |
 
 Resmî kodlar (FİZ.11.x.y, FBAB10, KB2.7) asla bizim ID'lerimizle değiştirilmez; ayrı alanda saklanır.
 
@@ -92,7 +96,7 @@ Yayınevi ve ÖSYM sorularının metni veri tabanına toplu olarak kopyalanmaz. 
 
 ## Üretim ve doğrulama
 
-- Veri, mümkün olduğunca **betikle ve resmî ham dosyadan** üretilir (`scripts/build_*.py`). Böylece MEB programı güncellendiğinde yeniden üretilebilir.
+- Veri, mümkün olduğunca **betikle ve resmî ham dosyadan** üretilir (`scripts/build_*.py`). Elle yazılan bilgi (kavramlar, ilişkiler, kapsam yorumları, ön koşul eşlemeleri) `scripts/data_*.py` ve `*.curated.json` dosyalarında tutulur; derleme betikleri bu bilgiyi resmî metne karşı kanıt arayarak doğrular. Böylece MEB programı güncellendiğinde yeniden üretilebilir.
 - `master-map.md` üretilen bir dosyadır; elle düzenlenmez.
 - `scripts/validate_*.py` her çalıştırmada şunları kontrol eder:
   - JSON geçerliliği, yinelenen ID
