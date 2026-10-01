@@ -1,7 +1,7 @@
 # Boşluk Analizi — 11. Sınıf Fizik
 
 - **Güncelleme:** 2026-10-01
-- **Durum:** STEP 1–7 tamamlandı. STEP 8–16 başlamadı.
+- **Durum:** STEP 1–7 tamamlandı. STEP 8 Ünite 1 için tamamlandı; Ünite 2–3 ve STEP 9–16 başlamadı.
 
 ## Missing curriculum data
 - Yok. 3 ünite, 18 içerik başlığı, 33 çıktı ve 85 süreç bileşeni resmî PDF ile birebir.
@@ -28,7 +28,11 @@
 - Ders kitabındaki çözümlü örneklerin tamamı taranmadı; az kullanılan ara bağıntılar eksik olabilir. Örnek: düşey çemberde enerji korunumu (s. 112), 10. sınıf mekanik enerji konusu.
 
 ## Missing question families / variations / solution methods / shortcuts (STEP 8, 9, 11, 12)
-- Başlamadı.
+- **Ünite 1 tamamlandı:** 57 aile, 25/25 süreç bileşeni kapsanıyor (`step-8-unit1-audit.md`).
+- **Ünite 2 (13 çıktı) ve Ünite 3 (10 çıktı):** soru ailesi yok.
+- **Ünite 1'deki gerekçeli uyarıcı boşlukları:** 11.1.5 tablo, 11.1.6 grafik, 11.1.9 grafik, tablo ve deney.
+- **Piyasa kanıtı (STEP 9) ve ÖSYM özellikleri (STEP 10):** boş.
+- **Çözüm yöntemi ve kısa yol:** yalnız adlar var; ayrıntılar STEP 11–12'de.
 - `legacy-taslak-fizik-11/` altında doğrulanmamış bir piyasa kaynakları envanteri (72 kayıt) ve kısmi bir FİZ.11.1.1 taslağı var. Yeni şemaya taşınmadılar.
 
 ## Missing error types / pedagogy (STEP 13, 14)

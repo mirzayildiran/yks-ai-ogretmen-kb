@@ -1,6 +1,6 @@
 """Bilgi tabanını resmî kaynaklardan baştan üretir ve tüm doğrulamaları çalıştırır.
 
-Sıra: build_curriculum → build_skills → enrich_learning_outcomes → build_concepts → build_prerequisites → build_formulas
+Sıra: build_curriculum → build_skills → enrich_learning_outcomes → build_concepts → build_prerequisites → build_formulas → build_question_families
       → validate_curriculum → validate_graphs
 Herhangi bir adım hata verirse durur ve çıkış kodu 1 döner.
 """
@@ -10,7 +10,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 STEPS = ["build_curriculum.py", "build_skills.py", "enrich_learning_outcomes.py", "build_concepts.py",
-         "build_prerequisites.py", "build_formulas.py", "validate_curriculum.py", "validate_graphs.py"]
+         "build_prerequisites.py", "build_formulas.py", "build_question_families.py", "validate_curriculum.py", "validate_graphs.py"]
 
 for step in STEPS:
     print(f"\n=== {step} ===", flush=True)

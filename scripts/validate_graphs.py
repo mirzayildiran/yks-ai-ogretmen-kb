@@ -85,13 +85,32 @@ def main():
         for fid in o.get("formulas", []):
             if fid not in fids:
                 errors.append(f"{o['official_code']}: kırık formül referansı {fid}")
-    versions = {d["curriculum_version"] for d in (lo_doc, cdoc, rdoc, sdoc, pdoc, fdoc)}
+    qdoc = load("question-families/question-families.json")
+    qids = {q["id"] for q in qdoc["question_families"]}
+    comp_ids = {c["id"] for o in los for c in o["process_components"]}
+    for q in qdoc["question_families"]:
+        for c in q["concepts"] + q["prerequisites"]:
+            if c not in cids:
+                errors.append(f"{q['id']}: kırık kavram referansı {c}")
+        for fid in q["formulas"]:
+            if fid not in fids:
+                errors.append(f"{q['id']}: kırık formül referansı {fid}")
+        for c in q["process_components"]:
+            if c["component_id"] not in comp_ids:
+                errors.append(f"{q['id']}: kırık süreç bileşeni {c['component_id']}")
+        if any(not e["verified"] for e in q["sources"]):
+            errors.append(f"{q['id']}: doğrulanmamış kanıt")
+    for o in los:
+        for qid in o.get("question_families", []):
+            if qid not in qids:
+                errors.append(f"{o['official_code']}: kırık soru ailesi referansı {qid}")
+    versions = {d["curriculum_version"] for d in (lo_doc, cdoc, rdoc, sdoc, pdoc, fdoc, qdoc)}
     if len(versions) != 1:
         errors.append(f"Tutarsız müfredat sürümü: {versions}")
     if any(e["forward_in_program_order"] for e in pdoc["intra_grade_outcome_edges"]):
         warnings.append("Program sırasına ters ön koşul kenarı var")
 
-    print(f"GRAFİK DOĞRULAMA: {len(concepts)} kavram, {len(rels)} ilişki, {len(skills)} beceri, {len(fids)} formül, "
+    print(f"GRAFİK DOĞRULAMA: {len(concepts)} kavram, {len(rels)} ilişki, {len(skills)} beceri, {len(fids)} formül, {len(qids)} soru ailesi, "
           f"{len(pdoc['intra_grade_outcome_edges'])} çıktı-içi ön koşul kenarı")
     for w in warnings:
         print("  !", w)

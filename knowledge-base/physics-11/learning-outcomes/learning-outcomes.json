@@ -243,6 +243,10 @@
       },
       "formulas": [
         "phys11-formula-002"
+      ],
+      "question_families": [
+        "phys11-qf-001",
+        "phys11-qf-002"
       ]
     },
     {
@@ -586,6 +590,16 @@
         "phys11-formula-004",
         "phys11-formula-005",
         "phys11-formula-006"
+      ],
+      "question_families": [
+        "phys11-qf-003",
+        "phys11-qf-004",
+        "phys11-qf-005",
+        "phys11-qf-006",
+        "phys11-qf-007",
+        "phys11-qf-008",
+        "phys11-qf-009",
+        "phys11-qf-010"
       ]
     },
     {
@@ -948,6 +962,15 @@
         "phys11-formula-007",
         "phys11-formula-008",
         "phys11-formula-009"
+      ],
+      "question_families": [
+        "phys11-qf-011",
+        "phys11-qf-012",
+        "phys11-qf-013",
+        "phys11-qf-014",
+        "phys11-qf-015",
+        "phys11-qf-016",
+        "phys11-qf-017"
       ]
     },
     {
@@ -1144,6 +1167,12 @@
       },
       "formulas": [
         "phys11-formula-010"
+      ],
+      "question_families": [
+        "phys11-qf-018",
+        "phys11-qf-019",
+        "phys11-qf-020",
+        "phys11-qf-021"
       ]
     },
     {
@@ -1409,6 +1438,14 @@
         "phys11-formula-012",
         "phys11-formula-013",
         "phys11-formula-014"
+      ],
+      "question_families": [
+        "phys11-qf-022",
+        "phys11-qf-023",
+        "phys11-qf-024",
+        "phys11-qf-025",
+        "phys11-qf-026",
+        "phys11-qf-027"
       ]
     },
     {
@@ -1609,7 +1646,12 @@
           }
         ]
       },
-      "formulas": []
+      "formulas": [],
+      "question_families": [
+        "phys11-qf-028",
+        "phys11-qf-029",
+        "phys11-qf-030"
+      ]
     },
     {
       "id": "phys11-lo-007",
@@ -1850,6 +1892,16 @@
         "phys11-formula-014",
         "phys11-formula-015",
         "phys11-formula-016"
+      ],
+      "question_families": [
+        "phys11-qf-031",
+        "phys11-qf-032",
+        "phys11-qf-033",
+        "phys11-qf-034",
+        "phys11-qf-035",
+        "phys11-qf-036",
+        "phys11-qf-037",
+        "phys11-qf-038"
       ]
     },
     {
@@ -2094,6 +2146,12 @@
       "formulas": [
         "phys11-formula-017",
         "phys11-formula-018"
+      ],
+      "question_families": [
+        "phys11-qf-039",
+        "phys11-qf-040",
+        "phys11-qf-041",
+        "phys11-qf-042"
       ]
     },
     {
@@ -2292,7 +2350,12 @@
           }
         ]
       },
-      "formulas": []
+      "formulas": [],
+      "question_families": [
+        "phys11-qf-043",
+        "phys11-qf-044",
+        "phys11-qf-045"
+      ]
     },
     {
       "id": "phys11-lo-010",
@@ -2634,6 +2697,20 @@
         "phys11-formula-026",
         "phys11-formula-027",
         "phys11-formula-028"
+      ],
+      "question_families": [
+        "phys11-qf-046",
+        "phys11-qf-047",
+        "phys11-qf-048",
+        "phys11-qf-049",
+        "phys11-qf-050",
+        "phys11-qf-051",
+        "phys11-qf-052",
+        "phys11-qf-053",
+        "phys11-qf-054",
+        "phys11-qf-055",
+        "phys11-qf-056",
+        "phys11-qf-057"
       ]
     },
     {
