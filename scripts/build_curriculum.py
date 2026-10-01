@@ -372,11 +372,19 @@ def write_master_map(cur, outcomes):
             L += [f"### {t['official_title']}", ""]
             for o in los:
                 conf = "" if o["subtopic"]["confidence"] == "HIGH" else f" _(başlık eşlemesi: {o['subtopic']['confidence']})_"
-                L.append(f"- **{o['official_code']}** {o['official_text']} — beceri `{o['skills'][0]['code']}`{conf}")
+                book = ""
+                if o.get("textbook_sections"):
+                    b = o["textbook_sections"][0]
+                    book = f" · ders kitabı {b['section']} (s. {b['printed_page']})"
+                L.append(f"- **{o['official_code']}** {o['official_text']} — beceri `{o['skills'][0]['code']}`{book}{conf}")
                 for c in o["process_components"]:
-                    L.append(f"  - {c['label']}) {c['official_text']}")
+                    sc = f" `[{c['skill_component']['code']}]`" if c.get("skill_component") else ""
+                    L.append(f"  - {c['label']}) {c['official_text']}{sc}")
                 for s in o["official_scope_constraints"]:
-                    L.append(f"  - ⚠️ _Kapsam (resmî):_ {s}")
+                    if isinstance(s, dict):
+                        L.append(f"  - ⚠️ `{s['type']}` _{s['official_text']}_ → {s['implication']}")
+                    else:
+                        L.append(f"  - ⚠️ _Kapsam (resmî):_ {s}")
             L.append("")
         L += ["**Zenginleştirme (resmî; öğrenme çıktısı eklemez, ders kitabında yer almaz):**", ""]
         for e in u["enrichment_official"]:

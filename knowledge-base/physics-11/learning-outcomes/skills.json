@@ -1,0 +1,679 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "generated_by": "scripts/build_skills.py",
+  "generated_at": "2026-10-01",
+  "count": 14,
+  "skills": [
+    {
+      "id": "skill-fbab1",
+      "official_code": "FBAB1",
+      "official_name": "Bilimsel Gözlem",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Bilgiye ulaşmada veya bilgiyi yapılandırmada tüm duyularla doğrudan ya da dolaylı olarak nesne, olgu, olay ve süreçlerle ilgili veriler toplamayı ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB1.SB1",
+          "official_text": "Nitelikleri tanımlamak"
+        },
+        {
+          "code": "FBAB1.SB2",
+          "official_text": "Veri toplamak ve kaydetmek"
+        },
+        {
+          "code": "FBAB1.SB3",
+          "official_text": "Verileri açıklamak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.2.4",
+        "FİZ.11.3.6"
+      ],
+      "listed_in_units": [
+        2,
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab7",
+      "official_code": "FBAB7",
+      "official_name": "Deney Yapma",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Salt gözlemin ötesine geçerek ölçme verileri ve onların analizlerini kullanarak bir sonuca ulaşma sürecini ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB7.SB1",
+          "official_text": "Deney tasarlamak"
+        },
+        {
+          "code": "FBAB7.SB2",
+          "official_text": "Ölçme ve veri analizi yapmak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.3.4",
+        "FİZ.11.3.5",
+        "FİZ.11.3.10"
+      ],
+      "listed_in_units": [
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab8",
+      "official_code": "FBAB8",
+      "official_name": "Bilimsel Çıkarım Yapma",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Gözlem verilerine dayanan destekleyici kanıtlara ve geçmiş deneyimlere dayalı bir sonuca ulaşma ve bir yargıda bulunmayı ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB8.SB1",
+          "official_text": "Nitelikleri tanımlamak"
+        },
+        {
+          "code": "FBAB8.SB2",
+          "official_text": "Veri toplamak ve kaydetmek"
+        },
+        {
+          "code": "FBAB8.SB3",
+          "official_text": "Verileri yorumlamak ve değerlendirmek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.8",
+        "FİZ.11.2.12",
+        "FİZ.11.2.13",
+        "FİZ.11.3.1"
+      ],
+      "listed_in_units": [
+        1,
+        2,
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab9",
+      "official_code": "FBAB9",
+      "official_name": "Bilimsel Model Oluşturma",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Zihinsel aşamalar içeren bilimsel işlemler bütününü ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB9.SB1",
+          "official_text": "Açıklamalar için model önermek"
+        },
+        {
+          "code": "FBAB9.SB2",
+          "official_text": "Yeni kanıtlarla modeli yenilemek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.3.2"
+      ],
+      "listed_in_units": [
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab10",
+      "official_code": "FBAB10",
+      "official_name": "Tümevarımsal Akıl Yürütme",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Deneyimlere dayalı gözlemlerden veya deneysel olarak çıkarılmış önermelerden genellemelere ulaşmak yani deneyimlerden genelleme yoluyla bilgi üretme yöntemini ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB10.SB1",
+          "official_text": "Örüntü bulmak"
+        },
+        {
+          "code": "FBAB10.SB2",
+          "official_text": "Genelleme yapmak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.1",
+        "FİZ.11.1.3",
+        "FİZ.11.1.4",
+        "FİZ.11.1.7",
+        "FİZ.11.1.10",
+        "FİZ.11.2.1",
+        "FİZ.11.2.2",
+        "FİZ.11.2.5",
+        "FİZ.11.2.6",
+        "FİZ.11.2.8",
+        "FİZ.11.2.11"
+      ],
+      "listed_in_units": [
+        1,
+        2
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab11",
+      "official_code": "FBAB11",
+      "official_name": "Tümdengelimsel Akıl Yürütme",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Mantıksal çıkarım adımları izlenerek genel önermelerden yola çıkılarak özel önermelerin elde edilme sürecini ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB11.SB1",
+          "official_text": "Kuramsal temele dayalı hipotez kurmak ve test etmek"
+        },
+        {
+          "code": "FBAB11.SB2",
+          "official_text": "Geçerli hipotezleri yeni durumları açıklamak için kullanmak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.3.8"
+      ],
+      "listed_in_units": [
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-fbab12",
+      "official_code": "FBAB12",
+      "official_name": "Kanıt Kullanma",
+      "family": "Fen Bilimleri Alan Becerileri",
+      "official_definition": "Bilimsel sorgulama, argümantasyon ve problem çözme süreçlerinin temel becerisini ifade eder.",
+      "process_components": [
+        {
+          "code": "FBAB12.SB1",
+          "official_text": "Veri toplamak ve kaydetmek"
+        },
+        {
+          "code": "FBAB12.SB2",
+          "official_text": "Veri setleri oluşturmak"
+        },
+        {
+          "code": "FBAB12.SB3",
+          "official_text": "Veriye dayalı açıklama yapmak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.2"
+      ],
+      "listed_in_units": [
+        1
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-4",
+      "official_code": "KB2.4",
+      "official_name": "Çözümleme",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Bir bütünü parçalarına ayırarak parçalar arasındaki ilişkileri belirlemeyi ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.4.SB1",
+          "official_text": "Nesne, olgu ve olaylara ilişkin parçaları belirlemek"
+        },
+        {
+          "code": "KB2.4.SB2",
+          "official_text": "Parçalar arasındaki ilişkileri belirlemek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.2.10"
+      ],
+      "listed_in_units": [
+        2
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-6",
+      "official_code": "KB2.6",
+      "official_name": "Bilgi Toplama",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Olay/konu/durum ile ilgili istenen bilgiyi çeşitli yöntemlerle elde etmeyi, doğrulamayı ve kaydetmeyi ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.6.SB1",
+          "official_text": "İstenen bilgiye ulaşmak için kullanacağı araçları belirlemek"
+        },
+        {
+          "code": "KB2.6.SB2",
+          "official_text": "Belirlediği aracı kullanarak olay/konu/durum hakkındaki bilgileri bulmak"
+        },
+        {
+          "code": "KB2.6.SB3",
+          "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri doğrulamak"
+        },
+        {
+          "code": "KB2.6.SB4",
+          "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri kaydetmek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.2.3",
+        "FİZ.11.2.7",
+        "FİZ.11.3.7"
+      ],
+      "listed_in_units": [
+        2,
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-7",
+      "official_code": "KB2.7",
+      "official_name": "Karşılaştırma",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Birden fazla kavram veya durum arasındaki benzerlik ve farklılıkların belirlenmesini ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.7.SB1",
+          "official_text": "Birden fazla kavram veya duruma ilişkin özellikleri belirlemek"
+        },
+        {
+          "code": "KB2.7.SB2",
+          "official_text": "Belirlenen özelliklere ilişkin benzerlikleri listelemek"
+        },
+        {
+          "code": "KB2.7.SB3",
+          "official_text": "Belirlenen özelliklere ilişkin farklılıkları listelemek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.6",
+        "FİZ.11.3.3",
+        "FİZ.11.3.9"
+      ],
+      "listed_in_units": [
+        1,
+        3
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-14",
+      "official_code": "KB2.14",
+      "official_name": "Yorumlama",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Mevcut olayı/konuyu/durumu bağlamından koparmadan yeniden açıklamayı ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.14.SB1",
+          "official_text": "Mevcut olayı/konuyu/durumu incelemek"
+        },
+        {
+          "code": "KB2.14.SB2",
+          "official_text": "Mevcut olayı/konuyu/durumu bağlamdan kopmadan dönüştürmek"
+        },
+        {
+          "code": "KB2.14.SB3",
+          "official_text": "Kendi ifadeleriyle olayı/konuyu/durumu nesnel, doğru ve anlamı değiştirmeyecek şekilde yeniden ifade etmek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.5"
+      ],
+      "listed_in_units": [
+        1
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-15",
+      "official_code": "KB2.15",
+      "official_name": "Yansıtma",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Bir durumu gelecekteki durumlara uygulamak için deneyimlerden yola çıkarak gözden geçirmeyi, çıkarımda bulunmayı ve değerlendirmeyi ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.15.SB1",
+          "official_text": "Deneyimi gözden geçirmek"
+        },
+        {
+          "code": "KB2.15.SB2",
+          "official_text": "Deneyime dayalı çıkarım yapmak"
+        },
+        {
+          "code": "KB2.15.SB3",
+          "official_text": "Ulaşılan çıkarımları değerlendirmek"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.2.9"
+      ],
+      "listed_in_units": [
+        2
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-16",
+      "official_code": "KB2.16",
+      "official_name": "Muhakeme",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "Tümevarım/tümdengelim/analoji yaklaşımlarını kullanarak mevcut olaya/konuya/duruma ilişkin çıkarımlara ulaşma sürecini ifade eder.",
+      "process_components": [],
+      "sub_skills": [
+        "KB2.16.3"
+      ],
+      "used_as_primary_skill_by": [],
+      "listed_in_units": [
+        1
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    },
+    {
+      "id": "skill-kb2-16-3",
+      "official_code": "KB2.16.3",
+      "official_name": "Analojik Akıl Yürütme",
+      "family": "Kavramsal Beceriler",
+      "official_definition": "En az mevcut iki olay/konu/durum arasındaki yapısal ve işlevsel benzerliklerden hareketle düşünmeyi ifade eder.",
+      "process_components": [
+        {
+          "code": "KB2.16.3.SB1",
+          "official_text": "Birden fazla durumu gözlemlemek"
+        },
+        {
+          "code": "KB2.16.3.SB2",
+          "official_text": "Birden fazla durumun niteliklerini tespit etmek"
+        },
+        {
+          "code": "KB2.16.3.SB3",
+          "official_text": "Benzerliklerden çıkarım yapmak"
+        }
+      ],
+      "sub_skills": [],
+      "used_as_primary_skill_by": [
+        "FİZ.11.1.9"
+      ],
+      "listed_in_units": [
+        1
+      ],
+      "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+      "sources": [
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "official_definition",
+            "process_components"
+          ]
+        },
+        {
+          "source_id": "src-meb-fizik-op-2026",
+          "fields": [
+            "official_name",
+            "listed_in_units"
+          ]
+        }
+      ],
+      "confidence": "HIGH",
+      "created_at": "2026-10-01",
+      "updated_at": "2026-10-01"
+    }
+  ]
+}

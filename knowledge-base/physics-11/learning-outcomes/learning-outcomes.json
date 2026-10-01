@@ -19,19 +19,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-1",
         "official_title": "Serbest Düşme",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.1.1 'Serbest Düşen Cisimler' (s. 16)"
       },
       "process_components": [
         {
           "id": "phys11-lo-001-a",
           "label": "a",
-          "official_text": "Serbest düşme hareketi yapan cisimleri gözlemleyerek ivme ve hız değişimleri arasındaki ilişkiyi bulur."
+          "official_text": "Serbest düşme hareketi yapan cisimleri gözlemleyerek ivme ve hız değişimleri arasındaki ilişkiyi bulur.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-001-b",
           "label": "b",
-          "official_text": "Serbest düşme hareketi yapan cisimlerin ivmesi hakkında genelleme yapar."
+          "official_text": "Serbest düşme hareketi yapan cisimlerin ivmesi hakkında genelleme yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -43,22 +56,49 @@
       ],
       "official_teaching_practice": "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar. Öğrencilerden görsellerdeki cisimlerin hareketini gözlemleyerek sınıf tartışması ile serbest düşen cisimlerin ivmesine ilişkin açıklama getirmesi istenir. Öğrenciler tartışma sırasında kendi iddialarını ve destekleyicilerini açıklar varsa akranlarının karşıt iddialarına yönelik çürütücülerini belirterek yer çekimi ivmesi ile hız değişimi arasındaki ilişkiye yönelik fikir birliği ile çıkarımda bulunur. Serbest düşme hareketi yapan cisimlerin ivmeleriyle ilgili genelleme yapar. Yer çekimi ivmesi sabit kabul edilir. Öğrencilerden serbest düşme hareketi ile ilgili poster hazırlayarak sunmaları istenebilir.",
       "official_scope_constraints": [
-        "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar.",
-        "Yer çekimi ivmesi sabit kabul edilir."
+        {
+          "id": "phys11-lo-001-scope-1",
+          "type": "ASSUMPTION",
+          "official_text": "Öğretmen video, animasyon ya da simülasyon gibi dijital içeriklerden birini kullanarak hava direncinin ihmal edildiği ortamda serbest düşen farklı kütleli cisimlere örnek olacak görselleri hazır veri seti ile ilişkilendirerek sunar.",
+          "implication": "Hava direnci yok sayılır.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-001-scope-2",
+          "type": "ASSUMPTION",
+          "official_text": "Yer çekimi ivmesi sabit kabul edilir.",
+          "implication": "g yükseklikle değişmez.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-001-a",
+          "observable_verb": "bulur",
+          "behavior": "Serbest düşme hareketi yapan cisimleri gözlemleyerek ivme ve hız değişimleri arasındaki ilişkiyi bulur.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-001-b",
+          "observable_verb": "yapar",
+          "behavior": "Serbest düşme hareketi yapan cisimlerin ivmesi hakkında genelleme yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -76,11 +116,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.1.1",
+          "official_title": "Serbest Düşen Cisimler",
+          "printed_page": 16,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-002",
@@ -94,24 +156,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-1",
         "official_title": "Serbest Düşme",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.1.2 'Serbest Düşme Hareketi ile İlgili Veriler' (s. 20)"
       },
       "process_components": [
         {
           "id": "phys11-lo-002-a",
           "label": "a",
-          "official_text": "Serbest düşme hareketi ile ilgili verileri toplayarak kaydeder."
+          "official_text": "Serbest düşme hareketi ile ilgili verileri toplayarak kaydeder.",
+          "skill_component": {
+            "code": "FBAB12.SB1",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-002-b",
           "label": "b",
-          "official_text": "Serbest düşme hareketi ile ilgili veri setleri oluşturur."
+          "official_text": "Serbest düşme hareketi ile ilgili veri setleri oluşturur.",
+          "skill_component": {
+            "code": "FBAB12.SB2",
+            "official_text": "Veri setleri oluşturmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-002-c",
           "label": "c",
-          "official_text": "Serbest düşme hareketini verilere dayalı olarak açıklar."
+          "official_text": "Serbest düşme hareketini verilere dayalı olarak açıklar.",
+          "skill_component": {
+            "code": "FBAB12.SB3",
+            "official_text": "Veriye dayalı açıklama yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -123,22 +204,72 @@
       ],
       "official_teaching_practice": "Öğrenciler, deney ya da dijital içerikler yolu ile düşey doğrultuda ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini gözlemleyerek hız, ivme, konum, zaman ve yer değiştirme ile ilgili verileri toplayıp kaydeder. Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur. Ön öğrenmelerindeki ivmeli hareket grafiklerini dikkate alarak oluşturduğu veri setleri üzerinden hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer. Düşeyde serbest düşen cisimlerin hareketini grafiklere ve veriye dayalı olarak açıklar. Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır. Öğrenciler düşey düzlemde ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini açıklayacakları kısa rapor hazırlayabilir.",
       "official_scope_constraints": [
-        "Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur.",
-        "Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır."
+        {
+          "id": "phys11-lo-002-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğrenciler, deney ya da dijital içerikler yolu ile düşey doğrultuda ilk hızı sıfır olan ve ilk hızı sıfırdan farklı olan serbest düşen cisimlerin hareketlerini gözlemleyerek hız, ivme, konum, zaman ve yer değiştirme ile ilgili verileri toplayıp kaydeder.",
+          "implication": "İlk hızlı (aşağı/yukarı) düşey hareket de serbest düşme kapsamında.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-002-scope-2",
+          "type": "ASSUMPTION",
+          "official_text": "Hava direncini ihmal ederek hız, ivme, konum, yer değiştirme ve zaman değişkenleri ile ilgili veri setleri oluşturur.",
+          "implication": "Hava direnci yok sayılır.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-002-scope-3",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Ön öğrenmelerindeki ivmeli hareket grafiklerini dikkate alarak oluşturduğu veri setleri üzerinden hız-zaman, ivme-zaman ve konum-zaman grafiklerini çizer.",
+          "implication": "Üç hareket grafiği ve aralarındaki dönüşüm kapsamda.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-002-scope-4",
+          "type": "TERMINOLOGY",
+          "official_text": "Hareket türü ifade edilirken serbest düşmenin sadece yer çekimi etkisindeki tüm hareketlerin ortak adı olduğu vurgulanır ve ‘’düşey atış hareketi’’ şeklinde hareket türü tanımından kaçınılır.",
+          "implication": "'Düşey atış' adı kullanılmaz; hepsi 'serbest düşme'.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-002-a",
+          "observable_verb": "kaydeder",
+          "behavior": "Serbest düşme hareketi ile ilgili verileri toplayarak kaydeder.",
+          "skill_component": "FBAB12.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-002-b",
+          "observable_verb": "oluşturur",
+          "behavior": "Serbest düşme hareketi ile ilgili veri setleri oluşturur.",
+          "skill_component": "FBAB12.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-002-c",
+          "observable_verb": "açıklar",
+          "behavior": "Serbest düşme hareketini verilere dayalı olarak açıklar.",
+          "skill_component": "FBAB12.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -156,11 +287,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.1.2",
+          "official_title": "Serbest Düşme Hareketi ile İlgili Veriler",
+          "printed_page": 20,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-003",
@@ -174,19 +327,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-2",
         "official_title": "İki Boyutta Sabit İvmeli Hareket",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.2 'İki Boyutta Sabit İvmeli Hareket' (s. 30)"
       },
       "process_components": [
         {
           "id": "phys11-lo-003-a",
           "label": "a",
-          "official_text": "İki boyutta sabit ivmeli hareketin bileşenleri ile sabit hızlı ve sabit ivmeli hareket arasındaki ilişkiyi bulur."
+          "official_text": "İki boyutta sabit ivmeli hareketin bileşenleri ile sabit hızlı ve sabit ivmeli hareket arasındaki ilişkiyi bulur.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-003-b",
           "label": "b",
-          "official_text": "İki boyutta sabit ivmeli harekete yönelik genelleme yapar."
+          "official_text": "İki boyutta sabit ivmeli harekete yönelik genelleme yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -198,21 +364,70 @@
       ],
       "official_teaching_practice": "Öğrenciler, iki boyutta sabit ivmeyle hareket eden cisimlerin hareketlerini animasyon, simülasyon ya da video gibi dijital içerikler yolu ile gözlemler. Öğrenciler, öğretmen rehberliğinde gruplar oluşturup küçük grup tartışmalarında akranlarıyla iletişim kurarak hareketin bileşenlerini yatay ve düşey eksende ayrı ayrı ele alır. Öğretmen, öğrencilerin trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine yönelik farkındalık kazandırır. Öğrenciler, vektörlerin bileşenlerine ayrılarak toplanmasıyla ilgili problem çözümlerinde de trigonometrik hesaplamaları kullanabileceğini fark eder. Öğrenciler, yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden cisimlerin hareketini gözlemler. Bu hareketi yapan cisimlerin hız, ivme ve yer değiştirme değişkenlerini inceleyerek hareket bileşenlerini eksenlere göre sabit hızlı ve sabit ivmeli hareket ile ilişkilendirir. Öğretmen, her gruptan bir temsilcinin iki boyutta sabit ivmeyle hareket eden cisimlerin hareketine yönelik gruplarının iddialarını ve gerekçelerini sunmalarını isteyebilir. Grup temsilcileri, hareketin farklı boyutlardaki hız, ivme ve yer değiştirme değişkenlerine yönelik kendi gruplarının iddialarını ve gerekçelerini ifade eder; varsa akranlarının karşıt iddialarına yönelik çürütücü fikirlerini etki altında kalmadan sunar. Büyük grup tartışması neticesinde öğrenciler iki boyutta sabit ivmeli hareket eden cisimlerin hareketi ile ilgili genellemelere ulaşır. ‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır. Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
       "official_scope_constraints": [
-        "‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır."
+        {
+          "id": "phys11-lo-003-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğrenciler, yalnızca yer çekimi ivmesi etkisi altında iki boyutta sabit ivmeyle hareket eden cisimlerin hareketini gözlemler.",
+          "implication": "İki boyutlu hareketin ivmesi yalnız g; başka sabit ivme kaynağı yok.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-003-scope-2",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğretmen, öğrencilerin trigonometrik hesaplamalara yönelik ön bilgisini hatırlatarak hız vektörünün bileşenlerinin trigonometrik hesaplamalar ile bulunabileceğine yönelik farkındalık kazandırır.",
+          "implication": "Hız bileşenleri trigonometriyle bulunur.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-003-scope-3",
+          "type": "TERMINOLOGY",
+          "official_text": "‘’Yatay atış” ve “eğik atış” şeklinde hareket türü tanımından kaçınılır.",
+          "implication": "'Yatay atış' ve 'eğik atış' adları kullanılmaz.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-003-scope-4",
+          "type": "CALC_INCLUDED",
+          "official_text": "Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
+          "implication": "Sayısal hesap ve grafik yorumu ölçülür.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-003-a",
+          "observable_verb": "bulur",
+          "behavior": "İki boyutta sabit ivmeli hareketin bileşenleri ile sabit hızlı ve sabit ivmeli hareket arasındaki ilişkiyi bulur.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-003-b",
+          "observable_verb": "yapar",
+          "behavior": "İki boyutta sabit ivmeli harekete yönelik genelleme yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Yazılı yoklama ile öğrencilerin iki boyutta sabit ivmeli harekete yönelik matematiksel hesaplamalar ve grafiklere dayalı yorumlar yapmaları istenir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -230,11 +445,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.2",
+          "official_title": "İki Boyutta Sabit İvmeli Hareket",
+          "printed_page": 30,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-004",
@@ -248,19 +485,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-3",
         "official_title": "Newton'ın Hareket Yasaları",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.3.1 'Bileşke Kuvvet ve Hareket Arasındaki İlişki' (s. 40)"
       },
       "process_components": [
         {
           "id": "phys11-lo-004-a",
           "label": "a",
-          "official_text": "Bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkileri keşfeder."
+          "official_text": "Bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkileri keşfeder.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-004-b",
           "label": "b",
-          "official_text": "Newton'ın Hareket Yasalarına yönelik genellemeler yapar."
+          "official_text": "Newton'ın Hareket Yasalarına yönelik genellemeler yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -275,16 +525,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-004-a",
+          "observable_verb": "keşfeder",
+          "behavior": "Bileşke kuvvet ile cisimlerin hareketi arasındaki ilişkileri keşfeder.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-004-b",
+          "observable_verb": "yapar",
+          "behavior": "Newton'ın Hareket Yasalarına yönelik genellemeler yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrencilere Newton'ın Hareket Yasalarına yönelik örnekler vermeleri için çıkış kartı verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -302,11 +570,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.3.1",
+          "official_title": "Bileşke Kuvvet ve Hareket Arasındaki İlişki",
+          "printed_page": 40,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-005",
@@ -320,24 +610,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-3",
         "official_title": "Newton'ın Hareket Yasaları",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.3.2 'Serbest Cisim Diyagramı' (s. 53)"
       },
       "process_components": [
         {
           "id": "phys11-lo-005-a",
           "label": "a",
-          "official_text": "Bir cisme etki eden kuvvetleri belirler."
+          "official_text": "Bir cisme etki eden kuvvetleri belirler.",
+          "skill_component": {
+            "code": "KB2.14.SB1",
+            "official_text": "Mevcut olayı/konuyu/durumu incelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-005-b",
           "label": "b",
-          "official_text": "Bir cisme etki eden kuvvetleri serbest cisim diyagramı üzerinde gösterir."
+          "official_text": "Bir cisme etki eden kuvvetleri serbest cisim diyagramı üzerinde gösterir.",
+          "skill_component": {
+            "code": "KB2.14.SB2",
+            "official_text": "Mevcut olayı/konuyu/durumu bağlamdan kopmadan dönüştürmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-005-c",
           "label": "c",
-          "official_text": "Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını yeniden ifade eder."
+          "official_text": "Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını yeniden ifade eder.",
+          "skill_component": {
+            "code": "KB2.14.SB3",
+            "official_text": "Kendi ifadeleriyle olayı/konuyu/durumu nesnel, doğru ve anlamı değiştirmeyecek şekilde yeniden ifade etmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -349,22 +658,61 @@
       ],
       "official_teaching_practice": "Öğretmen, birden fazla kuvvetin etkisinde kalan cisimlerle ilgili görseller gösterir. Öğrenciler görselleri yorumlayarak cisimler üzerine etki eden tüm kuvvetleri belirler. Öğrenciler belirledikleri kuvvetleri serbest cisim diyagramını kullanarak gösterir. Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını kendi cümleleriyle yeniden ifade eder. Serbest cisim diyagramı kullanmanın bir cisme etki eden net kuvvetin hesaplanması ile ilgili matematiksel problemlerin çözümündeki işlevini analitik bakış açısıyla tartışır. Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır. Sabit ivmeli hareket ile sınırlı kalınır. Serbest cisim diyagramları hakkında farklı soru türleri içeren bir çalışma yaprağı verilebilir.",
       "official_scope_constraints": [
-        "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
-        "Sabit ivmeli hareket ile sınırlı kalınır."
+        {
+          "id": "phys11-lo-005-scope-1",
+          "type": "CALC_LIMITED",
+          "official_text": "Farklı büyüklükteki ivmeyle hareket eden cisimlerin bir arada olduğu sistemlerle ilgili matematiksel hesaplamalardan kaçınılır.",
+          "implication": "Bağlı sistemlerde tüm cisimler aynı ivmeyle hareket eder; farklı ivmeli sistem hesaplanmaz.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-005-scope-2",
+          "type": "CALC_LIMITED",
+          "official_text": "Sabit ivmeli hareket ile sınırlı kalınır.",
+          "implication": "Değişken ivmeli dinamik yok.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-005-a",
+          "observable_verb": "belirler",
+          "behavior": "Bir cisme etki eden kuvvetleri belirler.",
+          "skill_component": "KB2.14.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-005-b",
+          "observable_verb": "gösterir",
+          "behavior": "Bir cisme etki eden kuvvetleri serbest cisim diyagramı üzerinde gösterir.",
+          "skill_component": "KB2.14.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-005-c",
+          "observable_verb": "eder",
+          "behavior": "Serbest cisim diyagramını kullanarak Newton'ın Hareket Yasalarını yeniden ifade eder.",
+          "skill_component": "KB2.14.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Serbest cisim diyagramları hakkında farklı soru türleri içeren bir çalışma yaprağı verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -382,11 +730,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.3.2",
+          "official_title": "Serbest Cisim Diyagramı",
+          "printed_page": 53,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-006",
@@ -400,24 +770,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-4",
         "official_title": "Sürtünme Kuvveti",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.4.1 'Statik ve Kinetik Sürtünme Kuvvetleri' (s. 65)"
       },
       "process_components": [
         {
           "id": "phys11-lo-006-a",
           "label": "a",
-          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin özellikleri belirler."
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin özellikleri belirler.",
+          "skill_component": {
+            "code": "KB2.7.SB1",
+            "official_text": "Birden fazla kavram veya duruma ilişkin özellikleri belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-006-b",
           "label": "b",
-          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin benzerlikleri listeler."
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin benzerlikleri listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB2",
+            "official_text": "Belirlenen özelliklere ilişkin benzerlikleri listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-006-c",
           "label": "c",
-          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin farklılıkları listeler."
+          "official_text": "Statik ve kinetik sürtünme kuvvetlerine ilişkin farklılıkları listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB3",
+            "official_text": "Belirlenen özelliklere ilişkin farklılıkları listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -428,20 +817,54 @@
         }
       ],
       "official_teaching_practice": "Öğretmen, örnek olay ya da dijital içeriklerde yer alan görselleri yorumlayarak öğrencilerin harekete zorlanmasına rağmen durmakta olan, kayarak öteleme hareketi yapmakta olan ve dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini fark etmesini sağlar. Öğrenciler, statik ve kinetik sürtünme kuvvetlerinin özelliklerini belirleyerek bunları ifade eder. Öğrenciler, soru cevap tekniğinin kullanıldığı etkileşimli ortamda görsellerde yer alan sürtünme kuvvetinin temel bileşenlerini, statik ve kinetik sürtünme kuvvetinin benzerliklerini ve farklılıklarını sorgulayarak listeler. Öğrencilere, statik ve kinetik sürtünme kuvvetlerini karşılaştırabilmeleri için yapılandırılmış grid verilebilir.",
-      "official_scope_constraints": [],
+      "official_scope_constraints": [
+        {
+          "id": "phys11-lo-006-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğretmen, örnek olay ya da dijital içeriklerde yer alan görselleri yorumlayarak öğrencilerin harekete zorlanmasına rağmen durmakta olan, kayarak öteleme hareketi yapmakta olan ve dönerek öteleme hareketi yapmakta olan cisimlere etki eden sürtünme kuvvetini fark etmesini sağlar.",
+          "implication": "Duran, kayan ve yuvarlanan cisimlerde sürtünme (nitel).",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
+      ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-006-a",
+          "observable_verb": "belirler",
+          "behavior": "Statik ve kinetik sürtünme kuvvetlerine ilişkin özellikleri belirler.",
+          "skill_component": "KB2.7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-006-b",
+          "observable_verb": "listeler",
+          "behavior": "Statik ve kinetik sürtünme kuvvetlerine ilişkin benzerlikleri listeler.",
+          "skill_component": "KB2.7.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-006-c",
+          "observable_verb": "listeler",
+          "behavior": "Statik ve kinetik sürtünme kuvvetlerine ilişkin farklılıkları listeler.",
+          "skill_component": "KB2.7.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrencilere, statik ve kinetik sürtünme kuvvetlerini karşılaştırabilmeleri için yapılandırılmış grid verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -459,11 +882,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.4.1",
+          "official_title": "Statik ve Kinetik Sürtünme Kuvvetleri",
+          "printed_page": 65,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-007",
@@ -477,19 +922,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-4",
         "official_title": "Sürtünme Kuvveti",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.4.2 'Sürtünme Kuvvetinin Bağlı Olduğu Değişkenler' (s. 70)"
       },
       "process_components": [
         {
           "id": "phys11-lo-007-a",
           "label": "a",
-          "official_text": "Sürtünme kuvvetinin bağlı olduğu değişkenler arasındaki ilişkiyi keşfederek matematiksel modeline ulaşır."
+          "official_text": "Sürtünme kuvvetinin bağlı olduğu değişkenler arasındaki ilişkiyi keşfederek matematiksel modeline ulaşır.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-007-b",
           "label": "b",
-          "official_text": "Farklı veri setleri ile hesaplamalar yaparak sürtünme kuvvetinin matematiksel modelini geneller."
+          "official_text": "Farklı veri setleri ile hesaplamalar yaparak sürtünme kuvvetinin matematiksel modelini geneller.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -500,20 +958,55 @@
         }
       ],
       "official_teaching_practice": "Öğrenciler, simülasyon gibi dijital içerikler yoluyla ya da deney yardımıyla kayarak öteleme hareketinde zorlanmasına rağmen duran ve sabit hızla hareket eden cisimlere etki eden sürtünme kuvvetinin bağlı olduğu değişkenleri gözlemler. Öğrenciler, sınıf tartışması yolu ile gözlemlerine yönelik çıkarımlarını simülasyon veya deney yoluyla elde ettiği verilerle destekleyerek ifade eder. Tartışma sonucunda sürtünme kuvvetinin matematiksel modeline ulaşır. Öğretmen, sürtünmeli ortamda hareket eden cisimlere yönelik problem durumları sunabilir. Öğrencilerden dijital içerik ya da deney verilerini kullanarak sürtünme kuvveti-uygulanan kuvvet grafiğini çizmeleri istenebilir. Öğrenciler, matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar ve modeli geneller. Kayarak öteleme ve dönerek öteleme hareketlerinde sürtünme kuvvetinin yönünün belirlendiği durumlara günlük hayattan örnekler verir. Öğrencilere, sürtünme kuvveti ile ilgili hesaplamalar yapmaları için farklı soru türlerinden oluşan bir test verilebilir.",
-      "official_scope_constraints": [],
+      "official_scope_constraints": [
+        {
+          "id": "phys11-lo-007-scope-1",
+          "type": "CALC_INCLUDED",
+          "official_text": "Öğrenciler, matematiksel model kullanarak statik ve kinetik sürtünme kuvvetleriyle ilgili hesaplamalar yapar ve modeli geneller.",
+          "implication": "Sürtünme kuvveti hesabı kapsamda.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-007-scope-2",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğrencilerden dijital içerik ya da deney verilerini kullanarak sürtünme kuvveti-uygulanan kuvvet grafiğini çizmeleri istenebilir.",
+          "implication": "f–F grafiği kapsamda.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
+      ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-007-a",
+          "observable_verb": "ulaşır",
+          "behavior": "Sürtünme kuvvetinin bağlı olduğu değişkenler arasındaki ilişkiyi keşfederek matematiksel modeline ulaşır.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-007-b",
+          "observable_verb": "geneller",
+          "behavior": "Farklı veri setleri ile hesaplamalar yaparak sürtünme kuvvetinin matematiksel modelini geneller.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrencilere, sürtünme kuvveti ile ilgili hesaplamalar yapmaları için farklı soru türlerinden oluşan bir test verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -531,11 +1024,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.4.2",
+          "official_title": "Sürtünme Kuvvetinin Bağlı Olduğu Değişkenler",
+          "printed_page": 70,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-008",
@@ -549,24 +1064,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-5",
         "official_title": "Limit Hız",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.5 'Limit Hız' (s. 86)"
       },
       "process_components": [
         {
           "id": "phys11-lo-008-a",
           "label": "a",
-          "official_text": "Limit hızı etkileyen değişkenleri tanımlar."
+          "official_text": "Limit hızı etkileyen değişkenleri tanımlar.",
+          "skill_component": {
+            "code": "FBAB8.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-008-b",
           "label": "b",
-          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri toplayarak kaydeder."
+          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri toplayarak kaydeder.",
+          "skill_component": {
+            "code": "FBAB8.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-008-c",
           "label": "c",
-          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri yorumlayarak değerlendirir."
+          "official_text": "Limit hızı etkileyen değişkenlerle ilgili verileri yorumlayarak değerlendirir.",
+          "skill_component": {
+            "code": "FBAB8.SB3",
+            "official_text": "Verileri yorumlamak ve değerlendirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -578,21 +1112,48 @@
       ],
       "official_teaching_practice": "Profesyonel bir paraşütçünün uçaktan atlama deneyimine yönelik video üzerinden öğrencilerin paraşütçünün hareketini ve hareketine etki eden değişkenleri tartışıp yorumlaması sağlanır. Öğrencilerin yorumları alındıktan sonra öğretmen özdeş kâğıtlardan birini yatay, diğerini buruşturulmuş olmak üzere iki farklı şekilde serbest bırakarak basit gösteri deneyi gerçekleştirebilir. Yatay ve buruşturulmuş olarak bırakılan özdeş kâğıtların havada kalma süreleri arasındaki ve düşey hızları arasındaki farklılıkların nedenleri soru cevap etkinliğiyle sorgulanabilir. Sınıf tartışmasında öğrenciler kendi iddialarını ve destekleyicilerini paraşüt hareketini de kullanarak ortaya koyabilir. Yapılan tartışmalar neticesinde, öğrencilerin limit hıza etki eden değişkenleri sürtünme kuvveti ile ilişkilendirerek tanımlamaları sağlanır. Öğretmen, öğrencileri simülasyon kullanarak limit hıza etki eden değişkenlerle ilgili veri toplamaya yönlendirebilir. Öğrenciler, limit hıza etki eden değişkenlerin büyüklüğünü değiştirerek limit hızın aldığı değerleri kaydeder. Öğrenciler kendi iddialarını, tekrar eden gözlemleri ve gözlemler esnasında kaydettikleri verileri kullanarak gerekçelendirir. Kendi iddialarını ve gerekçelerini, varsa arkadaşlarının karşıt iddialarına yönelik çürütücülerini saygı çerçevesinde ve yapıcı olarak ifade eder, limit hızı etkileyen değişkenleri değerlendirir. Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır. Öğrenciler limit hızı etkileyen faktörler hakkında bilgi görseli hazırlayabilir.",
       "official_scope_constraints": [
-        "Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır."
+        {
+          "id": "phys11-lo-008-scope-1",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Matematiksel modeli ile ilgili örneklerde limit hızın bağlı olduğu değişkenlerin ilişkilerine yönelik yorumlamalarla sınırlı kalınır.",
+          "implication": "Limit hız sayısal hesaplanmaz; yalnız değişken ilişkisi yorumlanır.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-008-a",
+          "observable_verb": "tanımlar",
+          "behavior": "Limit hızı etkileyen değişkenleri tanımlar.",
+          "skill_component": "FBAB8.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-008-b",
+          "observable_verb": "kaydeder",
+          "behavior": "Limit hızı etkileyen değişkenlerle ilgili verileri toplayarak kaydeder.",
+          "skill_component": "FBAB8.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-008-c",
+          "observable_verb": "değerlendirir",
+          "behavior": "Limit hızı etkileyen değişkenlerle ilgili verileri yorumlayarak değerlendirir.",
+          "skill_component": "FBAB8.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -610,11 +1171,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.5",
+          "official_title": "Limit Hız",
+          "printed_page": 86,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-009",
@@ -628,24 +1211,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-6",
         "official_title": "Düzgün Çembersel Hareket",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.6.1 'Çembersel Harekette Yörünge ve Hız Kavramları' (s. 95)"
       },
       "process_components": [
         {
           "id": "phys11-lo-009-a",
           "label": "a",
-          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerini gözlemler."
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerini gözlemler.",
+          "skill_component": {
+            "code": "KB2.16.3.SB1",
+            "official_text": "Birden fazla durumu gözlemlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-009-b",
           "label": "b",
-          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder."
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder.",
+          "skill_component": {
+            "code": "KB2.16.3.SB2",
+            "official_text": "Birden fazla durumun niteliklerini tespit etmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-009-c",
           "label": "c",
-          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin benzerliklerinden yola çıkarak yörüngeleri ve hız vektörü hakkında çıkarım yapar."
+          "official_text": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin benzerliklerinden yola çıkarak yörüngeleri ve hız vektörü hakkında çıkarım yapar.",
+          "skill_component": {
+            "code": "KB2.16.3.SB3",
+            "official_text": "Benzerliklerden çıkarım yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -660,16 +1262,41 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-009-a",
+          "observable_verb": "gözlemler",
+          "behavior": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerini gözlemler.",
+          "skill_component": "KB2.16.3.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-009-b",
+          "observable_verb": "eder",
+          "behavior": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin özelliklerini tespit eder.",
+          "skill_component": "KB2.16.3.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-009-c",
+          "observable_verb": "yapar",
+          "behavior": "Düzgün çembersel hareket yapan farklı cisimlerin hareketlerinin benzerliklerinden yola çıkarak yörüngeleri ve hız vektörü hakkında çıkarım yapar.",
+          "skill_component": "KB2.16.3.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrenciler hız ve yarıçap vektörünün yönlerine yönelik açık uçlu sorulardan oluşan çalışma yaprağı ile değerlendirilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -687,11 +1314,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.6.1",
+          "official_title": "Çembersel Harekette Yörünge ve Hız Kavramları",
+          "printed_page": 95,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-010",
@@ -705,19 +1354,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-1-6",
         "official_title": "Düzgün Çembersel Hareket",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 1.6.2 'Çembersel Hareketin Değişkenleri' (s. 101)"
       },
       "process_components": [
         {
           "id": "phys11-lo-010-a",
           "label": "a",
-          "official_text": "Düzgün çembersel hareketin değişkenlerini keşfederek aralarındaki ilişkileri matematiksel olarak modeller."
+          "official_text": "Düzgün çembersel hareketin değişkenlerini keşfederek aralarındaki ilişkileri matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-010-b",
           "label": "b",
-          "official_text": "Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller."
+          "official_text": "Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -729,21 +1391,58 @@
       ],
       "official_teaching_practice": "Öğrenciler öğretmen rehberliğinde gruplara ayrılabilir. Düzgün çembersel hareketle ilgili temel kavramları (çizgisel sürat, açısal hız, çizgisel hız, merkezcil ivme, açısal ivme ve merkezcil kuvvet) içeren video veya animasyon izletebilir. Öğretmen, öğrencilerden düzgün çembersel hareketin temel değişkenlerinden en az iki tanesinin karşılıklı etkileşimini gösteren drama etkinliği yapmalarını ister. Öğrencilerden, akranlarına değişkenleri doğru aktarabilmek için hazırlayacakları senaryo üzerinde tartışarak görüş birliğine varmaları istenir. Öğretmen, canlandırma etkinliği öncesinde gruplar tarafından hazırlanan bütün senaryoları inceleyerek temel değişkenlerin tamamının senaryolar kapsamında yer aldığından emin olur. Öğrenciler hazırladıkları senaryoları canlandırır. Öğrenciler, canlandırma etkinlikleri sonrasında gruplar arası tartışma yolu ile değişkenlere ve değişkenler arasındaki ilişkiye yönelik iddialarını, gerekçelerini ve varsa karşıt iddialara sahip olan arkadaşlarına yönelik çürütücülerini saygı çerçevesinde ifade eder. Gruplar arası tartışma ile öğrenciler değişkenler arasındaki ilişkileri keşfederek bu ilişkileri matematiksel olarak modeller. Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller. Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır. Düzgün çembersel hareket ile ilgili değişkenleri göstermek için bir kısa film çekilmesi ya da animasyon hazırlanması performans görevi olarak verilebilir. Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir.",
       "official_scope_constraints": [
-        "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır."
+        {
+          "id": "phys11-lo-010-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Drama etkinliği sırasında grup üyeleri arasında sağlanan etkileşim sonucu ulaştıkları değişkenler arasındaki ilişkilere yönelik matematiksel modelleri; yatay düzlemde düzgün çembersel hareket, düşey düzlemde düzgün çembersel hareket, yatay ve eğimli virajlardaki düzgün çembersel hareket problemlerinin çözümlerinde kullanarak geneller.",
+          "implication": "Yatay düzlem, düşey düzlem, yatay ve eğimli viraj problemleri kapsamda.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-010-scope-2",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Ray sisteminde çembersel hareketle ilgili matematiksel işlemlerden kaçınılır.",
+          "implication": "Ray (ör. lunapark rayı) problemleri hesaplanmaz.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-010-a",
+          "observable_verb": "modeller",
+          "behavior": "Düzgün çembersel hareketin değişkenlerini keşfederek aralarındaki ilişkileri matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-010-b",
+          "observable_verb": "geneller",
+          "behavior": "Farklı veri setleri ile hesaplamalar yaparak düzgün çembersel hareketin değişkenleri arasındaki ilişkilere yönelik matematiksel modelleri geneller.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Düzgün çembersel hareket ile ilgili değişkenleri göstermek için bir kısa film çekilmesi ya da animasyon hazırlanması performans görevi olarak verilebilir.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Matematiksel hesaplamalar yapabilmeleri için açık uçlu test kullanılabilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -761,11 +1460,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "1.6.2",
+          "official_title": "Çembersel Hareketin Değişkenleri",
+          "printed_page": 101,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-011",
@@ -779,19 +1500,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-1",
         "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.1.1 'Elektriksel Kuvvet' (s. 155)"
       },
       "process_components": [
         {
           "id": "phys11-lo-011-a",
           "label": "a",
-          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin bağlı olduğu değişkenler arasındaki keşfettiği ilişkiyi matematiksel olarak modeller."
+          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin bağlı olduğu değişkenler arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-011-b",
           "label": "b",
-          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeli üzerinden genellemeler yapar."
+          "official_text": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -803,22 +1537,46 @@
       ],
       "official_teaching_practice": "Öğretmen bu çıktının öğretiminde 5E öğrenme modelinden yararlanabilir. Öğretmen, öğrencilere otomobillerin üretim aşamasında homojen olarak boyanması veya fotokopi makinelerinde bir metnin çoğaltılması ile ilgili sorular sorabilir. Öğretmen elektriksel kuvvetin günlük hayattaki rolünden bahsederek bu tür uygulamalarda elektriksel kuvvetin önemini vurgulayabilir. Öğrencilerin konuya yönelik ilgileri çekilir ve yeni öğreneceği bilgilere ihtiyaçları olduğunu fark etmeleri sağlanır. Öğretmen rehberliğinde öğrenciler gruplara ayrılır. Öğrencilere noktasal yükler arasındaki elektriksel kuvvetin büyüklüğünün bağlı olduğu faktörlere yönelik sorular sorularak gruplardan iş birliği ile hipotezler oluşturmaları istenir. Gruplar etkileşimli bir simülasyon aracılığıyla veri toplayarak tablo şeklinde kaydedebilir. Gruplardan tablodaki verilere dayalı olarak grafikler oluşturmaları, grafikleri kullanarak hipotezlerini desteklemeleri veya yanlışlamaları istenebilir. Gruplar simülasyon, tablo ve grafikler üzerinden topladıkları verilerden yararlanarak ve fikir alışverişinde bulunarak elektriksel kuvvetin bağlı olduğu faktörler arasındaki ilişkiyi keşfeder ve bu ilişkiyi matematiksel olarak modeller. Öğretmen Coulomb sabitinden bahsederek öğrencilerin yaptıkları çıkarımları açıklayan matematiksel modelin Coulomb Yasası olarak adlandırıldığını belirtir. Gruplar elektrik yüklü bir yalıtkanı belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir. Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin Coulomb Yasası'nı kavrama durumları, farklı madde türlerinden oluşan bir soru kutusu hazırlanarak değerlendirilebilir.",
       "official_scope_constraints": [
-        "Gözlemlerini Coulomb Yasası'yla matematiksel hesaplamalara girmeden açıklayabilir.",
-        "Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller."
+        {
+          "id": "phys11-lo-011-scope-1",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Öğrenciler, Coulomb Yasası ile ilgili farklı problem durumlarında matematiksel hesaplamalara girmeden uygulamalar yaparak matematiksel modeli geneller.",
+          "implication": "Coulomb kuvveti yalnız oran/yön/yorum düzeyinde; sayısal hesap yok.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-011-a",
+          "observable_verb": "modeller",
+          "behavior": "Elektrik yükleri arasındaki elektriksel kuvvetin bağlı olduğu değişkenler arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-011-b",
+          "observable_verb": "yapar",
+          "behavior": "Elektrik yükleri arasındaki elektriksel kuvvetin matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrencilerin Coulomb Yasası'nı kavrama durumları, farklı madde türlerinden oluşan bir soru kutusu hazırlanarak değerlendirilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -836,11 +1594,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.1.1",
+          "official_title": "Elektriksel Kuvvet",
+          "printed_page": 155,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-012",
@@ -854,19 +1634,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-1",
         "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.1.2 'Elektriksel Alan' (s. 166)"
       },
       "process_components": [
         {
           "id": "phys11-lo-012-a",
           "label": "a",
-          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alana ilişkin keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller."
+          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alana ilişkin keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-012-b",
           "label": "b",
-          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alanın matematiksel modeli üzerinden genellemeler yapar."
+          "official_text": "Elektrik yüklerinin oluşturduğu elektriksel alanın matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -878,22 +1671,50 @@
       ],
       "official_teaching_practice": "Öğretmen elektrik yüklerinin oluşturduğu elektriksel alanı açıklamak için 5E öğrenme modelinden yararlanabilir. Öğrenciler öğretmen rehberliğinde gruplara ayrılarak elektriksel alanın bağlı olduğu faktörler hakkında sorular sorar. Gruplar hipotezlerini oluşturarak not edebilir. Öğrenciler hipotezlerini test edebilecekleri bir simülasyon aracılığıyla ölçümler yaparak verileri tablo şeklinde kaydeder. Öğrenciler, toplanan verilerle oluşturulan grafikleri kullanarak elektriksel alanın bağlı olduğu faktörleri keşfeder ve elektriksel alana ilişkin buldukları ilişkileri öğretmen rehberliğinde matematiksel olarak modeller. Gruplar elektrik yüklü yalıtkan çubuğu belli mesafelerde elektroskoba yaklaştırarak yapraklarının açılma mesafelerini gözlemleyebilir. Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir. Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller. Öğrencilerin elektriksel alanı kavrama durumları, farklı madde türlerinin bulunduğu soru kutusu yardımıyla değerlendirilebilir.",
       "official_scope_constraints": [
-        "Öğrenciler gözlemlerini elektriksel alan ile matematiksel hesaplamalara girmeden matematiksel model ile ilişkilendirerek açıklayabilir.",
-        "Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller."
+        {
+          "id": "phys11-lo-012-scope-1",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Öğrenciler, matematiksel hesaplara girmeden elektriksel alanla ilgili farklı problem türleri üzerinden uygulamalar yaparak matematiksel modeli geneller.",
+          "implication": "Elektriksel alan yalnız oran/yön/yorum düzeyinde.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-012-a",
+          "observable_verb": "modeller",
+          "behavior": "Elektrik yüklerinin oluşturduğu elektriksel alana ilişkin keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-012-b",
+          "observable_verb": "yapar",
+          "behavior": "Elektrik yüklerinin oluşturduğu elektriksel alanın matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrenciler hipotezlerini test edebilecekleri bir simülasyon aracılığıyla ölçümler yaparak verileri tablo şeklinde kaydeder.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğrencilerin elektriksel alanı kavrama durumları, farklı madde türlerinin bulunduğu soru kutusu yardımıyla değerlendirilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -911,11 +1732,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.1.2",
+          "official_title": "Elektriksel Alan",
+          "printed_page": 166,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-013",
@@ -929,29 +1772,54 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-1",
         "official_title": "Elektriksel Kuvvet ve Elektriksel Alan",
-        "mapping_method": "derived_from_titles",
-        "confidence": "MEDIUM"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.1.3 'Faraday Kafesi' (s. 178)"
       },
       "process_components": [
         {
           "id": "phys11-lo-013-a",
           "label": "a",
-          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": {
+            "code": "KB2.6.SB1",
+            "official_text": "İstenen bilgiye ulaşmak için kullanacağı araçları belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-013-b",
           "label": "b",
-          "official_text": "Belirlediği kaynağı kullanarak Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgileri bulur."
+          "official_text": "Belirlediği kaynağı kullanarak Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgileri bulur.",
+          "skill_component": {
+            "code": "KB2.6.SB2",
+            "official_text": "Belirlediği aracı kullanarak olay/konu/durum hakkındaki bilgileri bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-013-c",
           "label": "c",
-          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri doğrular."
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri doğrular.",
+          "skill_component": {
+            "code": "KB2.6.SB3",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri doğrulamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-013-ç",
           "label": "ç",
-          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri kaydeder."
+          "official_text": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri kaydeder.",
+          "skill_component": {
+            "code": "KB2.6.SB4",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -966,16 +1834,43 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-013-a",
+          "observable_verb": "belirler",
+          "behavior": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": "KB2.6.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-013-b",
+          "observable_verb": "bulur",
+          "behavior": "Belirlediği kaynağı kullanarak Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili bilgileri bulur.",
+          "skill_component": "KB2.6.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-013-c",
+          "observable_verb": "doğrular",
+          "behavior": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri doğrular.",
+          "skill_component": "KB2.6.SB3",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-013-ç",
+          "observable_verb": "kaydeder",
+          "behavior": "Faraday kafesi ve Faraday kafesinin kullanım alanları ile ilgili ulaşılan bilgileri kaydeder.",
+          "skill_component": "KB2.6.SB4",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -993,11 +1888,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.1.3",
+          "official_title": "Faraday Kafesi",
+          "printed_page": 178,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-014",
@@ -1011,24 +1928,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.1 'Manyetik Alan' (s. 186)"
       },
       "process_components": [
         {
           "id": "phys11-lo-014-a",
           "label": "a",
-          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili nitelikleri tanımlar."
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili nitelikleri tanımlar.",
+          "skill_component": {
+            "code": "FBAB1.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-014-b",
           "label": "b",
-          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri toplayarak kaydeder."
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri toplayarak kaydeder.",
+          "skill_component": {
+            "code": "FBAB1.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-014-c",
           "label": "c",
-          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar."
+          "official_text": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar.",
+          "skill_component": {
+            "code": "FBAB1.SB3",
+            "official_text": "Verileri açıklamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1043,16 +1979,41 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-014-a",
+          "observable_verb": "tanımlar",
+          "behavior": "Mıknatısların birbiriyle etkileşimiyle ilgili nitelikleri tanımlar.",
+          "skill_component": "FBAB1.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-014-b",
+          "observable_verb": "kaydeder",
+          "behavior": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri toplayarak kaydeder.",
+          "skill_component": "FBAB1.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-014-c",
+          "observable_verb": "açıklar",
+          "behavior": "Mıknatısların birbiriyle etkileşimiyle ilgili verileri manyetik alan çizgileriyle açıklar.",
+          "skill_component": "FBAB1.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Mıknatısların oluşturduğu manyetik alan ve özelliklerini sorgulamak için bir çıkış kartı verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1070,11 +2031,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.1",
+          "official_title": "Manyetik Alan",
+          "printed_page": 186,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-015",
@@ -1088,19 +2071,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.2 'Üzerinden Akım Geçen Düz İletken Telin Manyetik Alanı' (s. 198)"
       },
       "process_components": [
         {
           "id": "phys11-lo-015-a",
           "label": "a",
-          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli bulur."
+          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli bulur.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-015-b",
           "label": "b",
-          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli geneller."
+          "official_text": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli geneller.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1112,21 +2108,54 @@
       ],
       "official_teaching_practice": "Öğretmen okul bahçesinde öğrencilere pusula kullanılan oryantiring (yönbul) gibi bir yarışa veya arama kurtarma faaliyetlerine dayalı bir etkinlik yaptırabilir. Öğrencilere bu tür yarışlarda veya arama kurtarma faaliyetlerinde pusulaların her yerde doğru çalışıp çalışmadığı sorulabilir. Ørsted’in, üzerinden akım geçen bir iletken ve pusula ile yaptığı çalışmalardan bahsedilebilir. Öğretmen rehberliğinde öğrenciler gruplara ayrılarak Ørsted’in deneyi ile benzerlik gösteren bir deney tasarlar. Manyetik alanın iletkene olan uzaklığı ve elektrik akımının büyüklüğünün değişimi hakkında öğrenci görüşleri alınarak hipotezler kurulur.Öğretmen manyetik alan katsayısı ve sağ el kuralı ile ilgili bilgi verir. Öğrenciler, deney düzeneği üzerinden hipotezlerini test eder. Manyetik alanın, iletkene olan uzaklığı ve elektrik akımının değişimi ile ilişkisini keşfeder ve matematiksel olarak modeller. Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller. Öğrencilere, tasarladıkları deneyle ilgili öz değerlendirme formu verilebilir.",
       "official_scope_constraints": [
-        "Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller."
+        {
+          "id": "phys11-lo-015-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Manyetik alanın iletkene olan uzaklığı ve elektrik akımının büyüklüğünün değişimi hakkında öğrenci görüşleri alınarak hipotezler kurulur.Öğretmen manyetik alan katsayısı ve sağ el kuralı ile ilgili bilgi verir.",
+          "implication": "Sağ el kuralı kapsamda.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-015-scope-2",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Öğrenciler matematiksel hesaplamalara girmeden ulaştıkları matematiksel modelle ilgili problem çözümleri yaparak modeli geneller.",
+          "implication": "Düz telin manyetik alanı oran/yön düzeyinde.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-015-a",
+          "observable_verb": "bulur",
+          "behavior": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli bulur.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-015-b",
+          "observable_verb": "geneller",
+          "behavior": "Üzerinden akım geçen düz bir iletken telin oluşturduğu manyetik alana ilişkin matematiksel modeli geneller.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrenciler, deney düzeneği üzerinden hipotezlerini test eder.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1144,11 +2173,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.2",
+          "official_title": "Üzerinden Akım Geçen Düz İletken Telin Manyetik Alanı",
+          "printed_page": 198,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-016",
@@ -1162,19 +2213,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.3 'Akım Makarasının Manyetik Alanı' (s. 207)"
       },
       "process_components": [
         {
           "id": "phys11-lo-016-a",
           "label": "a",
-          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alana ilişkin keşfettiği ilişkiyi matematiksel olarak modeller."
+          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alana ilişkin keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-016-b",
           "label": "b",
-          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeli üzerinden genelleme yapar."
+          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeli üzerinden genelleme yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1189,16 +2253,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-016-a",
+          "observable_verb": "modeller",
+          "behavior": "Akım makarasının merkez ekseninde oluşan manyetik alana ilişkin keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-016-b",
+          "observable_verb": "yapar",
+          "behavior": "Akım makarasının merkez ekseninde oluşan manyetik alanın matematiksel modeli üzerinden genelleme yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen rehberliğinde öğrenciler gruplara ayrılarak ve hipotezlerini test edecekleri deneyler tasarlayarak veri toplar.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1216,11 +2298,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.3",
+          "official_title": "Akım Makarasının Manyetik Alanı",
+          "printed_page": 207,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-017",
@@ -1234,29 +2338,54 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "MEDIUM"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.4 'Elektromıknatısların Kullanım Alanları' (s. 213)"
       },
       "process_components": [
         {
           "id": "phys11-lo-017-a",
           "label": "a",
-          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": {
+            "code": "KB2.6.SB1",
+            "official_text": "İstenen bilgiye ulaşmak için kullanacağı araçları belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-017-b",
           "label": "b",
-          "official_text": "Belirlediği kaynağı kullanarak elektromıknatısların kullanım alanlarıyla ilgili bilgileri bulur."
+          "official_text": "Belirlediği kaynağı kullanarak elektromıknatısların kullanım alanlarıyla ilgili bilgileri bulur.",
+          "skill_component": {
+            "code": "KB2.6.SB2",
+            "official_text": "Belirlediği aracı kullanarak olay/konu/durum hakkındaki bilgileri bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-017-c",
           "label": "c",
-          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili ulaştığı bilgilerin doğru olup olmadığını belirler."
+          "official_text": "Elektromıknatısların kullanım alanlarıyla ilgili ulaştığı bilgilerin doğru olup olmadığını belirler.",
+          "skill_component": {
+            "code": "KB2.6.SB3",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri doğrulamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-017-ç",
           "label": "ç",
-          "official_text": "Elektromıknatısların günlük hayattaki kullanım alanlarıyla ilgili ulaştığı bilgileri kaydeder."
+          "official_text": "Elektromıknatısların günlük hayattaki kullanım alanlarıyla ilgili ulaştığı bilgileri kaydeder.",
+          "skill_component": {
+            "code": "KB2.6.SB4",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1271,16 +2400,48 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-017-a",
+          "observable_verb": "belirler",
+          "behavior": "Elektromıknatısların kullanım alanlarıyla ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": "KB2.6.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-017-b",
+          "observable_verb": "bulur",
+          "behavior": "Belirlediği kaynağı kullanarak elektromıknatısların kullanım alanlarıyla ilgili bilgileri bulur.",
+          "skill_component": "KB2.6.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-017-c",
+          "observable_verb": "belirler",
+          "behavior": "Elektromıknatısların kullanım alanlarıyla ilgili ulaştığı bilgilerin doğru olup olmadığını belirler.",
+          "skill_component": "KB2.6.SB3",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-017-ç",
+          "observable_verb": "kaydeder",
+          "behavior": "Elektromıknatısların günlük hayattaki kullanım alanlarıyla ilgili ulaştığı bilgileri kaydeder.",
+          "skill_component": "KB2.6.SB4",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Akım makarasının merkez ekseninde oluşan manyetik alanla ve elektromıknatısların kullanım alanlarıyla ilgili farklı soru maddelerinden oluşan bir çalışma yaprağı verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1298,11 +2459,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.4",
+          "official_title": "Elektromıknatısların Kullanım Alanları",
+          "printed_page": 213,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-018",
@@ -1316,19 +2499,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.5 'Manyetik Alanda Üzerinden Akım Geçen Düz Bir Tele Etki Eden Kuvvet' (s. 218)"
       },
       "process_components": [
         {
           "id": "phys11-lo-018-a",
           "label": "a",
-          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvetin etmenleri arasındaki keşfettiği ilişkiyi matematiksel olarak modeller."
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvetin etmenleri arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-018-b",
           "label": "b",
-          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel model üzerinden genelleme yapar."
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel model üzerinden genelleme yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1339,20 +2535,50 @@
         }
       ],
       "official_teaching_practice": "Öğrencilere, üzerinden akım geçen bir telin çevresinde manyetik alan oluşturduğu hatırlatılır. Öğrencilere, üzerinden akım geçen düz bir tel manyetik alana bırakıldığında manyetik alanın tele etkileri sorulur. Öğretmen manyetik alan içerisindeki akım geçen tele etki eden manyetik kuvvetin telin içerisinde hareketli yüklü parçacıklara etki eden kuvvetten kaynaklandığını vurgular. Öğrencilere iletken bir tel üzerinde manyetik kuvvet oluşmasını sağlayan etmenler hakkında sorular sorulur. Öğrenciler, öğretmen rehberliğinde gruplara ayrılabilir. Gruplar manyetik alanda akım geçen tele etki eden manyetik kuvvet ve büyüklüğünü etkileyen faktörler hakkında bir deney tasarlayarak veri toplar. Veri analizine dayalı olarak manyetik kuvvet ve büyüklüğünü etkileyen etmenler arasındaki ilişkiyi keşfeder ve matematiksel modele ulaşır. Öğrenciler manyetik alanda akım geçen tele etki eden manyetik kuvvetin büyüklüğünü etkileyen değişkenlere bağlı matematiksel modeli oluşturabilir. Öğretmen manyetik kuvvetin vektörel olduğundan bahsederek sağ el kuralını açıklar. Öğrenciler her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler üzerinden, manyetik kuvvet ile değişkenler arasındaki ilişkiyi geneller. Öğrencilerin grup içindeki performanslarını ölçmek üzere öz veya akran değerlendirme formu verilebilir.",
-      "official_scope_constraints": [],
+      "official_scope_constraints": [
+        {
+          "id": "phys11-lo-018-scope-1",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğretmen manyetik alan içerisindeki akım geçen tele etki eden manyetik kuvvetin telin içerisinde hareketli yüklü parçacıklara etki eden kuvvetten kaynaklandığını vurgular.",
+          "implication": "Tele etki eden kuvvetin kaynağı yüklü parçacıklar olarak kavramsal anılır; yüke etki eden kuvvet ayrı bir çıktı değildir.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-018-scope-2",
+          "type": "SCOPE_INCLUDED",
+          "official_text": "Öğrenciler her bir değişkeni ayrı ayrı değiştirerek çözdüğü problemler üzerinden, manyetik kuvvet ile değişkenler arasındaki ilişkiyi geneller.",
+          "implication": "F = BIL modeliyle değişken bazlı problem çözümü; açık hesap yasağı yok.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
+      ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-018-a",
+          "observable_verb": "modeller",
+          "behavior": "Manyetik alanda akım geçen düz bir tele etki eden kuvvetin etmenleri arasındaki keşfettiği ilişkiyi matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-018-b",
+          "observable_verb": "yapar",
+          "behavior": "Manyetik alanda akım geçen düz bir tele etki eden kuvvete ilişkin matematiksel model üzerinden genelleme yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1370,11 +2596,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.5",
+          "official_title": "Manyetik Alanda Üzerinden Akım Geçen Düz Bir Tele Etki Eden Kuvvet",
+          "printed_page": 218,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-019",
@@ -1388,24 +2636,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-2",
         "official_title": "Manyetik Alan ve Manyetik Kuvvet",
-        "mapping_method": "derived_from_titles",
-        "confidence": "MEDIUM"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.2.6 'Manyetik Alanda Üzerinden Akım Geçen Dikdörtgen Telin Bir Eksen Etrafında Dönmesi' (s. 229)"
       },
       "process_components": [
         {
           "id": "phys11-lo-019-a",
           "label": "a",
-          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini gözden geçirir."
+          "official_text": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini gözden geçirir.",
+          "skill_component": {
+            "code": "KB2.15.SB1",
+            "official_text": "Deneyimi gözden geçirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-019-b",
           "label": "b",
-          "official_text": "Deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen telin bir eksen etrafında dönmesi hakkında çıkarım yapar."
+          "official_text": "Deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen telin bir eksen etrafında dönmesi hakkında çıkarım yapar.",
+          "skill_component": {
+            "code": "KB2.15.SB2",
+            "official_text": "Deneyime dayalı çıkarım yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-019-c",
           "label": "c",
-          "official_text": "Yaptığı çıkarımları elektrik motorlarının çalışma prensibi açısından değerlendirir."
+          "official_text": "Yaptığı çıkarımları elektrik motorlarının çalışma prensibi açısından değerlendirir.",
+          "skill_component": {
+            "code": "KB2.15.SB3",
+            "official_text": "Ulaşılan çıkarımları değerlendirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1420,16 +2687,36 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-019-a",
+          "observable_verb": "geçirir",
+          "behavior": "Manyetik alanda akım geçen düz bir tele etki eden kuvvet ile ilgili deneyimini gözden geçirir.",
+          "skill_component": "KB2.15.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-019-b",
+          "observable_verb": "yapar",
+          "behavior": "Deneyimine dayalı olarak manyetik alanda akım geçen dikdörtgen telin bir eksen etrafında dönmesi hakkında çıkarım yapar.",
+          "skill_component": "KB2.15.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-019-c",
+          "observable_verb": "değerlendirir",
+          "behavior": "Yaptığı çıkarımları elektrik motorlarının çalışma prensibi açısından değerlendirir.",
+          "skill_component": "KB2.15.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1447,11 +2734,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.2.6",
+          "official_title": "Manyetik Alanda Üzerinden Akım Geçen Dikdörtgen Telin Bir Eksen Etrafında Dönmesi",
+          "printed_page": 229,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-020",
@@ -1465,19 +2774,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-3",
         "official_title": "İndüksiyon Akımı",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.3.1 'Manyetik Akı' (s. 236)"
       },
       "process_components": [
         {
           "id": "phys11-lo-020-a",
           "label": "a",
-          "official_text": "Manyetik akıya etki eden etmenleri belirler."
+          "official_text": "Manyetik akıya etki eden etmenleri belirler.",
+          "skill_component": {
+            "code": "KB2.4.SB1",
+            "official_text": "Nesne, olgu ve olaylara ilişkin parçaları belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-020-b",
           "label": "b",
-          "official_text": "Manyetik akıya etki eden etmenler arasındaki ilişkiyi belirler."
+          "official_text": "Manyetik akıya etki eden etmenler arasındaki ilişkiyi belirler.",
+          "skill_component": {
+            "code": "KB2.4.SB2",
+            "official_text": "Parçalar arasındaki ilişkileri belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1488,20 +2810,42 @@
         }
       ],
       "official_teaching_practice": "Öğretmen manyetik akı kavramını kavramsal olarak açıklar. Püskürtme boya ile kâğıt üzerine bir kez boya püskürterek manyetik akı ve püskürtülen boyanın tanecik yoğunluğu arasında analoji kurulabilir. Öğrencilerin analojideki boyanın tanecik yoğunluğunu etkileyebilecek etmenler üzerine düşünmeleri istenebilir. Öğretmen, öğrencilerin manyetik alanın boya gibi taneciklerden oluşmadığını fark etmelerini sağlar. Öğrenciler analojiden yola çıkarak manyetik akıya etki eden etmenleri belirler. Öğrenciler manyetik akının manyetik alanın büyüklüğü ve yüzey alanının büyüklüğü ile olan ilişkisini belirler.",
-      "official_scope_constraints": [],
+      "official_scope_constraints": [
+        {
+          "id": "phys11-lo-020-scope-1",
+          "type": "CONCEPTUAL_ONLY",
+          "official_text": "Öğretmen manyetik akı kavramını kavramsal olarak açıklar.",
+          "implication": "Manyetik akı kavramsal tanıtılır; B ve yüzey alanıyla ilişkisi belirlenir.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
+      ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-020-a",
+          "observable_verb": "belirler",
+          "behavior": "Manyetik akıya etki eden etmenleri belirler.",
+          "skill_component": "KB2.4.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-020-b",
+          "observable_verb": "belirler",
+          "behavior": "Manyetik akıya etki eden etmenler arasındaki ilişkiyi belirler.",
+          "skill_component": "KB2.4.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1519,11 +2863,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.3.1",
+          "official_title": "Manyetik Akı",
+          "printed_page": 236,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-021",
@@ -1537,19 +2903,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-3",
         "official_title": "İndüksiyon Akımı",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.3.2 'İndüksiyon Gerilimi' (s. 242)"
       },
       "process_components": [
         {
           "id": "phys11-lo-021-a",
           "label": "a",
-          "official_text": "İndüksiyon geriliminin oluşmasında keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller."
+          "official_text": "İndüksiyon geriliminin oluşmasında keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+          "skill_component": {
+            "code": "FBAB10.SB1",
+            "official_text": "Örüntü bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-021-b",
           "label": "b",
-          "official_text": "İndüksiyon geriliminin matematiksel modeli üzerinden genellemeler yapar."
+          "official_text": "İndüksiyon geriliminin matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": {
+            "code": "FBAB10.SB2",
+            "official_text": "Genelleme yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1564,16 +2943,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-021-a",
+          "observable_verb": "modeller",
+          "behavior": "İndüksiyon geriliminin oluşmasında keşfettiği etmenler arasındaki ilişkiyi matematiksel olarak modeller.",
+          "skill_component": "FBAB10.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-021-b",
+          "observable_verb": "yapar",
+          "behavior": "İndüksiyon geriliminin matematiksel modeli üzerinden genellemeler yapar.",
+          "skill_component": "FBAB10.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Manyetik akı ve indüksiyon geriliminin matematiksel modeline yönelik açık uçlu maddelerden oluşan bir test verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1591,11 +2988,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.3.2",
+          "official_title": "İndüksiyon Gerilimi",
+          "printed_page": 242,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-022",
@@ -1609,24 +3028,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-3",
         "official_title": "İndüksiyon Akımı",
-        "mapping_method": "derived_from_titles",
-        "confidence": "MEDIUM"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.3.3 'Alternatif Akım' (s. 253)"
       },
       "process_components": [
         {
           "id": "phys11-lo-022-a",
           "label": "a",
-          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenleri belirler."
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenleri belirler.",
+          "skill_component": {
+            "code": "FBAB8.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-022-b",
           "label": "b",
-          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişkiyi belirlemek üzere veri toplayarak kaydeder."
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişkiyi belirlemek üzere veri toplayarak kaydeder.",
+          "skill_component": {
+            "code": "FBAB8.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-022-c",
           "label": "c",
-          "official_text": "İndüklenme sonucu oluşan alternatif akımı topladığı verilerden yola çıkarak yorumlayıp değerlendirir."
+          "official_text": "İndüklenme sonucu oluşan alternatif akımı topladığı verilerden yola çıkarak yorumlayıp değerlendirir.",
+          "skill_component": {
+            "code": "FBAB8.SB3",
+            "official_text": "Verileri yorumlamak ve değerlendirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1641,16 +3079,41 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-022-a",
+          "observable_verb": "belirler",
+          "behavior": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenleri belirler.",
+          "skill_component": "FBAB8.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-022-b",
+          "observable_verb": "kaydeder",
+          "behavior": "İndüklenme sonucu oluşan alternatif akımı etkileyen etmenler arasındaki ilişkiyi belirlemek üzere veri toplayarak kaydeder.",
+          "skill_component": "FBAB8.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-022-c",
+          "observable_verb": "değerlendirir",
+          "behavior": "İndüklenme sonucu oluşan alternatif akımı topladığı verilerden yola çıkarak yorumlayıp değerlendirir.",
+          "skill_component": "FBAB8.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "İndüksiyon akımı ile alternatif akım arasındaki ilişkiye yönelik grafik ve açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1668,11 +3131,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.3.3",
+          "official_title": "Alternatif Akım",
+          "printed_page": 253,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-023",
@@ -1686,24 +3171,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-2-4",
         "official_title": "Transformatörler",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 2.4 'Transformatörler' (s. 263)"
       },
       "process_components": [
         {
           "id": "phys11-lo-023-a",
           "label": "a",
-          "official_text": "Transformatörün niteliklerini deney yaparak tanımlar."
+          "official_text": "Transformatörün niteliklerini deney yaparak tanımlar.",
+          "skill_component": {
+            "code": "FBAB8.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-023-b",
           "label": "b",
-          "official_text": "Transformatörlerin kullanım alanlarına yönelik topladığı verileri kaydeder."
+          "official_text": "Transformatörlerin kullanım alanlarına yönelik topladığı verileri kaydeder.",
+          "skill_component": {
+            "code": "FBAB8.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-023-c",
           "label": "c",
-          "official_text": "Elde ettiği verilerden yola çıkarak transformatörün kullanım alanlarındaki rolünü yorumlar ve değerlendirir."
+          "official_text": "Elde ettiği verilerden yola çıkarak transformatörün kullanım alanlarındaki rolünü yorumlar ve değerlendirir.",
+          "skill_component": {
+            "code": "FBAB8.SB3",
+            "official_text": "Verileri yorumlamak ve değerlendirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1715,22 +3219,65 @@
       ],
       "official_teaching_practice": "Öğretmen, elektrik üretim santrallerinde üretilen elektriğin taşınması sırasında harcanan elektrik enerjisi miktarının iletkenlerin direncine bağlı olarak değiştiğini belirtir. Öğrencilere bu kaybı azaltmanın en verimli yolları sorularak verilen cevaplar doğrultusunda toplum yararına en verimli yolun, elektriğin en düşük akımlarla taşınması olduğu sonucuna varmaları sağlanır. Öğretmen transformatörü tanıtarak tartışma ortamı oluşturur. Tartışma sonucunda öğrenciler transformatörün birincil gerilim, birincil akım, ikincil gerilim, ikincil akım ve sarım sayısı gibi niteliklerini tanımlar. Öğrenciler bu nitelikler arasındaki ilişkileri deneylerle veri toplayarak ortaya koyar ve verileri kaydeder. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır. Matematiksel işlemlerden kaçınılır. Öğrenciler transformatörlerin kullanım alanlarını araştırarak kullanım alanlarındaki rolünü yorumlar ve değerlendirir. Transformatörlerin nitelikleri arasındaki ilişkilere yönelik açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir. Öğrencilerden performans görevi olarak transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları istenebilir.",
       "official_scope_constraints": [
-        "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır.",
-        "Matematiksel işlemlerden kaçınılır."
+        {
+          "id": "phys11-lo-023-scope-1",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik yorumlamalarla sınırlı kalınır.",
+          "implication": "Transformatör nitelikleri yalnız yorumlanır.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        },
+        {
+          "id": "phys11-lo-023-scope-2",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Matematiksel işlemlerden kaçınılır.",
+          "implication": "Sarım-gerilim-akım sayısal hesabı yok.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-023-a",
+          "observable_verb": "tanımlar",
+          "behavior": "Transformatörün niteliklerini deney yaparak tanımlar.",
+          "skill_component": "FBAB8.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-023-b",
+          "observable_verb": "kaydeder",
+          "behavior": "Transformatörlerin kullanım alanlarına yönelik topladığı verileri kaydeder.",
+          "skill_component": "FBAB8.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-023-c",
+          "observable_verb": "değerlendirir",
+          "behavior": "Elde ettiği verilerden yola çıkarak transformatörün kullanım alanlarındaki rolünü yorumlar ve değerlendirir.",
+          "skill_component": "FBAB8.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Transformatörlerin nitelikleri arasındaki ilişkilere yönelik açık uçlu maddelerden oluşan bir çalışma yaprağı verilebilir.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğrencilerden performans görevi olarak transformatörün yapısı ve kullanım alanlarına yönelik bilgi görseli hazırlamaları istenebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1748,11 +3295,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "2.4",
+          "official_title": "Transformatörler",
+          "printed_page": 263,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-024",
@@ -1766,24 +3335,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-1",
         "official_title": "Işık Şiddeti, Işık Akısı ve Aydınlanma",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.1 'Işık Şiddeti, Işık Akısı ve Aydınlanma' (s. 302)"
       },
       "process_components": [
         {
           "id": "phys11-lo-024-a",
           "label": "a",
-          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarının tanımlarını yapar."
+          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarının tanımlarını yapar.",
+          "skill_component": {
+            "code": "FBAB8.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-024-b",
           "label": "b",
-          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramları ile ilgili veri setlerini inceler."
+          "official_text": "Işık şiddeti, ışık akısı ve aydınlanma kavramları ile ilgili veri setlerini inceler.",
+          "skill_component": {
+            "code": "FBAB8.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-024-c",
           "label": "c",
-          "official_text": "Veri setlerini kullanarak ışık şiddeti, ışık akısı ve aydınlanma kavramlarını yorumlayarak değerlendirir."
+          "official_text": "Veri setlerini kullanarak ışık şiddeti, ışık akısı ve aydınlanma kavramlarını yorumlayarak değerlendirir.",
+          "skill_component": {
+            "code": "FBAB8.SB3",
+            "official_text": "Verileri yorumlamak ve değerlendirmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1798,16 +3386,41 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-024-a",
+          "observable_verb": "yapar",
+          "behavior": "Işık şiddeti, ışık akısı ve aydınlanma kavramlarının tanımlarını yapar.",
+          "skill_component": "FBAB8.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-024-b",
+          "observable_verb": "inceler",
+          "behavior": "Işık şiddeti, ışık akısı ve aydınlanma kavramları ile ilgili veri setlerini inceler.",
+          "skill_component": "FBAB8.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-024-c",
+          "observable_verb": "değerlendirir",
+          "behavior": "Veri setlerini kullanarak ışık şiddeti, ışık akısı ve aydınlanma kavramlarını yorumlayarak değerlendirir.",
+          "skill_component": "FBAB8.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen farklı veri setleri üzerinden ışık akısı, ışık şiddeti ve aydınlanma hakkında açık uçlu sorulardan oluşan bir çalışma kâğıdı kullanarak değerlendirme yapabilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1825,11 +3438,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.1",
+          "official_title": "Işık Şiddeti, Işık Akısı ve Aydınlanma",
+          "printed_page": 302,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-025",
@@ -1843,19 +3478,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-2",
         "official_title": "Düzlem Aynalar",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.2 'Düzlem Aynalar' (s. 312)"
       },
       "process_components": [
         {
           "id": "phys11-lo-025-a",
           "label": "a",
-          "official_text": "Düzlem aynaları kullanarak bir model önerir."
+          "official_text": "Düzlem aynaları kullanarak bir model önerir.",
+          "skill_component": {
+            "code": "FBAB9.SB1",
+            "official_text": "Açıklamalar için model önermek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-025-b",
           "label": "b",
-          "official_text": "Düzlem aynaları kullanarak önerdiği modeli yeni durumlara uyarlayarak geliştirir."
+          "official_text": "Düzlem aynaları kullanarak önerdiği modeli yeni durumlara uyarlayarak geliştirir.",
+          "skill_component": {
+            "code": "FBAB9.SB2",
+            "official_text": "Yeni kanıtlarla modeli yenilemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1870,16 +3518,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-025-a",
+          "observable_verb": "önerir",
+          "behavior": "Düzlem aynaları kullanarak bir model önerir.",
+          "skill_component": "FBAB9.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-025-b",
+          "observable_verb": "geliştirir",
+          "behavior": "Düzlem aynaları kullanarak önerdiği modeli yeni durumlara uyarlayarak geliştirir.",
+          "skill_component": "FBAB9.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrenciler öğretmen rehberliğinde gruplara ayrılarak performans görevi çerçevesinde düzlem aynalarda STEM yaklaşımına uygun bilgi temelli hayat problemi belirler.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1897,11 +3563,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.2",
+          "official_title": "Düzlem Aynalar",
+          "printed_page": 312,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-026",
@@ -1915,24 +3603,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-3",
         "official_title": "Küresel Aynalar",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.3.1 'Küresel Ayna Çeşitleri ve Özellikleri' (s. 323)"
       },
       "process_components": [
         {
           "id": "phys11-lo-026-a",
           "label": "a",
-          "official_text": "Küresel aynaların fiziksel özelliklerini ve ışınların küresel aynalarda yansıdıktan sonra izlediği yolu belirler."
+          "official_text": "Küresel aynaların fiziksel özelliklerini ve ışınların küresel aynalarda yansıdıktan sonra izlediği yolu belirler.",
+          "skill_component": {
+            "code": "KB2.7.SB1",
+            "official_text": "Birden fazla kavram veya duruma ilişkin özellikleri belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-026-b",
           "label": "b",
-          "official_text": "Çukur ve tümsek aynaların benzer özelliklerini listeler."
+          "official_text": "Çukur ve tümsek aynaların benzer özelliklerini listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB2",
+            "official_text": "Belirlenen özelliklere ilişkin benzerlikleri listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-026-c",
           "label": "c",
-          "official_text": "Çukur ve tümsek aynaların farklı özelliklerini listeler."
+          "official_text": "Çukur ve tümsek aynaların farklı özelliklerini listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB3",
+            "official_text": "Belirlenen özelliklere ilişkin farklılıkları listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -1947,16 +3654,36 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-026-a",
+          "observable_verb": "belirler",
+          "behavior": "Küresel aynaların fiziksel özelliklerini ve ışınların küresel aynalarda yansıdıktan sonra izlediği yolu belirler.",
+          "skill_component": "KB2.7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-026-b",
+          "observable_verb": "listeler",
+          "behavior": "Çukur ve tümsek aynaların benzer özelliklerini listeler.",
+          "skill_component": "KB2.7.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-026-c",
+          "observable_verb": "listeler",
+          "behavior": "Çukur ve tümsek aynaların farklı özelliklerini listeler.",
+          "skill_component": "KB2.7.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -1974,11 +3701,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.3.1",
+          "official_title": "Küresel Ayna Çeşitleri ve Özellikleri",
+          "printed_page": 323,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-027",
@@ -1992,19 +3741,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-3",
         "official_title": "Küresel Aynalar",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.3.2 'Küresel Aynalarda Görüntü Oluşumu' (s. 333)"
       },
       "process_components": [
         {
           "id": "phys11-lo-027-a",
           "label": "a",
-          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili bir deney tasarlar."
+          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili bir deney tasarlar.",
+          "skill_component": {
+            "code": "FBAB7.SB1",
+            "official_text": "Deney tasarlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-027-b",
           "label": "b",
-          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          "official_text": "Küresel aynalarda görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": {
+            "code": "FBAB7.SB2",
+            "official_text": "Ölçme ve veri analizi yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2019,16 +3781,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-027-a",
+          "observable_verb": "tasarlar",
+          "behavior": "Küresel aynalarda görüntü oluşumu ile ilgili bir deney tasarlar.",
+          "skill_component": "FBAB7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-027-b",
+          "observable_verb": "eder",
+          "behavior": "Küresel aynalarda görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": "FBAB7.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen küresel aynalardaki deney sürecine yönelik kontrol listesi ve küresel aynalarda farklı yerlerde olan cisimlerin görüntü özelliklerini açıklamaya yönelik farklı madde türlerinden oluşan bir test ile değerlendirme yapabilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2046,11 +3826,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.3.2",
+          "official_title": "Küresel Aynalarda Görüntü Oluşumu",
+          "printed_page": 333,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-028",
@@ -2064,19 +3866,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-4",
         "official_title": "Kırılma",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.4 'Kırılma' (s. 343)"
       },
       "process_components": [
         {
           "id": "phys11-lo-028-a",
           "label": "a",
-          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili deney tasarlar."
+          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili deney tasarlar.",
+          "skill_component": {
+            "code": "FBAB7.SB1",
+            "official_text": "Deney tasarlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-028-b",
           "label": "b",
-          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          "official_text": "Işığın saydam ortamlardaki davranışı ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": {
+            "code": "FBAB7.SB2",
+            "official_text": "Ölçme ve veri analizi yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2091,16 +3906,29 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-028-a",
+          "observable_verb": "tasarlar",
+          "behavior": "Işığın saydam ortamlardaki davranışı ile ilgili deney tasarlar.",
+          "skill_component": "FBAB7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-028-b",
+          "observable_verb": "eder",
+          "behavior": "Işığın saydam ortamlardaki davranışı ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": "FBAB7.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2118,11 +3946,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.4",
+          "official_title": "Kırılma",
+          "printed_page": 343,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-029",
@@ -2136,24 +3986,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-5",
         "official_title": "Görünür Derinlik",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.5 'Görünür Derinlik' (s. 354)"
       },
       "process_components": [
         {
           "id": "phys11-lo-029-a",
           "label": "a",
-          "official_text": "Görünür derinliği etkileyen gerçek derinlik ve ortamların ışığı kırma indisini tanımlar."
+          "official_text": "Görünür derinliği etkileyen gerçek derinlik ve ortamların ışığı kırma indisini tanımlar.",
+          "skill_component": {
+            "code": "FBAB1.SB1",
+            "official_text": "Nitelikleri tanımlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-029-b",
           "label": "b",
-          "official_text": "Görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değiştiğini gözlemleyerek kaydeder."
+          "official_text": "Görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değiştiğini gözlemleyerek kaydeder.",
+          "skill_component": {
+            "code": "FBAB1.SB2",
+            "official_text": "Veri toplamak ve kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-029-c",
           "label": "c",
-          "official_text": "Gözlemlerine dayalı olarak görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değişimini açıklar."
+          "official_text": "Gözlemlerine dayalı olarak görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değişimini açıklar.",
+          "skill_component": {
+            "code": "FBAB1.SB3",
+            "official_text": "Verileri açıklamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2165,21 +4034,53 @@
       ],
       "official_teaching_practice": "Günlük hayattan görünür derinliğe ilişkin örneklerin fotoğraf ya da videoları sınıf ile paylaşılabilir. Öğrenciler kullanılan görsellerdeki cisimlerin gerçek derinlikleri ile görünür derinliklerinin farklı olmasının nedenlerini sorgular. Işığı kırma indisleri farklı olan ortamlardaki cisimlerin görünür derinlikleri üzerine yapılan tahminler, soru cevap veya beyin fırtınası gibi tekniklerden biri kullanılarak not edilebilir. Öğrenciler görünür derinliği etkileyen ortamların sahip oldukları farklı kırıcılık indisleri ve cismin bulunduğu gerçek derinlik değişkenlerini tanımlar. Görünür derinliğe ilişkin düzenekler su, sıvı yağ, cam gibi ortamlar; bozuk para ve kalem gibi malzemeler kullanılarak sınıf ortamında kurulabilir. Öğrenciler bu düzeneklerdeki cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi gözlemleyerek kaydeder. Yapılan gözlemler üzerinden öğrenciler ortamların ışığı kırma indisi ve cismin bulunduğu gerçek derinlik ile görünür derinlik arasındaki ilişkiyi açıklar. Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır. Öğretmen açık uçlu sorulardan oluşan bir test veya gözlem formu ile değerlendirme yapabilir.",
       "official_scope_constraints": [
-        "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır."
+        {
+          "id": "phys11-lo-029-scope-1",
+          "type": "CALC_EXCLUDED",
+          "official_text": "Görünür derinliğe ilişkin matematiksel model ve işlemlerden kaçınılır.",
+          "implication": "Görünür derinlik yalnız nitel.",
+          "implication_confidence": "MEDIUM",
+          "source_id": "src-meb-fizik-op-2026"
+        }
       ],
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-029-a",
+          "observable_verb": "tanımlar",
+          "behavior": "Görünür derinliği etkileyen gerçek derinlik ve ortamların ışığı kırma indisini tanımlar.",
+          "skill_component": "FBAB1.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-029-b",
+          "observable_verb": "kaydeder",
+          "behavior": "Görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değiştiğini gözlemleyerek kaydeder.",
+          "skill_component": "FBAB1.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-029-c",
+          "observable_verb": "açıklar",
+          "behavior": "Gözlemlerine dayalı olarak görünür derinliğin gerçek derinlik ve ortamların ışığı kırma indisine bağlı olarak değişimini açıklar.",
+          "skill_component": "FBAB1.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen açık uçlu sorulardan oluşan bir test veya gözlem formu ile değerlendirme yapabilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2197,11 +4098,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.5",
+          "official_title": "Görünür Derinlik",
+          "printed_page": 354,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-030",
@@ -2215,29 +4138,54 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-6",
         "official_title": "Fiber Optik",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.6 'Fiber Optik' (s. 361)"
       },
       "process_components": [
         {
           "id": "phys11-lo-030-a",
           "label": "a",
-          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler."
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": {
+            "code": "KB2.6.SB1",
+            "official_text": "İstenen bilgiye ulaşmak için kullanacağı araçları belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-030-b",
           "label": "b",
-          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için belirlediği araçları kullanarak bilgi toplar."
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için belirlediği araçları kullanarak bilgi toplar.",
+          "skill_component": {
+            "code": "KB2.6.SB2",
+            "official_text": "Belirlediği aracı kullanarak olay/konu/durum hakkındaki bilgileri bulmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-030-c",
           "label": "c",
-          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında toplanan bilgiyi doğrular."
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında toplanan bilgiyi doğrular.",
+          "skill_component": {
+            "code": "KB2.6.SB3",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri doğrulamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-030-ç",
           "label": "ç",
-          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında ulaşılan bilgileri kaydeder."
+          "official_text": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında ulaşılan bilgileri kaydeder.",
+          "skill_component": {
+            "code": "KB2.6.SB4",
+            "official_text": "Olayla/konuyla/durumla ilgili ulaşılan bilgileri kaydetmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2252,16 +4200,48 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-030-a",
+          "observable_verb": "belirler",
+          "behavior": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için kullanacağı kaynakları belirler.",
+          "skill_component": "KB2.6.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-030-b",
+          "observable_verb": "toplar",
+          "behavior": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları ile ilgili bilgiye ulaşmak için belirlediği araçları kullanarak bilgi toplar.",
+          "skill_component": "KB2.6.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-030-c",
+          "observable_verb": "doğrular",
+          "behavior": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında toplanan bilgiyi doğrular.",
+          "skill_component": "KB2.6.SB3",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-030-ç",
+          "observable_verb": "kaydeder",
+          "behavior": "Fiber optik malzemelerin yapısı, çalışma prensibi ve kullanım alanları hakkında ulaşılan bilgileri kaydeder.",
+          "skill_component": "KB2.6.SB4",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğrencilerin fiber optik kabloların yapısı, çalışma prensibi ve kullanım alanları ile ilgili hazırladıkları sunum dereceli puanlama anahtarı ile değerlendirilebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2279,11 +4259,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.6",
+          "official_title": "Fiber Optik",
+          "printed_page": 361,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-031",
@@ -2297,19 +4299,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-7",
         "official_title": "Prizmalar",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.7 'Prizmalar' (s. 367)"
       },
       "process_components": [
         {
           "id": "phys11-lo-031-a",
           "label": "a",
-          "official_text": "Kırılma yasalarının prizmalar için kullanılabilir olduğuna dair hipotez kurarak test eder."
+          "official_text": "Kırılma yasalarının prizmalar için kullanılabilir olduğuna dair hipotez kurarak test eder.",
+          "skill_component": {
+            "code": "FBAB11.SB1",
+            "official_text": "Kuramsal temele dayalı hipotez kurmak ve test etmek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-031-b",
           "label": "b",
-          "official_text": "Geçerli hipotezleri kullanarak prizmalar ile oluşturulmuş birleşik sistemlerde tek renkli ışığın izleyeceği yolu açıklar."
+          "official_text": "Geçerli hipotezleri kullanarak prizmalar ile oluşturulmuş birleşik sistemlerde tek renkli ışığın izleyeceği yolu açıklar.",
+          "skill_component": {
+            "code": "FBAB11.SB2",
+            "official_text": "Geçerli hipotezleri yeni durumları açıklamak için kullanmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2324,16 +4339,54 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-031-a",
+          "observable_verb": "eder",
+          "behavior": "Kırılma yasalarının prizmalar için kullanılabilir olduğuna dair hipotez kurarak test eder.",
+          "skill_component": "FBAB11.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-031-b",
+          "observable_verb": "açıklar",
+          "behavior": "Geçerli hipotezleri kullanarak prizmalar ile oluşturulmuş birleşik sistemlerde tek renkli ışığın izleyeceği yolu açıklar.",
+          "skill_component": "FBAB11.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen gruplara birer çalışma yaprağı verebilir.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğrencilerden çalışma yaprağında ışığın kırılma sırasındaki davranışlarını listelemeleri için nitelik sıralaması yapmaları, sınıflandırma tablosu oluşturmaları veya anlam çözümleme tablosu hazırlamaları istenebilir.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğrenciler çalışma yaprağındaki ilgili bölüme prizmanın özelliklerini yazabilir ve şeklini çizebilir.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğrenciler hipotezlerini simülasyon veya deney düzeneği ile test eder.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Hipotezlerinin doğru olup olmadığına karar vererek sonuçlarını çalışma kâğıdına yazar.",
+          "type": "official_assessment_suggestion"
+        },
+        {
+          "official_text": "Öğretmen çalışma kâğıdını dereceli puanlama anahtarı ile değerlendirebilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2351,11 +4404,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.7",
+          "official_title": "Prizmalar",
+          "printed_page": 367,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-032",
@@ -2369,24 +4444,43 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-8",
         "official_title": "Mercekler",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.8.1 'Merceklerin Özellikleri' (s. 373)"
       },
       "process_components": [
         {
           "id": "phys11-lo-032-a",
           "label": "a",
-          "official_text": "Merceklerin fiziksel özelliklerini ve ışınların merceklerde kırıldıktan sonra izlediği yola ilişkin özellikleri belirler."
+          "official_text": "Merceklerin fiziksel özelliklerini ve ışınların merceklerde kırıldıktan sonra izlediği yola ilişkin özellikleri belirler.",
+          "skill_component": {
+            "code": "KB2.7.SB1",
+            "official_text": "Birden fazla kavram veya duruma ilişkin özellikleri belirlemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-032-b",
           "label": "b",
-          "official_text": "Yakınsak ve ıraksak merceklerin benzer özelliklerini listeler."
+          "official_text": "Yakınsak ve ıraksak merceklerin benzer özelliklerini listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB2",
+            "official_text": "Belirlenen özelliklere ilişkin benzerlikleri listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-032-c",
           "label": "c",
-          "official_text": "Yakınsak ve ıraksak merceklerin farklı özelliklerini listeler."
+          "official_text": "Yakınsak ve ıraksak merceklerin farklı özelliklerini listeler.",
+          "skill_component": {
+            "code": "KB2.7.SB3",
+            "official_text": "Belirlenen özelliklere ilişkin farklılıkları listelemek",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2401,16 +4495,36 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-032-a",
+          "observable_verb": "belirler",
+          "behavior": "Merceklerin fiziksel özelliklerini ve ışınların merceklerde kırıldıktan sonra izlediği yola ilişkin özellikleri belirler.",
+          "skill_component": "KB2.7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-032-b",
+          "observable_verb": "listeler",
+          "behavior": "Yakınsak ve ıraksak merceklerin benzer özelliklerini listeler.",
+          "skill_component": "KB2.7.SB2",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-032-c",
+          "observable_verb": "listeler",
+          "behavior": "Yakınsak ve ıraksak merceklerin farklı özelliklerini listeler.",
+          "skill_component": "KB2.7.SB3",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
       "assessment_implications": [],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2428,11 +4542,33 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.8.1",
+          "official_title": "Merceklerin Özellikleri",
+          "printed_page": 373,
+          "verified_on_page": true
+        }
+      ]
     },
     {
       "id": "phys11-lo-033",
@@ -2446,19 +4582,32 @@
       "subtopic": {
         "topic_id": "phys11-topic-3-8",
         "official_title": "Mercekler",
-        "mapping_method": "derived_from_titles",
-        "confidence": "HIGH"
+        "mapping_method": "textbook_toc",
+        "confidence": "HIGH",
+        "evidence": "Ders kitabı 3.8.2 'Merceklerde Görüntü Oluşumu' (s. 381)"
       },
       "process_components": [
         {
           "id": "phys11-lo-033-a",
           "label": "a",
-          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili deney tasarlar."
+          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili deney tasarlar.",
+          "skill_component": {
+            "code": "FBAB7.SB1",
+            "official_text": "Deney tasarlamak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         },
         {
           "id": "phys11-lo-033-b",
           "label": "b",
-          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder."
+          "official_text": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": {
+            "code": "FBAB7.SB2",
+            "official_text": "Ölçme ve veri analizi yapmak",
+            "mapping_method": "ordered_alignment_equal_count",
+            "confidence": "HIGH"
+          }
         }
       ],
       "skills": [
@@ -2473,16 +4622,34 @@
       "concepts": [],
       "prerequisites": [],
       "mathematical_prerequisites": [],
-      "measurable_behaviors": [],
+      "measurable_behaviors": [
+        {
+          "component_id": "phys11-lo-033-a",
+          "observable_verb": "tasarlar",
+          "behavior": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili deney tasarlar.",
+          "skill_component": "FBAB7.SB1",
+          "evidence_type": "official_process_component"
+        },
+        {
+          "component_id": "phys11-lo-033-b",
+          "observable_verb": "eder",
+          "behavior": "Yakınsak ve ıraksak merceklerde görüntü oluşumu ile ilgili tasarladığı deney düzeneğinden veri toplayarak analiz eder.",
+          "skill_component": "FBAB7.SB2",
+          "evidence_type": "official_process_component"
+        }
+      ],
       "common_misconceptions": [],
-      "assessment_implications": [],
+      "assessment_implications": [
+        {
+          "official_text": "Öğretmen merceklerde asal eksen üzerinde ve herhangi bir noktadaki cisimlerin görüntülerinin özelliklerini içeren farklı madde türlerinden oluşan testi kullanarak değerlendirme yapabilir.",
+          "type": "official_assessment_suggestion"
+        }
+      ],
       "pending_fields": [
         "concepts",
         "prerequisites",
         "mathematical_prerequisites",
-        "measurable_behaviors",
-        "common_misconceptions",
-        "assessment_implications"
+        "common_misconceptions"
       ],
       "sources": [
         {
@@ -2500,11 +4667,50 @@
             "official_teaching_practice",
             "official_scope_constraints"
           ]
+        },
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "fields": [
+            "textbook_sections",
+            "subtopic"
+          ]
+        },
+        {
+          "source_id": "src-tymm-ortak-metin",
+          "fields": [
+            "process_components.skill_component"
+          ]
         }
       ],
       "confidence": "HIGH",
       "created_at": "2026-10-01",
-      "updated_at": "2026-10-01"
+      "updated_at": "2026-10-01",
+      "textbook_sections": [
+        {
+          "source_id": "src-meb-fiz11-ders-kitabi",
+          "section": "3.8.2",
+          "official_title": "Merceklerde Görüntü Oluşumu",
+          "printed_page": 381,
+          "verified_on_page": true
+        }
+      ]
     }
-  ]
+  ],
+  "global_scope_constraints": [
+    {
+      "type": "CALC_LIMITED",
+      "source": "src-meb-fizik-op-2026",
+      "page": 7,
+      "official_text": "Fizik Dersi Öğretim Programı’nın uygulanmasında ders içeriğinden ziyade öğrenme çıktıları önceliklendirilmeli, öğrencilerin öğrenme çıktılarını kazanmalarını sağlayacak içerik bilgisi sunulmalı, konu yoğunluğuna sebep olmayacak şekilde matematiksel hesaplamalar ile ilgili sınırlamalara dikkat edilmelidir.",
+      "implication": "Programda açık hesap sınırı olmayan çıktılarda da hesap karmaşıklığı düşük tutulmalı."
+    },
+    {
+      "type": "SCOPE_EXCLUDED_FROM_TEXTBOOK",
+      "source": "src-meb-fizik-op-2026",
+      "page": 9,
+      "official_text": "Farklılaştırma kapsamında zenginleştirme ve destekleme bölümlerinde yer verilen uygulamalara (“*” sembolü ile verilen uygulamalar dâhil) ders kitaplarında yer verilmez.",
+      "implication": "Zenginleştirme maddeleri öğrenme çıktısı eklemez; temel kapsamın parçası sayılmaz (fen liselerinde * işaretliler zorunlu)."
+    }
+  ],
+  "enriched_by": "scripts/enrich_learning_outcomes.py"
 }

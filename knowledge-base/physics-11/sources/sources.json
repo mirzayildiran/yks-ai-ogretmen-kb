@@ -163,9 +163,12 @@
       "publication_date": "2026-09-07",
       "access_date": "2026-09-30",
       "reliability": "HIGH",
-      "status": "downloaded_not_analyzed",
-      "used_for": [],
-      "notes": "İndirildi ancak henüz incelenmedi. Formül düzeyi, alt başlıklar ve terminoloji doğrulaması için gerekli.",
+      "status": "used_secondary",
+      "used_for": [
+        "textbook_sections",
+        "subtopic_verification"
+      ],
+      "notes": "416 sayfa. İçindekiler (s. 7-8) ile 33 çıktının kitap bölümü eşlendi; her başlık ilgili sayfada doğrulandı. Telif notu: 'Kitabın metin, soru ve şekilleri kısmen de olsa hiçbir surette alınıp yayımlanamaz.' Yalnız yapısal bilgi kullanılır; çıkarılan metin git'e konmaz. Kitapta 1.6 alt başlıkları yanlışlıkla 1.4.1/1.4.2 numaralı. Formül incelemesi STEP 7'de.",
       "local_path": "knowledge-base/physics-11/sources/raw/pdf/fizik-11-ders-kitabi.pdf",
       "sha256": "5005230407cdc3f9d477a14eef09e99e29e0ed063ed1a7ece13c98d984a7526b",
       "bytes": 91247005,
@@ -182,9 +185,12 @@
       "publication_date": null,
       "access_date": "2026-09-30",
       "reliability": "HIGH",
-      "status": "downloaded_not_analyzed",
-      "used_for": [],
-      "notes": "Beceri kodlarının (FBAB, KB, E, SDB, D, OB) resmî tanımları burada olmalı; fizik programı yalnız kodları listeliyor.",
+      "status": "used_secondary",
+      "used_for": [
+        "skill_definitions",
+        "skill_process_components"
+      ],
+      "notes": "158 sayfa. 14 becerinin (FBAB, KB) resmî tanımı ve süreç bileşenleri alındı (skills.json).",
       "local_path": "knowledge-base/physics-11/sources/raw/pdf/tymm-ortak-metin.pdf",
       "sha256": "6c294c7d1f759fa2f21089c2d26945b0884658f1c88d8a776cbd9847ad4a0c12",
       "bytes": 4902774,
