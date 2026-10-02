@@ -1919,7 +1919,7 @@ assert abs(-N * A * (B_pts[1][1] - B_pts[0][1]) / (B_pts[1][0] - B_pts[0][0]) + 
 # tablo yöntemi: ardışık farklar (1 s adım)
 phis = [phi(float(t)) for t in range(8)]
 eps_tab = [-N * (phis[k + 1] - phis[k]) / 1.0 for k in range(7)]
-assert abs(eps_tab[0] + 0.02) < 1e-12 and abs(eps_tab[3]) < 1e-12 and abs(eps_tab[5] - 0.06) < 1e-12
+assert abs(eps_tab[0] + 0.04) < 1e-12 and abs(eps_tab[3]) < 1e-12 and abs(eps_tab[5] - 0.06) < 1e-12
 """)
 
 SOLUTIONS["lenz-induced-current-direction"] = S(
@@ -1993,12 +1993,14 @@ SOLUTIONS["magnet-falling-through-ring"] = S(
     """
 import math
 # dipol–halka akısı (eksen üzerinde): Φ(z) = Φ0 / (1 + (z/a)^2)^{3/2}, z: halka düzleminden yükseklik
-Phi0, a, g, m = 1.0, 0.05, 10.0, 0.1
+Phi0, a, g, m = 0.01, 0.05, 10.0, 0.1       # Φ0 küçük: frenleme orta şiddette (terminal hız ~ m/s) → kısa simülasyon
 dPhi = lambda z: -3 * Phi0 * z / a ** 2 / (1 + (z / a) ** 2) ** 2.5
 def fall(Rring):
-    z, v, t, dt = 0.4, 0.0, 0.0, 1e-5
+    z, v, t, dt = 0.4, 0.0, 0.0, 1e-4
+    n = 0
     i_signs, F_signs = set(), []
-    while z > -0.4:
+    while z > -0.4 and n < 100000:                 # adım sınırı: sonsuz döngü olmasın
+        n += 1
         eps = -dPhi(z) * v                         # ε = −dΦ/dt
         i = eps / Rring if Rring != float("inf") else 0.0
         F = i * dPhi(z)                            # güç dengesi: F·v = −i²R → F = i·dΦ/dz
@@ -2006,9 +2008,10 @@ def fall(Rring):
             i_signs.add(i > 0); F_signs.append(F > 0)
         acc = -g + F / m
         v += acc * dt; z += v * dt; t += dt
+    assert z <= -0.4                               # halkadan geçip aşağı çıktı
     return t, i_signs, F_signs
 t_free, _, _ = fall(float("inf"))
-t_ring, i_signs, F_signs = fall(0.005)
+t_ring, i_signs, F_signs = fall(0.01)
 assert abs(t_free - math.sqrt(2 * 0.8 / g)) < 5e-3      # kesik bilezik: serbest düşme
 assert t_ring > t_free * 1.05                           # kapalı bilezik: düşme uzar
 assert i_signs == {True, False}                         # girerken ve çıkarken akım yönleri zıt
@@ -2045,10 +2048,11 @@ eps0 = amp_eps(N0, d0, f0)
 # sayısal türev ile genlik ve frekans doğrulaması
 dt = 1e-6
 phi = lambda t: 5e-6 + d0 * math.sin(2 * math.pi * f0 * t)
-vals = [-(N0 * (phi(k * dt + dt) - phi(k * dt - dt)) / (2 * dt)) for k in range(0, 10000)]
+vals = [-(N0 * (phi(k * dt + dt) - phi(k * dt - dt)) / (2 * dt)) for k in range(0, 200000)]
 assert abs(max(vals) - eps0) / eps0 < 1e-3
-zc = sum(1 for k in range(1, len(vals)) if vals[k - 1] * vals[k] < 0)
-assert abs(zc / 2 / (len(vals) * dt) - f0) < 2.0           # ε frekansı 440 Hz
+# sıfır geçiş anları (doğrusal interpolasyon); iki ardışık yukarı geçiş = 1 periyot
+ups = [(k - 1 + vals[k - 1] / (vals[k - 1] - vals[k])) * dt for k in range(1, len(vals)) if vals[k - 1] < 0 <= vals[k]]
+assert abs((len(ups) - 1) / (ups[-1] - ups[0]) - f0) < 0.5           # ε frekansı 440 Hz
 assert abs(amp_eps(2 * N0, 3 * d0, f0) / eps0 - 6) < 1e-12
 # tel durunca ε = 0
 still = lambda t: 5e-6
@@ -2058,3 +2062,1559 @@ R = 0.03
 flux = lambda z: 1.0 / (R ** 2 + z ** 2) ** 1.5
 assert flux(0.01) > flux(0.03) > flux(0.06)
 """)
+
+# ============================ FİZ.11.2.12 — Alternatif akım ============================
+SOLUTIONS["ac-factors-identification"] = S(
+    M(["Basit jeneratörde akı Φ(t) = N·B·A·cos(2π·f·t) biçiminde değişir; ε = −dΦ/dt olduğundan ε_maks = N·B·A·(2π·f), ε'un frekansı çerçevenin dönme frekansı f'ye eşittir.",
+       "Her etmen için sor: 'Akının değişim hızını artırır mı?' N, B, A ve f ε_maks'ı doğru orantılı değiştirir.",
+       "Frekansı YALNIZ dönme frekansı belirler; N, B ve A değişince ε_maks değişir, frekans değişmez.",
+       "Çarpan yöntemi: ε_maks'ın yeni değeri = (N çarpanı)(B çarpanı)(A çarpanı)(f çarpanı); frekans çarpanı = yalnız f çarpanı.",
+       "Eşleştirme tablosu: N, B, A → yalnız büyüklük; dönme hızı → hem büyüklük hem frekans; yönelim ve çerçeve şekli frekansı etkilemez."],
+      ["Düzgün manyetik alan", "Çerçeve sabit açısal hızla dönüyor", "Çerçeve ekseni alana dik"],
+      ["Kitabın 12. Etkinlik düzeneği nitel ve oran düzeyindedir; ε_maks = N·B·A·ω ifadesi türetmedir, kitapta ayrı formül olarak yer almaz", "Hız sabit değilse dalga sinüs biçiminden sapar"],
+      ["Sarım sayısı artınca frekansın da arttığını sanmak", "Yüzey alanı büyüyünce frekansın azaldığını sanmak", "Dönme hızı artınca yalnız frekansın arttığını, büyüklüğün değişmediğini sanmak"]),
+    M(["Akı ne kadar hızlı değişirse ε o kadar büyük olur: daha çok sarım, daha güçlü alan, daha büyük alan veya daha hızlı dönüş akı değişimini büyütür.",
+       "Frekans, saniyedeki tur sayısıdır: çerçeve her turda bir tam salınım yapar; N, B, A turu hızlandırmaz.",
+       "Bisiklet dinamosunda hız artınca lamba hem parlar hem daha sık yanıp söner: iki etki birlikte görülür."],
+      ["Düzgün alanda dönen çerçeve"], ["Nitel"], ["Büyüklük ile frekansı aynı şey sanmak"]),
+    M(["Sorudaki etmeni bul: N, B ya da A ise 'büyüklük ×k, frekans aynı'; dönme hızı ise 'büyüklük ×k, frekans ×k'. Birden çok etmen varsa büyüklük çarpanlarını çarp."],
+      ["Her değişiklik tek tek tanımlı"], ["Etmenler birbirini götürebilir (B ×2, A ×1/2 → büyüklük aynı)"], ["Frekans çarpanını N, B, A'ya da uygulamak"]),
+    M(["Eğim yolu: Φ–t grafiğinde etmen değişince tepe değer ve eğim nasıl değişir diye grafik çiz; f artarsa eğri sıkışır (periyot kısalır), N·B·A artarsa genlik büyür."],
+      ["Grafik karşılaştırması"], ["Nicel eğim hesabı gerekmez"], ["Genlikle periyodu karıştırmak"]),
+    "Dört etmenin ikisi sınıfı: (N, B, A) yalnız büyüklüğü, dönme hızı büyüklüğü VE frekansı artırır. 'Frekans' tuzağı: N, B, A'ya frekans bağlamak.",
+    "Düzgün manyetik alanda sabit hızla dönen N sarımlı bir çerçeve ε_maks = E₀ ve f₀ frekanslı bir alternatif gerilim üretiyor. (a) N iki katına, (b) dönme sıklığı 3 katına, (c) B yarıya ve A 4 katına, (d) B 2 katına ve dönme sıklığı yarıya çıkarılırsa ε_maks ve frekans nasıl değişir?",
+    ["ε_maks ∝ N·B·A·f; frekans ∝ f.",
+     "(a) ε_maks ×2, frekans aynı.", "(b) ε_maks ×3, frekans ×3.", "(c) ε_maks ×(1/2)(4) = ×2, frekans aynı.", "(d) ε_maks ×(2)(1/2) = ×1 (değişmez), frekans ×1/2."],
+    "(a) 2E₀, f₀; (b) 3E₀, 3f₀; (c) 2E₀, f₀; (d) E₀, f₀/2.",
+    """
+import math
+def emf_wave(N, B, A, f, T=2.0, dt=1e-4):
+    # Φ(t) = N·B·A·cos(2π f t); ε = −dΦ/dt sayısal merkezi farkla
+    phi = lambda t: N * B * A * math.cos(2 * math.pi * f * t)
+    n = int(T / dt)
+    return [-(phi(k * dt + dt) - phi(k * dt - dt)) / (2 * dt) for k in range(n)], dt
+def peak_and_freq(N, B, A, f):
+    e, dt = emf_wave(N, B, A, f)
+    ups = [(k - 1 + e[k - 1] / (e[k - 1] - e[k])) * dt for k in range(1, len(e)) if e[k - 1] < 0 <= e[k]]
+    return max(e), (len(ups) - 1) / (ups[-1] - ups[0])
+N0, B0, A0, f0 = 50, 0.2, 0.01, 5.0
+E0, F0 = peak_and_freq(N0, B0, A0, f0)
+assert abs(E0 - N0 * B0 * A0 * 2 * math.pi * f0) / E0 < 1e-3 and abs(F0 - f0) < 0.05
+cases = {"a": (2 * N0, B0, A0, f0), "b": (N0, B0, A0, 3 * f0), "c": (N0, B0 / 2, 4 * A0, f0), "d": (N0, 2 * B0, A0, f0 / 2)}
+expect = {"a": (2, 1), "b": (3, 3), "c": (2, 1), "d": (1, 0.5)}
+for k, args in cases.items():
+    e, fr = peak_and_freq(*args)
+    assert abs(e / E0 - expect[k][0]) < 2e-3 and abs(fr / F0 - expect[k][1]) < 5e-3, k
+""")
+
+SOLUTIONS["ac-loop-graphs"] = S(
+    M(["Konum–akı eşleşmesi: çerçeve alana dik (yüzeyle alan dik) → Φ en büyük, ε = 0; çerçeve alana paralel → Φ = 0, |ε| en büyük (akı en hızlı değişir).",
+       "Akım yönü: çerçevenin alan çizgilerini kesme yönü yarım turda bir yönde, diğer yarım turda zıt yöndedir; bir turda akım iki kez yön değiştirir.",
+       "Φ–t kosinüs benzeriyse ε–t sinüs benzeridir: ε, Φ–t grafiğinin eğimiyle (−) orantılıdır; ε, akıya göre T/4 (90°) kaymıştır.",
+       "Φ–t'de tepe ya da çukurdan geçerken eğim sıfırdır → ε = 0; Φ–t sıfırdan geçerken eğim en dik → |ε| en büyük.",
+       "Osiloskop: dalganın tepe yüksekliği (kare sayısı × V/kare) en büyük gerilimi; bir tam dalganın yatay uzunluğu (kare × s/kare) periyodu verir; f = 1/T.",
+       "İki dalgayı aynı ölçekle karşılaştır: tepe oranı = gerilim oranı; periyot oranının TERSİ = frekans oranı."],
+      ["Düzgün alan, sabit dönme hızı", "Osiloskopta iki kanalın ölçeği aynı ya da ölçek oranı biliniyor"],
+      ["Ölçek (V/kare, s/kare) iki kanalda farklıysa kare sayısını doğrudan karşılaştırmak yanlıştır", "Dönme hızı sabit değilse dalga sinüs olmaz"],
+      ["Φ–t grafiğini ε–t grafiği sanmak", "Akı sıfırken akımın da sıfır olduğunu sanmak", "Periyodu kare sayısını yanlış okuyarak (tepeden çukura) yarım alınması"]),
+    M(["Gerilimi akının kendisi değil değişim hızı belirler: dik dururken yüzeyden geçen akı en büyük ama o an değişmiyor (tepe noktası).",
+       "Alana paralelken çerçeve alan çizgilerini 'kesiyor': akı sıfırdan geçiyor ve değişimi en hızlı.",
+       "Tam tur: iki kez akı en büyük (zıt yönlü), iki kez sıfır; akım iki kez yön değiştirir, iki kez mutlak değerce en büyük olur."],
+      ["Her an için"], ["Nitel"], ["Akı büyük = akım büyük sanmak"]),
+    M(["Üç kural: Φ tepe/çukur → ε = 0; Φ sıfır → |ε| en büyük; ε–t, Φ–t'ye göre T/4 geri/ileri. Osiloskopta: yükseklik → gerilim, genişlik → periyot (frekans ters)."],
+      ["Bir periyotluk sinüs benzeri grafik"], ["Eğrisel olmayan dalgada geçersiz"], ["Frekansı periyotla doğru orantılı almak"]),
+    None,
+    "Φ–t ile ε–t'yi hep eğim ilişkisiyle bağla: akı tepedeyse ε sıfır. Osiloskopta tepe = gerilim, genişlik = periyot (frekans ters). Bir turda 2 yön değişimi.",
+    "Düzgün alanda sabit hızla dönen çerçevenin Φ–t grafiği t = 0'da en büyük değerden başlayan kosinüs eğrisidir (T periyot). (a) ε = 0 hangi anlardadır, |ε| hangi anlarda en büyüktür? (b) T/4 ve 3T/4 anlarında akım yönleri nasıldır? (c) Bir turda akım kaç kez yön değiştirir? (d) Osiloskop ekranında (her iki kanal 1 V/kare, 2 ms/kare) mavi dalga tepede 4 kare, bir tam dalga 4 kare; sarı dalga tepede 2 kare, bir tam dalga 8 kare ise mavi ve sarı dalganın en büyük gerilim ve frekans oranları nedir?",
+    ["(a) Φ tepe/çukur anlarında (0, T/2, T) eğim 0 → ε = 0; Φ = 0 olan T/4 ve 3T/4'te eğim en dik → |ε| en büyük.",
+     "(b) T/4'te ε bir işaretlidir, 3T/4'te zıt işaretlidir: akım yönleri zıt.", "(c) ε iki kez sıfırdan geçip işaret değiştirir → bir turda 2 kez yön değiştirir.",
+     "(d) V_mavi = 4 V, V_sarı = 2 V → oran 2; T_mavi = 8 ms, T_sarı = 16 ms → f_mavi = 125 Hz, f_sarı = 62,5 Hz → frekans oranı 2."],
+    "(a) ε = 0: 0, T/2, T; |ε| en büyük: T/4, 3T/4. (b) zıt yönlü. (c) 2 kez. (d) Gerilim oranı 2, frekans oranı 2 (mavi büyük).",
+    """
+import math
+T = 1.0
+phi = lambda t: math.cos(2 * math.pi * t / T)
+h = 1e-6
+eps = lambda t: -(phi(t + h) - phi(t - h)) / (2 * h)          # ε = −dΦ/dt (N=1)
+# (a) ε = 0 anları akı tepe/çukurunda; |ε| en büyük anlar akının sıfır olduğu anlarda
+for t in (0.0, 0.5, 1.0):
+    assert abs(eps(t)) < 1e-4 and abs(abs(phi(t)) - 1) < 1e-12
+for t in (0.25, 0.75):
+    assert abs(phi(t)) < 1e-12 and abs(abs(eps(t)) - 2 * math.pi / T) < 1e-3
+# (b) T/4 ve 3T/4'te zıt işaret
+assert eps(0.25) > 0 > eps(0.75)
+# (c) bir periyotta işaret değişimi sayısı
+ts = [k / 10000.0 for k in range(1, 10000)]
+signs = [eps(t) > 0 for t in ts]
+assert sum(1 for a, b in zip(signs, signs[1:]) if a != b) == 1       # (0,1) içinde T/2'de bir değişim; ε t=0 ve t=T'de de sıfırdan geçer → periyotta 2 değişim
+assert eps(1e-3) > 0 and eps(1 - 1e-3) < 0 and eps(1 + 1e-3) > 0     # t=0'da ve t=T'de işaret değişir
+# ε–t, Φ–t'ye göre çeyrek periyot kaymış: ε maksimumu (t=T/4), Φ maksimumundan (t=0) T/4 sonra
+t_eps_max = max(ts, key=eps)
+assert abs(phi(0.0) - 1.0) < 1e-12 and abs(t_eps_max - 0.25) < 1e-3
+# (d) osiloskop: tepe yüksekliği (kare) × V/kare ve bir tam dalga genişliği (kare) × s/kare
+V_per_div, s_per_div = 1.0, 2e-3
+blue = dict(peak_div=4, wave_div=4); yellow = dict(peak_div=2, wave_div=8)
+Vb, Vy = blue["peak_div"] * V_per_div, yellow["peak_div"] * V_per_div
+Tb, Ty = blue["wave_div"] * s_per_div, yellow["wave_div"] * s_per_div
+assert Vb / Vy == 2 and abs((1 / Tb) / (1 / Ty) - 2) < 1e-12 and abs(1 / Tb - 125) < 1e-9 and abs(1 / Ty - 62.5) < 1e-9
+# örnekle: dalgaları üretip tepe ve frekansı ölç
+def measure(V0, f, dt=1e-5, dur=0.1):
+    y = [V0 * math.sin(2 * math.pi * f * k * dt) for k in range(int(dur / dt))]
+    ups = [k for k in range(1, len(y)) if y[k - 1] < 0 <= y[k]]
+    return max(y), (len(ups) - 1) / ((ups[-1] - ups[0]) * dt)
+pb, fb = measure(Vb, 1 / Tb); py, fy = measure(Vy, 1 / Ty)
+assert abs(pb / py - 2) < 1e-3 and abs(fb / fy - 2) < 1e-2
+""")
+
+SOLUTIONS["ac-led-data-interpretation"] = S(
+    M(["Veri tablosunda kontrol değişkeni yöntemini uygula: yalnız BİR etmenin değiştiği satır çiftini bul.",
+       "O çiftte çıktı (en büyük gerilim ya da parlaklık) nasıl değişti? Etmen ×k iken çıktı ×k ise doğru orantı; sabitse etki yok.",
+       "Orantı katsayısını (çıktı/etmen) her satırda hesapla: hepsi aynı çıkmalı; farklı çıkan satır hatalı kayıttır, doğru değeri katsayıdan bul.",
+       "Birden çok değişkenin aynı anda değiştiği satırlarda tek etmene yorum yapılmaz; çarpanları ayırmak için ek satır gerekir.",
+       "AC/DC ayrımı: DC kaynakta kararlı durumda akım sabit → komşu devrede akı sabit → ε = 0, lamba yanmaz (yalnız anahtar kapanıp açılırken anlık sıçrama); AC kaynakta akım ve akı sürekli değişir → ε oluşur → lamba yanar, parlaklık dalgalıdır."],
+      ["Her satırda yalnız tek etmen değişen en az bir çift var", "Ölçüm yöntemi satırlar arasında aynı"],
+      ["Doğrusal olmayan ilişkide katsayı sabit çıkmaz (grafiği çiz)", "Ölçüm hatası küçükse küçük sapmalar hata sayılmaz, belirgin sapma aranır", "DC devrede anahtar açılıp kapanırken kısa süreli ε oluşur"],
+      ["Tek satırdan genelleme yapmak", "AC kaynakta akıyı sabit saymak", "DC kaynakta lambanın sürekli yanacağını sanmak"]),
+    M(["Akı değişimi yoksa gerilim yoktur: DC komşu devresinde akı sabit, AC komşu devresinde akı sürekli değişir.",
+       "LED/lamba parlaklığı ε'un büyüklüğünü yansıtır: akı daha hızlı değiştikçe daha parlak.",
+       "Tablo yorumu fiziksel mantığa dayanır: ε ∝ akı değişim hızı ∝ dönme hızı, N, B, A."],
+      ["Kapalı devre"], ["Nitel"], ["Parlaklığı akının büyüklüğüne bağlamak"]),
+    M(["Satır çiftinde yalnız bir değişken → çıktı oranına bak. Katsayı sütunu ekle (çıktı/etmen). Tuhaf satır = hata. DC → yanmaz, AC → yanar."],
+      ["Tablo düzenli"], ["Çoklu değişim satırı yorumlanamaz"], ["Katsayıyı ters bölmek"]),
+    None,
+    "Tabloda önce 'tek değişkenli satır çifti', sonra 'çıktı/etmen' katsayısı. Katsayısı sapan satır hatalıdır. DC komşu devre: akı sabit → lamba yanmaz.",
+    "Bir jeneratör deneyinde çerçeveyi döndürürken ölçülen en büyük gerilimler (n: dönme sıklığı, tur/s; B: alan; N: sarım) şöyledir: (n=1, B=0,1 T, N=100) → 0,63 V; (2, 0,1, 100) → 1,26 V; (3, 0,1, 100) → 2,90 V; (1, 0,2, 100) → 1,26 V; (1, 0,1, 200) → 1,26 V. (a) Hangi satır hatalı kaydedilmiştir, doğrusu kaç V olmalıdır? (b) Gerilim n, B ve N ile nasıl değişir? (c) Çerçevenin komşusundaki devreye önce DC, sonra AC üreteci bağlanıyor; hangi durumda lamba yanar?",
+    ["n, B, N ayrı ayrı değişen satır çiftleri: gerilim hep aynı çarpanla artıyor → doğru orantı.",
+     "Katsayı V/n: 0,63; 0,63; 0,97 (!) → üçüncü satır tutarsız; V = 3·0,63 = 1,89 ≈ 1,9 V olmalı.",
+     "B, N ikişer katına çıkınca gerilim ikişer katı: V ∝ n·B·N.",
+     "DC: akı sabit, ε = 0 → lamba yanmaz (anlık sıçrama hariç). AC: akı değişir, ε oluşur → lamba yanar, parlaklık dalgalanır."],
+    "3. satır hatalı (≈ 1,9 V olmalı); V ∝ n·B·N; lamba yalnız AC kaynakta yanar.",
+    """
+import math
+rows = [(1, 0.1, 100, 0.63), (2, 0.1, 100, 1.26), (3, 0.1, 100, 2.90), (1, 0.2, 100, 1.26), (1, 0.1, 200, 1.26)]
+base = rows[0]
+# her satırı taban satırla karşılaştır: beklenen = V0 · (n/n0)(B/B0)(N/N0)
+exp = [base[3] * (n / base[0]) * (B / base[1]) * (N / base[2]) for n, B, N, V in rows]
+bad = [i for i, (e, r) in enumerate(zip(exp, rows)) if abs(e - r[3]) / e > 0.05]
+assert bad == [2] and abs(exp[2] - 1.89) < 1e-9
+# fiziksel modelden: ε_maks = N B A 2π n, A = 0,01 m²
+A = 0.01
+V = lambda n, B, N: N * B * A * 2 * math.pi * n
+for n, B, N, Vm in rows:
+    if (n, B, N) != (3, 0.1, 100):
+        assert abs(V(n, B, N) - Vm) < 0.01
+assert abs(V(3, 0.1, 100) - 1.885) < 0.01
+# komşu devre: ε = −M·di/dt; DC kararlı halde sıfır, AC'de sıfır değil
+M_, R_, L_, V0 = 0.5, 2.0, 0.1, 6.0
+i_dc = lambda t: (V0 / R_) * (1 - math.exp(-R_ * t / L_))      # anahtar kapanışından sonra
+h = 1e-7
+eps = lambda f, t: -M_ * (f(t + h) - f(t - h)) / (2 * h)
+assert abs(eps(i_dc, 1e-3)) > 1.0                              # anahtar kapanırken anlık sıçrama (geçici)
+assert abs(eps(i_dc, 2.0)) < 1e-9                              # kararlı durum: ε ≈ 0 → lamba yanmaz
+i_ac = lambda t: 3.0 * math.sin(2 * math.pi * 50 * t)
+assert max(abs(eps(i_ac, k * 1e-4)) for k in range(200)) > 100  # AC: ε sürekli oluşur
+""")
+
+SOLUTIONS["ac-effective-max-values"] = S(
+    M(["Isı eşdeğerliği: aynı direnç, aynı sürede aynı ısıyı açığa çıkarıyorsa DC'nin değeri AC'nin ETKİN değerine eşittir (V_etkin = V_DC, i_etkin = i_DC).",
+       "Etkin değerlerle Ohm yasası geçerlidir: i_etkin = V_etkin / R.",
+       "Maksimum değer: V_maks = √2·V_etkin ve i_maks = √2·i_etkin (√2 ≈ 1,41).",
+       "Ters yön: etkin değer = maksimum değer / √2.",
+       "Voltmetre ve ampermetre etkin değeri okur; şebeke gerilimi (ör. 220 V) etkin değerdir, tepe değeri 220√2 ≈ 311 V'tur.",
+       "Isıl güç etkin değerlerle: P = i_etkin²·R = V_etkin²/R; AC'nin bir periyottaki ortalama ısıl gücü budur."],
+      ["Sinüs biçimli alternatif akım", "Saf dirençli devre (program kapsamında yalnız etkin/maksimum değer ve ısı eşdeğerliği vardır)"],
+      ["Kare ya da üçgen dalgada √2 oranı geçerli değildir (yalnız sinüs için)", "Reaktans, empedans ve faz farkı programda yoktur"],
+      ["V_maks hesabında √2 yerine 2 ile çarpmak", "DC'deki değeri AC'nin maksimum değeri sanmak", "Şebeke geriliminin maksimum olduğunu sanmak"]),
+    M(["Sinüs biçimli akım zamanın büyük bölümünde tepe değerinden küçüktür; aynı ısıyı verebilmek için DC'nin değerinden √2 kat büyük tepeye çıkması gerekir.",
+       "Isıtma etkisi akımın yönünden bağımsızdır (i²R): AC'nin karesel ortalaması DC'nin karesine eşitlenir.",
+       "Ölçü aletlerinin etkin değeri göstermesi, ısı etkisinin ölçülmesinden gelir."],
+      ["Isıl etki"], ["Nitel"], ["Etkin değeri ortalama değer sanmak (ortalama sıfırdır)"]),
+    M(["Tek satır: 'DC eşdeğeri → etkin; maksimum = etkin·1,41'. 'Voltmetre okuyor / şebeke 220 V' → etkin."],
+      ["Sinüs biçimli AC"], ["Sinüs dışı dalga"], ["√2 yerine 2"]),
+    M(["Güç yolu: P_AC(ortalama) = ½ V_maks²/R = V_DC²/R → V_maks = √2 V_DC (ısıl güçlerin eşitlenmesi)."],
+      ["Aynı direnç, sinüs dalga"], ["Program ısı eşdeğerliğiyle yetinir"], ["Ortalama gücü tepe gücü sanmak"]),
+    "'DC değeri verilmiş + aynı ısı' → AC etkin değeri o değerdir. Maksimum için ×√2 (×1,41). Voltmetre ve şebeke değeri etkin değerdir; ortalama değer sıfırdır.",
+    "3 Ω'luk bir ısıtıcı 12 V'luk DC kaynağa bağlandığında belli sürede açığa çıkan ısıyı aynı sürede bir AC kaynak da veriyor. AC kaynağın etkin gerilimi ve akımı ile maksimum gerilimi ve akımı nedir? Şebeke gerilimi 230 V etkin ise tepe gerilimi yaklaşık kaç volttur? AC devredeki voltmetre hangi değeri gösterir? (√2 = 1,41 alınız)",
+    ["DC: i = V/R = 12/3 = 4 A. Aynı ısı → AC etkin değerleri V_etkin = 12 V, i_etkin = 4 A.",
+     "V_maks = 12√2 ≈ 17 V; i_maks = 4√2 ≈ 5,7 A.", "230 V şebeke: V_maks = 230·1,41 ≈ 325 V.", "Voltmetre etkin değeri (12 V) gösterir, tepe değeri değil."],
+    "V_etkin = 12 V, i_etkin = 4 A; V_maks ≈ 17 V, i_maks ≈ 5,7 A; şebeke tepesi ≈ 325 V; voltmetre etkin değeri okur.",
+    """
+import math
+R, Vdc = 3.0, 12.0
+Pdc = Vdc ** 2 / R
+Vmax = Vdc * math.sqrt(2)
+# bağımsız: bir periyotta ortalama ısıl güç (sayısal integral)
+n = 100000
+Pavg = sum(((Vmax * math.sin(2 * math.pi * (k + 0.5) / n)) ** 2) / R for k in range(n)) / n
+assert abs(Pavg - Pdc) / Pdc < 1e-6                       # aynı ısı → V_etkin = V_dc
+Vrms = math.sqrt(sum((Vmax * math.sin(2 * math.pi * (k + 0.5) / n)) ** 2 for k in range(n)) / n)
+assert abs(Vrms - Vdc) < 1e-6 and abs(Vmax - 16.97) < 0.01 and abs(Vmax / R - 5.657) < 0.01
+assert abs(230 * 1.41 - 324.3) < 0.1
+# ortalama değer sıfır (ölçü aletinin okuduğu etkin değer, ortalama değil)
+assert abs(sum(Vmax * math.sin(2 * math.pi * (k + 0.5) / n) for k in range(n)) / n) < 1e-9
+# başarısız durum: kare dalgada V_etkin = V_maks (√2 geçersiz)
+Vsq = sum(((Vdc) ** 2) for _ in range(n)) / n
+assert abs(math.sqrt(Vsq) - Vdc) < 1e-12 and abs(math.sqrt(Vsq) * math.sqrt(2) - Vdc) > 1
+""")
+
+SOLUTIONS["ac-frequency-period-counting"] = S(
+    M(["Periyot T = 1/f (f: saniyedeki tam salınım sayısı).",
+       "Bir periyotta akım 2 kez yön değiştirir, 2 kez sıfırdan geçer (lamba 2 kez söner) ve mutlak değerce 2 kez tepe değerine ulaşır (biri +, biri −).",
+       "Saniyede sayım: yön değiştirme = sıfır geçiş = lambanın sönme sayısı = mutlak değerce tepe sayısı = 2f.",
+       "Verilen süredeki tam periyot sayısı = f·t; süre T'nin katıysa sayım tam çıkar.",
+       "Frekans değişince: T = 1/f kadar ters değişir (f ×2 → T ×1/2); tepe değer frekansa bağlı değildir, i–t grafiğinde tepeler aynı yükseklikte kalır, dalgalar sıkışır.",
+       "Şebeke tablosu: gerilim ve frekans iki ayrı özelliktir; aynı frekanslı şebekeler (ör. 50 Hz) birbirine bağlanabilir, gerilim farkı için transformatör gerekir."],
+      ["Sinüs biçimli AC", "Frekans tam salınım/s olarak verilmiş"],
+      ["Başlangıç anı sayıma bir fazla/eksik sıfır geçişi ekleyebilir; sayım tam periyot sayısında kesindir", "Frekans radyan/s (ω) verilirse f = ω/2π"],
+      ["T = f yazmak", "Bir periyottaki sıfır geçiş sayısını 1 sanmak", "Frekans artınca tepe değerin de arttığını sanmak"]),
+    M(["Akım bir yönde tepe yapıp sıfıra iner, sonra zıt yönde tepe yapıp sıfıra döner: bir tam salınımda iki sıfır, iki tepe.",
+       "Lamba akımın yönüne bakmaz; akım her sıfır geçişinde (saniyede 2f kez) çok kısa süre söner ama bu insan gözüyle fark edilmez.",
+       "Frekans, jeneratörün saniyedeki tur sayısıdır; tepe değeri alan, alan ve sarım belirler."],
+      ["Sinüs dalga"], ["Nitel"], ["Frekansı tepe sayısıyla karıştırmak"]),
+    M(["f'yi ikiyle çarp: saniyedeki yön değişimi, sönme ve tepe sayısı. T = 1/f. 'Tepe değer değişir mi?' → frekans değişince hayır."],
+      ["Sinüs biçimli AC"], ["Süre 1 s değilse süre ile çarp"], ["f yerine T'yi çarpmak"]),
+    None,
+    "Saniyede 2f: yön değişimi, sönme, mutlak tepe. T = 1/f. Frekans artınca grafik sıkışır, tepe değer aynı kalır.",
+    "Şebeke frekansı 60 Hz olan bir ülkede şebekeye bağlı lamba için (a) periyodu, (b) 1 saniyede akımın kaç kez yön değiştirdiğini, kaç kez mutlak değerce en büyük değere ulaştığını ve lambanın kaç kez söndüğünü, (c) 0,05 s'de kaç tam periyot olduğunu bulunuz. (d) Frekans 120 Hz'e çıkarılırsa i–t grafiğinde periyot ve tepe değeri nasıl değişir?",
+    ["(a) T = 1/60 s ≈ 16,7 ms.", "(b) Saniyede 2f = 120: 120 kez yön değiştirir, 120 kez mutlak değerce tepeye ulaşır, lamba 120 kez söner.",
+     "(c) f·t = 60·0,05 = 3 tam periyot.", "(d) f ×2 → T ×1/2 (≈ 8,3 ms); tepe değer değişmez."],
+    "(a) 1/60 s; (b) 120, 120, 120; (c) 3 tam periyot; (d) periyot yarıya iner, tepe değer aynı kalır.",
+    """
+import math
+def count(f, dur=1.0, dt=1e-5, phase=0.1):
+    n = int(dur / dt)
+    i = [math.sin(2 * math.pi * f * k * dt + phase) for k in range(n + 1)]
+    zeros = sum(1 for a, b in zip(i, i[1:]) if a * b < 0)
+    a_ = [abs(x) for x in i]
+    peaks = sum(1 for k in range(1, n) if a_[k] > a_[k - 1] and a_[k] >= a_[k + 1] and a_[k] > 0.999)
+    return zeros, peaks, max(i)
+z60, p60, m60 = count(60.0)
+assert abs(1 / 60.0 - 0.016667) < 1e-5 and z60 == 120 and p60 == 120     # yön değişimi = sıfır = tepe = 2f
+assert abs(60.0 * 0.05 - 3) < 1e-12 and count(60.0, dur=0.05)[0] in (5, 6)  # 3 periyot ≈ 6 sıfır geçişi (başlangıç fazına göre ±1)
+z120, p120, m120 = count(120.0)
+assert z120 == 240 and p120 == 240 and abs(m120 - m60) < 1e-6              # tepe değeri sabit
+assert abs((1 / 120.0) / (1 / 60.0) - 0.5) < 1e-12                          # periyot yarıya iner
+""")
+
+# ============================ FİZ.11.2.13 — Transformatör (program: hesaplamasız, oran/yorum) ============================
+SOLUTIONS["transformer-structure-experiment"] = S(
+    M(["Tabloda birincil sarım sayısı (Np) ve birincil gerilim (Vp) sabit satırları seç; yalnız ikincil sarım sayısı (Ns) değişiyor.",
+       "Ns kaç kat artınca ikincil gerilim (Vs) kaç kat arttığına bak: aynı çarpan → Vs, Ns ile doğru orantılıdır; benzer biçimde Np artınca (Vp sabit) Vs azalır.",
+       "Her satırda Vs/Ns (ya da Vs/Vp ile Ns/Np) oranını karşılaştır: aynı olmalı; farklı çıkan satır hatalı kayıttır.",
+       "Ns > Np ise Vs > Vp (yükseltici); Ns < Np ise Vs < Vp (alçaltıcı); Ns = Np ise Vs ≈ Vp.",
+       "DC kaynak bağlanırsa kararlı durumda birincil akım sabit, çekirdekteki akı sabit, ikincil bobinde gerilim oluşmaz (Vs = 0); yalnız anahtar kapanıp açılırken kısa süreli sıçrama olur.",
+       "Yapı: birincil bobin kaynağa bağlıdır ve akıyı üretir; demir çekirdek akıyı ikincil bobine taşır; ikincil bobin yüke gerilim verir."],
+      ["Alternatif akım kaynağı", "Demir çekirdekte akı iki bobine de ulaşıyor (ideal modele yakın)", "Satırlar arası yalnız bir değişken değişiyor"],
+      ["Program hesaplamayı dışlar; kitapta var: Vp/Vs = Np/Ns (s. 268)", "Çekirdek açık ya da bobinler uzaktaysa akı kaçar, ölçülen Vs beklenenden küçük çıkar", "DC'de ilk anda ölçülen kısa değer kararlı değer değildir"],
+      ["Birincil ve ikincil sütunlarını karıştırmak", "DC'de de sürekli ikincil gerilim beklemek", "Birden çok değişken değişen satırı tek etmenin etkisi saymak"]),
+    M(["İkincil bobinde gerilimi oluşturan şey çekirdekteki akının DEĞİŞİMİdir; AC bu akıyı sürekli değiştirir, DC değiştirmez.",
+       "Her sarım çekirdekteki aynı akı değişiminden aynı gerilim alır: sarım sayısı arttıkça sarımların gerilimleri seri toplanır → Vs ∝ Ns.",
+       "Demir çekirdek akı çizgilerini ikincil bobine yönlendirdiği için transformatör verimli çalışır."],
+      ["AC ile çalışan transformatör"], ["Nitel"], ["Bobini 'gerilim depolayan' eleman sanmak"]),
+    M(["Tek satır: 'Vs'nin Vp'ye oranı Ns'nin Np'ye oranına eşit' → bir satırdan ikinci satıra çarpanla git. DC bağlıysa → Vs = 0."],
+      ["AC, düzenli tablo"], ["DC / çekirdeksiz yapı"], ["Oranı ters (Np/Ns) kurmak"]),
+    M(["Sayısal yol: Vs = Vp·(Ns/Np) ile eksik hücre hesaplanır; sonuç ölçülenle karşılaştırılır (program hesaplamayı dışlar; kitapta var)."],
+      ["İdeal transformatör"], ["Program hesaplamayı dışlar; kitapta var"], ["Hesabı program kapsamında sanmak"]),
+    "Transformatör deneyi: Vs ∝ Ns (Vp, Np sabit); Np büyürse Vs küçülür. Tek tek satır çiftleriyle orantıyı kontrol et. DC bağlanırsa kararlı durumda Vs = 0.",
+    "Birincil bobini 600 sarımlı, Vp = 3 V (AC) olan bir deneyde ikincil sarım sayısı değiştirilerek şu Vs değerleri ölçülüyor: Ns = 300 → 1,5 V; Ns = 600 → 3,0 V; Ns = 1200 → 6,0 V; Ns = 1800 → 7,5 V. (a) Hangi satır tutarsızdır, doğru değer ne olmalıdır? (b) Vs ile Ns arasındaki ilişkiyi yorumlayınız. (c) Birincil bobine 3 V'luk DC kaynak bağlanırsa kararlı durumda voltmetre ne gösterir? Hangi bobin akıyı üretir, çekirdek ne iş yapar?",
+    ["Vs/Ns: 1,5/300 = 3,0/600 = 6,0/1200 = 0,005 V/sarım; 7,5/1800 = 0,0042 → 1800 sarımlı satır tutarsız.",
+     "Doğru değer: 0,005·1800 = 9,0 V.", "(b) Ns ikiye katlanınca Vs iki katı: Vs ∝ Ns (Vp, Np sabit). Ns < Np → alçaltıcı, Ns > Np → yükseltici.",
+     "(c) DC: kararlı durumda akı sabit → Vs = 0. Birincil bobin akıyı üretir, demir çekirdek akıyı ikincil bobine taşır."],
+    "1800 sarımlı satır hatalı (9,0 V olmalı); Vs ∝ Ns; DC'de kararlı durumda voltmetre 0 gösterir.",
+    """
+import math
+rows = [(300, 1.5), (600, 3.0), (1200, 6.0), (1800, 7.5)]
+Np, Vp = 600, 3.0
+ratio = [Vs / Ns for Ns, Vs in rows]
+bad = [i for i, r in enumerate(ratio) if abs(r - 0.005) / 0.005 > 0.05]
+assert bad == [3] and abs(0.005 * 1800 - 9.0) < 1e-12
+# fiziksel model: çekirdek akısı Φ(t) ortak; Vp = Np dΦ/dt, Vs = Ns dΦ/dt (AC)
+w = 2 * math.pi * 50
+phi = lambda t: -Vp / (Np * w) * math.cos(w * t)
+h = 1e-7
+dphi = lambda t: (phi(t + h) - phi(t - h)) / (2 * h)
+for Ns, Vs in rows[:3]:
+    Vs_pred = max(Ns * dphi(k * 1e-4) for k in range(200))          # tepe oranı: Vs/Vp = Ns/Np
+    assert abs(Vs_pred / Vp - Ns / Np) < 1e-3
+# DC: birincil akım R–L devresi; Vs = M di/dt kararlı durumda sıfır
+R, L, M_ = 1.5, 0.2, 0.15
+i = lambda t: (3.0 / R) * (1 - math.exp(-R * t / L))
+Vs_dc = lambda t: M_ * (i(t + h) - i(t - h)) / (2 * h)
+assert Vs_dc(1e-3) > 1.0 and abs(Vs_dc(5.0)) < 1e-9                 # anlık sıçrama var, kararlı durumda 0
+""")
+
+SOLUTIONS["transformer-turns-voltage-current-ratio"] = S(
+    M(["Sarım sayılarını karşılaştır: Ns < Np → alçaltıcı, Ns > Np → yükseltici. Hangi bobinin kaynağa bağlı (birincil) olduğuna dikkat et.",
+       "Gerilim yönü: yükselticide Vs > Vp, alçaltıcıda Vs < Vp (gerilim sarım sayısıyla aynı yönde değişir).",
+       "İdeal transformatörde güç korunur: giriş gücü = çıkış gücü. Gerilim kaç kat artarsa akım o kadar kat AZALIR (ters).",
+       "Akım yönü: yükselticide is < ip; alçaltıcıda is > ip.",
+       "Oran dili: Vs/Vp = Ns/Np ve is/ip = Np/Ns (akım oranı sarım oranının tersi).",
+       "Gerçek transformatörde kayıplar vardır (bobin ısınması, çekirdek kaçakları): çıkış gücü giriş gücünden küçüktür, fark ısıya gider."],
+      ["İdeal (kayıpsız) transformatör", "AC kaynak", "Birincil bobin kaynağa bağlı"],
+      ["Program hesaplamayı dışlar; kitapta var: Vp/Vs = Np/Ns = is/ip (s. 273)", "Gerçek transformatörde is/ip oranı Np/Ns'den küçüktür", "DC'de çalışmaz"],
+      ["Akım oranını sarım oranıyla doğru orantılı almak", "Birincil–ikincil bobinleri karıştırmak", "Gerilim kazanıldığı için gücün de arttığını sanmak"]),
+    M(["Güç korunumu: yükseltici transformatör 'gerilim kazandırır' ama akımdan öder; enerji yoktan var olmaz.",
+       "Her sarımın gerilimi eşittir: sarım sayısı çok olan bobinde toplam gerilim büyüktür; güç aynıysa akım küçüktür.",
+       "Gerçek cihazda ısıya giden kısım nedeniyle çıkış gücü daima girişten azdır."],
+      ["Enerji korunumu"], ["Nitel"], ["Gerilimi artıran trafonun enerji de artırdığını sanmak"]),
+    M(["Üç adım: (1) Ns/Np → tür, (2) gerilim aynı yönde, (3) akım ters yönde. İdealde P_giriş = P_çıkış; gerçekte P_çıkış < P_giriş."],
+      ["İdeal transformatör"], ["Kayıplı gerçek trafo"], ["Akımı da aynı yönde değiştirmek"]),
+    M(["Sayısal yol: Vs = Vp·Ns/Np, is = ip·Np/Ns, P = Vp·ip = Vs·is (program hesaplamayı dışlar; kitapta var)."],
+      ["İdeal transformatör"], ["Program hesaplamayı dışlar; kitapta var"], ["Sarım oranını ters yazmak"]),
+    "Trafo sorusunda 'gerilim sarımla aynı yönde, akım sarımın tersi, güç eşit'. Alçaltıcı → ikincil akım büyük. Gerçek trafoda çıkış gücü küçük (ısı).",
+    "İdeal bir transformatörün birincil bobini 1200, ikincil bobini 300 sarımlıdır. (a) Yükseltici mi alçaltıcı mı? (b) Vs, Vp'nin kaçta kaçıdır; is, ip'nin kaç katıdır? (c) Giriş ve çıkış güçleri nasıl karşılaştırılır? (d) Sarım sayıları yer değiştirirse (birincil 300, ikincil 1200) gerilim ve akımlar nasıl değişir? (e) Gerçek transformatörde güç ilişkisi nasıl olur?",
+    ["(a) Ns < Np → alçaltıcı.", "(b) Vs/Vp = Ns/Np = 1/4 → Vs = Vp/4; is/ip = Np/Ns = 4 → is = 4·ip.",
+     "(c) Vs·is = (Vp/4)(4ip) = Vp·ip → güçler eşit.", "(d) Yükseltici olur: Vs = 4Vp, is = ip/4; güç yine eşit.", "(e) Gerçekte P_çıkış < P_giriş (fark ısı)."],
+    "(a) Alçaltıcı; (b) Vs = Vp/4, is = 4 ip; (c) eşit; (d) yükseltici: Vs = 4 Vp, is = ip/4; (e) P_çıkış < P_giriş.",
+    """
+from fractions import Fraction as Fr
+import math
+def ideal(Np, Ns, Vp, ip):
+    Vs = Vp * Fr(Ns, Np)
+    is_ = ip * Fr(Np, Ns)                    # güç korunumu: Vp·ip = Vs·is
+    return Vs, is_
+Vp, ip = Fr(120), Fr(1)
+Vs, is_ = ideal(1200, 300, Vp, ip)
+assert Vs == Vp / 4 and is_ == 4 * ip and Vs * is_ == Vp * ip
+Vs2, is2 = ideal(300, 1200, Vp, ip)
+assert Vs2 == 4 * Vp and is2 == ip / 4 and Vs2 * is2 == Vp * ip
+# bağımsız: akı yolu — Vp = Np dΦ/dt, Vs = Ns dΦ/dt; akım ters oranda (ortalama güç eşitliği) sinüsle doğrulanır
+w = 2 * math.pi * 50
+n = 20000
+vp = [120 * math.sin(w * k / (50.0 * n)) for k in range(n)]
+vs = [v * 300 / 1200 for v in vp]            # Vs/Vp = Ns/Np
+ip_t = [1.0 * math.sin(w * k / (50.0 * n)) for k in range(n)]
+is_t = [i * 1200 / 300 for i in ip_t]        # is/ip = Np/Ns
+Pin = sum(a * b for a, b in zip(vp, ip_t)) / n
+Pout = sum(a * b for a, b in zip(vs, is_t)) / n
+assert abs(Pin - Pout) / Pin < 1e-9
+# gerçek trafo: verim < 1 → is, idealden küçük; çıkış gücü girişten küçük
+eta = 0.9
+is_real = eta * float(is_)
+assert is_real < float(is_) and abs(float(Vs) * is_real - eta * float(Vp * ip)) < 1e-9
+# başarısız model: akımı sarım oranıyla doğru orantılı almak güç korunumunu bozar
+is_wrong = ip * Fr(300, 1200)
+assert Vs * is_wrong != Vp * ip
+""")
+
+SOLUTIONS["transformer-chain-and-lamp-comparison"] = S(
+    M(["Her transformatör için çarpan: k = Ns/Np (ikincil sarım / birincil sarım). k > 1 yükseltici, k < 1 alçaltıcı.",
+       "Özdeş lambalarda parlaklık, lambanın uçlarındaki ikincil gerilimin büyüklüğüne bağlıdır (daha büyük gerilim → daha parlak); aynı kaynağa bağlı trafolarda k'yı karşılaştırarak sırala.",
+       "Ardışık bağlı iki transformatörde ilkinin ikincil gerilimi ikincinin birincil gerilimidir: toplam çarpan k₁·k₂ (çarpılır, toplanmaz).",
+       "Hedef gerilim için gerekli son çarpanı bul: k_gerekli = V_hedef / V_ara; sarım sayısını buna göre değiştir.",
+       "Yapıyı kontrol et: demir çekirdeksiz/açık çekirdekli ya da DC kaynaklı transformatörde ikincil gerilim oluşmaz (ya da çok küçüktür); o lamba yanmaz.",
+       "Güç sorusu varsa özdeş lambada P ∝ V² (daha büyük gerilimde daha parlak)."],
+      ["İdeal transformatörler", "AC kaynak", "Lambalar özdeş ve doğrusal (direnç sabit)"],
+      ["Program hesaplamayı dışlar; kitapta var: kitap 47. Alıştırma sayısal değerlerle sorar", "Lamba direnci sıcaklıkla değişir; parlaklık sıralaması yine de gerilim sıralamasıyla uyumludur", "Çekirdeksiz yapıda oran kullanılamaz"],
+      ["Çarpma yerine toplama yapmak", "Oranı (Ns/Np) ters kurmak", "Sarım sayısı fazla olan lambanın hep en parlak olduğunu sanmak (Ns/Np oranına bak)"]),
+    M(["Her aşamada gerilim sarım oranı kadar ölçeklenir; aşamalar arka arkaya olduğundan ölçekler çarpılır.",
+       "Lamba parlaklığı o lambaya aktarılan güçle ilgilidir; özdeş lambada güç gerilimin karesiyle artar.",
+       "Akı olmadan (DC ya da çekirdeksiz) enerji aktarımı yoktur."],
+      ["Ardışık trafolar"], ["Nitel"], ["Ara gerilimi atlamak"]),
+    M(["k = Ns/Np'yi her trafo için yaz; sırala; zincirde çarp. 'Son gerilim = V₀' için k₁k₂ = 1 yap."],
+      ["İdeal trafolar"], ["Çekirdeksiz yapı"], ["k'yı ters yazmak"]),
+    None,
+    "k = Ns/Np'yi her trafoda yaz; zincirde çarp; parlaklık sırası = k sırası (aynı kaynak). DC ya da çekirdeksiz yapı → lamba yanmaz.",
+    "Aynı AC kaynağa (gerilimi V) bağlı üç ideal trafonun sarım sayıları: K (Np = 200, Ns = 100), L (Np = 100, Ns = 300), M (Np = 150, Ns = 150). Her birinin ikincil bobinine özdeş birer lamba bağlı. (a) Lambaları parlaklığa göre sıralayınız. (b) L'nin ikincil bobini, birincil bobini 300 ve ikincil bobini 150 sarımlı bir trafonun birincil bobinine bağlanırsa son gerilim kaç V olur? (c) Son gerilimin tam V olması için ikinci trafonun ikincil sarım sayısı ne olmalıdır? (d) N trafosu DC kaynağa bağlıysa N'nin lambası yanar mı?",
+    ["(a) k_K = 100/200 = 1/2, k_L = 3, k_M = 1 → gerilimler V/2, 3V, V → parlaklık L > M > K.",
+     "(b) İkinci trafonun k = 150/300 = 1/2 → toplam k = 3·(1/2) = 3/2 → son gerilim 1,5 V.",
+     "(c) k_toplam = 1 için k₂ = 1/3 → Np₂ = 300 ise Ns₂ = 100.", "(d) DC'de çekirdekteki akı sabit → ikincil gerilim yok → lamba yanmaz."],
+    "(a) L > M > K; (b) 1,5 V; (c) 100 sarım; (d) yanmaz.",
+    """
+from fractions import Fraction as Fr
+def secondary(V, Np, Ns, ac=True, core=True):
+    if not ac or not core:
+        return Fr(0)
+    return V * Fr(Ns, Np)
+V = Fr(100)
+VK, VL, VM = secondary(V, 200, 100), secondary(V, 100, 300), secondary(V, 150, 150)
+assert VK == V / 2 and VL == 3 * V and VM == V and VL > VM > VK
+# lamba gücü P = V²/R (özdeş lamba): sıralama gerilim sıralamasıyla aynı
+assert VL ** 2 > VM ** 2 > VK ** 2
+V_end = secondary(secondary(V, 100, 300), 300, 150)
+assert V_end == Fr(3, 2) * V
+# (c) son gerilim V olsun: Ns2
+Ns2 = [n for n in range(1, 1000) if secondary(secondary(V, 100, 300), 300, n) == V]
+assert Ns2 == [100]
+# (d) DC kaynak ya da çekirdeksiz yapı → ikincil gerilim yok
+assert secondary(V, 100, 300, ac=False) == 0 and secondary(V, 100, 300, core=False) == 0
+# başarısız model: gerilimleri toplamak yanlış sonuç verir
+assert V * Fr(3) + V * Fr(1, 2) != V_end
+""")
+
+SOLUTIONS["transformer-transmission-loss"] = S(
+    M(["İletilen güç aynıysa P = V·i: iletim gerilimi ne kadar artarsa hattaki akım o kadar azalır (ters orantı).",
+       "Hat telinde kayıp Joule ısınmasıdır: P_kayıp = i²·R. Kayıp akımın KARESİYLE orantılıdır.",
+       "Gerilim n kat artarsa akım 1/n, kayıp 1/n² olur. Hat direnci k kat olursa kayıp k kat olur.",
+       "Birleşik oran: P_kayıp'ın yeni değeri = (akım çarpanı)²·(R çarpanı); akım çarpanı = 1/(gerilim çarpanı).",
+       "Hat modelini yorumla: santral yanında yükseltici (K), şehirde ara/alçaltıcı (L, M): iletim yüksek gerilimde, tüketim güvenli düşük gerilimde yapılır.",
+       "Neden direnç azaltılmaz? Daha kalın tel çok pahalı ve ağırdır; gerilimi yükseltmek ekonomik yoldur."],
+      ["İletilen güç sabit", "Hat direnci sabit (ya da çarpanı verilmiş)", "İdeal transformatörler (kayıp yalnız hatta)"],
+      ["Program hesaplamayı dışlar; kitapta var: P = V·i ve P_kayıp = i²·R (s. 263)", "Yük direnci sabitse gerilim artınca akım ARTAR (sabit güç varsayımı geçersiz olur)", "P_kayıp = V²/R'de V, hattın iki ucu arasındaki gerilim olmalı, şebeke gerilimi değil"],
+      ["P = i²R yerine P = iR yazmak", "Yükseltici ve alçaltıcıyı yanlış yere koymak", "Gerilim artınca akımın da arttığını sanmak"]),
+    M(["Aynı güç için gerilimi artırmak, daha az yük taşımak demektir: akım azalır, telin ısınması çok azalır.",
+       "Akım yarıya inince ısınma dörtte birine iner: telin uçları arasındaki gerilim düşümü (i·R) de yarıya iner ve güç = (düşüm)·(akım) olduğundan iki etki çarpılır (i²R).",
+       "Alçaltıcı transformatör, yüksek gerilimli hattı güvenli kullanım gerilimine indirir."],
+      ["Enerji iletimi"], ["Nitel"], ["Kaybı artıran şeyin gerilim olduğunu sanmak"]),
+    M(["Gerilim n kat ↑ → akım n kat ↓ → kayıp n² kat ↓. Direnç çarpanı doğrudan kayıp çarpanıdır."],
+      ["Sabit güç, sabit hat"], ["Yük değişirse geçersiz"], ["n yerine n² kullanmamak"]),
+    M(["Sayısal yol: i = P/V, P_kayıp = i²R ile iki durumu hesapla ve oranla (program hesaplamayı dışlar; kitapta var)."],
+      ["Sabit güç"], ["Program hesaplamayı dışlar; kitapta var"], ["Birimleri (kV → V) çevirmemek"]),
+    "İletimde 'gerilim ×n → akım /n → kayıp /n²'. Direnç çarpanı kayıp çarpanıdır. Yükseltici santral yanında, alçaltıcı tüketici yanında.",
+    "Bir santralin ürettiği güç aynı iletim hattından taşınıyor. (a) İletim gerilimi 5 katına çıkarılırsa hattaki akım ve hattaki enerji kaybı kaç katına çıkar? (b) Gerilim değişmeden hat direnci yarıya inerse kayıp ne olur? (c) Gerilim 4 katına çıkarılır ve eski telin yerine direnci 2 katı olan bir tel kullanılırsa kayıp kaç katı olur? (d) K (santral yanı) ve M (ev yanı) transformatörleri hangi türdedir?",
+    ["Sabit güç: i ∝ 1/V; P_kayıp = i²R.", "(a) i ×1/5, kayıp ×1/25.", "(b) Kayıp ×1/2.", "(c) i ×1/4 → i² ×1/16; R ×2 → kayıp ×2/16 = ×1/8.", "(d) K yükseltici, M alçaltıcı."],
+    "(a) i → 1/5, kayıp → 1/25; (b) kayıp yarıya iner; (c) kayıp 1/8; (d) K yükseltici, M alçaltıcı.",
+    """
+P, R = 1.0e6, 10.0                          # W, Ω
+loss = lambda V, R_: (P / V) ** 2 * R_       # P_kayıp = i² R, i = P/V
+V0 = 20e3
+L0 = loss(V0, R)
+assert abs(loss(5 * V0, R) / L0 - 1 / 25) < 1e-12
+assert abs((P / (5 * V0)) / (P / V0) - 1 / 5) < 1e-12
+assert abs(loss(V0, R / 2) / L0 - 0.5) < 1e-12
+assert abs(loss(4 * V0, 2 * R) / L0 - 1 / 8) < 1e-12
+assert abs(L0 - 25e3) < 1e-6 and abs(loss(100e3, R) - 1e3) < 1e-6      # 2,5 % → 0,1 %
+# başarısız durum 1: yük direnci sabitse gerilim artınca akım artar (sabit güç varsayımı geçersiz)
+R_load = 100.0
+i_load = lambda V: V / R_load
+assert i_load(5 * V0) > i_load(V0)
+# başarısız durum 2: kayıpta şebeke gerilimi kullanmak (V²/R, V hattın iki ucu arasında değil) hatalı sonuç verir
+V_drop = (P / V0) * R                        # hat uçları arasındaki gerilim düşümü
+assert abs(V_drop ** 2 / R - L0) < 1e-9 and abs(V0 ** 2 / R - L0) > 1e6
+""")
+
+SOLUTIONS["transformer-applications-record"] = S(
+    M(["Kayıt tablosunda her satır için kaynak gerilimini (şebeke ya da önceki kademe) ve cihazın gerekli gerilimini yaz.",
+       "Cihaz gerilimi < kaynak gerilimi → alçaltıcı; cihaz gerilimi > kaynak gerilimi → yükseltici; eşitse transformatör gerekmez.",
+       "Yazılı rolü bu kuralla karşılaştır; çelişen hücre yanlıştır, eksik hücreyi aynı kuralla doldur.",
+       "Rol, transformatörün hangi bobininin kaynağa bağlı olduğuna bağlıdır; aynı trafo ters bağlanırsa rolü de tersine döner.",
+       "Cihazın etiketi (ör. 110 V) cihazın ihtiyaç duyduğu gerilimdir, şebeke gerilimi değildir; şebekeden farklıysa dönüştürücü (transformatör) gerekir.",
+       "Her kayıtta üç öge olsun: uygulama, rol (yükselten/alçaltan), kaynak (kitap sayfası / araştırma)."],
+      ["Alternatif akım şebekesi", "Cihaz geriliminin ve kaynak geriliminin değerleri belli"],
+      ["Transformatör yalnız gerilimin büyüklüğünü değiştirir; doğru akımla çalışan cihaz (telefon şarjı) ayrıca doğrultucu ister", "Program yalnız rolü yorumlatır; sayısal sarım oranı hesabı programda yoktur", "Hat modelinde santral yanı yükseltici, tüketici yanı alçaltıcıdır; ara trafoda kademeye bakılmalı"],
+      ["Uygulama ile rolünü karıştırmak", "Cihaz etiketindeki gerilimi şebeke gerilimi sanmak", "Ters bağlanan trafonun rolünü sabit saymak"]),
+    M(["Transformatörün görevi, mevcut gerilimi cihazın istediği gerilime dönüştürmektir: yüksek gerilimli hat → ev gerilimi → cihaz gerilimi.",
+       "İletim hatlarında yükseltme, kaybı azaltmak içindir; evde alçaltma güvenlik ve cihaz uyumu içindir.",
+       "Uygun olmayan gerilimde çalışan cihaz yanabilir (110 V cihaz 220 V şebekede) ya da çalışmaz."],
+      ["Kullanım alanı yorumu"], ["Nitel"], ["Transformatörün enerji ürettiğini sanmak"]),
+    M(["Her satırda iki sayıyı karşılaştır: cihaz < kaynak → alçaltıcı; cihaz > kaynak → yükseltici. Yazılı rolle uyuşmuyorsa hatalı."],
+      ["AC kaynak"], ["Ters bağlama, doğrultucu gereksinimi"], ["Sayıların yerini karıştırmak"]),
+    None,
+    "Tabloda rol = (cihaz gerilimi ile kaynak gerilimini karşılaştır). Küçülüyorsa alçaltıcı, büyüyorsa yükseltici. 110 V cihaz + 220 V şebeke → alçaltıcı dönüştürücü gerekir.",
+    "Bir öğrenci kayıt tablosuna şunları yazmıştır: (1) Cep telefonu şarj aleti: 230 V → 5 V, alçaltıcı. (2) Mikrodalga fırının yüksek gerilim bölümü: 230 V → 2000 V, alçaltıcı. (3) Santral çıkışı: 10 kV → 150 kV, yükseltici. (4) Şehir girişi: 150 kV → 10 kV, yükseltici. (5) 110 V ile çalışan cihaz 230 V şebekede: dönüştürücü gerekir, yükseltici. Hangi hücreler hatalıdır, doğru roller nedir? 110 V'luk cihaz dönüştürücüsüz 230 V şebekeye bağlanırsa ne olur?",
+    ["Kural: cihaz/çıkış gerilimi < giriş → alçaltıcı; > giriş → yükseltici.",
+     "(1) 5 < 230 → alçaltıcı (doğru). (2) 2000 > 230 → YÜKSELTİCİ (yazılan hatalı). (3) 150 kV > 10 kV → yükseltici (doğru). (4) 10 kV < 150 kV → ALÇALTICI (yazılan hatalı).",
+     "(5) 110 V < 230 V → ALÇALTICI dönüştürücü (yazılan hatalı).", "Dönüştürücüsüz bağlanırsa cihaz gereğinden yüksek gerilim alır; zarar görür/yanar."],
+    "Hatalı hücreler 2, 4, 5: doğru roller yükseltici, alçaltıcı, alçaltıcı; dönüştürücüsüz bağlanırsa cihaz yüksek gerilimle zarar görür.",
+    """
+def role(v_in, v_out):
+    return "alçaltıcı" if v_out < v_in else "yükseltici" if v_out > v_in else "gerekmez"
+table = [(1, 230, 5, "alçaltıcı"), (2, 230, 2000, "alçaltıcı"), (3, 10e3, 150e3, "yükseltici"),
+         (4, 150e3, 10e3, "yükseltici"), (5, 230, 110, "yükseltici")]
+wrong = [i for i, vin, vout, r in table if role(vin, vout) != r]
+assert wrong == [2, 4, 5]
+assert [role(vin, vout) for i, vin, vout, r in table if i in wrong] == ["yükseltici", "alçaltıcı", "alçaltıcı"]
+# ters bağlama: aynı trafoyu çevirince rol tersine döner
+assert role(5, 230) == "yükseltici" and role(230, 5) == "alçaltıcı"
+# cihazın etiketi (110 V) şebeke değildir: gerilim oranı 230/110 > 1 → dönüştürücüsüz bağlanınca aşırı gerilim
+assert 230 / 110 > 1.5
+# başarısız durum: eşit gerilimde trafo gerekmez
+assert role(230, 230) == "gerekmez"
+""")
+
+
+# =====================================================================================================
+# KISA YOLLAR (SHORTCUTS) — Ünite 2
+# Kapsam: 11.2.1 / 11.2.2 / 11.2.5 / 11.2.13 hesapsız — kısa yollar oran, yön, tablo yorumu düzeyindedir;
+# numeric_check yalnız kısa yolun doğruluğunu tam yöntemle sınar (öğrenciden sayısal hesap beklenmez).
+# =====================================================================================================
+
+# ---------------- Coulomb ve elektrik alan ----------------
+SHORTCUTS += [
+    SC("inverse-square-multiplier-method", "Çarpan yöntemi: q çarpanları / d çarpanının karesi / k çarpanı",
+       ["coulomb-ratio-generalization", "coulomb-collinear-net-force", "efield-point-charge-ratio"],
+       "F (ya da E) yeni = F·(q₁ çarpanı)(q₂ çarpanı)(k çarpanı)/(d çarpanı)²; E için yalnız kaynak yükü (q) çarpanı, F için iki yük çarpanı.",
+       "F = k·q₁q₂/d² ve E = k·q/d² bağıntıları çarpımsal olduğundan her değişkenin çarpanı bağımsız olarak çarpılır; d'nin çarpanı ters kare gelir.",
+       ["Noktasal (ya da küresel simetrik, uzak) yükler", "Ortam k'si değişiyorsa çarpanı verilmiş", "Yük miktarları sabit kalıyor"],
+       ["d çarpanını karesiz kullanmak ('d iki katına çıkınca F yarıya iner') yanlıştır", "Yükler arasında temas/paylaşım varsa yeni yükler önce bulunmalı (çarpımın işareti bile değişebilir)", "Çok yakın mesafede iletken kürelerin yük dağılımı bozulur, noktasal model geçersiz", "Program hesaplamayı dışlar; oran düzeyinde kullanılır, kitapta k·q₁q₂/d² var"],
+       "LOW", [TB("s. 159 14. adım tablosu"), TB("s. 163 1. Alıştırma"), DV("F = k·q₁·q₂/d² çarpımsal; ortak sabitler oranda sadeleşir")],
+       """
+import random
+from fractions import Fraction as Fr
+random.seed(11)
+F = lambda k, q1, q2, d: k * q1 * q2 / d ** 2
+for _ in range(300):
+    k = 9e9; q1, q2 = random.uniform(1e-9, 9e-9), random.uniform(1e-9, 9e-9); d = random.uniform(0.01, 0.2)
+    a, b, c, e = (random.choice([Fr(1, 3), Fr(1, 2), 2, 3, 4]) for _ in range(4))
+    full = F(k * float(e), q1 * float(a), q2 * float(b), d * float(c)) / F(k, q1, q2, d)
+    assert abs(full / float(a * b * e / c ** 2) - 1) < 1e-9
+# başarısız durum 1: d çarpanını karesiz almak
+assert abs(F(1, 1, 1, 2) / F(1, 1, 1, 1) - 1 / 2) > 0.2           # gerçek 1/4, yanlış kısa yol 1/2
+# başarısız durum 2: temas sonrası yük paylaşımı (özdeş iletken küreler): çarpım ve işaret değişir
+q1, q2 = 4.0, -2.0
+q1n = q2n = (q1 + q2) / 2
+assert q1 * q2 < 0 < q1n * q2n                                      # çekmeden itmeye geçer; eski çarpanlarla çarpmak yanlış
+""")
+    ,
+    SC("constant-ratio-column-table", "Sabit oran sütunu: tablodan model testi ve eksik hücre",
+       ["coulomb-data-table-graph", "efield-data-table-graph", "wire-field-data-model", "solenoid-data-model", "wire-force-data-model"],
+       "Tabloya modelin 'çıktı·(ters etmenler)/(doğru etmenler)' sütununu ekle (F·d²/q₁q₂, E·d²/q, B·d/i, B·L/(iN), F/(B·i·L·sinθ)); sütun sabitse model doğrudur ve eksik hücre bu sabitle tamamlanır, sabit değilse model yanlıştır.",
+       "Doğru orantı ve ters orantı bileşenlerinden oluşan bir bağıntı (y = c·∏xᵢ^pᵢ) her satırda aynı c'yi verir; yanlış üs sütunu sabit tutmaz.",
+       ["Çıktıyı etkileyen tüm değişkenler tabloda bulunuyor", "Üs değerleri (modelde 1 ya da 2) bilinir ya da denenir", "Ölçüm hatası küçük (tolerans payıyla)"],
+       ["Ölçüm gürültüsü varsa oran tam sabit çıkmaz: tolerans düşünülmeli, tek sapmaya bakıp modeli reddetmemek", "Tabloda tablo dışı bir değişken (ortam, sıcaklık) de değişmişse sütun sabit çıkmaz", "Yanlış üsle (ör. 1/d yerine 1/d²) sütun sabit çıkmaz — bu bir hata değil, modelin yanlış olduğunu gösterir", "Program yalnız yorumu ister; sabitin sayısal değeri sorulmaz"],
+       "MEDIUM", [TB("s. 158 10. adım"), TB("s. 167 10. adım"), TB("s. 204 Örnek cevabı"), TB("s. 208 6.–7. adım"), TB("s. 220 7.–9. adım"), DV("y = c·∏ xᵢ^pᵢ ⇒ y/∏ xᵢ^pᵢ = c")],
+       """
+import random, math
+random.seed(3)
+# her yasa: (şekil fonksiyonu, sabit c): y = c·şekil → sütun y/şekil sabittir
+laws = {"coulomb": (lambda q1, q2, d: q1 * q2 / d ** 2, 9.0), "efield": (lambda q, d: q / d ** 2, 9.0),
+        "wire": (lambda i, d: i / d, 0.2), "solenoid": (lambda i, N, L: i * N / L, 1.2),
+        "force": (lambda B, i, L, s: B * i * L * s, 1.0)}
+for name, (shape, c) in laws.items():
+    n = shape.__code__.co_argcount
+    rows = [[random.uniform(0.5, 5) for _ in range(n)] for _ in range(6)]
+    ys = [c * shape(*r) for r in rows]
+    cs = [y / shape(*r) for y, r in zip(ys, rows)]               # sütun: çıktı / (doğru etmenler / ters etmenler)
+    assert max(cs) - min(cs) < 1e-9 * max(cs)                      # sütun sabit
+    hidden = ys[-1]                                                # eksik hücre: sabitle tamamlanır
+    assert abs(cs[0] * shape(*rows[-1]) - hidden) < 1e-9 * hidden
+# başarısız durum 1: yanlış üs → sütun sabit değil
+rows = [(q, d) for q, d in [(1, 1), (1, 2), (2, 3), (1, 4)]]
+wrong = [9.0 * q / d ** 2 * d / q for q, d in rows]                # d çarpanı (1 yerine 2 üs) yanlış
+assert max(wrong) - min(wrong) > 1.0
+# başarısız durum 2: gürültü — %5 hata ile tam eşitlik testi başarısız, tolerans testi başarılı
+noisy = [9.0 * (1 + random.uniform(-0.05, 0.05)) for _ in range(6)]
+assert max(noisy) != min(noisy) and (max(noisy) - min(noisy)) / 9.0 < 0.12
+""")
+    ,
+    SC("two-row-exponent-log-slope", "İki satırdan üs bulma: p = ln(y₂/y₁)/ln(x₂/x₁)",
+       ["coulomb-data-table-graph", "efield-data-table-graph", "wire-field-data-model", "solenoid-data-model"],
+       "Yalnız bir değişkenin (x) değiştiği iki satırda çıktı y'nin üssü p = ln(y₂/y₁)/ln(x₂/x₁): d için ≈ −2 → ters kare; −1 → ters orantı; +1 → doğru orantı. Grafik: log–log doğrusu.",
+       "y = c·xᵖ ise ln y = ln c + p·ln x doğrusaldır; iki noktadan eğim p'yi verir.",
+       ["Satır çifti yalnız bir değişkende farklı", "Güç yasası biçimli ilişki"],
+       ["İki değişkenin birden değiştiği satır çiftinde sonuç yanlıştır (ör. q ve d birlikte değişirse p anlamsızdır)", "İlişki güç yasası değilse (ör. doygunluk, eşik) tek üs yoktur", "Ölçüm hatası tek çiftte büyük etki yapar: mümkünse iki çift kullan"],
+       "MEDIUM", [TB("s. 158 10. adım"), TB("s. 167 9.–10. adım"), DV("ln y = ln c + p·ln x doğru denklemi")],
+       """
+import math
+y = lambda q, d: 3.0 * q / d ** 2
+# tek değişkenli çift: d ×3 → y ÷9 → p = −2
+p = math.log(y(2, 6) / y(2, 2)) / math.log(6 / 2)
+assert abs(p + 2) < 1e-12
+# q ×3 → p = +1
+assert abs(math.log(y(6, 2) / y(2, 2)) / math.log(3) - 1) < 1e-12
+# başarısız: iki değişken birden değişir (q ×3 ve d ×3) → p = −1 gibi görünür (yanlış üs)
+p_bad = math.log(y(6, 6) / y(2, 2)) / math.log(3)
+assert abs(p_bad + 2) > 0.5
+# başarısız: güç yasası olmayan ilişki (y = d + 1/d) için iki farklı çiftte farklı üs çıkar
+f = lambda d: d + 1 / d
+p1 = math.log(f(2) / f(1)) / math.log(2); p2 = math.log(f(4) / f(2)) / math.log(2)
+assert abs(p1 - p2) > 0.3
+""")
+    ,
+    SC("coulomb-sign-product-direction", "İşaret çarpımı → yön; kuvvetler eşit (Newton 3); ivme ∝ 1/m",
+       ["coulomb-direction-newton3", "coulomb-free-charge-dynamics"],
+       "(+)(+) ve (−)(−) → itme; (+)(−) → çekme. İki yükün birbirine uyguladığı kuvvetler eşit büyüklükte, zıt yönlü; serbest bırakılırsa ivmelerin oranı kütlelerin tersi.",
+       "Coulomb kuvveti yük çarpımının işaretiyle yön kazanır ve ikili etkileşim etki–tepki çiftidir; F = m·a ⇒ a = F/m.",
+       ["İki noktasal yükün etkileşimi", "Yalnız elektriksel kuvvet (ağırlık ihmal)"],
+       ["Üçüncü bir yük varsa net kuvvet vektörel toplamdır; tek çiftin yönü yetmez", "Kuvvet yaklaşırken artar: sabit ivme formülleri kullanılamaz", "Birine kuvvet uygulayan yük büyük diye kuvvetin büyük olduğu sanılır: büyüklükler eşittir"],
+       "LOW", [TB("s. 162 Örnek"), TB("s. 164 3. Alıştırma"), TB("s. 165 4. Alıştırma"), DV("Newton'un 3. yasası, Coulomb yasası")],
+       """
+import random
+random.seed(5)
+def force_on_1(q1, x1, q2, x2):
+    d = x1 - x2
+    return q1 * q2 / d ** 2 * (1 if d > 0 else -1)                # (x ekseni) k = 1
+for _ in range(500):
+    q1, q2 = random.choice([-1, 1]) * random.uniform(0.5, 9), random.choice([-1, 1]) * random.uniform(0.5, 9)
+    x1, x2 = random.uniform(-5, 5), random.uniform(-5, 5)
+    if abs(x1 - x2) < 0.1: continue
+    f1, f2 = force_on_1(q1, x1, q2, x2), force_on_1(q2, x2, q1, x1)
+    assert abs(f1 + f2) < 1e-9                                      # eşit büyüklük, zıt yön
+    repel = (f1 > 0) == (x1 > x2)                                   # 1. yük diğerinden uzağa itiliyor mu
+    assert repel == (q1 * q2 > 0)                                   # işaret çarpımı kuralı
+    m1, m2 = random.uniform(1, 9), random.uniform(1, 9)
+    assert abs((f1 / m1) / (f2 / m2) + m2 / m1) < 1e-9              # |a1|/|a2| = m2/m1
+# başarısız: üçüncü yük varsa tek çifte bakmak net yönü verir mi? (verme)
+qs, xs = [1.0, -1.0, 3.0], [0.0, 1.0, 1.5]
+net_on_2 = force_on_1(qs[1], xs[1], qs[0], xs[0]) + force_on_1(qs[1], xs[1], qs[2], xs[2])
+only_pair = force_on_1(qs[1], xs[1], qs[0], xs[0])
+assert (net_on_2 > 0) != (only_pair > 0)                            # net yön, tek çiftin yönünden farklı
+""")
+    ,
+    SC("collinear-f-unit-table", "Doğrusal yük dizisinde F birimi tablosu ve net kuvvetlerin toplamı sıfır",
+       ["coulomb-collinear-net-force", "efield-superposition-collinear"],
+       "Tüm çiftler için 'q-çarpımı/(d çarpanı)²' değerini F (ya da E₀) biriminde yaz, yön işaretle ekle; her yüke gelen net kuvveti topla. Kontrol: üç yükün net kuvvetlerinin toplamı sıfırdır.",
+       "Her çiftin kuvveti ayrı hesaplanır (süperpozisyon) ve iç kuvvetler Newton 3 ile ikişer ikişer götürür.",
+       ["Yükler aynı doğru üzerinde", "Her çift için noktasal Coulomb kuvveti"],
+       ["Yükler aynı doğru üzerinde değilse işaretli toplama yetmez, vektör bileşenleri gerekir", "Toplamın sıfır çıkması sonuçların doğruluğunun gerekli koşuludur, yeterli değil", "Alan sorusunda (E₀) toplam sıfır kontrolü uygulanmaz; yalnız kuvvetlerde geçerli"],
+       "MEDIUM", [TB("s. 163 1. Alıştırma"), TB("s. 276 ÖD-3"), TB("s. 172 Örnek"), DV("Süperpozisyon + Newton 3")],
+       """
+import random
+from fractions import Fraction as Fr
+random.seed(8)
+def nets(q, x):
+    out = []
+    for i in range(len(q)):
+        s = Fr(0)
+        for j in range(len(q)):
+            if j != i:
+                d = x[i] - x[j]
+                s += q[i] * q[j] / d ** 2 * (1 if d > 0 else -1)
+        out.append(s)
+    return out
+for _ in range(200):
+    q = [Fr(random.choice([-3, -2, -1, 1, 2, 3])) for _ in range(3)]
+    x = sorted(random.sample(range(0, 12), 3)); x = [Fr(v) for v in x]
+    assert sum(nets(q, x)) == 0                                     # toplam sıfır
+# başarısız: alan sorusunda toplam sıfır kuralı yok
+q, x = [Fr(1), Fr(-2), Fr(1)], [Fr(0), Fr(1), Fr(3)]
+def E(p):
+    s = Fr(0)
+    for qq, xx in zip(q, x):
+        d = p - xx
+        s += qq / d ** 2 * (1 if d > 0 else -1)
+    return s
+assert sum(E(p) for p in (Fr(-1), Fr(2), Fr(5))) != 0
+""")
+    ,
+    SC("field-lines-three-rules", "Alan çizgisi üç kuralı: çıkış + / giriş −; çizgi sayısı ∝ |q|; sıklık ∝ E",
+       ["efield-direction-and-lines", "magnet-field-lines-pattern"],
+       "Çizgi çıkıyorsa yük pozitif, giriyorsa negatif; çizgi sayısı oranı yük büyüklükleri oranına eşit; birim alandaki çizgi sayısı o noktadaki alan büyüklüğünü gösterir.",
+       "Çizgi sayısı, yükü saran kapalı yüzeyden geçen toplam alan çizgisi sayısıdır (Gauss yasası ile q'ya orantılı); çizgi yoğunluğu |E| ile orantılı çizilir.",
+       ["Çizgiler aynı çizimde, aynı ölçekte çizilmiş", "Yükü tamamen çevreleyen yüzeyden çıkan toplam çizgi sayılıyor"],
+       ["Yükü çevrelemeyen yüzeyde net çizgi sayısı sıfırdır (giren ve çıkan eşit)", "Farklı çizimler arası çizgi sayısı karşılaştırılamaz (ölçek yok)", "Çizgiler birbirini kesmez; kesişen çizgili şekil yanlıştır", "Program hesaplamayı dışlar; yalnız nitel kullanım"],
+       "HIGH", [TB("s. 173 6. Alıştırma"), TB("s. 185 Özet"), DV("Gauss yasası: Φ_E = q/ε₀ — kapalı yüzeyden çıkan çizgi sayısı ∝ q")],
+       """
+import math
+def flux(q, pos, R=1.0, n=60):
+    # küre yüzeyi üzerinden net alan çizgisi (E·n dA); k = 1
+    s = 0.0
+    for a in range(n):
+        th = math.pi * (a + 0.5) / n
+        for b in range(2 * n):
+            ph = math.pi * (b + 0.5) / n
+            nx, ny, nz = math.sin(th) * math.cos(ph), math.sin(th) * math.sin(ph), math.cos(th)
+            rx, ry, rz = R * nx - pos[0], R * ny - pos[1], R * nz - pos[2]
+            r3 = (rx * rx + ry * ry + rz * rz) ** 1.5
+            s += q * (rx * nx + ry * ny + rz * nz) / r3 * R * R * math.sin(th) * (math.pi / n) ** 2
+    return s
+f1 = flux(1.0, (0, 0, 0)); f2 = flux(2.0, (0.3, -0.2, 0.1)); fm = flux(-1.0, (0.2, 0.2, 0))
+assert abs(f1 / (4 * math.pi) - 1) < 1e-3 and abs(f2 / f1 - 2) < 1e-2 and abs(fm / f1 + 1) < 1e-2    # çıkış +, sayı ∝ |q|, giriş −
+# sıklık ∝ |E|: d → 2d alan 1/4
+assert abs((1 / 1 ** 2) / (1 / 2 ** 2) - 4) < 1e-12
+# başarısız: yükü çevrelemeyen yüzeyden net çizgi sıfır
+assert abs(flux(1.0, (3.0, 0, 0))) < 1e-3
+""")
+    ,
+    SC("deflection-sign-q-over-m", "Sapma yönünden işaret; aynı hızda sapma ∝ |q|/m",
+       ["efield-charged-particle-deflection", "efield-force-balance-droplet"],
+       "Parçacık hangi levhaya sapıyorsa o levhanın TERSİ işaretlidir (pozitif levhaya sapan negatif); sapmayan yüksüzdür; aynı hızla girenlerde sapma miktarı oranı |q|/m oranına eşittir.",
+       "F = qE yönü işarete bağlı; yatay hız v ile levha boyunca geçme süresi t = L/v ortak, dikey sapma y = ½(qE/m)t² ∝ q/m.",
+       ["Düzgün alan, parçacıklar levhalara paralel ve aynı v ile giriyor", "Yer çekimi ihmal ya da hesaba katılmış"],
+       ["Girişte hızlar farklıysa sapma ∝ q/(m·v²) olur, yalnız q/m oranı yetmez", "Parçacık levhaya çarparsa ya da levha dışına çıkarsa y = ½at² geçersiz", "Yer çekimi ihmal edilemeyecek kadar büyükse (ağır damlacık) net kuvvete bakılmalı"],
+       "MEDIUM", [TB("s. 176 Elektron tabancası"), TB("s. 275 ÖD-2"), DV("y = ½(qE/m)(L/v)²")],
+       """
+def deflect(q, m, v, E=1000.0, L=0.1, steps=4000):
+    t_end = L / v; dt = t_end / steps; y = vy = 0.0
+    for _ in range(steps):
+        vy += q * E / m * dt; y += vy * dt                           # +y: pozitif levhadan negatif levhaya (alan yönü)
+    return y
+y1 = deflect(1e-6, 1e-3, 50.0)
+y2 = deflect(3e-6, 1e-3, 50.0); y3 = deflect(1e-6, 3e-3, 50.0); yn = deflect(-1e-6, 1e-3, 50.0); y0 = deflect(0.0, 1e-3, 50.0)
+assert abs(y2 / y1 - 3) < 5e-3 and abs(y3 / y1 - 1 / 3) < 5e-3     # sapma ∝ q/m
+assert y1 > 0 > yn and y0 == 0.0                                     # işaret: alan yönünde / ters yönde / sapmaz
+# başarısız: farklı hız → oran q/m'den farklı
+y4 = deflect(1e-6, 1e-3, 100.0)
+assert abs(y4 / y1 - 1) > 0.5 and abs(y4 / y1 - 0.25) < 5e-3
+""")
+    ,
+    SC("plate-field-v-over-d", "Paralel levhalarda E oranı = (V çarpanı)/(d çarpanı) — üretece bağlıysa",
+       ["efield-uniform-plates"],
+       "Levhalar üretece bağlıyken E = V/d: gerilim çarpanı bölü uzaklık çarpanı; çizgiler paralel ve eşit aralıklıdır. Yalnız levhalar ayrılıp yük sabitse E değişmez.",
+       "Düzgün alanda gerilim V = E·d. Üreteç V'yi sabit tutarsa d artınca E azalır.",
+       ["Levhalar sonsuz büyük gibi (düzgün alan)", "Levhalar üretece bağlı (V verilmiş/sabit)"],
+       ["Üreteçten ayrılmış (yük sabit) levhalarda d değişince E değişmez (E = σ/ε₀); V değişir", "Levha kenarlarında alan düzgün değildir", "Program hesaplamayı dışlar; oran yorumu"],
+       "MEDIUM", [TB("s. 176 Paralel levha"), TB("s. 177 9. Alıştırma"), TB("s. 178 10. Alıştırma a"), DV("V = E·d")],
+       """
+import random
+random.seed(2)
+eps0 = 8.85e-12
+for _ in range(200):
+    V, d = random.uniform(5, 50), random.uniform(0.01, 0.1)
+    a, b = random.choice([0.5, 1.5, 2, 3]), random.choice([0.5, 2, 4])
+    full = ((a * V) / (d / b)) / (V / d)
+    assert abs(full - a * b) < 1e-9                                  # V çarpanı a, d çarpanı 1/b → E çarpanı a·b
+# başarısız: yük sabit (üreteç ayrılmış) → E değişmez, V = E d değişir
+A, Q = 0.01, 1e-9
+E = lambda d: Q / (eps0 * A)                                         # d'den bağımsız
+V = lambda d: E(d) * d
+assert E(0.02) == E(0.04) and V(0.04) == 2 * V(0.02)
+""")
+    ,
+    SC("force-comparison-hover-rule", "qE ile mg karşılaştır: =  askıda, > yukarı ivme, < aşağı ivme",
+       ["efield-force-balance-droplet", "wire-force-balance-dynamics"],
+       "Elektriksel (ya da manyetik) kuvvetin büyüklüğünü ağırlıkla karşılaştır: eşitse dengede, büyükse kuvvet yönünde, küçükse ağırlık yönünde ivme; yönü kuvvetin işaretinden ve alan yönünden kontrol et.",
+       "Net kuvvet F_net = F_e − mg (yukarı pozitif); a = F_net/m, işareti hareketin yönünü verir.",
+       ["Tek doğrultuda (düşey) iki baskın kuvvet", "Kuvvet ve ağırlık aynı doğru üzerinde"],
+       ["Hava direnci ya da başka kuvvet varsa yalnız iki kuvvete bakmak yetmez", "Alan yatay/eğikse bileşenlere ayırmadan karşılaştırma yapılamaz", "Elektron gibi çok hafif parçacıklarda mg ihmal edilir (qE ≫ mg)"],
+       "MEDIUM", [TB("s. 277 ÖD-5"), TB("s. 284 ÖD-13"), TB("s. 228 29. Alıştırma"), DV("ΣF = m·a")],
+       """
+import random
+random.seed(4)
+g = 10.0
+def displacement_sign(Fe, m, t=0.05, dt=1e-5):
+    y = v = 0.0
+    for _ in range(int(t / dt)):
+        a = (Fe - m * g) / m; v += a * dt; y += v * dt
+    return y
+for _ in range(100):
+    m = random.uniform(0.01, 1.0)
+    Fe = m * g * random.choice([0.5, 1.0, 1.7, 3.0])
+    y = displacement_sign(Fe, m)
+    rule = 0 if abs(Fe - m * g) < 1e-12 else (1 if Fe > m * g else -1)
+    assert (y > 1e-9) == (rule == 1) and (y < -1e-9) == (rule == -1) and (abs(y) < 1e-9) == (rule == 0)
+# başarısız: hava direnci / başka kuvvet — yalnız iki kuvvete bakmak yetmez (limit hıza ulaşınca denge)
+kdrag, m = 5.0, 0.1
+v = 0.0
+for _ in range(200000):
+    v += ((0.5 * m * g * 3) - m * g - kdrag * v) / m * 1e-5            # Fe > mg ama sürüklenme varsa sınırlı hız
+assert abs(v - (0.5 * m * g * 3 - m * g) / kdrag) < 1e-3
+""")
+    ,
+]
+
+# ---------------- Mıknatıs, akım ve manyetik alan, manyetik kuvvet ----------------
+SHORTCUTS += [
+    SC("magnet-pole-scale-reading", "Mıknatıs–terazi: aynı kutup itme → okuma artar; zıt kutup çekme → okuma azalır",
+       ["magnet-pole-interaction"],
+       "Teraziye konan mıknatısın üstündeki (dışarıdan tutulan) mıknatıs aynı kutupla bakıyorsa aşağı iter, okuma ağırlıktan büyük olur; zıt kutupla bakıyorsa yukarı çeker, okuma küçülür; mesafe azaldıkça fark büyür.",
+       "Terazi, üzerindeki cisme gelen toplam aşağı yönlü kuvveti (ağırlık + manyetik kuvvet bileşeni) okur; manyetik kuvvet kutup işaretiyle yön kazanır.",
+       ["Üstteki mıknatıs terazi dışında bir desteğe bağlı", "Kuvvet düşey doğrultuda"],
+       ["İki mıknatıs da aynı terazinin üzerindeyse iç kuvvetler götürür: okuma yalnız toplam ağırlıktır", "Mıknatısın yatay kayması/dönmesi olursa düşey bileşene bakılmalı", "Kuvvet mesafeyle monoton değildir: program yalnız 'yaklaştıkça artar' nitel ilişkisini ister"],
+       "LOW", [TB("s. 192 Örnek"), TB("s. 279 ÖD-8"), DV("Terazi okuması = (ağırlık ± F_manyetik)/g")],
+       """
+g = 10.0
+def reading(m, p_low, p_up, r, ext_support=True):
+    F = p_low * p_up / r ** 2                       # >0 itme (k = 1), kutup işaretleri çarpılır
+    return (m * g + (F if ext_support else 0.0)) / g
+base = 0.5
+rep, att = reading(base, +1, +1, 0.1), reading(base, +1, -1, 0.1)
+assert rep > base > att
+assert reading(base, +1, +1, 0.05) - base > reading(base, +1, +1, 0.1) - base      # yaklaştıkça fark büyür
+assert (reading(base, +1, -1, 0.05) - base) < (reading(base, +1, -1, 0.1) - base)
+# başarısız: iki mıknatıs da aynı terazide → iç kuvvet götürür, okuma değişmez (toplam ağırlık)
+def reading_both(m1, m2):
+    return (m1 * g + m2 * g) / g
+assert reading_both(0.5, 0.3) == 0.8
+""")
+    ,
+    SC("compass-3-4-5-vector", "Dik iki alan: bileşke Pisagor (3-4-5), yön tanθ = karşı/komşu",
+       ["magnet-vector-compass-earth"],
+       "Birbirine dik iki alan B₁, B₂ ise bileşke √(B₁²+B₂²) (3-4-5, 5-12-13 üçlüleriyle hızlı), pusula iğnesinin N ucu bileşke yönünde, B₁ ile açısı tanθ = B₂/B₁.",
+       "Dik vektörlerin bileşkesi Pisagor; pusula N ucu o noktadaki net alanın yönünü gösterir.",
+       ["Alanlar birbirine dik", "Pusula yalnız yatay düzlemdeki alana duyarlı (Dünya'nın düşey bileşeni dikkate alınmaz)", "Dünya alanı varsa vektör olarak eklenir"],
+       ["Alanlar dik değilse (örn. 60°) Pisagor yanlış sonuç verir; paralelkenar kuralı gerekir", "Dünya'nın manyetik alanını unutmak yönü kaydırır", "Alan çizgilerine teğetin yönü ile pusula N ucunu karıştırmak"],
+       "LOW", [TB("s. 194 15. Alıştırma"), TB("s. 196 Örnek"), TB("s. 197 17. Alıştırma"), DV("Dik vektörlerin bileşkesi")],
+       """
+import math, random
+random.seed(7)
+for a, b in [(3, 4), (5, 12), (8, 15), (7, 24)]:
+    r = math.hypot(a, b); assert abs(r - round(r)) < 1e-12
+for _ in range(200):
+    B1, B2 = random.uniform(1, 10), random.uniform(1, 10)
+    res = (B1, B2)                                              # B1 doğuya, B2 kuzeye (dik)
+    assert abs(math.hypot(*res) - math.sqrt(B1 ** 2 + B2 ** 2)) < 1e-12
+    assert abs(math.atan2(B2, B1) - math.atan(B2 / B1)) < 1e-12
+# başarısız: iki alan 60° ise Pisagor yanlış
+B1, B2, ang = 3.0, 4.0, math.radians(60)
+vec = (B1 + B2 * math.cos(ang), B2 * math.sin(ang))
+assert abs(math.hypot(*vec) - 5.0) > 1.0
+""")
+    ,
+    SC("wire-field-side-table", "Düz tel: yön tablosu (akım ↑ → sağda ⊗, solda ⊙; akım → → üstte ⊙, altta ⊗)",
+       ["wire-field-direction-rhr", "wire-field-superposition"],
+       "Sayfa düzleminde akım yukarıya ise telin sağındaki noktada alan sayfaya girer (⊗), solundakinde çıkar (⊙); akım sağa ise üstteki noktada alan sayfadan çıkar (⊙), alttakinde girer (⊗). Akım ters olunca hepsi ters.",
+       "Biot–Savart: B yönü dl × r̂ (r̂ telden noktaya); x sağa, y yukarı, z sayfadan dışarı.",
+       ["Sayfa: x sağa, y yukarı, z sayfadan okura doğru", "Akım yönü (geleneksel) verilmiş"],
+       ["Elektron akışı verilmişse geleneksel akım TERS yöndedir: tablo da ters uygulanır", "Aynı yönlü iki akımın arasında alanlar zıttır (toplam azalır); yalnız tek telin tablosu üst üste binmez", "Telin kendisi üzerindeki ya da çok yakın nokta için model geçersiz", "Sağ elini yanlış (sol) kullanmak"],
+       "HIGH", [TB("s. 203 Şekil 2.22"), TB("s. 205 19. Alıştırma a"), DV("dl × r̂ vektör çarpımı")],
+       VEC + """
+# yön tablosu: akım yönü → (noktanın yeri → alan işareti z bileşeni)
+P = {"sağ": (1.0, 0, 0), "sol": (-1.0, 0, 0), "üst": (0, 1.0, 0), "alt": (0, -1.0, 0)}
+def Bz(p0, p1, point):
+    return biot(line(p0, p1, 1000), point)[2]
+up = ((0, -50, 0), (0, 50, 0)); right = ((-50, 0, 0), (50, 0, 0))
+assert Bz(*up, P["sağ"]) < 0 and Bz(*up, P["sol"]) > 0           # akım ↑: sağda ⊗ (−z), solda ⊙ (+z)
+assert Bz(*right, P["üst"]) > 0 and Bz(*right, P["alt"]) < 0      # akım →: üstte ⊙, altta ⊗
+assert Bz(up[1], up[0], P["sağ"]) > 0                             # akım ters → alan ters
+# başarısız: aynı yönlü iki akım arasında alanlar zıt, orta noktada toplam sıfır
+left_wire = ((-1, -50, 0), (-1, 50, 0)); right_wire = ((1, -50, 0), (1, 50, 0))
+mid = (0.0, 0.0, 0.0)
+b_total = Bz(*left_wire, mid) + Bz(*right_wire, mid)
+assert abs(b_total) < 1e-6 and abs(Bz(*left_wire, mid)) > 1e-4
+""")
+    ,
+    SC("rhr-solenoid-fingers-current", "Makara: dört parmak akım yönünde, baş parmak N ucu",
+       ["solenoid-direction-poles-compass", "emag-verify-and-apply"],
+       "Sağ el dört parmağı sarım akımı yönünde kıvrılırsa baş parmak makaranın içindeki alan yönünü, yani N kutbunu gösterir; akım ters çevrilince kutuplar yer değiştirir.",
+       "Her sarım bir halka akımıdır; halka akımının eksen alanı sağ el kuralıyla belirlenir ve sarımların alanları eksende aynı yöne toplanır.",
+       ["Bakılan taraftan sarımın akış yönü doğru okunmuş", "Makara içinde alan (N ucu) kuralı; dışta alan N'den S'ye döner"],
+       ["Bakış yönü değişince 'saat yönü' ters okunur: akımı sarımın üzerinde izle", "Pusula makara dışında ve yanında ise iğne alanın dışarıdaki (N'den S'ye) yönünü gösterir; baş parmak kuralı o noktada ters yön verir", "Demir çekirdek alanı büyütür ama yönü değiştirmez"],
+       "MEDIUM", [TB("s. 209 Değerlendirme 1"), TB("s. 296 ÖD-26"), DV("Halka akımının eksen alanı (Biot–Savart)")],
+       VEC + """
+def stack(ccw, n_rings=40, L=1.0, R=0.05):
+    pts = []
+    for k in range(n_rings):
+        z = L * (k + 0.5) / n_rings
+        pts.append(circle(R, n=120, z=z, ccw=ccw))
+    return pts
+def Bz_at(rings, P):
+    s = 0.0
+    for r in rings:
+        s += biot(r, P)[2]
+    return s
+ccw, cw = stack(True), stack(False)
+assert Bz_at(ccw, (0, 0, 0.5)) > 0 and Bz_at(cw, (0, 0, 0.5)) < 0   # ccw: alan +z yönünde (N ucu +z tarafı); akım ters → ters
+# başarısız: makaranın DIŞINDA (yan tarafında) alan yönü içtekinin tersidir
+assert Bz_at(ccw, (0.4, 0, 0.5)) < 0
+""")
+    ,
+    SC("rhr-wire-force-cross-product-table", "Akımlı tel: F = i·L × B yön tablosu (⊙ ve ⊗ ile)",
+       ["wire-force-direction-rhr", "loop-force-directions", "parallel-wires-force"],
+       "Akım sağa ise: alan dışarı (⊙) → kuvvet aşağı; alan içeri (⊗) → kuvvet yukarı; alan yukarı → kuvvet sayfadan dışarı (⊙). Akım ya da alandan yalnız biri ters olursa kuvvet ters, ikisi birden ters olursa aynı kalır; akım alana paralelse kuvvet sıfır.",
+       "F = i·L × B (vektör çarpımı); x̂ × ẑ = −ŷ, x̂ × (−ẑ) = ŷ, x̂ × ŷ = ẑ.",
+       ["Sayfa: x sağa, y yukarı, z sayfadan dışarı", "Geleneksel akım yönü", "Alan düzgün"],
+       ["Elektron akımı için ters yön: elektron hareket yönü verilmişse akım yönü karşıtıdır", "Alan akımla paralel ya da antiparalelse kuvvet sıfırdır (sin 0° = 0)", "Alan düzgün değilse kenarlara göre farklı olabilir", "Sol el kullanmak ya da avuç ve baş parmak rollerini karıştırmak"],
+       "HIGH", [TB("s. 225 Şekil 2.26"), TB("s. 226 26. Alıştırma"), TB("s. 289 ÖD-19"), DV("Vektör çarpımı F = i·(L × B)")],
+       VEC + """
+X, Y, Z = (1, 0, 0), (0, 1, 0), (0, 0, 1)
+neg = lambda v: tuple(-a for a in v)
+table = {("sağa", "dışarı"): neg(Y), ("sağa", "içeri"): Y, ("sağa", "yukarı"): Z, ("yukarı", "dışarı"): X, ("yukarı", "içeri"): neg(X)}
+cur = {"sağa": X, "yukarı": Y}; fld = {"dışarı": Z, "içeri": neg(Z), "yukarı": Y}
+for (c, f), direction in table.items():
+    assert close(cross(cur[c], fld[f]), direction), (c, f)
+# tek tersleme → ters; ikisi birden → aynı
+F0 = cross(X, Z)
+assert close(cross(neg(X), Z), neg(F0)) and close(cross(X, neg(Z)), neg(F0)) and close(cross(neg(X), neg(Z)), F0)
+# başarısız: akım alana paralel → kuvvet sıfır
+assert close(cross(X, X), (0, 0, 0)) and close(cross(X, neg(X)), (0, 0, 0))
+# elektron akışı (negatif taşıyıcı, +x yönünde hareket) → geleneksel akım −x → kuvvet tersine
+assert close(cross(neg(X), Z), neg(cross(X, Z)))
+""")
+    ,
+    SC("sin-theta-special-angles", "F = B·i·L·sinθ özel açılar: 90° → 1, 30°/150° → ½, 0°/180° → 0",
+       ["wire-force-magnitude-angle", "wire-force-data-model"],
+       "θ telle alan arasındaki açıdır: sin 90° = 1 (en büyük), sin 30° = sin 150° = ½, sin 45° ≈ 0,7, sin 0° = sin 180° = 0 (kuvvet sıfır).",
+       "|i·L × B| = i·L·B·sinθ; sinüs özel açılar tablosundan hazır.",
+       ["θ telin uzunluk yönüyle alan çizgileri arasındaki açı", "Düzgün alan"],
+       ["Açı alan yönüyle değil de teli içeren yüzeyle (ya da alana dik doğrultuyla) verilmişse sinüs yerine kosinüs gerekir", "Akı formülünde (Φ = BA cosθ) θ yüzey NORMALİ ile alan arasındadır; ikisini karıştırmak sık hatadır", "0° ya da 180° için kuvvet sıfırdır, hareket başlamaz"],
+       "MEDIUM", [TB("s. 225 Model"), TB("s. 227 27. Alıştırma"), DV("Vektör çarpımı büyüklüğü: |a × b| = ab·sinθ")],
+       VEC + """
+import math
+table = {90: 1.0, 30: 0.5, 150: 0.5, 45: math.sqrt(2) / 2, 0: 0.0, 180: 0.0, 60: math.sqrt(3) / 2}
+B, i, L = 0.4, 5.0, 0.3
+for deg, s in table.items():
+    th = math.radians(deg)
+    w = (L * math.cos(th), L * math.sin(th), 0.0)              # tel yönü: alana (x ekseni) θ açısında
+    Fv = mul(i, cross(w, (B, 0.0, 0.0)))
+    assert abs(norm(Fv) - B * i * L * s) < 1e-12
+# başarısız: açı alanla değil alana DİK doğrultuyla verilirse sin yerine cos kullanılır
+th_perp = math.radians(30)                                      # tel, alana dik doğrultuyla 30°
+th_true = math.radians(90) - th_perp
+assert abs(math.sin(th_perp) - math.sin(th_true)) > 0.3
+""")
+    ,
+    SC("wire-field-i-over-d", "Düz tel: B ∝ i/d (karesiz); B ortamla K çarpanıyla değişir",
+       ["wire-field-ratio", "wire-field-superposition", "wire-field-data-model"],
+       "B oranı = (i çarpanı)(K çarpanı)/(d çarpanı); d'nin KARESİ yoktur. 'i ve d aynı çarpanla değişirse B değişmez.'",
+       "Biot–Savart integralinden sonsuz uzun düz tel için B = 2K·i/d (tel çevresinde çemberlerin çevresi d ile orantılı).",
+       ["Sonsuz uzun (d ≪ tel boyu) ince düz tel", "Aynı ortam ya da K çarpanı verilmiş"],
+       ["Telin uç bölgesinde ya da kısa teller için 1/d geçersizdir", "Halka telin merkezi ya da makara için başka bağıntılar vardır", "Program hesaplamayı dışlar; oran yorumu", "Ters kare ile (E alanı gibi) karıştırmak"],
+       "LOW", [TB("s. 202 Düz telin alanı"), TB("s. 200 9.–10. adım"), DV("Biot–Savart integrali, sonsuz tel")],
+       """
+import math
+def B_finite(d, h, n=40000):
+    s = 0.0; dz = 2 * h / n
+    for k in range(n):
+        z = -h + (k + 0.5) * dz
+        s += d / math.hypot(d, z) ** 3 * dz
+    return s
+long = (B_finite(1.0, 500.0), B_finite(2.0, 500.0), B_finite(3.0, 500.0))
+assert abs(long[0] / long[1] - 2) < 2e-3 and abs(long[0] / long[2] - 3) < 3e-3       # B ∝ 1/d
+# i ×3 ve d ×3 → B aynı
+assert abs((3.0 / 3.0) - 1) < 1e-12
+# süperpozisyon: iki telde toplam alan, tek tek alanların toplamı
+assert abs(B_finite(1.0, 500.0) + B_finite(3.0, 500.0) - (long[0] + long[2])) < 1e-12
+# başarısız: kısa tel (yarı uzunluk = d) → 1/d geçersiz
+short = (B_finite(1.0, 1.0), B_finite(2.0, 1.0))
+assert abs(short[0] / short[1] - 2) > 0.3
+""")
+    ,
+    SC("solenoid-n-over-L-factor", "Makara: B ∝ i·(N/L) — N ve L'yi birlikte düşün; demir çekirdek K'yi büyütür",
+       ["solenoid-ratio-generalization", "emag-verify-and-apply", "solenoid-data-model"],
+       "B oranı = (i çarpanı)(N çarpanı)(K çarpanı)/(L çarpanı); N ve L aynı çarpanla değişirse (sarım yoğunluğu aynı) B değişmez; yarıçap ve tel rengi etkisizdir.",
+       "İdeal uzun makarada içte B = 4π·K·i·N/L; sarımların alanları eksende toplanır.",
+       ["Makara boyu çapından çok büyük (L ≫ R)", "Alanı makara içinde, ortada ölçülüyor", "İdeal makara: içte düzgün, dışta ~0"],
+       ["Kısa ve geniş makarada (L ≲ R) B ≈ K'ya bağlı farklı bir ifadeyle N/L'ye değil N/R'ye bağlıdır; kısa yol geçersiz", "Demir çekirdek K'yi çarpar ama doyuma ulaşır", "Makaranın uçlarında alan ortadakinin yaklaşık yarısıdır", "Program hesaplamayı dışlar; oran düzeyinde"],
+       "MEDIUM", [TB("s. 209 11. adım"), TB("s. 211 Örnek"), TB("s. 281 ÖD-10"), DV("Halka akımı eksen alanlarının toplamı")],
+       """
+import math
+def Bc(N, L, i, R, steps=4000):
+    # sürekli sarım yoğunluğu n = N/L: orta noktadaki alan = n·i·∫ R²/(R²+z²)^{3/2} dz  (μ0/2 atıldı), sayısal integral
+    n = N / L; dz = L / steps; s = 0.0
+    for k in range(steps):
+        z = -L / 2 + (k + 0.5) * dz
+        s += R ** 2 / (R ** 2 + z ** 2) ** 1.5 * dz
+    return n * i * s
+R = 0.01
+base = Bc(100, 1.0, 1.0, R)
+assert abs(Bc(200, 1.0, 1.0, R) / base - 2) < 0.01                  # N ×2
+assert abs(Bc(200, 2.0, 1.0, R) / base - 1) < 0.01                  # N ×2, L ×2 → B aynı
+assert abs(Bc(100, 1.0, 3.0, R) / base - 3) < 1e-9                  # i ×3
+assert abs(Bc(100, 2.0, 1.0, R) / base - 0.5) < 0.01                # L ×2
+assert abs(Bc(100, 1.0, 1.0, 5 * R) / base - 1) < 0.05              # yarıçap etkisiz (uzun makarada)
+# başarısız: kısa, geniş makara (L ≪ R): N ×2 ve L ×2 sonuç değişmez DEĞİL, B ≈ 2×
+Rf = 0.05
+bs = Bc(100, 0.02, 1.0, Rf)
+assert abs(Bc(200, 0.04, 1.0, Rf) / bs - 1) > 0.5
+""")
+    ,
+    SC("parallel-currents-attract", "Paralel tellerde: aynı yön çeker, zıt yön iter; kuvvetler eşit (∝ i₁i₂/d)",
+       ["parallel-wires-force"],
+       "Aynı yönlü akımlar birbirini çeker, zıt yönlü akımlar iter; iki telin birbirine uyguladığı kuvvetler büyüklükçe eşittir (akımlar farklı olsa da); büyüklük i₁·i₂/d ile orantılıdır.",
+       "Tel 1'in tel 2'deki alanı B₁ ∝ i₁/d; F₂ = i₂·L·B₁ ∝ i₁i₂L/d. Yön F = i L × B ile bulunur; ikili etki Newton 3 çiftidir.",
+       ["Uzun paralel düz teller", "d ≪ tel boyu"],
+       ["Akımları farklı iki telde kuvvetin 'büyük akımlı tele daha büyük' olduğunu sanmak yanlıştır; kuvvetler eşit", "Teller paralel değilse (dik ya da eğik) büyüklük ve yön ayrıca hesaplanır", "Üç tel varsa her teldeki net kuvvet vektörel toplanır"],
+       "MEDIUM", [TB("s. 228 28. Alıştırma"), DV("Biot–Savart + F = i·L×B + Newton 3")],
+       VEC + """
+def field_of_line(i, p0, p1, point):
+    return mul(i, biot(line(p0, p1, 4000), point))               # B ∝ i, K atıldı
+d = 0.5
+up = (0, 0, 1)
+W1 = ((0, 0, -200), (0, 0, 200)); W2 = ((d, 0, -200), (d, 0, 200))
+for i1, i2, expected in [(3.0, 5.0, "çeker"), (3.0, -5.0, "iter")]:
+    B1_at_2 = field_of_line(i1, *W1, (d, 0, 0)); B2_at_1 = field_of_line(i2, *W2, (0, 0, 0))
+    F2 = mul(abs(i2), cross(mul(1 if i2 > 0 else -1, up), B1_at_2))
+    F1 = mul(abs(i1), cross(mul(1 if i1 > 0 else -1, up), B2_at_1))
+    toward = (F2[0] < 0)                                          # tel 2 tel 1'e (−x) doğru çekiliyor mu
+    assert toward == (expected == "çeker")
+    assert abs(norm(F1) - norm(F2)) / norm(F1) < 1e-6              # eşit büyüklük (akımlar farklı olsa da)
+    assert abs(F1[0] + F2[0]) < 1e-9 * max(1, norm(F1))            # zıt yön
+# büyüklük ∝ 1/d
+b_near = norm(field_of_line(1.0, *W1, (0.25, 0, 0))); b_far = norm(field_of_line(1.0, *W1, (0.5, 0, 0)))
+assert abs(b_near / b_far - 2) < 1e-2
+""")
+    ,
+    SC("loop-torque-parallel-max", "Çerçeve: düzlem alana paralelken döndürme etkisi en büyük, dikken sıfır; ∝ N·i·B·A",
+       ["loop-rotation-torque", "loop-force-directions"],
+       "Döndürme çifti τ = N·i·B·A·sinφ (φ: yüzey normali ile B arasındaki açı): düzlem alana paralel (φ = 90°) → en büyük; düzlem alana dik (φ = 0°) → sıfır; N, i, B, A arttıkça doğru orantılı artar.",
+       "Alana dik kenarlara etki eden kuvvetler eşit ve zıt yönlü olduğundan net kuvvet sıfır, ama farklı doğrultulardan geçtikleri için çift oluşturur.",
+       ["Düzgün alan", "Dikdörtgen/düzlemsel çerçeve, eksen alana dik", "Sabit akım yönü"],
+       ["Düzlem alana dik olunca döndürme etkisi sıfırdır: komütatörsüz motor bu ölü noktada takılır", "Akım yönü sabit kalırsa çerçeve yarım dönüşten sonra geri sürüklenir (komütatör/AC gerekir)", "Alan düzgün değilse net kuvvet sıfır olmaz", "Net kuvvet sıfırdır ama dönüş vardır: 'net kuvvet yok → dönme yok' sanılmaz"],
+       "MEDIUM", [TB("s. 233 30. Alıştırma"), TB("s. 234 31. Alıştırma"), TB("s. 293 ÖD-23"), DV("τ = Σ r × (i dl × B)")],
+       VEC + """
+import math
+def loop_torque(phi, a=0.2, b=0.3, i=2.0, Bv=0.5, n=40):
+    # eksen y, B = (Bv,0,0), normal n̂ = (cosφ, 0, sinφ); düzlem: y ve w = (−sinφ, 0, cosφ)
+    w = (-math.sin(phi), 0.0, math.cos(phi)); u = (0.0, 1.0, 0.0)
+    corners = [add(mul(-a / 2, u), mul(-b / 2, w)), add(mul(a / 2, u), mul(-b / 2, w)), add(mul(a / 2, u), mul(b / 2, w)), add(mul(-a / 2, u), mul(b / 2, w))]
+    tau = (0.0, 0.0, 0.0); Ftot = (0.0, 0.0, 0.0)
+    for k in range(4):
+        p, q = corners[k], corners[(k + 1) % 4]
+        for s in range(n):
+            p1 = add(p, mul(s / n, sub(q, p))); p2 = add(p, mul((s + 1) / n, sub(q, p)))
+            dl = sub(p2, p1); mid = mul(0.5, add(p1, p2))
+            dF = mul(i, cross(dl, (Bv, 0.0, 0.0)))
+            tau = add(tau, cross(mid, dF)); Ftot = add(Ftot, dF)
+    return norm(tau), norm(Ftot)
+A, i, Bv = 0.2 * 0.3, 2.0, 0.5
+for deg in (0, 30, 60, 90):
+    t, F = loop_torque(math.radians(deg))
+    assert abs(t - i * Bv * A * math.sin(math.radians(deg))) < 1e-9 and F < 1e-9   # net kuvvet sıfır, çift var
+assert loop_torque(math.radians(0))[0] < 1e-9                                       # düzlem alana dik → sıfır
+assert loop_torque(math.radians(90))[0] > loop_torque(math.radians(60))[0] > loop_torque(math.radians(30))[0]
+# başarısız: akım (alan) iki katına çıkınca döndürme çifti iki katına çıkar ama net kuvvet yine sıfır — 'net kuvvet 0 → dönme yok' yanlış
+t2, F2n = loop_torque(math.radians(90), i=4.0)
+assert abs(t2 / loop_torque(math.radians(90))[0] - 2) < 1e-9 and F2n < 1e-9 and t2 > 0
+""")
+    ,
+]
+
+# ---------------- Manyetik akı ve elektromanyetik indüksiyon ----------------
+SHORTCUTS += [
+    SC("flux-cos-normal-angle", "Akı: yüzey normali alana paralel → en büyük, dik (düzlem ∥ alan) → 0; Φ = B·A·cosθ",
+       ["flux-factors-analogy", "flux-relationship-qualitative", "flux-change-in-motion"],
+       "Φ ∝ B·A·cosθ; θ yüzeyin NORMALİ ile alan arasındaki açıdır. Düzlem alana dik duruyorsa (normal alana paralel) en büyük, düzlem alana paralelse (normal alana dik) sıfır; alan çizgilerine paralel eksen etrafında dönmek akıyı değiştirmez.",
+       "Φ, yüzeyden geçen alan çizgisi sayısı kadardır; yalnız yüzeye dik alan bileşeni sayılır: B·n̂·A.",
+       ["Düzgün alan", "Düzlem yüzey", "θ normal ile alan arasında"],
+       ["θ yüzeyle alan arasında verilmişse cos yerine sin kullanılır", "Alan düzgün değilse Φ = ∫B·dA'dır, B·A·cosθ kullanılamaz", "Akı büyük olsa da değişmiyorsa ε = 0'dır"],
+       "MEDIUM", [TB("s. 239 Model"), TB("s. 240 Örnek cevap"), TB("s. 241 34. Alıştırma"), DV("Φ = ∫ B·n̂ dA, düzgün alanda B·A·cosθ")],
+       """
+import math
+def flux(theta, A=0.2 * 0.3, B=0.5, n=50):
+    # yüzey üzerinde ızgara integrali: Σ B·n̂ dA, n̂ alana (z) θ açısında
+    nhat = (math.sin(theta), 0.0, math.cos(theta)); Bv = (0.0, 0.0, B)
+    dA = A / (n * n)
+    return sum(sum(a * b for a, b in zip(Bv, nhat)) * dA for _ in range(n * n))
+A, B = 0.06, 0.5
+for deg in (0, 30, 60, 90):
+    assert abs(flux(math.radians(deg)) - B * A * math.cos(math.radians(deg))) < 1e-12
+assert flux(0.0) > flux(math.radians(60)) > flux(math.radians(90)) - 1e-12 and abs(flux(math.radians(90))) < 1e-12
+# alana paralel eksen (z) etrafında dönme: normalin alanla açısı aynı → akı sabit
+assert all(abs(flux(math.radians(40)) - B * A * math.cos(math.radians(40))) < 1e-12 for _ in range(5))
+# başarısız: açı yüzeyle verilirse sin kullanılmalı
+theta_surface = math.radians(30)
+assert abs(B * A * math.cos(theta_surface) - B * A * math.sin(theta_surface)) > 0.01
+""")
+    ,
+    SC("ask-flux-changing-first", "Önce sor: akı değişiyor mu? (B, A ya da θ'dan biri zamanla değişmeli)",
+       ["induction-experiment-factors", "induction-applications", "flux-change-in-motion"],
+       "Hareket ya da düzenek verildiğinde ilk soru 'B, A veya θ zamanla değişiyor mu?': değişmiyorsa ε = 0 (akı büyük de olsa), değişiyorsa ε akı değişim hızıyla orantılı. Kapalı devre ise akım da vardır.",
+       "ε = −N·dΦ/dt; Φ = B·A·cosθ'nın zamana göre türevi sıfır değilse ε vardır.",
+       ["Bağlam: halka/bobin ve alan", "Hareket türü açıkça tanımlı"],
+       ["Düzgün alanda ötelenen halkada akı değişmez: ε = 0 (alan sınırından geçerken değişir)", "Açık devrede ε vardır ama akım yoktur", "Alan çizgilerine paralel eksenli dönmede akı sabittir"],
+       "LOW", [TB("s. 246 Şekil 2.31"), TB("s. 241 35. Alıştırma"), TB("s. 250 38. Alıştırma"), DV("ε = −dΦ/dt")],
+       """
+import math
+B, a = 0.5, 0.1
+def eps_of(phi, t, h=1e-6):
+    return -(phi(t + h) - phi(t - h)) / (2 * h)
+def overlap(x, w=0.4):                                  # halka sağdan alan bölgesine (x>0, genişlik w) giriyor
+    lo, hi = max(x - a, 0.0), min(x, w)
+    return max(0.0, hi - lo) * a
+v = 2.0
+phi_translate_uniform = lambda t: B * a * a                        # her yerde düzgün alan: ötelenme
+phi_enter = lambda t: B * overlap(v * t)                           # alan bölgesine giriş
+phi_spin_parallel = lambda t: B * a * a * math.cos(0.0)            # normal-alan açısı sabit (alan eksenli dönme)
+phi_spin_perp = lambda t: B * a * a * math.cos(40 * t)             # alana dik eksenli dönme
+phi_ramp = lambda t: (0.5 + 0.3 * t) * a * a                       # B zamanla artıyor
+assert abs(eps_of(phi_translate_uniform, 0.1)) < 1e-9 and abs(eps_of(phi_spin_parallel, 0.1)) < 1e-9
+assert abs(eps_of(phi_enter, 0.025)) > 1e-4                         # girerken (0 < x < a)
+assert abs(eps_of(phi_enter, 0.15)) < 1e-9                          # tamamen içeride (a < x < w)
+assert abs(eps_of(phi_spin_perp, 0.01)) > 1e-3 and abs(eps_of(phi_ramp, 0.5)) > 1e-4
+# başarısız: akı büyük ama sabit → ε = 0; açık devrede ε var, akım yok
+assert phi_translate_uniform(0) > 0 and abs(eps_of(phi_translate_uniform, 1.0)) < 1e-9
+e = abs(eps_of(phi_ramp, 0.5)); R_open = float("inf")
+assert e > 0 and e / R_open == 0.0
+""")
+    ,
+    SC("emf-ratio-multipliers", "ε oranı = (N çarpanı)(ΔΦ çarpanı)/(Δt çarpanı); i oranı ε/R",
+       ["induction-emf-ratio-calc", "induction-experiment-factors", "induction-applications"],
+       "ε_yeni/ε = (N çarpanı)·(ΔΦ çarpanı)/(Δt çarpanı); akım için ayrıca direnç çarpanına bölünür. Çarpanlar çarpılır, sürenin çarpanı bölende yer alır.",
+       "ε = N·ΔΦ/Δt çarpımsal olduğundan her çarpan bağımsız olarak çıkar.",
+       ["Aynı biçimde tanımlı iki durum", "ΔΦ/Δt ortalama (ya da sabit) değer"],
+       ["ΔΦ çarpanı, alan yönünün ters çevrilmesinde 2 gelir (0 değil): ΔΦ = Φ_son − Φ_ilk işaretli", "ε anlık değilse ortalama değerdir", "Akım için R değişiyorsa ayrıca bölünmeli; açık devrede i = 0, ε ≠ 0"],
+       "MEDIUM", [TB("s. 248 Örnek"), TB("s. 246 2. soru tablosu"), TB("s. 249 37. Alıştırma"), DV("ε = N·ΔΦ/Δt")],
+       """
+import random
+random.seed(9)
+for _ in range(300):
+    N, A, B1, B2, dt, R = random.randint(10, 500), random.uniform(0.001, 0.05), random.uniform(0, 1), random.uniform(0, 1), random.uniform(0.01, 2), random.uniform(1, 50)
+    eps = lambda N_, A_, b1, b2, t_: N_ * (b2 - b1) * A_ / t_
+    kN, kd, kt, kR = random.choice([0.5, 2, 3]), random.choice([0.5, 2, 4]), random.choice([0.5, 2, 5]), random.choice([0.5, 2])
+    e0 = eps(N, A, B1, B2, dt)
+    e1 = eps(kN * N, A, B1, B1 + kd * (B2 - B1), kt * dt)          # ΔB (dolayısıyla ΔΦ) çarpanı kd
+    assert abs(e1 / e0 - kN * kd / kt) < 1e-9
+    assert abs((e1 / (kR * R)) / (e0 / R) - kN * kd / kt / kR) < 1e-9
+# başarısız: alan yönü ters çevrilince ΔΦ = 2BA (0 değil)
+B, A = 0.1, 0.02
+dphi = (-B * A) - (B * A)
+assert abs(dphi - (-2 * B * A)) < 1e-12 and abs(dphi) > 0
+# başarısız: sabit akı → ΔΦ çarpanı sıfır, kısa yol 'ε büyük akıda büyük' demez
+assert eps(100, 0.02, 5.0, 5.0, 1.0) == 0.0
+""")
+    ,
+    SC("flux-time-slope-to-emf", "Φ–t grafiğinin eğimi → ε = −N·eğim (yatay → 0, dik → büyük)",
+       ["induction-flux-time-graphs"],
+       "Her doğrusal aralıkta ε = −N × (ΔΦ/Δt): yatay aralık ε = 0; dik artan → büyük negatif; dik azalan → büyük pozitif. B–t grafiğinde önce Φ = B·A.",
+       "Faraday yasası ε = −N·dΦ/dt: ε, akı grafiğinin eğimidir; akının kendisi değil.",
+       ["Parçalı doğrusal grafik", "Eksen birimleri SI'ya çevrilmiş (ms → s, mWb → Wb)", "N verilmiş"],
+       ["Eğrisel Φ–t'de ortalama eğim ≠ anlık eğim; ε zamanla değişir", "ms ve mWb'yi çevirmeden eğim almak sonucu yanlış kılar (örn. 10³ kat)", "Φ = 0 olan anda eğim büyükse |ε| büyüktür: akı sıfır → ε sıfır sanma"],
+       "MEDIUM", [TB("s. 251 40. Alıştırma"), TB("s. 252 41. Alıştırma"), DV("ε = −N·dΦ/dt")],
+       """
+import random
+random.seed(21)
+for _ in range(200):
+    N = random.randint(5, 300)
+    pts = [(0.0, random.uniform(-5e-3, 5e-3))]
+    t = 0.0
+    for _ in range(4):
+        t += random.uniform(0.5, 3.0); pts.append((t, random.uniform(-5e-3, 5e-3)))
+    phi = lambda x: next(p0[1] + (p1[1] - p0[1]) * (x - p0[0]) / (p1[0] - p0[0]) for p0, p1 in zip(pts, pts[1:]) if p0[0] <= x <= p1[0])
+    for p0, p1 in zip(pts, pts[1:]):
+        mid = (p0[0] + p1[0]) / 2
+        slope = (p1[1] - p0[1]) / (p1[0] - p0[0])
+        e_full = -N * (phi(mid + 1e-7) - phi(mid - 1e-7)) / 2e-7
+        assert abs(e_full - (-N * slope)) < 1e-6
+flat = [(0, 3e-3), (4, 3e-3)]
+assert -10 * (flat[1][1] - flat[0][1]) / (flat[1][0] - flat[0][0]) == 0.0       # yatay → 0, akı büyük olsa da
+# başarısız 1: eğrisel Φ = k t² → ortalama eğim ≠ anlık eğim
+k = 1e-3
+avg = (k * 4 ** 2 - k * 0) / 4; inst = 2 * k * 1.0
+assert abs(avg - inst) > 1e-3
+# başarısız 2: ms yerine s okumak 10³ hata yapar
+assert abs((8e-3 / 2e-3) / (8e-3 / 2) - 1000) < 1e-9
+""")
+    ,
+    SC("lenz-four-step", "Lenz dört adım: dış alan → artış/azalış → indüksiyon alanı (artışta zıt, azalışta aynı) → sağ el",
+       ["lenz-induced-current-direction", "induction-experiment-factors"],
+       "(1) Dış alan yönü, (2) artıyor mu azalıyor mu, (3) indüksiyon alanı artışta dış alana ZIT, azalışta AYNI yönlü, (4) sağ el kuralıyla akım yönü. Mıknatıs yaklaşırken ve uzaklaşırken akım yönleri zıttır.",
+       "ε = −dΦ/dt işaretindeki eksi, indüksiyon akımının akıdaki DEĞİŞİME karşı koyacak yönde olması demektir (enerji korunumu).",
+       ["Kapalı iletken devre", "Akı değişimi var", "Karşı koyulan şey 'dış alanın kendisi' değil 'akı DEĞİŞİMİ'dir"],
+       ["'Daima dış alana zıt' kuralı yanlıştır: akı azalırken indüksiyon alanı dış alanla aynı yönlüdür", "Dış alan yön değiştirirken (yön tersine dönüş) indüksiyon alanı yön değiştirmez, çünkü akının DEĞİŞİMİ aynı işaretlidir", "Devre açıksa akım yok (ε var); bakış yönünü (üstten/alttan) karıştırmak sık hatadır"],
+       "MEDIUM", [TB("s. 247 Lenz Yasası"), TB("s. 249 37. Alıştırma c"), TB("s. 286 ÖD-16"), DV("ε = −N·dΦ/dt ve sağ el kuralı (Biot–Savart)")],
+       VEC + """
+import math
+A, R_c = 0.01, 1.0
+ring_ccw, ring_cw = circle(0.1), circle(0.1, ccw=False)
+Bc_ccw = biot(ring_ccw, (0, 0, 0))[2]; Bc_cw = biot(ring_cw, (0, 0, 0))[2]
+assert Bc_ccw > 0 > Bc_cw                                            # ccw akım → merkezde +z alan
+def induced_axial_sign(Bz, t, h=1e-6):
+    eps = -(Bz(t + h) - Bz(t - h)) / (2 * h) * A                      # ε>0: +z normale göre ccw
+    i = eps / R_c
+    return (1 if i > 0 else -1) if abs(i) > 1e-12 else 0              # indüksiyon alanı z işareti = ccw işareti
+# artış: dış alan aşağı büyüyor → indüksiyon alanı yukarı (zıt)
+assert induced_axial_sign(lambda s: -(1 + 0.5 * s), 1.0) == +1
+# azalış: dış alan aşağı küçülüyor → indüksiyon alanı aşağı (aynı yönlü)
+assert induced_axial_sign(lambda s: -(2 - 0.5 * s), 1.0) == -1
+# başarısız: 'daima dış alana zıt' kuralı — dış alan +'dan −'ya düzgün değişirken indüksiyon alanı hiç yön değiştirmez
+Bz = lambda s: 1.0 - 2.0 * s                                         # t=0.5'te alan yön değiştirir
+signs = {induced_axial_sign(Bz, s) for s in (0.1, 0.3, 0.7, 0.9)}
+assert signs == {+1}
+ext_sign = [1 if Bz(s) > 0 else -1 for s in (0.1, 0.3, 0.7, 0.9)]
+assert ext_sign == [1, 1, -1, -1]                                     # dış alan işaret değiştirdi; indüksiyon alanı (+) hep aynı
+# kesik halka: i = ε/∞ = 0
+assert (1.0 / float("inf")) == 0.0
+""")
+    ,
+    SC("closed-conductor-braking-tree", "Mıknatıs–halka karar ağacı: kapalı iletken → yukarı fren; kesik/yalıtkan → serbest düşme",
+       ["magnet-falling-through-ring", "lenz-induced-current-direction", "induction-applications"],
+       "Halka kapalı ve iletkense mıknatıs girerken de çıkarken de yukarı yönlü fren kuvveti alır, düşme süresi uzar (ivme < g); halka kesik ya da yalıtkansa akım yok, fren yok, serbest düşme.",
+       "Kapalı iletkende akı değişimi akım doğurur; Lenz gereği manyetik kuvvet harekete zıt (P = i²R ≥ 0 ⇒ F·v < 0).",
+       ["Mıknatıs halka ekseni boyunca düşer", "Halka kapalı iletken ya da kesik/yalıtkan olarak belli"],
+       ["Halka direnci çok büyükse (akım çok küçük) fren fark edilmeyecek kadar küçüktür; 'fren var' yargısı niceliksel olarak boşa çıkar", "Mıknatıs çok yavaşsa akı değişimi küçüktür, etki zayıftır", "Kuvvet yalnız girişte ya da yalnız çıkışta değil, iki durumda da yukarıdır"],
+       "LOW", [TB("s. 287 ÖD-17"), DV("Lenz yasası + güç dengesi P = i²R")],
+       """
+import math
+Phi0, a, g, m = 0.01, 0.05, 10.0, 0.1
+dPhi = lambda z: -3 * Phi0 * z / a ** 2 / (1 + (z / a) ** 2) ** 2.5
+def fall(R):
+    z, v, t, dt, n = 0.4, 0.0, 0.0, 1e-4, 0
+    while z > -0.4 and n < 100000:
+        n += 1
+        i = (-dPhi(z) * v) / R if R != float("inf") else 0.0
+        F = i * dPhi(z)
+        v += (-g + F / m) * dt; z += v * dt; t += dt
+    assert z <= -0.4
+    return t
+t_free = fall(float("inf")); t_closed = fall(0.01); t_plastic = fall(float("inf"))
+assert abs(t_free - math.sqrt(0.8 * 2 / g)) < 5e-3 and t_closed > 1.05 * t_free and t_plastic == t_free
+# başarısız: çok büyük dirençli 'kapalı' halka → etki ihmal edilebilir
+assert abs(fall(1e6) - t_free) / t_free < 1e-3
+""")
+    ,
+]
+
+# ---------------- Alternatif akım ----------------
+SHORTCUTS += [
+    SC("ac-factor-classification", "AC etmen eşleştirmesi: N, B, A → yalnız büyüklük; dönme sıklığı → büyüklük VE frekans",
+       ["ac-factors-identification", "ac-led-data-interpretation"],
+       "ε_maks çarpanı = (N)(B)(A)(f çarpanları); frekans çarpanı = yalnız f çarpanı. N, B, A değişince frekans değişmez; dönme hızı ×k ise ε_maks ×k ve frekans ×k.",
+       "ε = −N·dΦ/dt, Φ = N B A cos(2π f t) ⇒ ε_maks = N·B·A·2π f; zero-crossing frekansı f'dir.",
+       ["Düzgün alanda sabit hızla dönen çerçeve", "Çerçeve ekseni alana dik"],
+       ["Dönme sabit değilse sinüs biçimi bozulur", "B ve A ters yönde değişirse büyüklükler birbirini götürebilir (B ×2, A ×½ → büyüklük aynı)", "Tablo verisinde çok değişkenli satırlarda tek etmene yorum yapılmaz"],
+       "LOW", [TB("s. 255 6. adım a–ç"), TB("s. 262 Kontrol Noktası"), DV("ε_maks = N·B·A·2π·f")],
+       """
+import math
+def peak_freq(N, B, A, f, T=0.5, dt=1e-4):
+    phi = lambda t: N * B * A * math.cos(2 * math.pi * f * t)
+    e = [-(phi(k * dt + dt) - phi(k * dt - dt)) / (2 * dt) for k in range(int(T / dt))]
+    ups = [(k - 1 + e[k - 1] / (e[k - 1] - e[k])) * dt for k in range(1, len(e)) if e[k - 1] < 0 <= e[k]]
+    return max(e), (len(ups) - 1) / (ups[-1] - ups[0])
+base = (40, 0.3, 0.02, 20.0)
+E0, F0 = peak_freq(*base)
+cases = [((2, 1, 1, 1), (2, 1)), ((1, 2, 1, 1), (2, 1)), ((1, 1, 3, 1), (3, 1)), ((1, 1, 1, 2), (2, 2)), ((1, 0.5, 1, 1), (0.5, 1)), ((1, 2, 1, 0.5), (1, 0.5))]
+for mult, (ke, kf) in cases:
+    e, fr = peak_freq(*(b * m for b, m in zip(base, mult)))
+    assert abs(e / E0 - ke) < 5e-3 and abs(fr / F0 - kf) < 1e-2, mult
+# başarısız: B ×2 ve A ×½ → büyüklük aynı; frekans da aynı
+e, fr = peak_freq(base[0], 2 * base[1], 0.5 * base[2], base[3])
+assert abs(e / E0 - 1) < 1e-3
+""")
+    ,
+    SC("phi-t-slope-quarter-shift", "Φ tepede ε = 0; Φ sıfırdayken |ε| en büyük (ε–t, Φ–t'ye göre T/4 kaymış)",
+       ["ac-loop-graphs"],
+       "Dönen çerçevede Φ–t kosinüs benzeri ise ε–t sinüs benzeridir: akı tepe/çukurdayken ε = 0, akı sıfırdan geçerken |ε| en büyük; tam turda akım iki kez yön değiştirir.",
+       "ε = −N·dΦ/dt: tepe/çukur eğimin sıfır olduğu noktadır, sıfır geçişi eğimin en dik olduğu noktadır.",
+       ["Sinüs biçimli dalga (sabit hızla dönen çerçeve)"],
+       ["Sinüs olmayan Φ–t (ör. doğrusal artış) için 'tepede ε = 0' kuralı çalışmaz: eğim yine sıfır olmayabilir", "Φ–t ile ε–t'yi aynı grafik sanmak", "Kesin T/4 kayması yalnız sinüsün türevi için geçerlidir"],
+       "MEDIUM", [TB("s. 254 2. adım"), TB("s. 256 Çalışma Yaprağı 1"), DV("d/dt cos(ωt) = −ω sin(ωt)")],
+       """
+import math
+T = 1.0; w = 2 * math.pi / T; h = 1e-6
+phi = lambda t: math.cos(w * t)
+eps = lambda t: -(phi(t + h) - phi(t - h)) / (2 * h)
+for t in (0.0, 0.5, 1.0):
+    assert abs(phi(t)) > 0.999 and abs(eps(t)) < 1e-4                 # Φ tepe/çukur → ε = 0
+for t in (0.25, 0.75):
+    assert abs(phi(t)) < 1e-9 and abs(abs(eps(t)) - w) < 1e-3          # Φ = 0 → |ε| en büyük
+ts = [k / 1000 for k in range(1, 1000)]
+assert abs(max(ts, key=eps) - 0.25) < 2e-3                            # ε maksimumu Φ maksimumundan T/4 sonra
+# başarısız: doğrusal artan akı (ramp) → Φ en büyükken ε sıfır DEĞİL
+ramp = lambda t: 2.0 * t
+e_ramp = -(ramp(0.99 + h) - ramp(0.99 - h)) / (2 * h)
+assert abs(e_ramp) > 1.9
+""")
+    ,
+    SC("oscilloscope-reading", "Osiloskop: tepe = kare × V/kare; periyot = kare × s/kare; f = 1/T",
+       ["ac-loop-graphs", "ac-frequency-period-counting"],
+       "Tepe yüksekliğini kare sayısı × (V/kare), bir tam dalganın yatay uzunluğunu kare × (s/kare) ile ölç; f = 1/T. İki dalganın oranı için ölçekler aynıysa kare sayısı oranı doğrudan kullanılır.",
+       "Ekran, gerilimi düşey eksende ve zamanı yatay eksende ölçekli gösterir; periyot iki ardışık aynı fazlı nokta arasıdır.",
+       ["Sinüs benzeri dalga", "Her iki kanalın ölçeği bilinir"],
+       ["Kanalların ölçekleri farklıysa (1 V/kare ve 2 V/kare) kare sayısı oranı gerilim oranı değildir", "Periyot yerine tepeden çukura (yarım dalga) okumak frekansı 2 kat verir", "Merkezlenmemiş dalgada tepe, sıfır çizgisinden ölçülmelidir"],
+       "MEDIUM", [TB("s. 261 43. Alıştırma"), TB("s. 260 42. Alıştırma"), DV("f = 1/T")],
+       """
+import math
+def measure(peak_div, wave_div, v_div, t_div, dt=1e-6):
+    V0, T = peak_div * v_div, wave_div * t_div
+    n = int(8 * T / dt)
+    y = [V0 * math.sin(2 * math.pi * k * dt / T) for k in range(n)]
+    ups = [k for k in range(1, n) if y[k - 1] < 0 <= y[k]]
+    return max(y), (len(ups) - 1) / ((ups[-1] - ups[0]) * dt)
+Vb, fb = measure(4, 4, 1.0, 2e-3); Vy, fy = measure(2, 8, 1.0, 2e-3)
+assert abs(Vb - 4.0) < 1e-3 and abs(fb - 125.0) < 0.5 and abs(Vy - 2.0) < 1e-3 and abs(fy - 62.5) < 0.5
+assert abs(Vb / Vy - 2) < 1e-3 and abs(fb / fy - 2) < 1e-2
+# başarısız 1: ölçekler farklı → kare oranı gerilim oranı değil
+V1, _ = measure(3, 4, 1.0, 2e-3); V2, _ = measure(3, 4, 2.0, 2e-3)
+assert abs(V2 / V1 - 1) > 0.5
+# başarısız 2: yarım dalgayı (tepe–çukur) periyot sanmak f'yi 2 kat verir
+assert abs(1 / (2e-3 * 2) - 125 * 2) < 1e-9
+""")
+    ,
+    SC("rms-equals-max-over-root2", "V_etkin = V_maks/√2, i_etkin = i_maks/√2 (yalnız sinüs); DC eşdeğeri etkin değerdir",
+       ["ac-effective-max-values"],
+       "Sinüs biçimli AC'de V_maks = √2·V_etkin (≈ 1,41), i_maks = √2·i_etkin; aynı dirençte aynı ısıyı veren DC'nin değeri AC'nin etkin değeridir; voltmetre ve ampermetre etkin değeri gösterir.",
+       "Bir periyotta ortalama ısıl güç ½·V_maks²/R; DC'ninkiyle eşitlenince V_etkin = V_maks/√2.",
+       ["Sinüs biçimli akım/gerilim", "Direnç (program kapsamında yalnız ısı eşdeğerliği)"],
+       ["Kare dalgada V_etkin = V_maks, üçgen dalgada V_etkin = V_maks/√3'tür; √2 yalnız sinüs için", "'Etkin' ile 'ortalama' farklıdır (sinüsün tam periyot ortalaması sıfırdır)", "V_maks hesabında √2 yerine 2 çarpmak"],
+       "MEDIUM", [TB("s. 259 Örnek"), TB("s. 294 ÖD-24 e"), DV("⟨sin²⟩ = ½")],
+       """
+import math
+def rms(f, n=200000):
+    return math.sqrt(sum(f((k + 0.5) / n) ** 2 for k in range(n)) / n)
+def avg(f, n=200000):
+    return sum(f((k + 0.5) / n) for k in range(n)) / n
+V = 10.0
+sine = lambda x: V * math.sin(2 * math.pi * x)
+assert abs(rms(sine) - V / math.sqrt(2)) < 1e-6 and abs(avg(sine)) < 1e-9
+# ısıl güç eşdeğerliği: R = 5 Ω
+R = 5.0
+assert abs(rms(sine) ** 2 / R - (V / math.sqrt(2)) ** 2 / R) < 1e-9
+# başarısız: kare ve üçgen dalga
+square = lambda x: V if x < 0.5 else -V
+tri = lambda x: V * (4 * x if x < 0.25 else 2 - 4 * x if x < 0.75 else 4 * x - 4)
+assert abs(rms(square) - V) < 1e-9 and abs(rms(tri) - V / math.sqrt(3)) < 1e-3
+assert abs(rms(square) - V / math.sqrt(2)) > 1.0
+""")
+    ,
+    SC("ac-count-2f", "Saniyede 2f: yön değişimi, sıfır geçişi, lambanın sönmesi ve mutlak tepe sayısı; T = 1/f",
+       ["ac-frequency-period-counting", "ac-loop-graphs"],
+       "Frekansı f (Hz) olan AC için 1 saniyede 2f kez yön değişir, 2f kez sıfırdan geçilir (lamba 2f kez söner) ve mutlak değerce 2f kez tepeye ulaşılır; pozitif tepe sayısı f'dir; T = 1/f; süre t ise t·f tam periyot.",
+       "Bir periyotta sinüs iki kez işaret değiştirir ve iki kez |tepe| yapar.",
+       ["Sinüs biçimli AC", "Sayım süresi periyodun tam katı (ya da büyük)"],
+       ["Sayım süresi periyottan kısa ya da tam sayı katı değilse sayım ±1 sapar", "'Tepe' pozitif tepeler anlamında kullanılırsa f'dir, mutlak değerce tepe 2f'dir", "T = f yazmak"],
+       "LOW", [TB("s. 294 ÖD-24 ç–d"), TB("s. 288 ÖD-18"), TB("s. 260 42. Alıştırma"), DV("sin(2π f t) sıfır geçişleri")],
+       """
+import math
+def counts(f, dur=1.0, dt=1e-5, phase=0.1):
+    n = int(round(dur / dt))
+    y = [math.sin(2 * math.pi * f * k * dt + phase) for k in range(n + 1)]
+    zeros = sum(1 for a, b in zip(y, y[1:]) if a * b < 0)
+    ab = [abs(v) for v in y]
+    peaks_abs = sum(1 for k in range(1, n) if ab[k] > ab[k - 1] and ab[k] >= ab[k + 1] and ab[k] > 0.999)
+    peaks_pos = sum(1 for k in range(1, n) if y[k] > y[k - 1] and y[k] >= y[k + 1] and y[k] > 0.999)
+    return zeros, peaks_abs, peaks_pos
+for f in (50.0, 60.0, 120.0):
+    z, pa, pp = counts(f)
+    assert z == 2 * f and pa == 2 * f and pp == f and z / 2 == f * 1.0     # saniyedeki tam periyot sayısı = f (T = 1/f)
+# başarısız: periyottan kısa sayım penceresi → 2f kuralı geçersiz
+z, pa, pp = counts(50.0, dur=0.004)
+assert z == 0 and abs(z - 2 * 50.0 * 0.004) > 0.3               # 2f·t = 0,4 tam sayı değil; sayım kuralı anlamsız
+""")
+    ,
+    SC("dc-steady-no-emf", "DC kararlı durumda akı sabit → ε = 0; AC'de ε sürekli (f arttıkça büyür)",
+       ["ac-led-data-interpretation", "transformer-structure-experiment", "transformer-chain-and-lamp-comparison"],
+       "Komşu devre/ikincil bobinde DC kaynak kararlı durumda ε = 0 verir (lamba yanmaz); AC kaynakta akı sürekli değişir: lamba yanar ve frekans arttıkça (akım genliği aynıysa) ε artar. Yalnız anahtar kapanıp açılırken kısa süreli sıçrama olur.",
+       "Karşılıklı indüksiyonda ε = −M·di/dt: DC kararlı halde di/dt = 0; sinüste di/dt genliği ∝ f.",
+       ["Kaynak bobinin akımı komşu bobinin akısını belirliyor", "Kararlı durum (geçici bitmiş)"],
+       ["Anahtar kapanırken/açılırken geçici ε vardır: voltmetre ya da LED anlık yanıp söner", "Çekirdeksiz ya da zayıf bağlı bobinde AC'de de ε küçüktür", "Çok düşük frekansta ε çok küçük olabilir; 'AC her zaman parlak yakar' denemez"],
+       "MEDIUM", [TB("s. 265 13. Etkinlik 12.–16. adım"), TB("s. 286 ÖD-16 a"), DV("ε = −M·di/dt")],
+       """
+import math
+Mu, R, L, V0 = 0.5, 2.0, 0.1, 6.0
+h = 1e-7
+eps = lambda i, t: -Mu * (i(t + h) - i(t - h)) / (2 * h)
+i_dc = lambda t: (V0 / R) * (1 - math.exp(-R * t / L))
+assert abs(eps(i_dc, 1e-3)) > 1.0                                     # geçici sıçrama
+assert abs(eps(i_dc, 5.0)) < 1e-9                                     # kararlı durum → 0
+def amp(f):
+    i = lambda t: 3.0 * math.sin(2 * math.pi * f * t)
+    return max(abs(eps(i, k / (f * 400.0))) for k in range(400))
+a50, a100 = amp(50.0), amp(100.0)
+assert abs(a100 / a50 - 2) < 1e-2 and a50 > 100                       # AC: ε sürekli, f ×2 → ε ×2
+# başarısız: çok düşük frekans / kuvvetsiz bağ → küçük ε
+assert amp(0.01) < 0.01 * a50
+""")
+    ,
+]
+
+# ---------------- Transformatör (program: hesaplamasız; kısa yollar oran/yön yorumu düzeyinde) ----------------
+SHORTCUTS += [
+    SC("transformer-v-proportional-n", "İdeal transformatörde V ∝ N: Vs/Vp = Ns/Np (gerilim sarımla aynı yönde)",
+       ["transformer-structure-experiment", "transformer-turns-voltage-current-ratio", "transformer-chain-and-lamp-comparison"],
+       "Ns > Np → Vs > Vp (yükseltici); Ns < Np → alçaltıcı; tabloda Np ve Vp sabitken Vs, Ns ile doğru orantılıdır; Ns sabitken Np artarsa Vs azalır.",
+       "Çekirdekteki ortak akı değişimi her sarımda aynı gerilimi indükler: Vp = Np·dΦ/dt, Vs = Ns·dΦ/dt.",
+       ["İdeal transformatör", "AC kaynak", "Demir çekirdek akıyı iki bobine de taşıyor", "Yük akımı küçük"],
+       ["DC kaynakta kararlı durumda Vs = 0", "Yük akımı büyükse gerçek transformatörün bobin direnci nedeniyle Vs idealden küçük olur", "Çekirdeksiz ya da açık çekirdekli yapıda akı kaçar, oran bozulur", "Program hesaplamayı dışlar; kitapta Vp/Vs = Np/Ns var (s. 273)"],
+       "MEDIUM", [TB("s. 265 13. Etkinlik 12.–16. adım"), TB("s. 268 Yapı"), TB("s. 273 Vp/Vs = Np/Ns"), DV("Faraday yasası, ortak akı")],
+       """
+import math
+Vp0, Np = 6.0, 400
+w = 2 * math.pi * 50
+phi = lambda t: -Vp0 / (Np * w) * math.cos(w * t)                  # Vp = Np dΦ/dt = Vp0 sin wt olacak biçimde akı
+h = 1e-7
+dphi = lambda t: (phi(t + h) - phi(t - h)) / (2 * h)
+for Ns in (100, 400, 1600):
+    Vs_peak = max(Ns * dphi(k * 1e-4) for k in range(200))
+    assert abs(Vs_peak / Vp0 - Ns / Np) < 1e-3
+# Ns sabit, Np artarsa (Vp sabit) Vs azalır
+def Vs_for(Np_, Ns_):
+    phi2 = lambda t: -Vp0 / (Np_ * w) * math.cos(w * t)
+    return max(Ns_ * (phi2(k * 1e-4 + h) - phi2(k * 1e-4 - h)) / (2 * h) for k in range(200))
+assert Vs_for(800, 400) < Vs_for(400, 400)
+# başarısız 1: DC → Vs = 0 (akı sabit)
+assert abs(Np * 0.0) == 0.0 and abs(100 * ((3.0 - 3.0) / 1.0)) == 0.0
+# başarısız 2: yüklü gerçek trafo (bobin direnci) → Vs idealden küçük
+r_s, R_L = 5.0, 20.0
+ideal = 12.0; loaded = ideal * R_L / (R_L + r_s)
+assert loaded < ideal and abs(loaded / ideal - 0.8) < 1e-12
+""")
+    ,
+    SC("transformer-i-inverse-n", "İdeal transformatörde i ∝ 1/N: is/ip = Np/Ns; giriş gücü = çıkış gücü",
+       ["transformer-turns-voltage-current-ratio", "transformer-transmission-loss"],
+       "Gerilim kaç kat artıyorsa akım o kadar kat azalır: yükselticide is < ip, alçaltıcıda is > ip; ideal transformatörde Vp·ip = Vs·is. Gerçek transformatörde çıkış gücü girişten küçüktür.",
+       "Güç korunumu: Vp·ip = Vs·is ve Vs/Vp = Ns/Np ⇒ is/ip = Np/Ns.",
+       ["İdeal (kayıpsız) transformatör", "AC kaynak"],
+       ["Gerçek transformatörde is/ip oranı Np/Ns'ten küçüktür (kayıplar ısıya gider)", "Akım oranını sarım oranıyla doğru orantılı almak yanlıştır", "Gerilim kazanan taraf güç kazanmaz; akımdan öder"],
+       "MEDIUM", [TB("s. 273 Vp/Vs = Np/Ns = is/ip"), TB("s. 270 45. Alıştırma"), TB("s. 288 ÖD-18 b, e"), DV("Enerji korunumu")],
+       """
+import random
+from fractions import Fraction as Fr
+random.seed(13)
+for _ in range(300):
+    Np, Ns = random.randint(10, 3000), random.randint(10, 3000)
+    Vp, ip = Fr(random.randint(5, 400)), Fr(random.randint(1, 20))
+    Vs = Vp * Fr(Ns, Np)
+    is_ = Vp * ip / Vs                                              # güç korunumundan
+    assert is_ / ip == Fr(Np, Ns) and Vs * is_ == Vp * ip
+    assert (Ns > Np) == (is_ < ip) == (Vs > Vp)                     # yükseltici ↔ akım düşer
+# başarısız 1: gerçek trafo (verim %90): çıkış akımı idealden küçük
+eta = Fr(9, 10)
+Np, Ns, Vp, ip = 1200, 300, Fr(120), Fr(1)
+is_ideal = ip * Fr(Np, Ns)
+is_real = eta * is_ideal
+assert is_real < is_ideal and (Vp * Fr(Ns, Np)) * is_real == eta * Vp * ip
+# başarısız 2: akımı sarımla doğru orantılı almak güç korunumunu bozar
+assert (Vp * Fr(Ns, Np)) * (ip * Fr(Ns, Np)) != Vp * ip
+""")
+    ,
+    SC("chain-multiply-turn-ratios", "Ardışık transformatörlerde k = Ns/Np çarpanları çarpılır",
+       ["transformer-chain-and-lamp-comparison"],
+       "Her trafonun k = Ns/Np çarpanını yaz; zincirde toplam çarpan k₁·k₂ (çarpım, toplam değil); hedef gerilim için son çarpan = V_hedef/V_ara.",
+       "İlk trafonun ikincil gerilimi ikincinin birincil gerilimidir: V₃ = k₂·V₂ = k₂·k₁·V₁.",
+       ["İdeal trafolar", "Birinin çıkışı diğerinin girişine doğrudan bağlı", "AC"],
+       ["Aşamalardan biri DC ya da çekirdeksizse zincir kopar (çarpan 0)", "Gerçek trafolarda ikinci trafonun yükü birinciyi yükler; ideal kabul geçerli değildir", "Oranı ters (Np/Ns) kurmak sonucu ters çevirir", "Program hesaplamayı dışlar; çarpan düzeyinde"],
+       "LOW", [TB("s. 272 47. Alıştırma"), DV("Gerilim dönüşümlerinin bileşkesi")],
+       """
+import random
+from fractions import Fraction as Fr
+random.seed(31)
+def secondary(V, Np, Ns, ok=True):
+    return V * Fr(Ns, Np) if ok else Fr(0)
+for _ in range(300):
+    V = Fr(random.randint(10, 400))
+    Np1, Ns1, Np2, Ns2 = (random.randint(10, 900) for _ in range(4))
+    chained = secondary(secondary(V, Np1, Ns1), Np2, Ns2)
+    assert chained == V * Fr(Ns1, Np1) * Fr(Ns2, Np2)
+    # hedef: son gerilim V olsun → Ns2 gerekli
+    need = Fr(Np2) * Fr(Np1, Ns1)
+    assert secondary(secondary(V, Np1, Ns1), Np2, need) == V
+# başarısız 1: toplama yanlış sonuç
+V = Fr(100); k1, k2 = Fr(3), Fr(1, 2)
+assert V * (k1 * k2) != V * (k1 + k2)
+# başarısız 2: ara aşama çekirdeksiz/DC → zincir kopar
+assert secondary(secondary(V, 100, 300, ok=False), 300, 150) == 0
+# ters çevrik oran sonucu tersine çevirir
+assert V * Fr(100, 300) != V * Fr(300, 100)
+""")
+    ,
+    SC("lamp-brightness-order-by-voltage", "Özdeş lambalarda parlaklık sırası = ikincil gerilim sırası (P ∝ V²)",
+       ["transformer-chain-and-lamp-comparison"],
+       "Aynı AC kaynağa bağlı trafolarda özdeş lambaların parlaklık sırası ikincil gerilim sırasıdır; k = Ns/Np'yi karşılaştır. Direnç sabitse güç oranı gerilim oranının karesidir.",
+       "Lamba gücü P = V²/R; R özdeşse P yalnız V'ye bağlı ve V ile artan bir fonksiyondur.",
+       ["Lambalar özdeş", "Aynı kaynak gerilimi", "İdeal trafolar"],
+       ["Lamba direnci sıcaklıkla artar: sıra korunur ama güç oranı gerilim oranının karesi değildir", "Lamba anma gerilimini aşarsa yanar: sıralama anlamsızlaşır", "Farklı yük (özdeş olmayan lamba) ya da çekirdeksiz yapıda sıralama değişir"],
+       "MEDIUM", [TB("s. 272 47. Alıştırma c"), DV("P = V²/R")],
+       """
+import random
+random.seed(17)
+R0, a = 10.0, 0.03                                                  # R(V) = R0 (1 + a V)  (sıcaklıkla artan direnç)
+P_const = lambda V: V ** 2 / R0
+P_real = lambda V: V ** 2 / (R0 * (1 + a * V))
+for _ in range(300):
+    V1, V2 = sorted(random.uniform(1, 40) for _ in range(2))
+    if V2 - V1 < 1e-6: continue
+    assert P_const(V1) < P_const(V2) and P_real(V1) < P_real(V2)    # sıra her iki modelde aynı
+# başarısız: direnç sabit değilse güç oranı gerilim oranının karesi değil
+V1, V2 = 10.0, 30.0
+assert abs(P_const(V2) / P_const(V1) - 9) < 1e-12
+assert abs(P_real(V2) / P_real(V1) - 9) > 0.5
+""")
+    ,
+    SC("transmission-loss-i-squared", "İletimde kayıp: V ×n → i ÷n → kayıp ÷n² (P_kayıp ∝ i²R)",
+       ["transformer-transmission-loss"],
+       "İletilen güç sabitken hat akımı gerilimle ters orantılıdır; kayıp i²R olduğundan gerilim n kat artarsa kayıp n² kat azalır; hat direnci k kat olursa kayıp k kat olur.",
+       "P = V·i ⇒ i = P/V; P_kayıp = i²·R ⇒ P_kayıp = P²R/V².",
+       ["İletilen güç sabit", "Hat direnci sabit ya da çarpanı verilmiş", "Kayıp yalnız hatta"],
+       ["Yük direnci sabitse gerilim artınca akım artar (sabit güç varsayımı geçersiz)", "P_kayıp = V²/R'de V hattın iki ucu arası gerilim düşümüdür, kaynak gerilimi değil", "Program hesaplamayı dışlar; oran düzeyinde (kitapta P = V·i ve P = i²R var)"],
+       "MEDIUM", [TB("s. 269 Örnek"), TB("s. 294 ÖD-24 c"), TB("s. 263 P = V·i; P_kayıp = i²·R"), DV("P_kayıp = P²R/V²")],
+       """
+import random
+random.seed(23)
+loss = lambda P, V, R: (P / V) ** 2 * R
+for _ in range(300):
+    P, V, R = random.uniform(1e5, 1e7), random.uniform(5e3, 5e5), random.uniform(1, 50)
+    n, k = random.choice([2, 3, 5, 10]), random.choice([0.5, 2, 3])
+    assert abs(loss(P, n * V, R) / loss(P, V, R) - 1 / n ** 2) < 1e-12
+    assert abs(loss(P, V, k * R) / loss(P, V, R) - k) < 1e-12
+    assert abs(loss(P, n * V, k * R) / loss(P, V, R) - k / n ** 2) < 1e-12
+# başarısız 1: yük direnci sabitse gerilim artınca akım artar
+R_load = 100.0
+assert (5e3 * 5) / R_load > 5e3 / R_load
+# başarısız 2: kayıp için V²/R'de kaynak gerilimi kullanmak büyük hata verir
+P, V, R = 1e6, 20e3, 10.0
+assert abs(loss(P, V, R) - ((P / V) * R) ** 2 / R) < 1e-6 and abs(V ** 2 / R - loss(P, V, R)) > 1e6
+""")
+    ,
+    SC("step-up-step-down-by-voltage-comparison", "Rol tablosu: çıkış/cihaz gerilimi < giriş → alçaltıcı; > giriş → yükseltici",
+       ["transformer-applications-record", "transformer-transmission-loss"],
+       "Kayıt tablosunda her satırda cihazın (çıkış) gerilimini şebeke (giriş) gerilimiyle karşılaştır: küçükse alçaltıcı, büyükse yükseltici, eşitse transformatör gerekmez; yazılı rolle çelişen hücre yanlıştır. Santral yanı yükseltici, tüketici yanı alçaltıcıdır.",
+       "Vs/Vp = Ns/Np olduğundan Vs < Vp ancak Ns < Np ile mümkündür (alçaltıcı) ve tersi yükselticidir.",
+       ["AC şebeke", "Giriş (kaynak) ve çıkış (cihaz) gerilimleri biliniyor"],
+       ["Ters bağlama: aynı transformatör çıkış tarafından beslenirse rolü tersine döner", "Transformatör gerilimi AC olarak dönüştürür; DC ile çalışan cihaz (telefon şarjı) ayrıca doğrultucu ister", "Cihazın etiketindeki gerilim şebeke gerilimi değil, cihazın ihtiyacıdır", "Program yalnız rolü yorumlatır, sarım oranı hesabı sorulmaz"],
+       "LOW", [TB("s. 263 Gerilim dönüştürücü"), TB("s. 265 13. Etkinlik 18. adım"), TB("s. 270 45. Alıştırma"), DV("Vs/Vp = Ns/Np")],
+       """
+def role(v_in, v_out):
+    return "alçaltıcı" if v_out < v_in else "yükseltici" if v_out > v_in else "gerekmez"
+cases = [(230, 5, "alçaltıcı"), (230, 2000, "yükseltici"), (10e3, 150e3, "yükseltici"), (150e3, 10e3, "alçaltıcı"), (230, 110, "alçaltıcı"), (230, 230, "gerekmez")]
+for vin, vout, expected in cases:
+    assert role(vin, vout) == expected
+    # tam yöntem: sarım oranı Ns/Np = Vs/Vp → Ns < Np ⇔ alçaltıcı
+    Np, Ns = 1000, 1000 * vout / vin
+    assert (Ns < Np) == (expected == "alçaltıcı") and (Ns > Np) == (expected == "yükseltici")
+# başarısız: ters bağlama rolü değiştirir
+assert role(230, 5) == "alçaltıcı" and role(5, 230) == "yükseltici"
+# başarısız: DC kaynakta transformatör rolü yok (kararlı durumda ikincil gerilim sıfır)
+def secondary_dc(v_in, Np, Ns):
+    return 0.0
+assert secondary_dc(12.0, 100, 1000) == 0.0 and role(12.0, 120.0) == "yükseltici"
+""")
+    ,
+]
+
+# ---------------- Ek kısa yollar: kapalı iletken (Faraday kafesi), tablo eğilimi, motor ----------------
+SHORTCUTS += [
+    SC("closed-conductor-shield-decision", "Faraday kafesi: kapalı iletken kabuk → iç bölge korunur; açık/boşluklu → zayıf; yalıtkan → korumaz",
+       ["fcage-verify-claims"],
+       "Önce kabuğun cinsine ve kapalılığına bak: iletken ve kapalıysa içerideki alan (yaklaşık) sıfırdır; delikli/açık kabukta koruma zayıflar; yalıtkan kabuk korumaz. 'İçeride yük birikir' ifadesi yanlıştır, fazla yük dış yüzeyde toplanır.",
+       "İletken kabuk yük hareketiyle eş potansiyel olur; iç bölgede yük yoksa Laplace denkleminin tek çözümü sabit potansiyeldir (E = 0).",
+       ["Kabuk iletken", "Kabuk kapalı (boşluklar çok küçük)", "Elektrostatik/yavaş değişen alan"],
+       ["Büyük açıklıklı ya da tel örgü gözleri alan dalgası boyundan büyükse koruma azalır", "Yalıtkan kabuk iç bölgeyi korumaz", "Kabuğun içine yerleştirilmiş yük, iç bölgede alan oluşturur (koruma dışarıdan gelen alana karşıdır)"],
+       "MEDIUM", [TB("s. 182 Örnek"), TB("s. 183 11.–12. Alıştırma"), TB("s. 184 13. Alıştırma"), DV("Laplace denklemi, iç bölgede yük yok ⇒ sabit potansiyel")],
+       """
+N = 41
+def solve(box="closed", sweeps=1500):
+    # 2B Laplace: sol kenar +1, sağ kenar −1, üst/alt doğrusal (düzgün dış alan). Kabuk: 11..29 halkası.
+    V = [[1.0 - 2.0 * j / (N - 1) for j in range(N)] for _ in range(N)]
+    lo, hi = 11, 29
+    fixed = [[False] * N for _ in range(N)]
+    for i in range(N):
+        for j in range(N):
+            edge = i in (0, N - 1) or j in (0, N - 1)
+            ring = (lo <= i <= hi and lo <= j <= hi) and (i in (lo, hi) or j in (lo, hi))
+            if edge:
+                fixed[i][j] = True
+            elif ring and box in ("closed", "gap"):
+                if box == "gap" and i == lo and 17 <= j <= 23:
+                    continue                                       # kabukta açıklık
+                fixed[i][j] = True; V[i][j] = 0.0
+    for _ in range(sweeps):
+        for i in range(1, N - 1):
+            for j in range(1, N - 1):
+                if not fixed[i][j]:
+                    V[i][j] = 0.25 * (V[i - 1][j] + V[i + 1][j] + V[i][j - 1] + V[i][j + 1])
+    # iç bölgede (lo+1..hi−1) yatay alan büyüklüğü (potansiyel farkı/hücre)
+    inner = [abs(V[i][j + 1] - V[i][j]) for i in range(lo + 2, hi - 1) for j in range(lo + 2, hi - 2)]
+    return max(inner), 2.0 / (N - 1)
+E_closed, E0 = solve("closed"); E_gap, _ = solve("gap"); E_ins, _ = solve("insulator")
+assert E_closed < 0.05 * E0                       # kapalı iletken → iç alan çok küçük
+assert E_closed < E_gap < E_ins                   # açıklık koruma zayıflatır; yalıtkan korumaz
+assert E_ins > 0.8 * E0 and E_gap > 5 * E_closed
+""")
+    ,
+    SC("monotonic-trend-outlier-check", "Tablo eğilimi: beklenen azalan/artan veride yönü bozan değer hatalıdır (ardışık satır karşılaştırması)",
+       ["magnet-data-collection", "coulomb-data-table-graph"],
+       "Çıktının mesafeyle azalması (ya da etmenle artması) bekleniyorsa ardışık satırları sırayla karşılaştır: eğilimi bozan satır hatalı kayıttır; sonra modelle (ör. 1/d²) doğru değeri bul.",
+       "Fiziksel ilişki monoton (ör. B ve F mesafeyle azalır) olduğundan veride yön değiştiren nokta ölçüm/kayıt hatasıdır.",
+       ["İlişkinin monoton olduğu fiziksel olarak biliniyor", "Ölçüm hatası yön değişimi yaratacak kadar büyük değil (aksi halde gerçek dalgalanma olabilir)"],
+       ["Ölçüm gürültüsü küçük yön değişimleri yapar: her bozulma hata değildir (tekrarlı ölçümlerle kontrol et)", "İlişki monoton değilse (ör. kutup çevresi, çizgi sıklığı) kural uygulanamaz", "Hata monoton eğilimi bozmayacak bir değerde ise (ör. biraz yüksek) yöntem onu yakalayamaz"],
+       "MEDIUM", [TB("s. 188 5.–7. adım"), TB("s. 193 14. Alıştırma"), DV("Monoton fonksiyonun ardışık farklarının işareti sabittir")],
+       """
+d = [1, 2, 3, 4, 5, 6]
+true = [100.0 / x ** 2 for x in d]                      # azalan beklenen: B ∝ 1/d²
+recorded = list(true); recorded[3] = 14.0               # d=4 satırı (doğrusu 6,25) hatalı: d=3'ten (11,1) büyük yazılmış
+bad = [k + 2 for k in range(len(recorded) - 1) if recorded[k + 1] >= recorded[k]]
+assert bad == [4]                                        # 4. satır (d=4) eğilimi bozuyor → yakalanır
+assert abs(true[3] - 6.25) < 1e-12                       # düzeltme modelle
+# başarısız 1: eğilimi bozmayan hatalı değer yakalanmaz
+recorded2 = list(true); recorded2[3] = 7.5               # 6,25 yerine 7,5 → yine azalan
+assert not [k for k in range(len(recorded2) - 1) if recorded2[k + 1] >= recorded2[k]] and abs(recorded2[3] - true[3]) > 1
+# başarısız 2: gürültülü gerçek veri küçük yön değişimleri verir (hata sanma)
+noisy = [10.0, 9.9, 9.95, 9.8]                           # gerçekte azalan; ölçüm gürültüsü 3. satırı yükseltti
+assert any(noisy[k + 1] >= noisy[k] for k in range(len(noisy) - 1))
+""")
+    ,
+    SC("commutator-half-turn-reversal", "Motor: akım yönü her yarım turda tersine çevrilmeli (komütatör); enerji dönüşümü kayıplıdır (η < 1)",
+       ["motor-principle-evaluation", "loop-rotation-torque"],
+       "Sabit akım yönünde döndürme çiftinin işareti yarım turda değişir ve dönüş sürmez; her yarım turda akımı ters çeviren komütatör (ya da AC) döndürme etkisini aynı işaretli tutar. Elektrik enerjisinin yalnız bir kısmı hareket enerjisine dönüşür.",
+       "τ ∝ i·B·A·sinφ: φ π'yi geçince sinφ negatiftir; akım da işaret değiştirirse τ işaretini korur.",
+       ["Düzgün alanda dönen çerçeve", "Komütatör yarım turda akımı ters çeviriyor"],
+       ["Komütatör olmazsa çerçeve ölü noktada takılır ve salınır", "Sürtünme ve ısı kayıpları nedeniyle verim 1'den küçüktür", "Metin yargılarında (çıkarım) 'veriye dayanıyor mu?' kontrolü sayısal kısa yolun dışındadır"],
+       "LOW", [TB("s. 231 Değerlendirme 2"), TB("s. 292 ÖD-22"), TB("s. 230 Fizik Gazetesi"), DV("τ = N·i·B·A·sinφ")],
+       """
+import math
+n = 3600
+tau_dc = [math.sin(2 * math.pi * k / n) for k in range(n)]                          # akım sabit (i = 1)
+tau_comm = [abs(t) for t in tau_dc]                                                  # komütatör: sinφ<0 ise akım ters
+assert abs(sum(tau_dc) / n) < 1e-9                                                    # sabit akımda tam turda ortalama çift sıfır
+assert abs(sum(tau_comm) / n - 2 / math.pi) < 1e-3                                    # komütatörle ortalama > 0
+assert min(tau_comm) >= 0
+# enerji: P_mekanik = P_elektrik − kayıplar < P_elektrik
+V, i, r, friction = 12.0, 2.0, 1.5, 3.0
+P_el = V * i; P_mech = P_el - i ** 2 * r - friction
+assert 0 < P_mech < P_el and abs(P_mech / P_el - 0.625) < 1e-12
+# başarısız: komütatörsüz çerçeve ölü noktada (φ = 0) döndürme çifti sıfır
+assert abs(tau_dc[0]) < 1e-12 and abs(tau_dc[n // 2]) < 1e-9
+""")
+    ,
+]
