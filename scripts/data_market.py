@@ -147,3 +147,409 @@ SOURCES += [
              "edition_year dijital katalog yayın tarihidir (2021). Vektörler açılışı nedeniyle aile eşlemesi yapılmadı. Öğrencinin elinde bulunma olasılığı yüksek eski baskı örneği.",
        confidence="MEDIUM"),
 ]
+
+# ---------------------------------------------------------------------------------------------------------------
+# DEVAM (2026-10-03): ek kaynaklar. VİP örnekleri numunekitap.com (yayınevinin herkese açık sayfa görselleri) üzerinden okundu.
+# ---------------------------------------------------------------------------------------------------------------
+SOURCES += [
+    _s(slug="vip-11-fizik-soru-bankasi", publisher="VİP", title="11. Sınıf Fizik Soru Bankası",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=True,
+       url="https://vipyayinlari.com/11-sinif/soru-bankasi/11-sinif-fizik-soru-bankasi", verified_by_fetch=True,
+       question_styles=["KAVRAMSAL", "GRAFIK_TABLO", "KLASIK_ISLEM", "BAGLAM_TEMELLI", "COK_ADIMLI"], difficulty="karma",
+       pedagogical_style="Bölüm > Kavrama Testi (öncüllü I-II-III) > VİP Testi (klasik hesap, sayısal) > Alıştırmalar (açık uçlu, yazılı cevap) ; ünite sonunda 'Ünite Tarama Testi' "
+                         "(Bağlam Temelli etiketli); cevap anahtarında alıştırma cevapları kitapta.",
+       unique_characteristics=[
+           "Kapakta 'Yeni — Maarif Modeline Uygundur' kurdelesi, 'Temelli Bağlam & Beceri Testler' rozeti; video çözüm, mobil kütüphane, akıllı tahta simgeleri",
+           "Kavrama Testlerinde ağırlık I-II-III öncül yargıları ve kısa şematik grafik/tablo seçenekleri; sahne ve hikâye yok",
+           "'Bağlam Temelli' etiketi yalnız Newton testlerinin başında ve Ünite Tarama Testlerinde (hareketli referans, makara-eğik düzlem, limit hız gibi) görüldü",
+           "'Alıştırmalar' sayfaları: günlük hayat sahnelerinde 'nasıl açıklanır' tarzı açık uçlu sorular (çözüm yeri boş) — çoktan seçmeli olmayan nadir piyasa kalıbı",
+           "Örnek sayfadaki cevap anahtarı sayfa 288'de; Fiber Optik, Prizmalar, Mercekler bölümleri ve alıştırma cevapları kitapta (kitap ~290+ sayfa; ürün kaydı ISBN 9786258598964)",
+       ],
+       sample_evidence=[{"url": "https://numunekitap.com/9786258598964",
+                         "what": "Yayınevinin yönlendirdiği herkese açık numune (numunekitap.com sayfa görselleri, ~118 sayfa): kapak, Ünite 1 kapağı, Serbest Düşme Kavrama Testi (s.11), "
+                                 "Alıştırmalar (s.15), İki Boyutta Sabit İvmeli Hareket Kavrama Testi (s.23), Newton Yasaları Kavrama (s.43) ve VİP Testi 7 (s.53), "
+                                 "Sürtünme Alıştırmaları (s.63), Düzgün Çembersel Hareket Kavrama Testi (s.83), Ünite 1 Tarama Testi 4 (s.103), cevap anahtarı (s.288) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("ff-upward-throw", "s.11 Kavrama Testi 3: yukarı atılan cismin v-t grafiğini seçme ve hız/ivme/ağırlık vektörlerinin yukarı atış boyunca değişimini yargılama"),
+           _fm("ff-motion-graphs", "s.11 Kavrama Testi 3, Soru 1: beş v-t grafiği seçenekli (bölmeleri eşit aralıklı) grafik seçme sorusu"),
+           _fm("ff-downward-throw-or-moving-carrier", "s.11 Soru 3: aşağı atılan cismin v-t grafiğinden yükseklik ve süre; seçenekleri h-t tablosu olan soru"),
+           _fm("ff-mass-independence", "s.15 Alıştırma 3 ve s.23: kütleleri çok farklı cisimlerin aynı anda yere düşmesinden ortam çıkarımı (açık uçlu)", "partial"),
+           _fm("2d-horizontal-launch", "s.23 Kavrama Testi 1 ve 3: yatay atışta serbest düşme/yatay sabit hız öncülleri (nehir-şelale sahnesi)"),
+           _fm("2d-angled-launch", "s.23 Kavrama Testi 2 ve 4: eğik atışta menzil/uçuş süresi/maksimum yükseklik bağımlılıkları; Dünya-Ay karşılaştırması; s.103 Soru 4 (hmax/h oranı)"),
+           _fm("2d-moving-reference-launch", "s.103 Ünite Tarama Soru 1 (Bağlam Temelli): hareketli kaykay üzerinden düşey atılan top, ayakta gözlemcinin gördüğü yörünge", "partial"),
+           _fm("connected-bodies-same-acceleration", "s.53 VİP Testi 7, Soru 1 ve 4: makara-ip ile bağlı sistemlerin ivmesi (eğik düzlem ve sabit makara) ; s.43 Soru 2 itilen kütle sistemleri"),
+           _fm("accelerating-frame-pendulum", "s.53 Soru 2: ivmelenen vagon tavanından asılı cisimlerin ip açıları ve ivme sıralaması"),
+           _fm("newton2-f-m-a-relations", "s.43 Kavrama Testi 3, Soru 1 (kamyon çekiş kuvveti) ve Soru 3 (düşen elmada F, a, v niceliklerinin değişimi)", "partial"),
+           _fm("net-force-motion-state", "s.43 Soru 4: dört yönde kuvvet vektörleri verilmiş cismin ivmesi (üstten görünüş şeması)", "partial"),
+           _fm("static-vs-kinetic-compare", "s.63 Alıştırma 2: statik ve kinetik sürtünme açısından kutu itme olayının açıklanması (açık uçlu)", "partial"),
+           _fm("circular-kinematics", "s.83 Kavrama Testi 2 (Soru 1, 2, 3, 5): düzgün çembersel harekette açısal hız, çizgisel sürat ve periyot ilişkileri; plak ve robot kol sahneleri"),
+           _fm("coupled-wheels", "s.83 Soru 4: yarıçapları r, 2r, 3r olan dişlilerde açısal hız sıralaması"),
+           _fm("frictionless-incline", "s.103 Soru 3 (Bağlam Temelli): ipe bağlı kütle eğik düzlemde kayarken ivmenin değişimi", "partial"),
+           _fm("terminal-velocity-variables", "s.103 Soru 2: hava direnci katsayısı sabit, kütle 8 katına çıkınca limit hızın değişimi (küresel cisim, kütle-yarıçap ilişkisi)", "partial"),
+       ],
+       notes="Örnek, 1. Ünite ağırlıklı (Serbest Düşme, 2B hareket, Newton, sürtünme, çembersel hareket) ve cevap anahtarı sayfalarından oluşuyor; Elektrik-Manyetizma ve Optik soru sayfaları görülmedi (yalnız cevap anahtarında Fiber Optik/Prizma/Mercek bölüm başlıkları). "
+             "Maarif beyanı kapaktan okundu (yayınevi beyanı); yayınevi sayfasında ayrıca yok. Baskı yılı yok. ÖSYM 2024-2025 TYT/AYT'deki çoktan seçmeli I-II-III öncül kalıbıyla yapı olarak çok uyumlu; "
+             "bağlam yoğunluğu Okyanus'a göre düşük.",
+       confidence="HIGH"),
+
+    _s(slug="vip-11-fizik-konu-anlatim-fasikulu", publisher="VİP", title="11. Sınıf Fizik Konu Anlatım Fasikülü (34 fasikül)",
+       kind="fasikul", target="11", edition_year=None, maarif_claim=True,
+       url="https://numunekitap.com/vip/11-sinif/11-sinif-fizik-konu-anlatim-fasikulu", verified_by_fetch=True,
+       question_styles=["BAGLAM_TEMELLI", "KLASIK_ISLEM", "KAVRAMSAL"], difficulty="karma",
+       pedagogical_style="Fasikül başına bir alt konu; 'Örnek' kutuları (Bağlam Temelli etiketli, uzun senaryo + alt sorular 1-3, çözüm alanı kareli ve boş) ve 'Alıştırmalar' (açık uçlu ve kutucuklu kısa cevap).",
+       unique_characteristics=[
+           "Kapakta '34 Fasikül', 'Yeni — Maarif Modeline Uygundur', 'Temelli Bağlam & Beceri Testler'; video çözüm, mobil kütüphane, akıllı tahta",
+           "Bağlam Temelli örnek: tek bir senaryo (uzay ajansı sensör kapsülü, vakum kulesi) altında ardışık 3 soru — süre, çarpma hızı/ivme yargısı, belirli saniye aralığında yol (ÖSYM 2025 AYT çok adımlı stemlere benzer)",
+           "Alıştırmalarda 'Cevabınızı kutucuklara sola dayalı yazınız' kısa cevaplı (optik okuma benzeri kutucuk) soru biçimi — ÖSYM çoktan seçmelisinden farklı",
+       ],
+       sample_evidence=[{"url": "https://numunekitap.com/vip/11-sinif/11-sinif-fizik-konu-anlatim-fasikulu",
+                         "what": "Yayınevinin herkese açık numune sayfa görselleri (~100 sayfa): kapak, Fasikül 1 Serbest Düşme Örnek 5 (s.4) ve Alıştırmalar (s.6) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("ff-kinematics-v0zero", "s.4 Örnek 5, Soru 1-2: ilk hızsız bırakılan kapsülün yere ulaşma süresi ve çarpma hızı/hız değişimi"),
+           _fm("ff-equal-interval-ratios", "s.4 Örnek 5, Soru 3: belirli iki saniye arasında alınan yol", "partial"),
+           _fm("ff-downward-throw-or-moving-carrier", "s.6 Alıştırma 1, 2, 5, 6: aşağı yönlü ilk hızlı atış ile ilk hızsız bırakmanın ivme/süre karşılaştırması (açık uçlu/kutucuklu)", "partial"),
+           _fm("ff-upward-throw", "s.6 Alıştırma 3, 4, 7, 8: yukarı atışta tepe noktasında ivme, hız/ivme vektör yönleri (açık uçlu/kutucuklu)", "partial"),
+       ],
+       notes="Maarif beyanı kapaktan; ürün künyesi (ISBN, sayfa, yıl) bu fasikül için doğrulanamadı. Örnekte yalnız Fasikül 1 (Serbest Düşme) görüldü. "
+             "VİP Fizik Soru Bankası ile aynı seri görünümü.",
+       confidence="MEDIUM"),
+
+    _s(slug="bilgi-sarmal-11-fizik-maarif-soru-bankasi", publisher="Bilgi Sarmal", title="11. Sınıf Fizik Maarif Soru Bankası",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=True,
+       url="https://www.kitapsec.com/Products/11-Sinif-Fizik-Maarif-Soru-Bankasi-Bilgi-Sarmal-949240.html", verified_by_fetch=True,
+       pedagogical_style="", unique_characteristics=[
+           "Ürün sayfasında başlıkta 'Maarif' ifadesi (satıcı sayfası); yazarlar Ümit Akça ve Cenk Çayırcıoğlu; ISBN 9786256712775",
+       ],
+       notes="Yalnız perakende (kitapsec) ürün sayfası okundu: içerik, sayfa sayısı, baskı yılı ve örnek sayfa yok. Soru stili/aile eşlemesi yapılmadı. Maarif beyanı başlıktan (yayınevi adı + ürün adı).",
+       confidence="LOW"),
+
+    _s(slug="palme-11-fizik-joker-tematik-soru-kitabi", publisher="Palme", title="11. Sınıf Fizik Joker Tematik Soru Kitabı",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/11-Sinif-Fizik-Joker-Tematik-Soru-Kitabi-Palme-Yayinlari-948934.html", verified_by_fetch=True,
+       unique_characteristics=["Yazarlar Cemil Ayan, Mahmut Pala; ISBN 9786258542677; 360 sayfa; 22x27,5 cm (satıcı künyesi)", "Başlıkta 'Tematik' ifadesi var; açık Maarif beyanı sayfada yok"],
+       notes="Yalnız perakende ürün sayfası okundu; içerik/örnek sayfa yok. Maarif beyanı yazılmadığı için None. Baskı yılı bilinmiyor (yeni ISBN bloğu nedeniyle yeni olması muhtemel ama kanıtlanmadı).",
+       confidence="LOW"),
+
+    _s(slug="orijinal-mikro-11-fizik-mof-ogreten-fasikul-set", publisher="Orijinal", title="Orijinal Mikro 11. Sınıf Fizik MÖF (Mikro Öğreten Fasikül) Set",
+       kind="fasikul", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/Orijinal-Mikro-11-Sinif-Fizik-MOF-Mikro-Ogreten-Fasikul-Set-Orijinal-Yayinlari-953541.html", verified_by_fetch=True,
+       unique_characteristics=["Yazarlar Engin Aydın, Zeynep Uslu; ISBN 9786255708656; 416 sayfa; 19x27 cm (satıcı künyesi)", "Ürün tanımı: konu bazlı mikro öğreten fasikül ve problem çözümü"],
+       notes="Yalnız perakende ürün sayfası okundu; Maarif beyanı sayfada yok (blog iddiaları kaynak sayılmadı). İçerik/örnek sayfa yok.",
+       confidence="LOW"),
+]
+
+# Paylaşım (numunekitap.com herkese açık numune sayfaları okundu) + VİP Konu Testi
+SOURCES += [
+    _s(slug="paylasim-11-fizik-soru-bankasi-4x4", publisher="Paylaşım", title="11. Sınıf Fizik Soru Bankası (4x4 Haftalık Planlı)",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=True,
+       url="https://numunekitap.com/paylasim/11-sinif/11-sinif-fizik-soru-bankasi", verified_by_fetch=True,
+       question_styles=["KAVRAMSAL", "GRAFIK_TABLO", "KLASIK_ISLEM", "BAGLAM_TEMELLI"], difficulty="orta",
+       pedagogical_style="Ardışık numaralı 'Başarı İzleme Testi'ler (test başına 4 soru, ünite/konu adı başlıkta); bazı sorularda 'Bağlam Temelli' etiketi; seçenekleri çoğunlukla tablo "
+                         "('v ve h bir arada doğru verilmiştir' kalıbı) ya da I-II-III öncüllü.",
+       unique_characteristics=[
+           "Kapakta '4x4 Haftalık Planlı', 'Yeni — Maarif Modeline Uygundur', 'BBT: Beceri ve Bağlam Temelli Testler'; video çözüm, mobil kütüphane, akıllı tahta",
+           "Test başına yalnız 4 soru; her sayfada sayısal ve kavramsal sorular karışık; bağlam sahneleri kısa (oyuncak araba, eğlence merkezi dönme dolabı, cam sanatçısı)",
+           "Elektrik sorularında 'öğrenci yargıları' kalıbı (Kadir/Hatice/Saliha, Ayşe'nin not aldığı bilgiler) — ÖSYM 2028 örneklerindeki doğrula-yargıla eğilimine yakın",
+           "Optik sayfasında kırılma indisi tablosu verilip ortamdaki ışık sürati sıralaması (GRAFIK_TABLO/KAVRAMSAL)",
+       ],
+       sample_evidence=[{"url": "https://numunekitap.com/paylasim/11-sinif/11-sinif-fizik-soru-bankasi",
+                         "what": "Yayınevinin herkese açık, 'PAYLAŞIM' damgalı numune sayfa görselleri (~110 sayfa): kapak, Test 4 Serbest Düşme (s.13), Test 9 İki Boyutta Sabit İvmeli Hareket (s.23), "
+                                 "Test 11 Çembersel Hareket (s.79), Test 6 Elektriksel Kuvvet ve Alan (s.121), Test 16 Kırılma (s.205) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("ff-downward-throw-or-moving-carrier", "s.13 Test 4 Soru 2: yüksekten aşağı doğru ilk hızla atılan cismin çarpma hızı ve yüksekliği, seçenekleri v-h tablosu"),
+           _fm("ff-upward-throw", "s.13 Test 4 Soru 3-4: yukarı atışta maksimum yükseklik/uçuş süresi ve yerden yükseklikten atılan cismin v-h tablosu"),
+           _fm("ff-kinematics-v0zero", "s.13 Test 4 Soru 1: K ve L cisimlerinin konum/hız öncülleri (ilk hızsız bırakma yargıları)", "partial"),
+           _fm("2d-angled-launch", "s.23 Test 9 Soru 1 ve 3: 53/37 derece açılı atış, maksimum yükseklik/havada kalma süresi/menzil öncülleri ve x1/x2 oranı"),
+           _fm("2d-horizontal-launch", "s.23 Test 9 Soru 4: serbest bırakılan, yatay atılan ve açılı atılan üç cismin hareket sürelerinin ilişkisi", "partial"),
+           _fm("circular-kinematics", "s.79 Test 11 Soru 1-4: düzgün çembersel harekette açısal/çizgisel hız, periyottan sürat, dönme dolap ve Dünya üzerindeki K-L noktaları"),
+           _fm("efield-direction-and-lines", "s.121 Test 6 Soru 3-4: alan çizgisinden K ve L'nin yük işaretleri, alan çizgisi özellikleri için öğrenci yargıları"),
+           _fm("efield-point-charge-ratio", "s.121 Test 6 Soru 1: noktasal yükün oluşturduğu alanın uzaklıkla değişimi, sarkaç yörüngesindeki cisim için O noktasında alan değişimi", "partial"),
+           _fm("fcage-verify-claims", "s.121 Test 6 Soru 2: Faraday kafesinin kullanım senaryolarından doğru olanları seçme", "partial"),
+           _fm("rf-ray-path-media-comparison", "s.205 Test 16 Soru 1 ve 3: ışık yolundan ortamların cinsini yargılama; kırılma indisi tablosundan ışık sürati sıralaması"),
+           _fm("rf-color-dispersion", "s.205 Test 16 Soru 2 (Bağlam Temelli): cam bloktan geçen beyaz ışığın renklere ayrılması ve kırılma miktarı öncülleri"),
+       ],
+       notes="Numune kitabın ~110 sayfasını kapsıyor (1. ünite, 2. ünite başı, Optik kırılma sayfası); bu nedenle üç ünitenin de soru sayfası görüldü ama her konudan örnek yok. "
+             "Maarif beyanı kapaktan (yayınevi beyanı). Baskı yılı ve künye (ISBN, sayfa) bu kayıt için doğrulanmadı. Okyanus'a göre bağlam yoğunluğu düşük, ÖSYM TYT/AYT'nin sade şemalarına yakın.",
+       confidence="HIGH"),
+
+    _s(slug="paylasim-11-fizik-anlatim-modulu-4-modul", publisher="Paylaşım", title="11. Sınıf Fizik Anlatım Modülü (4 modül)",
+       kind="konu_anlatimi", target="11", edition_year=None, maarif_claim=True,
+       url="https://numunekitap.com/paylasim/11-sinif/11-sinif-fizik-konu-anlatim-modulu", verified_by_fetch=True,
+       question_styles=["KLASIK_ISLEM", "KAVRAMSAL", "GRAFIK_TABLO"], difficulty="orta",
+       pedagogical_style="Konu anlatımı + numaralı 'Örnek' kutuları (çözüm alanı boş, 'Çözüm' başlığı); 'Paylaşım' uyarı kutusu; boşluk doldurma ve doğru-yanlış (D/Y) örnekleri; 'ÖSYM Sorusu' etiketli örnek.",
+       unique_characteristics=[
+           "Kapakta '4 Modül', '1. Modül: Kuvvet ve Hareket 1', 'Yeni — Maarif Modeline Uygundur', 'Beceri ve Bağlam Temelli Testler' rozetleri",
+           "Serbest Düşme örnekleri: boşluk doldurma ve D/Y biçiminde (çoktan seçmeli olmayan) kavramsal örnekler",
+           "Bir örneğin altında 'ÖSYM Sorusu' etiketi (t1/t2 oranından h1/h2 bulma) — çıkmış soruyla anlatım",
+       ],
+       sample_evidence=[{"url": "https://numunekitap.com/paylasim/11-sinif/11-sinif-fizik-konu-anlatim-modulu",
+                         "what": "Yayınevinin herkese açık numune sayfa görselleri (~60 sayfa): kapak, Serbest Düşme Örnek 2-5 (s.3) ve yukarı atış anlatımı/Örnek 12 (s.6) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("ff-kinematics-v0zero", "s.3 Örnek 2 ve Örnek 5: ilk hızsız bırakılan cismin belirli yükseklikteki hızı; t1/t2 ve h1/h2 oranı (ÖSYM etiketli)"),
+           _fm("ff-mass-independence", "s.3 Örnek 3 ve 4: kütleleri farklı cisimlerin aynı anda bırakılması, çarpma süresi/hızı/ivme için D/Y ve boşluk doldurma"),
+           _fm("ff-upward-throw", "s.6: yukarı atışta konum-hız-ivme grafik üçlüsü, uçuş süresi ve maksimum yükseklik formülleri, Örnek 12 (40 m/s)"),
+           _fm("ff-motion-graphs", "s.6: yukarı atışta konum-zaman, hız-zaman, ivme-zaman grafikleri (aşağı yön negatif)"),
+       ],
+       notes="Örnekte yalnız 1. modülün Serbest Düşme bölümü görüldü. Maarif beyanı kapaktan. Baskı yılı/künye doğrulanamadı.",
+       confidence="MEDIUM"),
+
+    _s(slug="vip-11-fizik-konu-testi-24-test", publisher="VİP", title="11. Sınıf Fizik Konu Testi (8'li, 24 test)",
+       kind="yaprak_test", target="11", edition_year=None, maarif_claim=True,
+       url="https://numunekitap.com/vip/11-sinif/11-sinif-fizik-konu-testi", verified_by_fetch=True,
+       question_styles=["KAVRAMSAL", "GRAFIK_TABLO", "KLASIK_ISLEM"], difficulty="orta",
+       pedagogical_style="Konu Testi + Ünite Değerlendirme + Konu Tarama olmak üzere 24 test (8'li); tek sayfa test, 5 soru; filigranlı yayınevi numunesi; QR ile video çözüm.",
+       unique_characteristics=[
+           "Kapakta '8'li 24 Test', 'Konu Testi • Ünite Değerlendirme • Konu Tarama', 'Yeni — Maarif Modeline Uygundur', 'Temelli Bağlam & Beceri Testler'",
+           "Test 2 (İki Boyutta Sabit İvmeli Hareket-1): tek sayfada 5 soru; şekil, v_x-v_y grafik seçenekleri, sayısal yatay atış",
+       ],
+       sample_evidence=[{"url": "https://numunekitap.com/vip/11-sinif/11-sinif-fizik-konu-testi",
+                         "what": "Yayınevinin herkese açık 22 sayfalık numune görselleri: kapak ve Test 2 (İki Boyutta Sabit İvmeli Hareket-1) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("2d-horizontal-launch", "Test 2 Soru 1, 3, 4: masadan yatay atılan top (hangi hareket), x yolunun v-h-g bağımlılığı, yatay 80 m/s ile atılan cismin yatay yolu"),
+           _fm("2d-component-graphs", "Test 2 Soru 2: yatay atışta v_x ve v_y bileşenlerinin zamana bağlı grafiğini seçme (beş grafik seçenekli)"),
+       ],
+       notes="Yalnız 1 test görüldü; Maarif beyanı kapaktan. Bağlam Temelli etiketli soru bu sayfada yoktu. Künye (ISBN, yıl) doğrulanamadı.",
+       confidence="MEDIUM"),
+]
+
+# Resmî (MEB) ücretsiz platformlar
+SOURCES += [
+    _s(slug="meb-mebi-yks-hazirlik", publisher="MEB", title="MEBİ (EBA/MEB dijital öğrenme ve sınav hazırlık platformu)",
+       kind="dijital_platform", target="YKS", edition_year=None, maarif_claim=None,
+       url="https://mebi.eba.gov.tr", verified_by_fetch=True,
+       difficulty=None,
+       pedagogical_style="Kısa video ders (10-20 dk), konu özeti, sesli özet, etkileşimli animasyon; soru bankası, çıkmış soru video çözümleri, deneme sınavları (çevrim içi/PDF); yapay zekâ asistanı ile çalışma planı.",
+       unique_characteristics=[
+           "Ücretsiz; EBA, e-Devlet veya MEBBİS hesabıyla giriş; web ve mobil uygulama",
+           "Ana sayfa içerik listesi LGS ve YKS (TYT, AYT, YDT) hazırlığını sayıyor",
+           "Ana sayfada 'Türkiye Yüzyılı Maarif Modeli'ne uygun müfredat içeriğinin 5, 6, 9 ve 10. sınıflar için bulunduğu yazıyor; 11. sınıf için aynı beyan yok",
+       ],
+       notes="Yalnız ana sayfa okundu; fizik soru örnekleri ve 11. sınıf içeriği oturum açmadan görülemedi, bu yüzden question_styles ve family_mapping boş. "
+             "MEB açıklamalarına göre (osym-analysis.md'deki 2025-12-15 kaydı) 2028 soru modeli örnekleri MEB platformlarından paylaşılacak; MEBİ bunların beklenen adresi ama bu kayıtta doğrulanmadı. "
+             "Maarif beyanı 9-10 için var, 11 için yok: bu nedenle maarif_claim None.",
+       confidence="MEDIUM"),
+
+    _s(slug="meb-eba-lise-fizik", publisher="MEB", title="EBA (Eğitim Bilişim Ağı) - Lise dersleri",
+       kind="dijital_platform", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.eba.gov.tr", verified_by_fetch=True,
+       pedagogical_style="Müfredata uygun ders videoları, etkileşimli içerik, alıştırma/test; yapay zekâ destekli çalışma planı vurgusu.",
+       unique_characteristics=[
+           "Ücretsiz; kişiselleştirilmiş takip için giriş gerekiyor; mobil ve tablet uygulaması var",
+           "Ana sayfa içerik türlerini sayıyor (video, etkileşimli içerik, test) ama fizik 11. sınıf içeriğine ilişkin ayrıntı vermiyor",
+       ],
+       notes="Yalnız ana sayfa okundu; sayfa 'iyileştirme çalışması' notu taşıyor. Fizik/11. sınıf içeriği, Maarif beyanı ve soru örnekleri görülemedi; stil ve aile eşlemesi yapılmadı.",
+       confidence="LOW"),
+
+    _s(slug="meb-ogm-materyal-fizik", publisher="MEB (OGM)", title="OGM Materyal - Fizik (soru bankası, ders sunuları, etkileşimli kitap)",
+       kind="dijital_platform", target="11", edition_year=None, maarif_claim=None,
+       url="https://ogmmateryal.eba.gov.tr", verified_by_fetch=False,
+       pedagogical_style="Kazanım bazlı soru bankası ve test oluşturma; ders anlatım sunuları; etkileşimli kitaplar (arama sonuçlarındaki özetlere göre).",
+       unique_characteristics=[
+           "Ücretsiz MEB Ortaöğretim Genel Müdürlüğü portalı; bölümler: Etkileşimli Kitaplar, Soru Bankası, YKS Hazırlık, Ders Anlatım, 3B Modeller, Deneyler (arama özeti)",
+           "Arama özetinde 11. sınıf fizik ders sunuları için vektörler, bağıl hareket, iş-enerji gibi eski müfredat başlıkları sayılıyor",
+       ],
+       old_curriculum_risk=True,
+       notes="Site tarayıcıda dinamik yükleniyor: WebFetch yalnız başlığı döndürdü, içerik okunamadı (verified_by_fetch False). Bilgiler arama sonucu özetinden; kaynak sayfa listesindeki başlıklar eski (2018-2024) program unsurlarını gösteriyor, "
+             "Maarif 11. sınıf içeriği bu portalda doğrulanamadı. Eğitim kaynağı olarak ücretsiz erişim kolay, ama 11. sınıf içeriği eski programa ait olabilir.",
+       confidence="LOW"),
+]
+
+# YouTube fizik kanalları (kanal 'Oynatma listeleri' sayfası tarayıcıda okundu; video içeriği izlenmedi, bu yüzden stil/aile eşlemesi boş)
+SOURCES += [
+    _s(slug="yt-vip-fizik", publisher="VİP Fizik (YouTube)", title="VIP FİZİK - YouTube kanalı (@VIPFIZIK)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=True,
+       url="https://www.youtube.com/@VIPFIZIK/playlists", verified_by_fetch=True,
+       pedagogical_style="Konu anlatımı kursları, 'günde' kamplar (50 günde TYT, 90 günde AYT), branş deneme ve soru bankası çözümleri, kısa 'Shorts' soruları; Maarif ve eski müfredat listeleri ayrı.",
+       unique_characteristics=[
+           "Kanal açıklaması '9., 10. ve 11. sınıf Maarif fizik yazılılarına hazırlık' diyor (kanal beyanı); yaklaşık 923 bin abone",
+           "'11.SINIF FİZİK MAARİF MODEL KONU ANLATIMI | 2027' oynatma listesi (26 ders); 9. sınıf (33) ve 10. sınıf (20) Maarif listeleri de var",
+           "Aynı kanalda eski müfredata dayalı 'AYT Fizik Soru Bankası Çözümleri | 2025' (147 ders), 'Vektörler' ve 'Bağıl Hız' listeleri ve '2027 AYT Fizik Kampı | 90 Günde AYT Fizik' (16 ders) bulunuyor",
+           "Yayınevi VİP Yayınları ile aynı marka; '2027 AYT SB Çözümleri' kitap çözümleri",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız kanal oynatma listeleri sayfası okundu (sayaçlar tarama tarihinde 2026-10-03). Videolar izlenmediği için soru stili ve aile eşlemesi yok. "
+             "Maarif beyanı kanal açıklamasından (kanal sahibi beyanı). AYT 2027 içerikleri eski müfredat; 11. sınıf Maarif listesi ayrı.",
+       confidence="MEDIUM"),
+
+    _s(slug="yt-ertan-sinan-sahin", publisher="Ertan Sinan Şahin (YouTube)", title="Ertan Sinan Şahin - YouTube kanalı (@ertansinansahin)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=None,
+       url="https://www.youtube.com/@ertansinansahin/playlists", verified_by_fetch=True,
+       pedagogical_style="TYT-AYT fizik kampları ve deneme/soru bankası çözümleri, canlı yayınlar, üniversite genel fizik ve kalkülüs dersleri.",
+       unique_characteristics=[
+           "Kanal açıklaması: TYT-AYT Fizik ve Üniversite Fizik; yaklaşık 530 bin abone",
+           "Oynatma listeleri 2027 TYT ve AYT Fizik Kampı, '2027 TYT-AYT Fizik Deneme ve Soru Bankası Çözümleri' ve '2025 TYT-AYT Fizik Deneme ve SB Çözümleri' içeriyor",
+           "Oynatma listelerinde 11. sınıf Maarif ya da yeni müfredat başlığı yok; 2027 AYT içeriği eski müfredata göre",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız oynatma listeleri sayfası okundu; ayrıca ürün sitesi (ertansinansahin.com) eski CSV'de 11. sınıf seti için 2022 baskı bilgisi veriyor (bu kayıtta tekrar doğrulanmadı). "
+             "Maarif beyanı yok → None. Video içeriği izlenmedi.",
+       confidence="MEDIUM"),
+
+    _s(slug="yt-altug-gunes-fizik", publisher="Altuğ Güneş (YouTube)", title="Altuğ Güneş FİZİK - YouTube kanalı (@altuggunesfizik)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=True,
+       url="https://www.youtube.com/@altuggunesfizik/playlists", verified_by_fetch=True,
+       pedagogical_style="Yeni müfredat (9-10-11. sınıf) ders listeleri, 2028 Maarif 1. oturum kampı, AYT 1. ve 2. kitap kampları, soru bankası (Twins) çözümleri, deneme çözümleri.",
+       unique_characteristics=[
+           "Kanal açıklaması: 'ÖSYM tarzına yakın sorular'; yaklaşık 489 bin abone",
+           "'11. Sınıf Yeni Müfredat Maarif Fizik Videoları' (11 video), '9. Sınıf Fizik Dersleri Yeni Müfredat 2026' (32), '10. Sınıf Fizik Dersleri Yeni Müfredat 2026' (41), '2028 Maarif Model 1. Oturum Fizik Kampı' (33)",
+           "Eski müfredat: 'AYT Fizik 2. Kitap Fizik Kampı 2027' (53 ders) ve 'AYT Fizik 12. Sınıf Konuları Fizik Kampı 2024'",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız oynatma listeleri sayfası okundu. 11. sınıf Maarif listesi henüz kısa (11 video). Video içeriği izlenmedi. Maarif beyanı liste başlıklarından (kanal beyanı).",
+       confidence="MEDIUM"),
+
+    _s(slug="yt-umut-oncul-akademi", publisher="Umut Öncül Akademi (YouTube)", title="Umut Öncül Akademi - YouTube kanalı (@umutonculakademi)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=True,
+       url="https://www.youtube.com/@umutonculakademi/playlists", verified_by_fetch=True,
+       pedagogical_style="Sınıf bazlı ders kursları, 'ÖSYM Sorar', 'İkiz Çıkmış Sorular', 'Öncüllü Sorular', 'Deneme Dedektifi' gibi çıkmış soru odaklı listeler; Maarif Shorts.",
+       unique_characteristics=[
+           "Yaklaşık 431 bin abone; '11.SINIF MAARİF MODELİ FİZİK 2027' oynatma listesi yalnız 3 video, ayrıca '11.SINIF FİZİK 2025' kursu 34 ders (eski program)",
+           "'ÖSYM Sorar AYT' (20 video), 'Öncüllü Sorular AYT' (9 ders), 'İkiz Çıkmış Sorular | Çap Yayınları' listeleri: çıkmış sorularla çalışma kalıbı",
+           "'Fizik Dersinde Maarif Modeli' (2 video) ve 'Maarif Modeli Fizik Kampı' (31 video) listeleri",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız oynatma listeleri sayfası okundu; video içeriği izlenmedi. 11. sınıf Maarif içeriği kanalda henüz sınırlı. Maarif beyanı liste başlıklarından.",
+       confidence="MEDIUM"),
+]
+
+# Karekök (yayınevi sitesinin "kitap görüntüleme" sayfasındaki herkese açık filigranlı numune okundu)
+SOURCES += [
+    _s(slug="karekok-11-fizik-soru-bankasi", publisher="Karekök", title="11. Sınıf Fizik Soru Bankası",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.karekok.com.tr/yayinlarimiz/11-sinif/soru-bankalari/11sinif-fizik-soru-bankasi-444.html", verified_by_fetch=True,
+       question_styles=["KAVRAMSAL", "GRAFIK_TABLO", "KLASIK_ISLEM", "COK_ADIMLI"], difficulty="orta",
+       pedagogical_style="Konu başlıklı klasik test sayfaları (sayfa başına 8 soru, alt şeritte cevap anahtarı); I-II-III öncüllü ağırlık; şematik, bağlam sahnesi az. "
+                         "Optik bölümünde kısa bilgi kutusu + açık uçlu 'Neden?' ve işaretleme soruları (kareli cevap alanı).",
+       unique_characteristics=[
+           "Yayınevi sayfası: Yazar Deniz Karakoç, ISBN 9786258609615, 264 sayfa, 210x270, video çözümlü, 'Müfredat: 2025-2026'; üniteler Kuvvet ve Hareket, Elektrik ve Manyetizma, Optik",
+           "Kapakta 'Yeni Müfredatın Öğrenme Çıktılarına Uygun Hazırlanmıştır' (açıkça 'Maarif' sözcüğü yok)",
+           "Mekanik testlerde sayfa altında cevap şeridi; sorular kısa stemli, ÖSYM benzeri 'kesinlikle doğrudur' vurgulu öncül soruları",
+           "Işık şiddeti-akısı-aydınlanma sayfasında çoktan seçmeli olmayan açık uçlu ve çoklu işaretleme soruları (kareli cevap alanı) — piyasada ÖSYM formatından sapan kalıp",
+       ],
+       sample_evidence=[{"url": "https://www.karekok.com.tr/kitap-goruntusu/?yayin_id=444",
+                         "what": "Yayınevinin herkese açık, 'karekök' filigranlı 34 sayfalık numune görselleri: kapak, 1. Ünite kapağı, s.12 (Serbest Düşme), s.80 (Kuvvet ve Hareket), "
+                                 "s.162 (Işık Şiddeti, Işık Akısı ve Aydınlanma) görüntülendi. Soru metni kaydedilmedi."}],
+       family_mapping=[
+           _fm("ff-kinematics-v0zero", "s.12 Soru 6: K'dan serbest bırakılan cismin iki ardışık yolunun süreleri 2t ve t iken yükseklik oranı (h1/h2)"),
+           _fm("ff-upward-throw", "s.12 Soru 5 ve 8: yerden yukarı atılan cismin yere çarpma hızı/süresi ve L-M noktalarından hız ile yol-süre-maksimum yükseklik öncülleri"),
+           _fm("ff-downward-throw-or-moving-carrier", "s.12 Soru 7: aynı yükseklikte iki cismin düşey aşağı atılması, biri serbest bırakılması, biri yerden yukarı atılması; havada kalma süresi sıralaması"),
+           _fm("2d-horizontal-launch", "s.80 Soru 7: kaykaycının yatay atışı ile serbest bırakılan elmanın aynı anda varması (aynı anda yere çarpma, süre eşitliği öncülleri)"),
+           _fm("accelerating-frame-pendulum", "s.80 Soru 5: hızlanan vagonda iki yaya bağlı cismin yay kuvvetleri ve net kuvvet öncülleri", "partial"),
+           _fm("connected-bodies-same-acceleration", "s.80 Soru 6: ipli iki cismin çekme yönü değişince ivme, ip gerilmesi ve net kuvvet öncülleri", "partial"),
+           _fm("newton2-f-m-a-relations", "s.80 Soru 8: 2 kg cismin v-t grafiğinden net kuvvet büyüklüğü", "partial"),
+           _fm("lum-qualitative-factors", "s.162 Soru 1 ve 3: lamba gücü iki katına çıkınca ışık şiddeti, kürenin yarıçapı büyüyünce yüzeye düşen ışık akısı (açık uçlu)"),
+           _fm("illum-oblique-angle", "s.162 Soru 4: yüzeye 60 derece gelen ışıkta aydınlanmanın dik gelişe göre değişimi (açık uçlu)"),
+       ],
+       notes="Örnek 34 sayfa; yalnız 3 içerik sayfası (s.12, s.80, s.162) okundu; elektrik ve manyetizma soru sayfası görülmedi. Maarif beyanı yok: yalnızca 'yeni müfredatın öğrenme çıktıları' ifadesi var (yayınevi 'Maarif' dememiş) -> maarif_claim None. "
+             "Sitedeki 'Müfredat: 2025-2026' alanı baskı yılı değil müfredat etiketi. İçerik 3 ünite, tork/momentum yok.",
+       confidence="HIGH"),
+]
+
+# Palme eski seri (yaygın ikinci el/stok kitapları): eski müfredat riski örnekleri
+SOURCES += [
+    _s(slug="palme-11-fizik-konu-anlatimli-eski", publisher="Palme", title="11. Sınıf Fizik Konu Anlatımlı (eski seri)",
+       kind="konu_anlatimi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.palmeyayinevi.com/11sinif-fIzIk-konu-anlatimli", verified_by_fetch=True,
+       unique_characteristics=[
+           "Yayınevi sayfası: ISBN 9786052820063, 352 sayfa, 19,5x27,5 cm, ürün 'artık satışta değil' olarak işaretli",
+           "Perakende sayfası (kitapsec): yazar Cemil Ayan; her konu sonunda 20 soruluk test, boşluk doldurma ve çözümlü örnekler",
+       ],
+       old_curriculum_risk=True,
+       notes="Baskı yılı iki sayfada da yok (yalnız arama özetinde 2021 geçti; teyit edilemedi). Maarif ifadesi hiçbir sayfada yok; içindekiler okunamadı. "
+             "Risk işareti kanıta değil dolaylı göstergelere dayanıyor: ISBN bloğu 978-605-2820 (eski), stok dışı, Maarif ifadesi yok. Öğrencinin elinde bulunma ihtimali yüksek eski seri örneği.",
+       confidence="LOW"),
+
+    _s(slug="palme-11-fizik-soru-kitabi-eski", publisher="Palme", title="11. Sınıf Fizik Soru Kitabı (eski seri)",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/11-Sinif-Fizik-Soru-Kitabi-Palme-Yayincilik-307513.html", verified_by_fetch=True,
+       unique_characteristics=[
+           "Perakende sayfası: yazar Cemil Ayan, ISBN 9786052820087, 220 sayfa, stokta yok; 4.636 satış ve 109 yorum (yaygın kullanılmış kitap)",
+       ],
+       old_curriculum_risk=True,
+       notes="Baskı yılı sayfada yok (arama özetinde 2018 geçti, teyit edilemedi); içerik ve Maarif ifadesi sayfada yok. Eski müfredat riski dolaylı göstergelere dayanıyor "
+             "(eski ISBN bloğu, yüksek satış-yorum geçmişi, stok dışı). Aile eşlemesi yapılmadı.",
+       confidence="LOW"),
+]
+
+# Ek YouTube kanalları (oynatma listeleri sayfası tarayıcıda okundu)
+SOURCES += [
+    _s(slug="yt-fizikfinito", publisher="Fizikfinito (YouTube)", title="Fizikfinito - YouTube kanalı (@Fizikfinito)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=True,
+       url="https://www.youtube.com/@Fizikfinito/playlists", verified_by_fetch=True,
+       pedagogical_style="Konu kampları (39 günde TYT, 42 günde AYT), kritik konular tekrarı, sınıf bazlı Maarif ders serileri, yazılı çalışmaları, deneyli anlatım serileri.",
+       unique_characteristics=[
+           "Yaklaşık 689 bin abone; '9. Sınıf Fizik 2025-2026 Maarif Model' (26-27 video) ve '10. Sınıf Fizik 2025-2026 Maarif Model' (55 ders) serileri",
+           "11. sınıf için Maarif serisi listede görülmedi; '11.Sınıf Fizik Kampı - AYT Fizik 1 Kitap 3 Kamp' (44 video) ve 'Maarif Model Fizik - Dosia 2026-2027' (1 video) var",
+           "Deneyli anlatım listeleri ('Deneylerle Fizik 2023', 'Deneyli Anlatım 2024')",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız oynatma listeleri sayfasının ilk bölümü okundu (çıktı kısaltıldı; listelerin tamamı görülmedi). 11. sınıf Maarif serisi bu okumada yoktu, bu nedenle 11. sınıf içeriği eski müfredata dayalı olabilir. "
+             "Video içeriği izlenmedi; Maarif beyanı 9-10 liste başlıklarından.",
+       confidence="MEDIUM"),
+
+    _s(slug="yt-hocalara-geldik", publisher="Hocalara Geldik (YouTube)", title="Hocalara Geldik - YouTube kanalı (@Hocalarageldik)",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=None,
+       url="https://www.youtube.com/hocalarageldik/playlists", verified_by_fetch=True,
+       pedagogical_style="Çok dersli YKS genel tekrar serileri (AYT/TYT Fizik Genel Tekrar), rehberlik ve tercih videoları.",
+       unique_characteristics=[
+           "Yaklaşık 1,31 milyon abone; 'AYT - Fizik - Genel Tekrar' (26 video) ve 'TYT - Fizik - Genel Tekrar' (14 video) listeleri",
+           "Okunan listelerde 11. sınıfa özel ya da Maarif etiketli fizik serisi yok",
+       ],
+       notes="Yalnız oynatma listeleri sayfasının ilk bölümü okundu; fizik genel tekrar videolarının hangi müfredata dayandığı doğrulanamadı. Maarif beyanı yok.",
+       confidence="LOW"),
+
+    _s(slug="yt-benim-hocam-fizik", publisher="Benim Hocam (YouTube)", title="Benim Hocam - YouTube kanalı (@BenimHocam) 2027 Fizik serileri",
+       kind="video_kanal", target="YKS", edition_year=None, maarif_claim=None,
+       url="https://www.youtube.com/@benimhocam/playlists", verified_by_fetch=True,
+       pedagogical_style="Çok öğretmenli, 2027 YKS'ye göre konu anlatım video ders notları; fizik için 'TYT Fizik' (50 video) ve 'AYT Fizik' (16 video) listeleri.",
+       unique_characteristics=[
+           "Yaklaşık 3,57 milyon abone; fizik öğretmeni olarak liste başlıklarında Veli İpekçi geçiyor",
+           "Okunan listeler '2027 / AYT Fizik Video Ders Notları' ve '2027 / TYT Fizik' — 2027 sınavı eski müfredata göre; 11. sınıf Maarif listesi görülmedi",
+       ],
+       old_curriculum_risk=True,
+       notes="Yalnız oynatma listeleri sayfasının ilk bölümü okundu; video içeriği izlenmedi. AYT 2027 listesi eski programın 11. sınıf konularını (ör. vektörler, momentum, tork) içerebilir ama video başlıkları okunmadı: bu bir olasılıktır, kanıt değil.",
+       confidence="LOW"),
+]
+
+# Perakende/yayınevi ürün sayfası okunan ek kayıtlar (örnek sayfa okunmadı: soru stili ve aile eşlemesi boş)
+SOURCES += [
+    _s(slug="uc-dort-bes-2027-ayt-fizik-soru-bankasi", publisher="Üç Dört Beş (345)", title="2027 AYT Fizik Soru Bankası",
+       kind="soru_bankasi", target="AYT", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/2023-AYT-Fizik-Soru-Bankasi-Uc-Dort-Bes-Yayinlari-393715.html", verified_by_fetch=True,
+       difficulty="zor",
+       unique_characteristics=[
+           "Yazar Ümit Akıncı, ISBN 9786056959028, 392 sayfa, 19x27 cm; konu özetli, tamamı video çözümlü (ürün sayfası)",
+           "Sayfada yaklaşık 47.7 bin satış görünüyor: yaygın kullanılan AYT kaynağı",
+       ],
+       old_curriculum_risk=True,
+       notes="Başlıktaki 2027 sınav yılıdır, baskı yılı değil (None). Zorluk düzeyi 'AYT' etiketinden ve sayfadaki 'özgün' ifadesinden, teyitli değil. Maarif ifadesi yok. 2027 AYT eski müfredata göre yapıldığı için "
+             "11. sınıf konularında vektör, momentum, tork, potansiyel gibi çıkan başlıkları içermesi beklenir (içindekiler okunmadı; olasılık). 2028 sonrası için kullanışlı değil.",
+       confidence="LOW"),
+
+    _s(slug="cap-2028-ders-platosu-maarif-tematik-fizik-sb-1-asama", publisher="Çap", title="2028 YKS TYT AYT Fizik Ders Platosu Maarif Modeli Tematik Soru Bankası (1. Aşama)",
+       kind="soru_bankasi", target="TYT", edition_year=None, maarif_claim=True,
+       url="https://www.indekskitap.com/urun/cap-yayinlari-yks-tyt-ayt-fizik-ders-platosu-maarif-modeli-tematik-soru-bankasi", verified_by_fetch=True,
+       difficulty=None,
+       unique_characteristics=[
+           "Yazarlar Bayram Tükenmez, Metin Çengel; ISBN 9786258909197; 208 sayfa; başlıkta 'Maarif Modeli', '2028 YKS' ve 'Tematik' (perakende sayfası)",
+           "1. Aşama etiketi: MEB-ÖSYM planına göre ilk aşama 9-10. sınıf içeriğidir; bu kitap bu nedenle 11. sınıfı içermez (kitabın içindekileri okunmadı)",
+       ],
+       notes="Yalnız perakende (indekskitap) sayfası okundu. Maarif beyanı başlıktan (yayınevi adı + ürün adı). Kapsam ve içindekiler sayfada yok; 11. sınıf bu kitapta yok olması çıkarımı '1. aşama' ifadesine dayanıyor. "
+             "Piyasada 2028 serileri 2. aşama (11-12. sınıf) için henüz bulunamadı. Aile eşlemesi yok.",
+       confidence="LOW"),
+
+    _s(slug="limit-11-fizik-konu-anlatim-foyleri-yeni", publisher="Limit", title="11. Sınıf Fizik Konu Anlatım Föyleri (yeni seri)",
+       kind="konu_anlatimi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/11-Sinif-Fizik-Konu-Anlatim-Foyleri-Limit-Yayinlari-949050.html", verified_by_fetch=True,
+       unique_characteristics=["Yazar Mesut Aksoy; ISBN 9786052758281; 304 sayfa; 19x27 cm; föy düzeninde (perakende sayfası)"],
+       notes="Eski föyden (limit-11-fizik-konu-anlatim-foyleri-eski, Yener Yasun, 224 s.) ayrı yeni kitap: yazar, ISBN ve sayfa sayısı farklı. Sayfada 'Maarif' ifadesi, baskı yılı ve içindekiler yok; "
+             "sayfadaki 2026 etiketi katalog listelemesi olduğu için baskı yılı olarak alınmadı. Eski CSV'deki içerik ayrıntıları (ÖSYM soruları, sıra sende, kazanım testleri) bu fetch'te doğrulanmadı.",
+       confidence="LOW"),
+
+    _s(slug="hiz-ve-renk-11-fizik-hit-soru-bankasi", publisher="Hız ve Renk", title="11. Sınıf Fizik HİT Soru Bankası",
+       kind="soru_bankasi", target="11", edition_year=None, maarif_claim=None,
+       url="https://www.kitapsec.com/Products/11-Sinif-Fizik-HIT-Soru-Bankasi-Hiz-ve-Renk-951801.html", verified_by_fetch=True,
+       unique_characteristics=["Yazarlar Özgür Ünlü, Ömer Bahadır Taner; ISBN 9786258715194; 304 sayfa (perakende sayfası)"],
+       notes="Perakende sayfasında Maarif ifadesi, içerik ve örnek sayfa yok; baskı yılı bilinmiyor (sayfadaki 2026 yalnız katalog tarihi). Yeni ISBN bloğu yeni baskıyı düşündürür ama kanıt değil.",
+       confidence="LOW"),
+]

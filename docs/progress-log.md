@@ -12,8 +12,8 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 | STEP 8 Ünite 3 | ✅ commit'li | 65 aile. Toplam 178 aile, 85/85 süreç bileşeni, 392/392 kitap + 140/140 program kanıtı |
 | STEP 10 ÖSYM | ✅ commit'li | AYT 2018–2025 (112) + TYT 2018–2025 optik ve 11. sınıfa denk gelenler (20); 132 soru, hepsi resmî kitapçıktan. `run_all_audits.py`'ye eklendi |
 | STEP 13 Hata + yanılgı | 🔄 parça parça | ✅ 17 hata türü, Ünite 1 (35), Ünite 2'nin 2.1–2.11'i (28) · 🔄 ajan 2.12–2.13 + Ünite 3 · Doğrulama `build_errors.py --check` |
-| STEP 11–12 Çözüm + kısa yol | 🔄 parça parça | ✅ Ünite 1 (55 çözüm, 33 kısa yol) · 🔄 ajan Ünite 2 (46/56 var; 3 hata düzeltiliyor, kısa yollar yazılıyor) · ⏳ Ünite 3 |
-| STEP 9 Piyasa | 🔄 | 5 kaynak commit'li · 🔄 ajan 20–30 kaynak daha |
+| STEP 11–12 Çözüm + kısa yol | 🔄 | ✅ Ünite 1 (55/33) · ✅ Ünite 2 (56/40) · 🔄 ajan Ünite 3 |
+| STEP 9 Piyasa | ✅ commit'li | 30 kaynak (29 okunarak doğrulandı, 15 Maarif beyanlı, 11 eski müfredat riski, 10 örnek sayfası incelendi, 31 aileye piyasa kanıtı). `run_all_audits.py`'de |
 | STEP 14 Pedagoji | ✅ commit'li | 9 protokol, ipucu merdiveni, 17 müdahale (`build_pedagogy.py`) |
 | STEP 15–16 | ⏳ dalga 4 | |
 
@@ -32,3 +32,4 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 - Tüm katmanlar bitince `run_all_audits.py`'ye `build_osym`, `build_errors`, `build_solutions` eklenecek.
 - GitHub: https://github.com/mirzayildiran/yks-ai-ogretmen-kb (herkese açık). `.git/hooks/post-commit` her commit'i otomatik gönderir; hata kaydı `.git/auto-push.log`. Commit yazarı GitHub noreply adresi (git config yerel).
 - macOS'ta `timeout` komutu yok; doğrulama kodları `build_solutions.py` içinde 20 sn sınırlı alt süreçte çalışır.
+- STEP 15 betiği hazır: `scripts/qa_report.py` (katmanlar arası pano). İlk ölçüm: çeldirici hedeflerinin yanılgı kayıtlarıyla kaba sözcük eşleşmesi 57/519 → açık bağlantı alanı eksik (STEP 16 boşluğu).

@@ -1,0 +1,742 @@
+{
+  "subject": "physics",
+  "grade": 11,
+  "curriculum_version": "TYMM-FIZIK-OP-2026-08-19",
+  "generated_at": "2026-10-01",
+  "generated_by": "scripts/build_pedagogy.py",
+  "protocols": [
+    {
+      "slug": "student-stuck",
+      "trigger": "Öğrenci: “Bu soruyu yapamadım.”",
+      "goal": "Cevabı vermeden, öğrencinin takıldığı noktayı bulup kendi çözmesini sağlamak.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Takıldığı yeri bul",
+          "teacher_says_example": "Nereye kadar gelebildin? İlk ne yapmayı düşündün?",
+          "observe": "Öğrencinin yazdığı/söylediği ilk adım; soruyu doğru okuyup okumadığı",
+          "branch": {
+            "soruyu yanlış anladı": 2,
+            "başlayamadı": 2,
+            "bir adımda takıldı": 3
+          }
+        },
+        {
+          "n": 2,
+          "action": "Ön koşulu yokla",
+          "teacher_says_example": "Bu soruda hangi büyüklükler veriliyor, hangisi soruluyor? Bu hareketin adı ne?",
+          "observe": "Sorunun soru ailesinin ön koşul kavramları (prerequisites) biliniyor mu",
+          "branch": {
+            "ön koşul eksik": "prerequisite-repair",
+            "ön koşul tamam": 3
+          }
+        },
+        {
+          "n": 3,
+          "action": "Küçük ipucu ver (ipucu merdiveni 1. seviyeden başla)",
+          "teacher_says_example": "Bu durumda cisme hangi kuvvetler etki ediyor, bir düşünelim mi?",
+          "observe": "İpucundan sonra ilerleyip ilerlemediği",
+          "branch": {
+            "ilerledi": 4,
+            "ilerlemedi": 3
+          }
+        },
+        {
+          "n": 4,
+          "action": "Ara adımı öğrenciden iste",
+          "teacher_says_example": "Peki şimdi düşey doğrultuda ne yazarsın?",
+          "observe": "Ara adımın doğruluğu ve gerekçesi",
+          "branch": {
+            "doğru": 7,
+            "hatalı": 5
+          }
+        },
+        {
+          "n": 5,
+          "action": "Hatayı sınıflandır",
+          "teacher_says_example": "Burada ivmenin yönünü nasıl seçtin, anlatır mısın?",
+          "observe": "Hata türü (data_errors kodu) ve varsa eşleşen kavram yanılgısı",
+          "branch": {
+            "kavramsal hata": "misconception-repair",
+            "işlem/dikkat hatası": 4,
+            "yöntem seçimi hatası": 6
+          }
+        },
+        {
+          "n": 6,
+          "action": "Gerekirse daha temel soruya dön",
+          "teacher_says_example": "Önce daha basit bir durumla deneyelim: aynı cisim yatayda dursa ne olurdu?",
+          "observe": "Aynı ailenin daha kolay varyasyonunu ya da ön koşul ailesini çözebiliyor mu",
+          "branch": {
+            "çözdü": 7,
+            "çözemedi": "prerequisite-repair"
+          }
+        },
+        {
+          "n": 7,
+          "action": "Asıl soruya geri dön",
+          "teacher_says_example": "Şimdi ilk soruya bakalım; bu durumdan farkı ne?",
+          "observe": "Basit durumdan asıl soruya aktarım",
+          "branch": {
+            "aktarabildi": 8,
+            "aktaramadı": 3
+          }
+        },
+        {
+          "n": 8,
+          "action": "Öğrencinin kendisinin çözmesini sağla ve özetlet",
+          "teacher_says_example": "Harika, şimdi baştan sona kendi cümlelerinle çözümü anlatır mısın?",
+          "observe": "Bağımsız çözüm ve gerekçelendirme",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Öğrenci soruyu kendisi çözüp gerekçesini açıkladı; ardından aynı aileden bir varyasyonu ipucusuz çözdü.",
+      "sources": [
+        "Görev tanımı madde 18",
+        "MEB Fizik ÖP 2026 s. 8 (hazır bulunuşluk, ön değerlendirme)"
+      ]
+    },
+    {
+      "slug": "wrong-answer-diagnosis",
+      "trigger": "Öğrenci çoktan seçmeli soruda yanlış şık işaretledi.",
+      "goal": "Seçilen çeldiriciden kavram yanılgısını tanılamak ve düzeltmek.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Gerekçe iste (sesli düşünme)",
+          "teacher_says_example": "Bu şıkkı neden seçtin, düşünceni anlatır mısın?",
+          "observe": "Gerekçe çeldiricinin hedeflediği yanılgıyla örtüşüyor mu (aile common_distractors.targets)",
+          "branch": {
+            "yanılgı doğrulandı": 2,
+            "dikkat hatası": 4
+          }
+        },
+        {
+          "n": 2,
+          "action": "Kavramsal çatışma yarat",
+          "teacher_says_example": "Öyle olsaydı Ay'daki çekiç ve tüy deneyinde ne görürdük?",
+          "observe": "Öğrencinin kendi fikriyle çelişen durumu fark etmesi",
+          "branch": {
+            "fark etti": 3,
+            "fark etmedi": "misconception-repair"
+          }
+        },
+        {
+          "n": 3,
+          "action": "Doğru fikri öğrenciye kurdur",
+          "teacher_says_example": "O zaman ivme neye bağlı olmalı?",
+          "observe": "Doğru genellemeyi kendi cümleleriyle ifade etmesi",
+          "branch": {
+            "ifade etti": 4
+          }
+        },
+        {
+          "n": 4,
+          "action": "Yeni varyasyonla sına",
+          "teacher_says_example": "Aynı fikirle şu soruyu deneyelim.",
+          "observe": "Aynı yanılgıyı hedefleyen farklı bağlamlı soruda doğru cevap",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Aynı yanılgıyı hedefleyen iki farklı bağlamlı soruda doğru cevap ve doğru gerekçe.",
+      "sources": [
+        "MEB Soru Yazım Kılavuzu s. 15 (çeldiriciler kavram yanılgısını tanılar)",
+        "MEB Soru Yazım Kılavuzu s. 117 (bilişsel görüşme)"
+      ]
+    },
+    {
+      "slug": "photo-question-intake",
+      "trigger": "Öğrenci bir kaynaktan soru fotoğrafı yükledi.",
+      "goal": "Soruyu müfredatta konumlandırmak ve doğru moda yönlendirmek.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Soruyu tanı: öğrenme çıktısı ve soru ailesi",
+          "teacher_says_example": "Bu soru iki boyutta sabit ivmeli hareketle ilgili; önce ne verildiğine bakalım.",
+          "observe": "Eşleşen aile ve çıktı; eşleşme güveni",
+          "branch": {
+            "kapsam dışı / eski müfredat": "scope-guard",
+            "kapsamda": 2
+          }
+        },
+        {
+          "n": 2,
+          "action": "Öğrencinin denemesini sor",
+          "teacher_says_example": "Bu soruda nereye kadar geldin?",
+          "observe": "Hiç denemediyse önce kendi denemesini iste",
+          "branch": {
+            "denedi ve takıldı": "student-stuck",
+            "denemedi": 3
+          }
+        },
+        {
+          "n": 3,
+          "action": "Kısa süreli bağımsız deneme iste",
+          "teacher_says_example": "İki dakika kendin dene, sonra birlikte bakalım.",
+          "observe": "Deneme sonucu",
+          "branch": {
+            "çözdü": 4,
+            "takıldı": "student-stuck"
+          }
+        },
+        {
+          "n": 4,
+          "action": "Çözümü doğrulat ve kısa yolu göster (yalnız geçerlilik koşuluyla)",
+          "teacher_says_example": "Doğru! Bu tip sorularda şu kısa yol da işe yarar ama yalnızca ilk hız sıfırsa.",
+          "observe": "Kısa yolun koşulunu anlayıp anlamadığı",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Soru çözüldü; öğrenci sorunun hangi aileye ait olduğunu ve kullanılan yöntemi söyleyebiliyor.",
+      "sources": [
+        "Tasarım kararı",
+        "Soru aileleri (STEP 8), kısa yollar (STEP 12)"
+      ]
+    },
+    {
+      "slug": "scope-guard",
+      "trigger": "Soru ya da öğrencinin yöntemi 11. sınıf Maarif kapsamının dışında (ör. ayna denklemi, görüntü sayısı formülü, ray sistemi hesabı, 'yatay atış' terimi).",
+      "goal": "Öğrenciyi yanıltmadan kapsamı bildirmek ve programın beklediği yöntemi öğretmek.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Kapsamı nazikçe bildir",
+          "teacher_says_example": "Bu formül yeni programda ve ders kitabında yok; sınavda beklenen yol özel ışın çizimi.",
+          "observe": "Öğrencinin kaynağının eski müfredata ait olup olmadığı",
+          "branch": {
+            "devam": 2
+          }
+        },
+        {
+          "n": 2,
+          "action": "Programın beklediği yöntemle çöz",
+          "teacher_says_example": "Hadi özel ışınlarla görüntüyü bulalım.",
+          "observe": "Beklenen yöntemi uygulayabilmesi",
+          "branch": {
+            "takıldı": "student-stuck"
+          }
+        }
+      ],
+      "exit_criteria": "Öğrenci aynı soruyu programın beklediği yöntemle çözdü ve kapsam farkını biliyor.",
+      "sources": [
+        "Kapsam sınırları (scope-constraints.curated.json)",
+        "Formül veritabanı OUT_OF_CURRICULUM kayıtları"
+      ]
+    },
+    {
+      "slug": "misconception-repair",
+      "trigger": "Bir kavram yanılgısı teşhis edildi.",
+      "goal": "Yanılgıyı Sokratik sorgulama ve kavramsal çatışmayla gidermek.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Yanılgı kaydının Sokratik sorularını sırayla sor",
+          "teacher_says_example": "Ağır cisim gerçekten daha hızlı düşüyorsa iki cismi iple bağlasak ne olur?",
+          "observe": "Her sorudan sonra öğrencinin fikri değişiyor mu",
+          "branch": {
+            "değişti": 2,
+            "değişmedi": 3
+          }
+        },
+        {
+          "n": 2,
+          "action": "Tanı sorusuyla doğrula",
+          "teacher_says_example": "Şu soruyu çözer misin?",
+          "observe": "Tanı sorusunda yanılgı şıkkını seçmemesi",
+          "branch": {
+            "doğru": 4,
+            "yanılgı sürüyor": 3
+          }
+        },
+        {
+          "n": 3,
+          "action": "Analoji ya da deney/simülasyon göster",
+          "teacher_says_example": "Vakum tüpündeki tüy ve madeni para videosuna bakalım.",
+          "observe": "Gözleme dayalı fikir değişimi",
+          "branch": {
+            "değişti": 2
+          }
+        },
+        {
+          "n": 4,
+          "action": "Aralıklı tekrar planla",
+          "teacher_says_example": "Bunu birkaç gün sonra tekrar soracağım.",
+          "observe": "Tekrar takvimine eklenmesi",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Tanı sorusunda ve aralıklı tekrarda yanılgı şıkkı seçilmedi.",
+      "sources": [
+        "MEB Fizik ÖP 2026 s. 7 (kavram yanılgıları tespit edilip iyileştirilmeli)",
+        "Kavram yanılgısı kayıtları (STEP 13)"
+      ]
+    },
+    {
+      "slug": "prerequisite-repair",
+      "trigger": "Ön koşul kavram ya da önceki sınıf çıktısı eksik.",
+      "goal": "Eksik ön koşulu kısa yoldan tamamlayıp asıl konuya dönmek.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Eksik ön koşulu ön koşul grafiğinden belirle",
+          "teacher_says_example": "Bu soru için vektörleri bileşenlerine ayırmamız gerekiyor; onu hatırlayalım.",
+          "observe": "REQUIRES zincirindeki ilk eksik kavram",
+          "branch": {
+            "devam": 2
+          }
+        },
+        {
+          "n": 2,
+          "action": "Kısa açıklama + tek kontrol sorusu",
+          "teacher_says_example": "37° açıyla 10 m/s'lik hızın yatay bileşeni ne olur?",
+          "observe": "Kontrol sorusunun doğruluğu",
+          "branch": {
+            "doğru": 3,
+            "yanlış": 2
+          }
+        },
+        {
+          "n": 3,
+          "action": "Asıl soruya dön",
+          "teacher_says_example": "Şimdi asıl soruya dönelim.",
+          "observe": "Aktarım",
+          "branch": {
+            "devam": "student-stuck"
+          }
+        }
+      ],
+      "exit_criteria": "Ön koşul kontrol sorusu doğru; asıl soruya dönüldü.",
+      "sources": [
+        "Ön koşul grafiği (STEP 6)",
+        "MEB Fizik ÖP 2026 s. 8 (temel kabuller)"
+      ]
+    },
+    {
+      "slug": "repeated-error",
+      "trigger": "Aynı hata türü son 5 soruda en az 2 kez görüldü.",
+      "goal": "Tekrarlayan hatanın kök nedenini bulmak.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Örüntüyü öğrenciye göster",
+          "teacher_says_example": "Son iki soruda da ivmenin işaretinde zorlandın; birlikte bakalım mı?",
+          "observe": "Öğrencinin örüntüyü fark etmesi",
+          "branch": {
+            "devam": 2
+          }
+        },
+        {
+          "n": 2,
+          "action": "Hata türünün müdahalesini uygula",
+          "teacher_says_example": "Her soruda önce pozitif yönü seçip ok çizelim.",
+          "observe": "Müdahale sonrası iki soruda hatasızlık",
+          "branch": {
+            "düzeldi": 3,
+            "sürüyor": "prerequisite-repair"
+          }
+        },
+        {
+          "n": 3,
+          "action": "Kişisel kontrol listesine ekle",
+          "teacher_says_example": "Bunu kontrol listene yazalım: 'Önce yön seç.'",
+          "observe": "Kontrol listesinin kullanımı",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Aynı hata türü sonraki 5 soruda görülmedi.",
+      "sources": [
+        "Tasarım kararı",
+        "Hata taksonomisi (STEP 13)"
+      ]
+    },
+    {
+      "slug": "correct-but-unsure",
+      "trigger": "Öğrenci doğru cevap verdi ama gerekçesi zayıf ya da tahmin etti.",
+      "goal": "Şans başarısını gerçek öğrenmeden ayırmak.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Gerekçe iste",
+          "teacher_says_example": "Doğru! Nasıl karar verdin?",
+          "observe": "Gerekçenin fiziksel doğruluğu",
+          "branch": {
+            "gerekçe zayıf": 2,
+            "gerekçe sağlam": 3
+          }
+        },
+        {
+          "n": 2,
+          "action": "Diğer şıkların neden yanlış olduğunu sor",
+          "teacher_says_example": "Peki C neden olamaz?",
+          "observe": "Çeldiricileri eleyebilmesi",
+          "branch": {
+            "eleyemedi": "misconception-repair",
+            "eledi": 3
+          }
+        },
+        {
+          "n": 3,
+          "action": "Transfer sorusu ver",
+          "teacher_says_example": "Aynı fikir başka bir durumda işe yarar mı, bakalım.",
+          "observe": "Farklı bağlamda doğru cevap",
+          "branch": {}
+        }
+      ],
+      "exit_criteria": "Gerekçeli doğru cevap ve transfer sorusunda başarı.",
+      "sources": [
+        "Tasarım kararı",
+        "MEB Soru Yazım Kılavuzu s. 117 (sesli düşünme)"
+      ]
+    },
+    {
+      "slug": "frustration",
+      "trigger": "Öğrencide bıkkınlık/kaygı belirtisi (“anlamıyorum”, “yapamam”, uzun sessizlik).",
+      "goal": "Motivasyonu korumak ve başarı deneyimi yaşatmak.",
+      "steps": [
+        {
+          "n": 1,
+          "action": "Duyguyu kabul et, yargılama",
+          "teacher_says_example": "Bu konu çoğu öğrenciyi zorlar; birlikte küçük adımlarla gidelim.",
+          "observe": "Öğrencinin devam isteği",
+          "branch": {
+            "devam": 2
+          }
+        },
+        {
+          "n": 2,
+          "action": "Adımı küçült ve kolay bir başarı ver",
+          "teacher_says_example": "Sadece şunu söyle: cisim yukarı mı aşağı mı hareket ediyor?",
+          "observe": "Küçük başarı",
+          "branch": {
+            "başardı": "student-stuck"
+          }
+        }
+      ],
+      "exit_criteria": "Öğrenci yeniden etkin katılım gösterdi.",
+      "sources": [
+        "Tasarım kararı",
+        "TYMM sosyal-duygusal öğrenme becerileri (program bileşeni)"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "name": "Üst bilişsel yönlendirme",
+      "what_to_give": "Soruyu ve verilenleri yeniden okutmak, ne istendiğini söyletmek",
+      "what_not_to_give": "Kavram adı, formül, sayı",
+      "example": "Soruda senden tam olarak ne isteniyor?"
+    },
+    {
+      "level": 2,
+      "name": "Kavram hatırlatma",
+      "what_to_give": "İlgili kavramı ya da ilkeyi adlandırmak",
+      "what_not_to_give": "Hangi denklemin nasıl kurulacağı",
+      "example": "Bu harekette yatay ve düşey bileşenler birbirini etkiler mi?"
+    },
+    {
+      "level": 3,
+      "name": "Strateji ipucu",
+      "what_to_give": "Çözüm yönteminin türünü ve ilk hamleyi işaret etmek",
+      "what_not_to_give": "Denklemin kendisi ve sonuç",
+      "example": "Uçuş süresini önce düşey hareketten bulmayı dener misin?"
+    },
+    {
+      "level": 4,
+      "name": "İlk adımı birlikte kurma",
+      "what_to_give": "İlk denklemi ya da çizimi birlikte kurmak",
+      "what_not_to_give": "Sonraki adımlar ve sonuç",
+      "example": "Düşeyde h = ½·g·t² yazalım; şimdi t'yi sen bul."
+    },
+    {
+      "level": 5,
+      "name": "Çözümlü anlatım + benzer soru",
+      "what_to_give": "Tam çözümü adım adım açıklamak",
+      "what_not_to_give": "Benzer bir soruyu bağımsız çözdürmeden bitirmek",
+      "example": "Birlikte çözdük; şimdi şu benzer soruyu sen çöz."
+    }
+  ],
+  "interventions": [
+    {
+      "error_type": "CONCEPTUAL_ERROR",
+      "first_move": "Gerekçe iste; yanılgıyı adlandırmadan önce öğrencinin modelini anla",
+      "diagnostic_prompt": "Bunun neden böyle olduğunu düşünüyorsun?",
+      "remediation_steps": [
+        "İlgili kavram yanılgısı kaydını bul",
+        "misconception-repair protokolünü uygula",
+        "Farklı bağlamlı iki soruyla sına"
+      ],
+      "fallback_to_prerequisite": true,
+      "recommended_question_families": [
+        "ff-mass-independence",
+        "newton3-action-reaction",
+        "net-force-motion-state"
+      ]
+    },
+    {
+      "error_type": "FORMULA_SELECTION_ERROR",
+      "first_move": "Hangi bilgiler verildiğini ve hangisinin eksik olduğunu listelet",
+      "diagnostic_prompt": "Hangi büyüklük verilmedi? O büyüklüğü içermeyen bağıntı hangisi?",
+      "remediation_steps": [
+        "Verilen/istenen tablosu yaptır",
+        "Formülün geçerlilik koşullarını sorgulat",
+        "Doğru bağıntıyı öğrenciye seçtir"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-kinematics-v0zero",
+        "ff-upward-throw"
+      ]
+    },
+    {
+      "error_type": "FORMULA_APPLICATION_ERROR",
+      "first_move": "Formülü sesli okut ve her sembolün anlamını söylet",
+      "diagnostic_prompt": "Bu formülde t² neden kare?",
+      "remediation_steps": [
+        "Sembol–değer eşlemesini tablo hâlinde yaptır",
+        "Birim kontrolüyle sonucu sına"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-kinematics-v0zero",
+        "horizontal-circle"
+      ]
+    },
+    {
+      "error_type": "SIGN_ERROR",
+      "first_move": "Pozitif yönü seçtirip şekle ok çizdir",
+      "diagnostic_prompt": "Hangi yönü pozitif aldın? İvmenin yönü ne?",
+      "remediation_steps": [
+        "Yön seçimini sorunun başında sabitle",
+        "Her vektörü işaretiyle yaz",
+        "Sonucun işaretini fiziksel durumla karşılaştır"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-upward-throw",
+        "hump-bridge",
+        "vertical-circle-tension"
+      ]
+    },
+    {
+      "error_type": "UNIT_ERROR",
+      "first_move": "Tüm verilerin birimlerini SI'ya çevirt",
+      "diagnostic_prompt": "Bu değer metre mi santimetre mi?",
+      "remediation_steps": [
+        "Birim dönüşüm tablosu",
+        "Sonucun büyüklük mertebesini makullük açısından sorgulat"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-reaction-time-ruler",
+        "circular-kinematics"
+      ]
+    },
+    {
+      "error_type": "VECTOR_ERROR",
+      "first_move": "Vektörleri ölçekli çizdir",
+      "diagnostic_prompt": "Bu iki hızı topladığında yön ne oluyor?",
+      "remediation_steps": [
+        "Bileşenlere ayırmayı tekrar ettir",
+        "Pisagor ve tanjantla bileşke bul",
+        "Skaler toplama ile farkı göster"
+      ],
+      "fallback_to_prerequisite": true,
+      "recommended_question_families": [
+        "2d-velocity-at-point",
+        "2d-angled-launch",
+        "fbd-equilibrium-tension"
+      ]
+    },
+    {
+      "error_type": "GRAPH_READING_ERROR",
+      "first_move": "Eksenleri ve birimleri okut",
+      "diagnostic_prompt": "Bu grafiğin eğimi neyi gösteriyor? Altındaki alan?",
+      "remediation_steps": [
+        "Eğim ve alanın fiziksel anlamını tablo hâlinde eşleştir",
+        "Grafikten tek bir değer okut",
+        "Grafik dönüşümü yaptır"
+      ],
+      "fallback_to_prerequisite": true,
+      "recommended_question_families": [
+        "ff-motion-graphs",
+        "friction-applied-force-graph",
+        "terminal-velocity-graph"
+      ]
+    },
+    {
+      "error_type": "TABLE_READING_ERROR",
+      "first_move": "Hangi satırların karşılaştırılabileceğini sor",
+      "diagnostic_prompt": "Bu iki satırda yalnız bir değişken mi değişiyor?",
+      "remediation_steps": [
+        "Kontrol değişkeni ilkesini hatırlat",
+        "Ardışık farkları hesaplat"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "friction-variables-data",
+        "ff-data-evidence"
+      ]
+    },
+    {
+      "error_type": "ALGEBRA_ERROR",
+      "first_move": "Denklemi sembollerle çözdürüp en sonda sayı koydur",
+      "diagnostic_prompt": "Önce t'yi yalnız bırakabilir misin?",
+      "remediation_steps": [
+        "Sembolik çözüm",
+        "Karekök/kare adımlarını kontrol",
+        "Sonucu denklemde yerine koyup doğrula"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-upward-throw",
+        "ff-passing-point-twice"
+      ]
+    },
+    {
+      "error_type": "ARITHMETIC_ERROR",
+      "first_move": "Sonucu tahmini mertebeyle karşılaştırt",
+      "diagnostic_prompt": "Sonuç yaklaşık kaç olmalı?",
+      "remediation_steps": [
+        "Ara sonuçları yazdır",
+        "Sayıları sadeleştirerek tekrar hesaplat"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "ff-kinematics-v0zero"
+      ]
+    },
+    {
+      "error_type": "QUESTION_INTERPRETATION_ERROR",
+      "first_move": "Soruyu kendi cümleleriyle anlattır",
+      "diagnostic_prompt": "Soru senden tam olarak ne istiyor? Hangi koşul verildi?",
+      "remediation_steps": [
+        "Koşul sözcüklerinin altını çizdir (ihmal, sabit hız, ilk hızsız)",
+        "Verilen/istenen ayrımı"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "terminal-velocity-daily-life",
+        "2d-horizontal-launch"
+      ]
+    },
+    {
+      "error_type": "METHOD_SELECTION_ERROR",
+      "first_move": "Sorunun hangi soru ailesine benzediğini sor",
+      "diagnostic_prompt": "Bu soruyu daha önce gördüğün hangi soruya benzetebilirsin?",
+      "remediation_steps": [
+        "Ailenin çözüm yöntemlerini karşılaştır",
+        "Yanlış yöntemin neden çalışmadığını göster"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "coupled-wheels",
+        "friction-stacked-blocks-together"
+      ]
+    },
+    {
+      "error_type": "PREREQUISITE_GAP",
+      "first_move": "Ön koşul grafiğinden eksik kavramı bul",
+      "diagnostic_prompt": "Bu kavramı hatırlıyor musun? Kısa bir örnek verir misin?",
+      "remediation_steps": [
+        "prerequisite-repair protokolü",
+        "Asıl soruya dönüş"
+      ],
+      "fallback_to_prerequisite": true,
+      "recommended_question_families": [
+        "2d-angled-launch",
+        "newton2-f-m-a-relations"
+      ]
+    },
+    {
+      "error_type": "CARELESS_ERROR",
+      "first_move": "Çözümü tekrar kontrol ettir, hatayı kendisi bulsun",
+      "diagnostic_prompt": "Çözümünü bir daha gözden geçirir misin?",
+      "remediation_steps": [
+        "Kişisel kontrol listesi",
+        "Zaman baskısı yoksa yavaşlat"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "fbd-identify-forces"
+      ]
+    },
+    {
+      "error_type": "FBD_ERROR",
+      "first_move": "Cismi çevresinden ayırıp temas noktalarını saydır",
+      "diagnostic_prompt": "Bu cisme kaç şey dokunuyor? Uzaktan etki eden kuvvet var mı?",
+      "remediation_steps": [
+        "Temas taraması + ağırlık",
+        "Fazladan kuvvet (hareket kuvveti, merkezcil kuvvet) var mı kontrol"
+      ],
+      "fallback_to_prerequisite": true,
+      "recommended_question_families": [
+        "fbd-identify-forces",
+        "connected-bodies-same-acceleration"
+      ]
+    },
+    {
+      "error_type": "SCOPE_CONFUSION",
+      "first_move": "Yöntemin hangi kaynaktan geldiğini sor",
+      "diagnostic_prompt": "Bu formülü nereden öğrendin?",
+      "remediation_steps": [
+        "scope-guard protokolü",
+        "Programın beklediği yöntemle çözüm"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "rail-system-circular",
+        "pm-angled-image-count",
+        "lens-equation-numeric"
+      ]
+    },
+    {
+      "error_type": "EXPERIMENT_DESIGN_ERROR",
+      "first_move": "Bağımsız, bağımlı ve kontrol değişkenlerini adlandırt",
+      "diagnostic_prompt": "Bu deneyde neyi değiştiriyoruz, neyi ölçüyoruz, neyi sabit tutmalıyız?",
+      "remediation_steps": [
+        "Değişken tablosu",
+        "Hatalı düzenekte sabit tutulmayan değişkeni buldur"
+      ],
+      "fallback_to_prerequisite": false,
+      "recommended_question_families": [
+        "friction-variables-data",
+        "drag-variables-data",
+        "rf-experiment-design",
+        "lens-experiment-design"
+      ]
+    }
+  ],
+  "voice_guidelines": [
+    {
+      "rule": "Formülleri sembol dizisi olarak değil, formül veritabanındaki spoken_tr okunuşuyla söyle",
+      "why": "Sesli ortamda sembol dizisi anlaşılmaz",
+      "example": "“h eşittir bir bölü iki g t kare”"
+    },
+    {
+      "rule": "Her cümlede tek fikir; 20–30 saniyede bir kontrol sorusu",
+      "why": "Sesli anlatımda çalışma belleği yükü hızla artar",
+      "example": "“Buraya kadar tamam mı? İvmenin yönü neydi?”"
+    },
+    {
+      "rule": "Sayıları birimiyle ve tekrar ederek söyle",
+      "why": "Sesli ortamda sayı karışıklığı sık",
+      "example": "“on metre bölü saniye, yani saniyede on metre”"
+    },
+    {
+      "rule": "Öğrenci konuşurken sözünü kesme; 3 saniye bekleme süresi bırak",
+      "why": "Düşünme süresi ara adım üretimini artırır",
+      "example": "Sorudan sonra sessiz bekle."
+    },
+    {
+      "rule": "Programın terimlerini kullan; eski terimi öğrenci getirirse eşleştir",
+      "why": "Maarif programı 'düşey/yatay/eğik atış' terimlerinden kaçınır",
+      "example": "“Senin 'yatay atış' dediğin hareket, programda iki boyutta sabit ivmeli hareket.”"
+    },
+    {
+      "rule": "Şekil gerektiren anlatımda sesle birlikte eşzamanlı çizim/pano kullan",
+      "why": "Optik ve kuvvet diyagramları yalnız sesle aktarılamaz",
+      "example": "“Ekrandaki asal eksene paralel gelen ışını izle.”"
+    }
+  ]
+}
