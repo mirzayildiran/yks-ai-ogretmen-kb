@@ -18,6 +18,7 @@ SHORTCUTS: [{"slug", "name", "question_families": [slug], "shortcut", "why_it_wo
 Kurallar: kapsamdaki (CORE) her ailenin çözümü olmalı; python_check ve numeric_check hatasız çalışmalı.
 """
 import importlib
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -32,13 +33,21 @@ MODULES = ARGS or sorted(p.stem for p in HERE.glob("data_solutions_u*.py"))
 METHOD_KEYS = ("steps", "validity", "limits", "risks")
 
 
+CHECK_TIMEOUT = 20  # saniye; sonsuz döngüye giren doğrulama kodu tüm hattı kilitlemesin
+
+
 def run_check(code, label, errors):
+    """Doğrulama kodunu ayrı süreçte, zaman sınırıyla çalıştırır."""
     try:
-        exec(compile(code, label, "exec"), {"__name__": "check"})
-        return True
-    except Exception as e:  # assert başarısızlığı ya da kod hatası
-        errors.append(f"{label}: doğrulama kodu başarısız ({type(e).__name__}: {str(e)[:80]})")
+        r = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, timeout=CHECK_TIMEOUT)
+    except subprocess.TimeoutExpired:
+        errors.append(f"{label}: doğrulama kodu {CHECK_TIMEOUT} sn içinde bitmedi (sonsuz döngü?)")
         return False
+    if r.returncode != 0:
+        last = (r.stderr.strip().splitlines() or ["?"])[-1]
+        errors.append(f"{label}: doğrulama kodu başarısız ({last[:100]})")
+        return False
+    return True
 
 
 def main():
