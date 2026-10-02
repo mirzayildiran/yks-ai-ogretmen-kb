@@ -8,8 +8,8 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 |---|---|---|
 | STEP 1–7 | ✅ commit'li | |
 | STEP 8 Ünite 1 | ✅ commit'li | 57 aile |
-| STEP 8 Ünite 2 | ✅ veri commit'li | 56 aile; birleşik derleme Ünite 3 bitince |
-| STEP 8 Ünite 3 | 🔄 alt ajan çalışıyor | 28 aile var (3.1–3.4); 3.5–3.10 ekleniyor. Bitince: `--check`, sonra `run_all_audits.py`, commit |
+| STEP 8 Ünite 2 | ✅ commit'li | 56 aile |
+| STEP 8 Ünite 3 | ✅ commit'li | 65 aile. Toplam 178 aile, 85/85 süreç bileşeni, 392/392 kitap + 140/140 program kanıtı |
 | STEP 10 ÖSYM | 🔄 alt ajan çalışıyor | Ajan `scripts/data_osym.py` yazıyor; doğrulama `build_osym.py --check`. Bitince derle ve commit'le. |
 | STEP 13 Hata + yanılgı | 🔄 alt ajan çalışıyor | Ajan `scripts/data_errors.py` yazıyor; doğrulama `build_errors.py --check`. Bitince derle ve commit'le. |
 | STEP 9, 11, 12, 14 | ⏳ dalga 2–3 | `docs/execution-plan.md` |

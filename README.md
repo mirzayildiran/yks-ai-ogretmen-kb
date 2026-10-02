@@ -21,7 +21,7 @@ Tüm katmanları resmî kaynaklardan baştan üretir ve doğrular; hata varsa ç
 | Kavram grafiği | `knowledge-base/physics-11/concepts/` |
 | Ön koşul grafiği | `knowledge-base/physics-11/prerequisites/` |
 | Formül veritabanı | `knowledge-base/physics-11/formulas/` |
-| Soru aileleri (Ünite 1) | `knowledge-base/physics-11/question-families/` |
+| Soru aileleri (178, üç ünite) | `knowledge-base/physics-11/question-families/` |
 | Denetimler | `knowledge-base/physics-11/audits/` |
 
 `legacy-taslak-fizik-11/` mimariden önce üretilmiş taslakları içerir; bilgi tabanının parçası değildir.
