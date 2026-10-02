@@ -10,8 +10,8 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 | STEP 8 Ünite 1 | ✅ commit'li | 57 aile |
 | STEP 8 Ünite 2 | ✅ veri commit'li | 56 aile; birleşik derleme Ünite 3 bitince |
 | STEP 8 Ünite 3 | 🔄 alt ajan çalışıyor | 28 aile var (3.1–3.4); 3.5–3.10 ekleniyor. Bitince: `--check`, sonra `run_all_audits.py`, commit |
-| STEP 10 ÖSYM | ⏳ sırada | Önce `build_osym.py`, sonra ajan |
-| STEP 13 Hata + yanılgı | ⏳ sırada | Önce `build_errors.py`, sonra ajan |
+| STEP 10 ÖSYM | 🔄 alt ajan çalışıyor | Ajan `scripts/data_osym.py` yazıyor; doğrulama `build_osym.py --check`. Bitince derle ve commit'le. |
+| STEP 13 Hata + yanılgı | 🔄 alt ajan çalışıyor | Ajan `scripts/data_errors.py` yazıyor; doğrulama `build_errors.py --check`. Bitince derle ve commit'le. |
 | STEP 9, 11, 12, 14 | ⏳ dalga 2–3 | `docs/execution-plan.md` |
 | STEP 15–16 | ⏳ dalga 4 | |
 
@@ -22,3 +22,8 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
    - Tamamsa: derle, `run_all_audits.py` çalıştır ve commit'le.
 3. Bir sonraki ⏳ satıra geç (`docs/execution-plan.md`).
 4. Bu tabloyu güncelle.
+
+## Notlar
+- Otomatik devam görevi: bu oturumda her saat :17'de çalışır, oturum kapanınca ya da 7 gün sonra biter.
+- Derleyiciler hazır: `build_osym.py`, `build_errors.py` (ortak: `kb_common.py`). `run_all_audits.py`'ye ancak veri dosyaları tamamlanınca eklenecekler.
+- Dalga 2 (Ünite 3 bitince): piyasa analizi + çözüm/kısa yol ajanları; önce `build_solutions.py` ve `build_market.py` yazılacak.
