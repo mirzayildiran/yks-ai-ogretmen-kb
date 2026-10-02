@@ -542,3 +542,25 @@ ITEMS += [
       "Röntgen, ultrason, tomografi, sonar ve termal kameradan hangisinin ses, hangisinin elektromanyetik dalgayla görüntü oluşturduğunu gösteren doğru eşleştirme aranıyor.",
       "no", "Dalga kullanan görüntüleme cihazları 12. sınıf (FİZ.12.3.7) konusu.", "HIGH"),
 ]
+
+
+# ============================ TYT 2018–2025: optik ve 11. sınıf çıktılarına denk gelen fizik soruları ============================
+# Kapsam: TYT Fen Bilimleri testinin Fizik bölümü (1-7). Yalnız optik (ışık, aydınlanma, ayna, kırılma, mercek, renk) ve
+# 11. sınıf Maarif çıktılarına denk gelen (Newton yasaları, sürtünme, elektriksel kuvvet) sorular kaydedilmiştir; diğerleri (ısı, basınç, dalga, devre vb.) kapsam dışıdır.
+# Gölge ve yarı gölge: 2018–2025 TYT fizik testlerinde soru çıkmamıştır.
+
+# ---- 2018 TYT ----
+ITEMS += [
+    Q(2018, "TYT", 5, "İtme-çekme gözleminden üç iletken kürenin yük işaretlerinin çıkarılması", ["FİZ.11.2.1"], "", "coulomb-direction-newton3", "partial", ["FBAB10"],
+      1, 1, 0, "", "üçlü işaret kombinasyonları (K, L, M için Pozitif/Negatif)", "Aynı cins yükler iter, zıt cinsler çeker: K ile L aynı işaretli, L ile M zıt işaretli olmalıdır",
+      "Nötr olmayan üç iletken kürede K'nin L'yi ittiği, L'nin M'yi çektiği gözleminden yüklerin işaretlerinin hangi kombinasyon olabileceği soruluyor.",
+      "yes", "Elektriksel kuvvetin yönü (itme-çekme) FİZ.11.2.1 kapsamında; sayısal Coulomb hesabı yok, program da hesabı dışlıyor.", "HIGH"),
+    Q(2018, "TYT", 6, "Işık şiddeti, ışık akısı ve aydınlanmadan hangilerinin kaynağa uzaklıkla değiştiği", ["FİZ.11.3.1"], "", "lum-concept-definitions", "exact", ["FBAB8"],
+      2, 1, 0, "", ROMAN, "Işık şiddeti ve toplam akı kaynağın özelliğidir; yalnız aydınlanma (E = I/d²) kaynağa uzaklıkla değişir",
+      "Birimleri (cd, lm, lüks) verilen ışık şiddeti, toplam ışık akısı ve aydınlanma niceliklerinden hangilerinin kaynağa olan uzaklığa göre değiştiği öncüllerle soruluyor.",
+      "yes", "Üç niceliğin tanımı, birimi ve bağlı olduğu etmen FİZ.11.3.1 kapsamında; nitel yorum düzeyi programa uygun.", "HIGH"),
+    Q(2018, "TYT", 7, "Kırılan ışının yolundan ortamların kırıcılığının karşılaştırılması ve L'den M'ye geçişte olası yollar", ["FİZ.11.3.5"], "", "rf-ray-path-media-comparison", "exact", ["FBAB7"],
+      3, 2, 0, "ms gr", "dört ışın yolu (I–IV) kombinasyonları (Yalnız I … II, III ve IV)", "İki şekilden n_L > n_M > n_K bulunur; L'den M'ye geçişte ışık normalden uzaklaşır, büyük gelme açısında sınır açısı ve tam yansıma da olabilir",
+      "K ortamından L ve M ortamlarına geçen ışının iki kırılma şeklinden ortamların kırıcılığı karşılaştırılıyor; L'den M'ye geçişte izlenebilecek yollar (kırılma, sınır, yansıma) seçiliyor.",
+      "yes", "Snell yasasının nitel kullanımı, sınır açısı ve tam yansıma FİZ.11.3.5 kapsamındadır; formül gerekmiyor.", "HIGH"),
+]

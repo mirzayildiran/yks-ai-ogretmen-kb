@@ -661,3 +661,843 @@ ERROR_TYPES += [
         "related_error_types": ["TABLE_READING_ERROR", "METHOD_SELECTION_ERROR", "QUESTION_INTERPRETATION_ERROR"],
     },
 ]
+
+# ============================================================================================
+# BÖLÜM 2 — KAVRAM YANILGILARI: ÜNİTE 1 (KUVVET VE HAREKET, FİZ.11.1.1–FİZ.11.1.10)
+# ============================================================================================
+# Ünite 1'e özgü ek kaynaklar (her biri bu çalışmada bulunup okunmuştur; okuma düzeyi citation içinde yazılıdır).
+SRC.update({
+    "MC83": _s("McCloskey, M. (1983). Intuitive physics. Scientific American, 248(4), 122–130. [ERIC kayıt sayfası ve özeti okundu: "
+               "katılımcıların hareketi Newton öncesi 'impetus' (itki) kuramına benzer biçimde açıklaması]",
+               "https://eric.ed.gov/?id=EJ277094", 2, True),
+    "DUR21": _s("Durkaya, F. (2021). Matematik öğretmen adaylarının serbest cisim diyagramı gösterimine ilişkin performans değerlendirmesi. Fen, "
+                "Matematik, Girişimcilik ve Teknoloji Eğitimi Dergisi, 4(1), 60–80. [tam metin okundu; 33 öğretmen adayı: eğik düzlemde normal "
+                "kuvveti 16'sı gösterdi, 17'si unuttu ya da göz ardı etti; düzgün dairesel harekette merkezcil kuvveti 9'u dışa yönelik çizdi]",
+                "https://dergipark.org.tr/en/download/article-file/1291648", 2, True),
+    "YK22": _s("Yüzbaşıoğlu, M. K. & Kurnaz, M. A. (2022). Ortaokul öğrencilerinin kuvvetin ölçülmesi ve sürtünme ünitesine yönelik alternatif "
+               "fikirlerinin incelenmesi: skor analizi. Mehmet Akif Ersoy Üniversitesi Eğitim Fakültesi Dergisi, 61, 1–22. [tam metin okundu; "
+               "140 beşinci sınıf öğrencisi; en az doğru yanıtlanan soru sürtünme kuvvetinin yönüyle ilgili (%19,29)]",
+               "https://dergipark.org.tr/tr/download/article-file/1922462", 2, True),
+    "BL23": _s("Boudreaux, A. & Lindsey, B. (2023). Investigation of student reasoning about air resistance and terminal speed behavior of falling "
+               "objects. APS April Meeting 2023 (bildiri özeti, bibcode 2023APS..APRF17006B). [yalnızca arama özeti görüldü: öğrenciler kesit "
+               "alanı gibi tek değişkene odaklanıyor ve kuvvet dengesiyle çelişen yanıtlar veriyor; sayfa açılamadı]",
+               "https://ui.adsabs.harvard.edu/abs/2023APS..APRF17006B/abstract", 2, False),
+})
+
+
+_U1_START = len(MISCONCEPTIONS)
+
+# --- FİZ.11.1.1–FİZ.11.1.2: Serbest düşme ---
+MISCONCEPTIONS += [
+    MC("heavier-falls-faster",
+       "Ağır cisim, hafif cisimden daha büyük ivmeyle düşer; bu yüzden önce yere ulaşır.",
+       "Hava direncinin ihmal edildiği ortamda serbest düşen tüm cisimlerin ivmesi aynıdır (g). Cisme etki eden tek kuvvet ağırlığıdır; "
+       "a = mg/m = g olduğundan kütle sadeleşir. Kütle büyüdükçe çeken kuvvet büyür, ama hızlandırılması gereken eylemsizlik de aynı oranda büyür.",
+       ["serbest-dusme", "yer-cekimi-ivmesi", "kutle", "agirlik"], LO("1.1", "1.2"), "CONCEPTUAL_ERROR",
+       "ff-mass-independence ailesinin çeldiricileri: 'ağır cisim daha büyük ivmeyle düşer / önce yere ulaşır' ve 'kütle iki katına çıkınca düşme "
+       "süresi yarıya iner'. FCI taksonomisinde G3 (heavier objects fall faster). Veri tablosu ve ϑ–t sorularında da ivmenin kütleye bağlandığı seçenekler.",
+       DI("Havası boşaltılmış uzun bir tüpün tepesinden 2 kg'lık demir bilya ile 20 g'lık plastik bilya aynı anda, ilk hızsız bırakılıyor. "
+          "Bilyaların tüpün dibine varma süreleri t_demir ve t_plastik ile gösterilirse hangisi doğrudur?",
+          "t_demir < t_plastik; çünkü demir bilyanın ağırlığı çok daha büyüktür.",
+          "t_demir = t_plastik; çünkü ikisinin de ivmesi g'dir.",
+          "t_demir > t_plastik; çünkü demir bilyanın eylemsizliği daha büyüktür.",
+          "t_demir = t_plastik; çünkü havasız ortamda cisimlere hiçbir kuvvet etki etmez.",
+          "t_demir, t_plastik'in yüzde biri kadardır; çünkü kütle oranı 100'dür.",
+          "B", "A"),
+       RM(["Havasız tüpte demir bilyaya hangi kuvvetler etki ediyor? Plastik bilyaya?",
+           "Demir bilyanın ağırlığı plastik olanınkinin 100 katı. Newton'un 2. yasasında ivmeyi yalnız kuvvet mi belirler, yoksa başka bir nicelik de var mı?",
+           "İki plastik bilyayı birbirine yapıştırıp bırakırsak kütle iki katına çıkar. Sistem daha hızlı mı düşer? Neden?",
+           "Havalı ortamda yaprak neden yavaş düşer? Bunu farklı kılan kuvvet ağırlık mı, başka bir şey mi?"],
+          "Ay'da (havasız ortam) çekiç ile tüy aynı yükseklikten aynı anda bırakıldığında birlikte yere düşer; oysa çekicin ağırlığı tüyünkinden çok daha büyüktür.",
+          "Bir kişiyi iten tek arkadaş ile iki kişiyi iten iki arkadaş: kişi başına düşen itme aynı olduğundan ivme değişmez. Ağırlık bu 'itme' gibidir; "
+          "kütle büyüdükçe hem itici kuvvet hem de itilen kütle aynı oranda büyür."),
+       S("FCI", "POTV23", "FERR17"), "HIGH"),
+
+    MC("speed-up-means-accel-up",
+       "Serbest düşen cismin hızı arttığı için ivmesi de artar (hız ile ivme karıştırılır).",
+       "Hava direncinin ihmal edildiği serbest düşmede ivme sabit g'dir: hız eşit zaman aralıklarında eşit miktarda artar (yaklaşık her saniye 10 m/s). "
+       "İvme, hızın büyüklüğüne değil hızın değişme hızına bağlıdır; ϑ–t grafiğinde sabit eğimli doğru çizilir.",
+       ["serbest-dusme", "yer-cekimi-ivmesi", "ivme", "hiz"], LO("1.1", "1.2"), "CONCEPTUAL_ERROR",
+       "ff-data-pattern-g ailesinin 'hızlar arttığı için ivme de artıyor' çeldiricisi; ff-motion-graphs ve ff-kinematics-v0zero sorularında "
+       "ivmenin zamanla arttığını düşünen seçenekler. FCI taksonomisinde K2 (velocity–acceleration undiscriminated) ve AF5.",
+       DI("Bir gezegende serbest düşen cismin hızı saniyede bir ölçülüyor: t = 0'da 0, 1 s'de 4 m/s, 2 s'de 8 m/s, 3 s'de 12 m/s. "
+          "Bu gezegende cismin ivmesi için hangisi söylenir?",
+          "Zamanla artar; çünkü hız her saniye daha büyük bir değere ulaşıyor.",
+          "Sabit ve 4 m/s²'dir; çünkü hız her saniye 4 m/s artıyor.",
+          "Sabit ve 12 m/s²'dir; çünkü 3. saniyede hız 12 m/s'dir.",
+          "Zamanla artar; çünkü her saniyede alınan yol bir öncekinden fazladır.",
+          "Verilerden bulunamaz; çünkü cismin kütlesi verilmemiştir.",
+          "B", "A"),
+       RM(["İvme neyi ölçer: hızın kendisini mi, hızın değişme hızını mı?",
+           "Tablodaki her saniyedeki hız artışını yan yana yaz. Bu sayılar değişiyor mu?",
+           "Hız iki katına çıkınca ivme de iki katına çıkıyor mu? ϑ–t grafiğini çizsen eğim nasıl olurdu?",
+           "Sabit 100 km/sa hızla giden bir arabanın ivmesi nedir?"],
+          "Sabit 100 km/sa ile giden araba büyük hızlıdır ama ivmesi sıfırdır; durgun hâlden her saniye 4 m/s artan araba küçük hızlıdır ama ivmesi vardır. "
+          "'Hız büyükse ivme büyüktür' düşüncesi bu iki araba karşısında çöker.",
+          "Hız, su deposundaki seviyeye; ivme ise musluğun debisine benzer. Seviye yüksek olabilir ama musluk kapalıysa (ivme sıfır) seviye değişmez; "
+          "musluk sabit akıyorsa seviye eşit aralıklarla yükselir."),
+       S("FCI", "HH85", "BEI94"), "HIGH"),
+
+    MC("apex-accel-zero",
+       "Yukarı atılan cisim tepe noktasında anlık durduğu için ivmesi de sıfırdır (cisim dengededir).",
+       "Tepe noktasında hız anlık olarak sıfırdır, ancak cisme ağırlığı etki etmeye devam eder; net kuvvet mg ve aşağı yönlüdür, ivme g'dir (hava direnci ihmal). "
+       "Hızın sıfır olması ivmenin sıfır olmasını gerektirmez; ivme hızın değişme hızıdır ve hız tepede işaret değiştirmektedir.",
+       ["tepe-noktasi-hareket", "serbest-dusme", "ivme", "hiz"], LO("1.2", "1.3"), "CONCEPTUAL_ERROR",
+       "ff-upward-throw ve ff-motion-graphs ailelerinin 'tepe noktasında ivme sıfırdır / a–t grafiğinde ivme sıfıra iner' çeldiricileri; "
+       "2d-angled-launch'ta tepe noktasında ivme sıfır seçeneği. FCI K2 ve Clement (1982) yukarı atılan madeni para sorusu.",
+       DI("Hava direncinin ihmal edildiği ortamda dik yukarı fırlatılan bir top yükselip tepe noktasına ulaşıyor. "
+          "Topun tepe noktasındaki anı için hangisi doğrudur? (g = 10 m/s², yukarı yön pozitif)",
+          "Hızı sıfır, ivmesi sıfırdır.",
+          "Hızı sıfır, ivmesi 10 m/s² büyüklüğünde ve aşağı yönlüdür.",
+          "Hızı sıfır, ivmesi 10 m/s² büyüklüğünde ve yukarı yönlüdür.",
+          "Hızı sıfır, ivmesi 5 m/s² ve aşağı yönlüdür; çünkü ivme yükselirken azalmıştır.",
+          "Hızı sıfır; ivme yükselirken 10 m/s², tepede sıfır, inerken tekrar 10 m/s² olur.",
+          "B", "A"),
+       RM(["Tepe noktasında topa etki eden kuvvetleri çiz. Ağırlık kayboldu mu?",
+           "Bir saniye sonra top ne yapıyor? Hızı hangi yönde ve sıfırdan farklı mı?",
+           "Hızın sıfırdan aşağı yönlü bir değere geçmesi için bir ivme gerekir mi?",
+           "ϑ–t grafiğinde t = tepe anında eğim ne kadar? Grafik orada kırılıyor mu?"],
+          "İvme sıfır olsaydı net kuvvet de sıfır olurdu ve top tepede havada asılı kalırdı (Newton'ın 1. yasası). Oysa top bir an sonra aşağı iner; "
+          "öyleyse ivme tepede sıfır olamaz.",
+          "Salıncağın en yüksek noktasında salıncak bir an durur ama hemen geri döner; durması, o anda net kuvvetin sıfır olduğu anlamına gelmez."),
+       S("CLEM", "FCI", "HH85"), "HIGH"),
+
+    MC("upward-motion-needs-upward-force",
+       "Elden çıktıktan sonra yukarı giden cisme 'atma kuvveti' gibi yukarı yönlü bir kuvvet etki eder; yer çekimi bu kuvveti yenince cisim durur.",
+       "Elden çıkan cisme yalnızca ağırlığı (aşağı yönlü) etki eder; hava direnci ihmal edildiğinde yukarı yönlü kuvvet yoktur. Yukarı yönlü hareket kuvvetten değil "
+       "ilk hızdan (eylemsizlikten) gelir; net kuvvet aşağı yönlü olduğundan hız yukarı yönde azalır.",
+       ["tepe-noktasi-hareket", "serbest-dusme", "newton-birinci-yasa", "bileske-kuvvet"], LO("1.2", "1.4"), "CONCEPTUAL_ERROR",
+       "ff-upward-throw ve fbd-identify-forces ailelerinde 'hareket yönünde ayrı bir hareket kuvveti oku'; yukarı atılan cisim için serbest cisim diyagramı. "
+       "Clement (1982) madeni para atışı ve FCI taksonomisinde I3 (impetus dissipation) ile AF2 (motion implies active force).",
+       DI("Elinizden dik yukarı fırlattığınız bir taş elden çıktıktan sonra yükselirken (hava direnci ihmal) taşa etki eden kuvvetler için hangisi doğrudur?",
+          "Yalnızca aşağı yönlü ağırlık kuvveti etki eder.",
+          "Aşağı yönlü ağırlık ile ağırlıktan büyük, sabit, yukarı yönlü bir kuvvet etki eder.",
+          "Aşağı yönlü ağırlık ile yukarı yönlü bir kuvvet etki eder; yukarı kuvvet başlangıçta ağırlıktan büyüktür, giderek azalır.",
+          "Yalnızca yukarı yönlü bir kuvvet etki eder; ağırlık taş durduktan sonra etkili olmaya başlar.",
+          "Aşağı yönlü ağırlık ile ona eşit yukarı yönlü kuvvet etki eder; net kuvvet sıfırdır.",
+          "A", "C"),
+       RM(["Taş elinden ayrıldı. Taşa dokunan herhangi bir cisim var mı? Yukarı iten kuvveti hangi cisim uyguluyor?",
+           "Bir kuvvetten söz edebilmek için o kuvveti uygulayan bir cisim bulunması gerekir mi?",
+           "Taşa yalnızca aşağı yönlü net kuvvet etki ediyorsa ivme hangi yönde olur? Hız yukarı yönlü iken azalması bununla uyumlu mu?",
+           "Yerçekimsiz uzayda elinizle ittiğiniz top, elinizden çıktıktan sonra ne yapar?"],
+          "Taş elden çıktığı anda temas biter; 'yukarı kuvveti' uygulayan hiçbir cisim gösterilemez. Kuvvet olmadan da cisim hareketini sürdürebilir; "
+          "bu yüzden yukarı yönlü hareket yukarı yönlü kuvvetin kanıtı sayılamaz.",
+          "Buz üzerinde itilen paten elden ayrıldıktan sonra kayar: itme bittiği hâlde hareket sürer. Hareketin devamı 'saklı bir itmeden' değil, eylemsizlikten gelir."),
+       S("CLEM", "FCI", "MC83"), "HIGH"),
+
+    MC("carrier-release-v0-zero",
+       "Hareket eden bir taşıyıcıdan (uçak, yükselen balon, koşan kişi) bırakılan cismin ilk hızı sıfırdır; cisim bırakıldığı noktanın hemen altına düşer.",
+       "Bırakılan cisim, bırakıldığı anda taşıyıcının hızına sahiptir ve hava direnci ihmal edildiğinde yatay (ya da düşey) hız bileşenini korur. "
+       "Sabit hızla giden taşıyıcının tam altında kalarak düşer; yükselen balondan bırakılan cisim ise başlangıçta yukarı yönlü hızla hareket eder.",
+       ["serbest-dusme", "hiz", "bilesenlerin-bagimsizligi", "newton-birinci-yasa"], LO("1.2", "1.3"), "CONCEPTUAL_ERROR",
+       "ff-downward-throw-or-moving-carrier çeldiricileri 'bırakılan cismin ilk hızı sıfırdır' ve 'yukarı çıkan balondan bırakılan cisim hemen aşağı düşer'; "
+       "2d-moving-reference-launch'ta 'top atıldığı noktanın gerisine düşer'. McCloskey (1983) impetus açıklamaları.",
+       DI("Sabit 8 m/s hızla yatay doğrultuda uçan bir drondan bir paket bırakılıyor; drone hızını koruyarak uçmaya devam ediyor ve hava direnci ihmal ediliyor. "
+          "Yerdeki bir gözlemciye göre paketin hareketi için hangisi doğrudur?",
+          "Paket bırakıldığı noktanın tam altına düşer; drone ilerlemeye devam eder.",
+          "Paket, dronun tam altında kalarak düşer ve dronun bulunduğu noktanın altına çarpar.",
+          "Paket dronun gerisinde kalır; çünkü bırakılınca yatay hızı giderek azalır.",
+          "Paket dronun önüne geçer; çünkü bırakılınca drondan daha hızlı hareket eder.",
+          "Paket yalnızca düşey doğrultuda 8 m/s ilk hızla aşağı atılmış gibi hareket eder.",
+          "B", "A"),
+       RM(["Paket dronun altına bağlıyken yatay hızı kaçtı? Bırakılınca bu hız hangi kuvvetle yok olur?",
+           "Hava direncinin ihmal edildiği ortamda pakete yatay doğrultuda hangi kuvvet etki ediyor?",
+           "Hareket eden trende bozuk para bıraksanız ayağınıza mı düşer, trenin gerisine mi?",
+           "Yatay ve düşey hareket birbirini etkiler mi, yoksa ayrı ayrı mı incelenebilir?"],
+          "Hareket eden bir trende elinizdeki bozuk para ayağınızın dibine düşer, trenin gerisine düşmez. Para bırakılır bırakılmaz hızı sıfırlansaydı geride kalırdı.",
+          "Koşarken havaya zıplayan kişi geriye düşmez; zıplarken koşu hızını korur ve koşuya devam eder. Bırakılan paket de taşıyıcının hızını 'yanında götürür'."),
+       S("MC83", "HH85", "TB"), "MEDIUM"),
+
+    MC("xt-graph-as-trajectory",
+       "Konum–zaman grafiği cismin izlediği yolun resmidir: ters U şeklinde bir grafik, cismin bir tepeye tırmanıp indiği anlamına gelir.",
+       "Grafiğin yatay ekseni zamandır, cismin yatay konumu değil. Düşey doğrultuda yukarı atılıp aynı yere dönen cismin konum–zaman grafiği ters U (parabol) olur "
+       "ama hareket tek bir düşey doğru boyuncadır. Grafiğin eğimi anlık hızı verir; tepede eğim sıfırdır, yani hız anlık sıfırdır.",
+       ["hareket-grafikleri", "grafik-egim-alan", "serbest-dusme", "konum"], LO("1.2"), "GRAPH_READING_ERROR",
+       "ff-motion-graphs ve ff-data-evidence ailelerinde konum–zaman grafiğinin yorumlanması; 'grafiği resim sanma' (graph-as-picture) "
+       "Beichner (1994) kinematik grafik yorumlama testinin bilinen hata kategorisidir.",
+       DI("Düşey yukarı fırlatılıp aynı noktaya dönen bir cismin yer–zaman (y–t) grafiği ters U (parabol) biçimindedir. Bu grafikle ilgili hangisi doğrudur?",
+          "Cisim önce eğri bir yokuşa tırmanır, sonra aşağı kayar; yörünge parabolik bir eğridir.",
+          "Cisim düşey bir doğru boyunca hareket eder; grafiğin tepesinde eğim sıfır olduğu için hız anlık sıfırdır.",
+          "Grafiğin tepesinde eğim sıfır olduğundan cismin ivmesi de o anda sıfırdır.",
+          "Cisim yükselirken hızı sabittir; çünkü grafik düzgün biçimde yükselmektedir.",
+          "Grafik parabol olduğundan cisim aynı zamanda yatay doğrultuda da hareket etmektedir.",
+          "B", "A"),
+       RM(["Grafiğin yatay ekseni neyi gösteriyor? Cismin kendisi yatay doğrultuda mı hareket ediyor?",
+           "t = 0 ve t = T anlarında cisim nerede? Aradaki yolculuğu bir yan kamerayla çekseydin cisim hangi yolu izlerdi?",
+           "Grafiğin bir noktadaki eğimi hangi fiziksel niceliği verir? Tepedeki eğim kaç?",
+           "Eğim sıfırsa ivme de sıfır mıdır? Eğimin değişmesi neyi anlatır?"],
+          "Stroboskopla çekilmiş düşey hareketin ardışık konumlarını zaman ekseni boyunca yan yana dizersen ters U çıkar; oysa cisim aynı düşey doğru üzerinde gidip gelmiştir. "
+          "Grafik, cismin yolundan farklı bir şeydir.",
+          "Günlük sıcaklık–zaman grafiğindeki tepe noktası havanın gerçekten bir tepeye tırmandığı anlamına gelmez; grafik zamanla değişimi anlatır, yolu değil."),
+       S("BEI94", "TB"), "HIGH"),
+
+    MC("vt-height-vs-slope",
+       "Hız–zaman grafiğinde çizginin o anki yüksekliği (değeri) ivmedir; çizgi yüksekteyse ivme büyük, eksene yaklaşınca küçüktür.",
+       "İvme, hız–zaman grafiğinin eğimidir; çizginin yüksekliği hızı verir. Yukarı yönlü fırlatılan cismin ϑ–t grafiği, yukarı yön pozitif alındığında, tüm yolculuk "
+       "boyunca eğimi sabit (−g) olan tek bir doğrudur; hızın sıfırdan geçtiği noktada bile eğim değişmez.",
+       ["hareket-grafikleri", "grafik-egim-alan", "ivme", "serbest-dusme"], LO("1.2", "1.3"), "GRAPH_READING_ERROR",
+       "ff-motion-graphs ve 2d-component-graphs ailelerinde ϑ–t grafiğinden ivme okuma; 'eğim ile yüksekliği karıştırma' Beichner (1994)'te belgelenmiş hata kategorisidir.",
+       DI("Düşey doğrultuda fırlatılan bir cismin, yukarı yön pozitif alınarak çizilen hız–zaman grafiği; t = 0'da +20 m/s'den başlayıp t = 2 s'de sıfırdan, "
+          "t = 4 s'de −20 m/s'den geçen bir doğrudur (g = 10 m/s², hava direnci ihmal). Bu grafikten ivme için hangisi söylenir?",
+          "İvme t = 0'da 20 m/s², t = 2 s'de 0, t = 4 s'de −20 m/s²'dir.",
+          "İvme 0–4 s boyunca değişmez ve −10 m/s²'dir; t = 2 s'de de −10 m/s²'dir.",
+          "İvme t = 2 s'ye kadar −10 m/s², sonrasında +10 m/s²'dir; çünkü hız işaret değiştirir.",
+          "İvme t = 2 s'de sıfırdır; çünkü doğru eksene o anda temas eder.",
+          "Eğim hızı verir; ivme ancak grafikle eksen arasındaki alanla bulunabilir.",
+          "B", "A"),
+       RM(["Hız–zaman grafiğinde dikey eksen hangi niceliği gösterir? İvmenin tanımı ne?",
+           "Grafikte t = 0 ve t = 2 s noktalarını seç: hız farkını süre farkına böl. Kaç buluyorsun?",
+           "Çizgi çok yüksekte ama tamamen yatay olsaydı (sabit hız) ivme kaç olurdu?",
+           "Bu doğrunun eğimi 0–4 s boyunca değişiyor mu? Eksenle kesiştiği noktada eğim farklı mı?"],
+          "'Yükseklik = ivme' kuralıyla t = 0'da 20 m/s², t = 4 s'de −20 m/s² bulunur; oysa cisme etki eden kuvvet (ağırlık) hiç değişmemiştir ve ivme her an −10 m/s²'dir.",
+          "3000 m yükseklikteki düz bir yaylada yol yataydır; yükseklik (deniz seviyesinden uzaklık) ile yokuşun dikliği (eğim) farklı şeylerdir."),
+       S("BEI94", "TB"), "HIGH"),
+]
+
+# --- FİZ.11.1.3–FİZ.11.1.4: İki boyutta sabit ivmeli hareket; Newton'ın hareket yasaları ---
+MISCONCEPTIONS += [
+    MC("horizontal-speed-changes-fall-time",
+       "Yatay doğrultuda ilk hızı büyük olan cisim yere daha geç (ya da daha erken) düşer; yatay hız düşey hareketi etkiler.",
+       "Yatay ve düşey hareket bileşenleri birbirinden bağımsızdır. Aynı yükseklikten yatay fırlatılan cismin yere varış süresi yalnızca yüksekliğe ve g'ye bağlıdır; "
+       "yatay hızdan bağımsızdır ve aynı yükseklikten serbest bırakılan cismin süresine eşittir. Yatay hız yalnızca yatay ilerleme miktarını (menzili) değiştirir.",
+       ["bilesenlerin-bagimsizligi", "ucus-suresi", "iki-boyutta-sabit-ivmeli-hareket", "serbest-dusme"], LO("1.3"), "CONCEPTUAL_ERROR",
+       "2d-horizontal-launch ailesinin 'yatay hızı büyük olan cisim daha geç yere düşer' çeldiricisi; 2d-component-data ve 2d-launch-onto-incline-or-steps "
+       "sorularında yatay hıza bağlanan uçuş süresi seçenekleri.",
+       DI("Aynı masanın kenarından, aynı anda özdeş iki bilyadan biri sessizce bırakılıyor, diğeri 6 m/s yatay hızla fırlatılıyor (hava direnci ihmal). "
+          "Bilyaların yere varış süreleri sırasıyla t_1 (bırakılan) ve t_2 (fırlatılan) ise hangisi doğrudur?",
+          "t_2 > t_1; çünkü fırlatılan bilya daha uzun bir yol alır.",
+          "t_2 = t_1; çünkü düşey hareket iki bilya için de aynıdır.",
+          "t_2 < t_1; çünkü yatay hızı olan bilya yere daha büyük hızla çarpar.",
+          "t_2 = t_1; çünkü iki bilyanın toplam hızı da aynıdır.",
+          "Hangisinin önce düşeceği yatay hızın değerine bağlıdır; verilen bilgiyle karşılaştırılamaz.",
+          "B", "A"),
+       RM(["Fırlatılan bilyaya düşey doğrultuda hangi kuvvet etki ediyor? Bu kuvvet yatay hız değişince değişir mi?",
+           "Yere varış süresini hangi doğrultudaki hareket belirler: yüksekliği aşmak mı, yatayda ilerlemek mi?",
+           "Yatay hızı iki katına çıkarsan hangisinin değişmesini beklersin: süre mi, yatay ilerleme mesafesi mi?",
+           "Stroboskopla iki bilyanın ardışık konumlarını işaretlesen, aynı anlarda aynı yükseklikte olurlar mı?"],
+          "Masanın kenarından aynı anda bırakılan ve yatay fırlatılan iki bilyanın stroboskop görüntüsünde bilyalar her anda aynı yükseklikte yer alır ve birlikte yere çarpar. "
+          "Yatay hızın süreyi uzattığı düşüncesi bu görüntüyü açıklayamaz.",
+          "Hareket eden bir trenin içinde yukarı zıplayan yolcunun havada kalma süresi trenin hızına bağlı değildir; yatay ilerleme ile yukarı-aşağı hareket birbirinden bağımsızdır."),
+       S("HH85", "MC83", "TB"), "MEDIUM"),
+
+    MC("two-stage-path-then-vertical",
+       "Yatay hızla fırlatılan cisim önce bir süre yatay gider, yatay itki bitince dik biçimde aşağı düşer; yörüngesi 'L' biçimindedir.",
+       "Yer çekimi, cisim elden ya da masadan ayrıldığı andan itibaren etki eder. Hava direnci ihmal edildiğinde yatay hız sabit kalırken düşey hız düzgün artar; "
+       "iki hareket aynı anda gerçekleşir ve yörünge parabolik bir eğridir.",
+       ["parabolik-yorunge", "bilesenlerin-bagimsizligi", "iki-boyutta-sabit-ivmeli-hareket", "newton-birinci-yasa"], LO("1.3"), "CONCEPTUAL_ERROR",
+       "2d-horizontal-launch ve 2d-component-graphs ailelerinde yörünge çizimi; 2d-launch-onto-incline-or-steps'te 'cisim ilk basamağa düşer' çeldiricisi. "
+       "FCI taksonomisinde G5 (yer çekimi impetus tükenince etki eder) ve I3/I4 (impetusun azalması, gecikmeli oluşması).",
+       DI("Bir bilye yatay bir masanın kenarından yuvarlanarak ayrılıp havada hareket ediyor (hava direnci ihmal). "
+          "Bilyenin masadan ayrıldıktan sonraki hareketi için hangisi doğrudur?",
+          "Önce bir süre yatay doğrultuda ilerler, sonra düşey olarak aşağı düşer.",
+          "Yatay hızı sabit kalırken düşey hızı artar; yörüngesi paraboldür.",
+          "Yatay hızı giderek azalıp sıfırlanır, ardından serbest düşme yapar.",
+          "Hem yatay hem düşey hızı sabittir; yörüngesi eğik bir doğrudur.",
+          "Düşey hızı sabittir, yatay hızı giderek artar.",
+          "B", "A"),
+       RM(["Bilye masadan ayrıldığı anda ağırlığı etkisini yitiriyor mu? Ağırlık ne zaman devreye giriyor?",
+           "Masadan ayrılan bilyeye yatay doğrultuda hangi kuvvet etki ediyor (hava ihmal)? Yatay hızı kim azaltsın?",
+           "Önce yatay gidip sonra dik düşseydi bilyenin yolu nasıl görünürdü? Yatay atılan bir topun fotoğrafı buna benziyor mu?",
+           "İki hareket aynı anda gerçekleşiyorsa yolun şekli nasıl olur?"],
+          "Yatay atılan bir topun stroboskop fotoğrafında 'L' biçimli bir yol değil, pürüzsüz bir eğri görülür; çünkü elden ya da masadan çıkar çıkmaz yer çekimi cismi aşağı doğru hızlandırır.",
+          "Nehirde karşıya yüzen kişiyi akıntı yana taşırken kürekleri karşıya götürür; iki etki aynı anda gerçekleşir, kişi önce akıntıyla sonra karşıya gitmez."),
+       S("FCI", "MC83", "HH85"), "HIGH"),
+
+    MC("resultant-velocity-scalar-sum",
+       "İki boyutlu harekette bir andaki bileşke hız, yatay ve düşey hız bileşenlerinin cebirsel toplamıdır (v = v_x + v_y).",
+       "Yatay ve düşey bileşenler birbirine dik vektörlerdir; bileşke hızın büyüklüğü v = √(v_x² + v_y²), yönü tanθ = v_y/v_x ile bulunur. "
+       "Büyüklükler yalnızca bileşenler aynı doğrultudaysa cebirsel olarak toplanır.",
+       ["vektor-bilesenleri", "cizgisel-hiz", "vektorel-nicelik", "iki-boyutta-sabit-ivmeli-hareket"], LO("1.3"), "VECTOR_ERROR",
+       "2d-velocity-at-point ailesinin 'bileşke hız bileşenlerin toplamıdır' çeldiricisi; 2d-horizontal-launch'ta 'çarpma hızı yalnız düşey hızdır' çeldiricisi. "
+       "FCI taksonomisinde K3 (nonvectorial velocity composition).",
+       DI("Hava direncinin ihmal edildiği ortamda yatay doğrultuda fırlatılan bir cismin, belirli bir anda yatay hız bileşeni 6 m/s, düşey hız bileşeni 8 m/s'dir. "
+          "Cismin o andaki hızının büyüklüğü kaç m/s'dir?",
+          "14", "10", "2", "48", "7",
+          "B", "A"),
+       RM(["Yatay ve düşey hız bileşenleri birbirine göre hangi açıyla duruyor?",
+           "Bir kişi 6 m doğuya, ardından 8 m kuzeye yürüyor. Başlangıç noktasından kaç metre uzaktadır? 14 m mi?",
+           "Bu iki hız bileşenini bir dik üçgenin dik kenarları olarak çiz. Bileşke hız hangi kenara karşılık gelir?",
+           "Bileşenlerin cebirsel toplamı bileşke büyüklüğe hangi özel durumda eşit olur?"],
+          "6 m doğuya sonra 8 m kuzeye yürüyen kişi başlangıçtan 14 m değil 10 m uzaktadır. Hız da yer değiştirme gibi vektördür; dik bileşenlerde toplama cebirsel değildir.",
+          "Dikdörtgen bir parkın köşegeni boyunca yürümek, iki kenarı dolaşmaktan kısadır: 6 + 8 = 14 m yerine yalnızca 10 m yürürsünüz."),
+       S("FCI", "WJL23", "TB"), "HIGH"),
+
+    MC("motion-requires-net-force",
+       "Bir cismin hareketini sürdürmesi için hareket yönünde bir kuvvet gerekir; sabit hızla giden cisme hareket yönünde net kuvvet etki eder, kuvvet yoksa cisim durur.",
+       "Net kuvvet sıfırsa cisim durgunluğunu ya da sabit hızlı hareketini sürdürür (Newton'ın 1. yasası). Sabit hızla giden cisimde motor gibi bir itme sürtünme ve "
+       "direnç kuvvetlerini dengeler, net kuvvet sıfırdır. Net kuvvet hızı korumaz; hızı değiştirir.",
+       ["newton-birinci-yasa", "eylemsizlik", "bileske-kuvvet", "kuvvet"], LO("1.4", "1.5"), "CONCEPTUAL_ERROR",
+       "newton1-inertia ailesinin 'hareket eden cismin hareketini sürdürmesi için kuvvet gerekir' çeldiricisi; net-force-motion-state ve fbd-identify-forces'ta "
+       "hareket yönünde ayrı bir 'hareket kuvveti' oku. FCI taksonomisinde AF2 (motion implies active force), I1 ve AF3; Türkiye'de de en sık görülen yanılgılar arasındadır.",
+       DI("Sürtünmesi ihmal edilemeyen yatay bir yolda bir araba, motorunun uyguladığı kuvvetle sabit 20 m/s hızla gidiyor. Araca etki eden net kuvvet için hangisi doğrudur?",
+          "Hareket yönündedir ve büyüklüğü motorun uyguladığı kuvvete eşittir.",
+          "Sıfırdır; motorun uyguladığı kuvvet, sürtünme ve direnç kuvvetlerinin toplamına eşittir.",
+          "Hareket yönündedir; çünkü motor kuvveti sürtünmeden büyük olmalıdır.",
+          "Hareket yönünün tersindedir ve büyüklüğü sürtünme kuvvetine eşittir.",
+          "Büyüklüğü 20 m/s ile orantılı bir değerdir ve hareket yönündedir.",
+          "B", "A"),
+       RM(["Araca etki eden bütün kuvvetleri çiz. Kaç tane var, yönleri nasıl?",
+           "Motor kapatılınca araç ne yapar? Yavaşlamasına hangi kuvvet neden olur?",
+           "Sürtünmesiz buz üzerinde kayan bir diskin hareketini sürdürmesi için bir kuvvet gerekir mi?",
+           "Hızı sabit olan bir cismin ivmesi kaçtır? Newton'ın 2. yasasına göre net kuvvet ne olur?"],
+          "Buz üzerinde itilen disk elden ayrıldıktan sonra uzun süre kayar; hareket kuvvetle sürseydi disk hemen dururdu. Disk durmaz, çünkü ona etki eden net kuvvet çok küçüktür.",
+          "Motoru kapatılan bir uzay aracı uzayda sonsuza kadar sürüklenir: durması için 'hareket kuvveti' değil, onu durduracak bir kuvvet gerekir."),
+       S("FCI", "CLEM", "TK16", "KGU05"), "HIGH"),
+
+    MC("constant-net-force-constant-velocity",
+       "Bir cisme sabit bir net kuvvet uygulanırsa cisim sabit hızla hareket eder (hız kuvvetle orantılıdır); kuvvet iki katına çıkınca hız iki katına çıkar.",
+       "Net kuvvet ivmeyi belirler (F = ma): sabit net kuvvet sabit ivme, yani hızın düzgün artması demektir. Hız, kuvvetle değil kuvvetin etki süresiyle (v = at) ve kütleyle ilişkilidir.",
+       ["newton-ikinci-yasa", "bileske-kuvvet", "hiz", "ivme", "kutle"], LO("1.4"), "CONCEPTUAL_ERROR",
+       "net-force-motion-state ve newton2-f-m-a-relations ailelerinde kuvvet–hız ilişkisi; friction-horizontal-dynamics'te sabit itme altında hızın sabit kaldığı seçenekler. "
+       "FCI taksonomisinde AF4 (velocity proportional to applied force) ve K2.",
+       DI("Sürtünmesiz yatay düzlemde durgun hâlden başlayan 4 kg'lık bir cisme yatay doğrultuda sabit 8 N'luk net kuvvet uygulanıyor. Kuvvetin 3 s boyunca etkimesinden sonra cismin hızı kaç m/s olur?",
+          "2 m/s; çünkü sabit kuvvet sabit hız oluşturur ve hız F/m'dir.",
+          "6 m/s; çünkü a = F/m = 2 m/s² olup hız her saniye 2 m/s artar.",
+          "24 m/s; çünkü hız kuvvet ile süre çarpımına (8·3) eşittir.",
+          "8 m/s; çünkü hız kuvvetle aynı sayısal değere sahiptir.",
+          "12 m/s; çünkü hız F·t / 2 ile bulunur.",
+          "B", "A"),
+       RM(["Aynı cisme 1 s sonra ve 3 s sonra bakarsan hızı aynı mıdır? Kuvvet değişmediği hâlde hız değişiyorsa kuvvet neyi belirliyor?",
+           "F = ma'daki ivme hangi niceliğin değişimidir?",
+           "Kuvvet iki katına çıkarsa hız mı iki katına çıkar, yoksa hızın artış hızı mı?",
+           "Aynı kuvvetle itilen kızağın hızı 1 s ve 10 s sonra aynı olur mu?"],
+          "Sürtünmesiz buzda sabit bir kuvvetle itilen kızak her saniye biraz daha hızlanır. Sabit kuvvet sabit hız verseydi kızak itildiği anda son hızına ulaşır ve hızlanma hiç görülmezdi.",
+          "Banka hesabına her ay aynı tutarda para yatırmak gibi: yatırılan miktar (kuvvet) bakiyenin (hızın) değişme miktarını belirler, bakiyenin kendisini değil."),
+       S("FCI", "CLEM", "TB"), "HIGH"),
+
+    MC("heavier-exerts-bigger-force",
+       "İki cisim etkileştiğinde (çarpışma, itme) büyük kütleli olan küçük kütleliye daha büyük kuvvet uygular.",
+       "Etki ve tepki kuvvetleri her durumda büyüklükçe eşit, zıt yönlüdür ve farklı cisimlere etki eder (Newton'ın 3. yasası). Kütle, kuvvetin büyüklüğünü değil, "
+       "o kuvvetin cisimlerde oluşturduğu ivmeyi belirler.",
+       ["etki-tepki", "kutle", "kuvvet", "newton-ikinci-yasa"], LO("1.4"), "CONCEPTUAL_ERROR",
+       "newton3-action-reaction ailesinin 'büyük kütleli cisim daha büyük kuvvet uygular' çeldiricisi. FCI taksonomisinde AR1 (greater mass implies greater force); "
+       "Aygün ve Tan (2021) çarpışmada bu yanılgının ders sonrasında bile sürdüğünü gösterir.",
+       DI("Sürtünmesiz yatay yolda 1200 kg'lık bir kamyonet, durmakta olan 300 kg'lık bir arabaya çarpıp onu itiyor. Çarpışma sırasında kamyonetin arabaya uyguladığı "
+          "kuvvet F_1, arabanın kamyonete uyguladığı kuvvet F_2 ise hangisi doğrudur?",
+          "F_1 = 4F_2; çünkü kamyonetin kütlesi daha büyüktür.",
+          "F_1 = F_2; ancak araba, kamyonetten daha büyük büyüklükte ivme kazanır.",
+          "F_1 = F_2 ve iki cismin ivmesinin büyüklüğü de eşittir.",
+          "F_1 < F_2; çünkü daha hafif olan araç çarpışmada daha çok sarsılır.",
+          "F_1 = F_2; ancak bu kuvvetler birbirini dengelediği için iki cisim de ivmelenmez.",
+          "B", "A"),
+       RM(["İki araç arasındaki etkileşimde toplam kaç kuvvet var? Hangi cisme etki ediyorlar?",
+           "Kamyonet arabaya daha çok kuvvet uygulasaydı, arabanın kamyoneti 'geri itmesi' neden daha az olsun? Bu durum etkileşimin simetrisiyle uyumlu mu?",
+           "Çarpışmada küçük aracın 'daha çok sarsılması' hangi büyüklüğün farkıdır: kuvvetin mi, ivmenin mi?",
+           "a = F/m'de aynı F için kütlesi küçük olan cismin ivmesi nasıl olur?"],
+          "Farklı kütleli iki arabaya aynı yatay doğrultuda bağlanmış iki kuvvet ölçer, ne kadar farklı kütleli olursalar olsunlar, her zaman aynı değeri gösterir.",
+          "El sıkışırken iki kişinin birbirine uyguladığı sıkma kuvveti, kişi ağır ya da hafif olsun, her zaman eşittir; farklı olan, el sıkışmanın kişileri ne kadar sarstığıdır."),
+       S("AT21", "FCI", "TK16"), "HIGH"),
+
+    MC("action-reaction-cancel",
+       "Etki ve tepki kuvvetleri eşit ve zıt olduğu için birbirini dengeler; bu yüzden cisimler kuvvet uygulanarak hareket ettirilemez.",
+       "Etki ve tepki kuvvetleri farklı cisimlere etki eder; bu yüzden aynı serbest cisim diyagramında birlikte bulunmaz ve birbirini dengeleyemez. "
+       "Bir cismin ivmesi yalnızca o cisme etki eden net kuvvete bağlıdır.",
+       ["etki-tepki", "bileske-kuvvet", "serbest-cisim-diyagrami", "newton-ikinci-yasa"], LO("1.4", "1.5"), "CONCEPTUAL_ERROR",
+       "newton3-action-reaction ailesinin 'etki-tepki kuvvetleri birbirini dengeler' çeldiricisi; fbd-identify-forces'ta cismin başka cisme uyguladığı kuvvetin diyagrama eklenmesi. "
+       "Temiz ve Kızılcık (2016) 'etki ve tepki aynı cisme etki eder' görüşünü lise düzeyinde sık görülen yanılgılar arasında sayar.",
+       DI("Sürtünmesiz zeminde durgun bir arabayı bir kişi elleriyle ileri itiyor. Newton'ın 3. yasasına göre araba da kişiyi aynı büyüklükte geri itiyor. "
+          "Araba bu durumda neden yine de hızlanabilir?",
+          "Etki ve tepki kuvvetleri birbirini dengelediği için net kuvvet sıfırdır; araba yalnızca ilk anda hareket eder.",
+          "Etki ve tepki farklı cisimlere (araba ve kişi) etki eder; arabaya yalnızca kişinin itmesi etki ettiğinden araba üzerinde net kuvvet vardır.",
+          "Kişi arabaya, arabanın kişiye uyguladığından daha büyük bir kuvvet uygular.",
+          "Tepki kuvveti etkiden biraz sonra oluştuğundan arabaya kısa bir süre etki etmez.",
+          "Araba kişiden hafif olduğu için kişiye uyguladığı tepki kuvveti daha küçüktür.",
+          "B", "A"),
+       RM(["Kişiyi geri iten kuvvet hangi cisme etki ediyor? Arabanın hareketini belirlerken hangi kuvvetlere bakarsın?",
+           "Arabanın serbest cisim diyagramını çiz. Kişiyi iten tepki kuvveti bu diyagramda yer alıyor mu?",
+           "Eşit ve zıt iki kuvvetin birbirini dengelemesi için hangi koşul gerekir?",
+           "Atın arabayı çekmesi: at–araba etkileşimi ile at–zemin etkileşimini ayrı ayrı değerlendir. Atı ileri götüren kuvvet hangisidir?"],
+          "Etki ve tepki birbirini dengeleseydi, itilen kapı, tekmelenen top ya da yürüyen insan hiç hızlanamazdı. Oysa hepsi hızlanır; demek ki bu kuvvetler aynı cisme etki etmiyor.",
+          "Buz üzerindeki iki patenciden biri diğerini iterse, ikisi de zıt yönlerde hızlanır: her biri yalnızca kendisine uygulanan kuvvetle ivmelenir."),
+       S("TK16", "KGU05"), "HIGH"),
+
+    MC("weight-normal-are-action-reaction",
+       "Masa üstünde duran cisme etki eden ağırlık ile normal kuvvet, eşit ve zıt oldukları için Newton'ın 3. yasasındaki etki-tepki çiftidir.",
+       "Ağırlık Dünya'nın cisme çekim kuvvetidir; tepkisi cismin Dünya'yı çekmesidir. Normal kuvvet masanın cisme uyguladığı temas kuvvetidir; tepkisi cismin masaya uyguladığı itmedir. "
+       "Ağırlık ve normal kuvvet aynı cisme etki eder; durgun cisimde eşit olmaları Newton'ın 1. yasasının sonucudur ve ivmeli sistemlerde eşit olmayabilir.",
+       ["etki-tepki", "agirlik", "normal-kuvvet", "newton-birinci-yasa"], LO("1.4", "1.5"), "CONCEPTUAL_ERROR",
+       "newton3-action-reaction ailesinin 'ağırlık ve normal kuvvet etki-tepki çiftidir' çeldiricisi; apparent-weight-elevator ve fbd-identify-forces'ta ağırlık ile normal kuvvetin her koşulda eşit sanılması.",
+       DI("Yatay masa üzerinde durgun bir kitap için hangi iki kuvvet Newton'ın 3. yasasındaki etki-tepki çiftidir?",
+          "Kitabın ağırlığı ile masanın kitaba uyguladığı normal kuvvet.",
+          "Dünya'nın kitaba uyguladığı çekim kuvveti ile kitabın Dünya'ya uyguladığı çekim kuvveti.",
+          "Masanın kitaba uyguladığı normal kuvvet ile masanın yere uyguladığı kuvvet.",
+          "Masanın kitaba uyguladığı normal kuvvet ile kitabın Dünya'ya uyguladığı çekim kuvveti.",
+          "Kitabın masaya uyguladığı kuvvet ile yerin masaya uyguladığı kuvvet.",
+          "B", "A"),
+       RM(["Bir etki-tepki çifti hangi iki cisim arasındaki etkileşimi anlatır? Ağırlığın kaynağı kim?",
+           "Ağırlığın tepkisini bul: Dünya'ya kim, hangi kuvveti uyguluyor?",
+           "Kitap ivmeyle yükselen bir asansörde olsaydı ağırlık ile normal kuvvet hâlâ eşit olur muydu?",
+           "Ağırlık ve normal kuvvet aynı cisme mi, farklı cisimlere mi etki ediyor?"],
+          "Masa çekilirse kitap serbest düşer: normal kuvvet kaybolur ama ağırlık sürer. Ağırlık ve normal kuvvet etki-tepki çifti olsaydı birlikte var olup birlikte yok olmak zorundaydı.",
+          "Aynı kişiyi zıt yönlerde çeken iki arkadaş denge oluşturur (aynı cisme etki eden iki kuvvet); iki kişinin birbirini çekmesi ise etki-tepkidir (farklı kişilere etki eden iki kuvvet)."),
+       S("TB", "KGU05"), "MEDIUM"),
+]
+
+# --- FİZ.11.1.5–FİZ.11.1.6: Serbest cisim diyagramı; statik ve kinetik sürtünme ---
+MISCONCEPTIONS += [
+    MC("fbd-extra-forces-added",
+       "Serbest cisim diyagramına cismin hareket yönünde ayrı bir 'hareket (itme) kuvveti', 'eylemsizlik kuvveti' ya da cismin başka bir cisme uyguladığı kuvvet de çizilir.",
+       "Serbest cisim diyagramında yalnızca incelenen cisme, çevresindeki başka cisimler (Dünya, yüzey, ip, el vb.) tarafından uygulanan gerçek kuvvetler gösterilir; "
+       "her kuvvetin bir uygulayıcı cismi bulunmalıdır. Hareket yönü ayrı bir kuvvet gerektirmez; cismin başka cisme uyguladığı kuvvet o diğer cismin diyagramına aittir.",
+       ["serbest-cisim-diyagrami", "kuvvet", "surtunme-kuvveti", "gerilme-kuvveti"], LO("1.5"), "FBD_ERROR",
+       "fbd-identify-forces ailesinin 'hareket yönünde ayrı bir hareket kuvveti oku' ve 'cismin başka cisme uyguladığı kuvvet diyagrama eklenmiş' çeldiricileri; "
+       "Temiz ve Kızılcık (2016) lise öğrencilerinin diyagramlarında ortamda bulunmayan kuvvetlerin eklendiğini, eylemsizlik kuvvetinin engelleyen kuvvet sayıldığını bildirir.",
+       DI("Sürtünmeli yatay zeminde bir kutu, ipten uygulanan 30 N'luk yatay kuvvetle sabit hızla sağa doğru çekiliyor. Kutunun serbest cisim diyagramı için hangisi doğrudur?",
+          "Ağırlık (aşağı), normal kuvvet (yukarı), ip gerilmesi (sağa, 30 N) ve sürtünme (sola, 30 N) çizilir; ayrıca bir 'hareket kuvveti' çizilmez.",
+          "Ağırlık, normal kuvvet, ip gerilmesi (sağa), sürtünme (sola) ve hareket yönünde ayrıca bir 'hareket kuvveti' (sağa) çizilir.",
+          "Ağırlık, normal kuvvet, ip gerilmesi (sağa) ve kutunun ipe uyguladığı kuvvet (sola) çizilir.",
+          "Yalnızca ip gerilmesi (sağa) ve sürtünme (sola) çizilir; ağırlık ile normal kuvvet birbirini dengelediği için çizilmez.",
+          "Ağırlık, normal kuvvet ve ip gerilmesi çizilir; sabit hızda sürtünme olmaz.",
+          "A", "B"),
+       RM(["Çizdiğin her okun yanına 'bu kuvveti hangi cisim uyguluyor?' diye yaz. 'Hareket kuvvetini' hangi cisim uyguluyor?",
+           "Kutu sabit hızla gidiyor. Net kuvvet kaç olmalı? Çizdiğin oklar bunu veriyor mu?",
+           "Kutunun ipe uyguladığı kuvvet kimin serbest cisim diyagramına aittir?",
+           "Kutunun sağa gitmesi için sağa doğru ekstra bir kuvvet mi gerekiyor, yoksa hız eylemsizlikten mi sürüyor?"],
+          "Hareket yönüne ekstra bir 'hareket kuvveti' çizersen sağa doğru net kuvvet sıfırdan büyük olur ve kutu giderek hızlanırdı; oysa kutu sabit hızla gidiyor.",
+          "Serbest cisim diyagramı, tek bir cismin 'kimlik fotoğrafı' gibidir: yalnızca o cismin üstüne gelen kuvvetler girer; onun başkalarına yaptığı etkiler başkalarının fotoğrafında yer alır."),
+       S("TK16", "KGU05"), "HIGH"),
+
+    MC("supporting-surface-exerts-no-force",
+       "Hareketsiz yüzeyler (masa, zemin, eğik düzlem) kuvvet uygulamaz; bu yüzden durgun cismin serbest cisim diyagramında normal kuvvet gösterilmez ya da gerekmez.",
+       "Sert yüzey, cismin yüzeye içine girmesine karşı dik doğrultuda bir itme (normal kuvvet) uygular; bu bir temas kuvvetidir. Durgun cisimde ağırlığı dengeleyen "
+       "kuvvet yüzeyin normal kuvvetidir. Yüzey, yalnızca 'pasif' göründüğü için kuvvetsiz değildir.",
+       ["normal-kuvvet", "serbest-cisim-diyagrami", "agirlik", "newton-birinci-yasa"], LO("1.5"), "FBD_ERROR",
+       "fbd-identify-forces ve frictionless-incline ailelerinde normal kuvvetin unutulması; Temiz ve Kızılcık (2016) eğik düzlem diyagramlarında yüzeyin tepki kuvvetini "
+       "yalnızca %17,59 oranında doğru gösterildiğini bildirir. FCI taksonomisinde Ob (obstacles exert no force).",
+       DI("Yatay bir masa üzerinde durgun duran 2 kg'lık bir kitabın serbest cisim diyagramı çiziliyor (g = 10 m/s²). Hangisi doğrudur?",
+          "Yalnızca aşağı yönlü 20 N'luk ağırlık gösterilir; masa pasif olduğundan kuvvet uygulamaz.",
+          "Aşağı yönlü 20 N'luk ağırlık ile masanın kitaba uyguladığı yukarı yönlü 20 N'luk normal kuvvet gösterilir.",
+          "Aşağı yönlü 20 N'luk ağırlık ile kitabın masaya uyguladığı yukarı yönlü 20 N'luk kuvvet gösterilir.",
+          "Aşağı yönlü 20 N'luk ağırlık ile yukarı yönlü 20 N'luk 'eylemsizlik kuvveti' gösterilir.",
+          "Kitap durgun olduğu için hiçbir kuvvet gösterilmez.",
+          "B", "A"),
+       RM(["Kitap durgun: net kuvvet kaç olmalı? Yalnızca ağırlığı çizersen net kuvvet kaç olur?",
+           "Kitabı bir süngerin üstüne koy: sünger ne yapar? Sert bir masa bundan temelde farklı mı davranır?",
+           "Elini bir kitabın üstüne bastırdığında elin neyi hissediyor? Masa kitabı aynı biçimde 'hissediyor' mu?",
+           "Masa aniden çekilirse kitap ne yapar? Masa o ana kadar neyi sağlıyordu?"],
+          "Yalnızca ağırlık etki etseydi kitap masanın üstünde de aşağı doğru ivmelenirdi. Kitap durgun olduğuna göre ağırlığı dengeleyen yukarı yönlü bir kuvvet olmak zorundadır: masanın itmesi.",
+          "Sert masa, çok az sıkışan ama aynı işi yapan çok sert bir yay gibidir: kitabın ağırlığı yayı biraz sıkıştırır, yay da kitabı yukarı iter."),
+       S("FCI", "TK16", "DUR21"), "HIGH"),
+
+    MC("scale-reading-always-weight",
+       "Tartının (baskülün) gösterdiği değer her zaman cismin ağırlığıdır; asansör hızlansa ya da yavaşlasa da 'ağırlık = tartı okuması' geçerlidir.",
+       "Tartı, cismin tartıya uyguladığı kuvveti (normal kuvvetin tepkisini) ölçer. Cismin ağırlığı (Dünya'nın çekim kuvveti) mg olarak sabit kalır; "
+       "ivmeli bir sistemde normal kuvvet N = m(g ± a) olduğundan tartı okuması ağırlıktan farklı olabilir.",
+       ["agirlik", "normal-kuvvet", "newton-ikinci-yasa", "serbest-cisim-diyagrami"], LO("1.5"), "CONCEPTUAL_ERROR",
+       "apparent-weight-elevator ailesinin 'tartı her zaman ağırlığı gösterir' ve 'sabit hızla yukarı çıkan asansörde tartı daha büyük gösterir' çeldiricileri. "
+       "Taibu, Rudge ve Schuster (2015) ders kitaplarında ağırlık tanımı ile tartı okumasının karıştırıldığını, ivmeli sistemlerde güçlük doğurduğunu belirtir.",
+       DI("70 kg'lık bir kişi asansördeki baskülün üzerinde dururken asansör yukarı yönlü 2 m/s² ivmeyle hızlanıyor (g = 10 m/s²). "
+          "Baskülün okuduğu kuvvet ile kişinin ağırlığı (Dünya'nın çekim kuvveti) için hangisi doğrudur?",
+          "Baskül 700 N okur; ağırlık 700 N'dur.",
+          "Baskül 840 N okur; ağırlık 700 N'dur.",
+          "Baskül 840 N okur; ağırlık da 840 N olur.",
+          "Baskül 560 N okur; ağırlık 700 N'dur.",
+          "Baskül 700 N okur; ağırlık 840 N olur.",
+          "B", "C"),
+       RM(["Baskül hangi kuvveti ölçüyor: kişinin baskülü ittiği kuvveti mi, Dünya'nın kişiyi çekmesini mi?",
+           "Kişinin serbest cisim diyagramını çiz. İvme yukarıysa net kuvvet hangi yönde? N ile mg'yi karşılaştır.",
+           "Asansör serbest düşerse baskül ne okur? Dünya kişiyi çekmeyi bırakır mı?",
+           "Asansör sabit hızla yükselirken baskül ne okur?"],
+          "Serbest düşen asansörde baskül sıfır okur; ama Dünya kişiyi hâlâ mg kuvvetiyle çeker. Demek ki baskül okuması çekim kuvvetinin kendisi değildir.",
+          "Bir yayın uzaması, yayı çeken kuvveti gösterir; baskül de sizin ona uyguladığınız basma kuvvetini gösterir. Bu kuvvet, ivmesiz ortamda ağırlığa eşit olur ama ağırlığın tanımı değildir."),
+       S("TAIBU15", "TB"), "MEDIUM"),
+
+    MC("normal-equals-weight",
+       "Normal kuvvet her zaman cismin ağırlığına (mg) eşittir; eğik düzlemde, açılı bir kuvvet altında ya da ivmeli sistemde de değişmez.",
+       "Normal kuvvet yüzeye dik doğrultudaki hareket denkleminden bulunur: eğik düzlemde N = mg cosθ; yukarı doğru açılı F kuvvetiyle çekilen cisimde N = mg − F sinθ; "
+       "ivmeli asansörde N = m(g ± a). Yalnızca yatay yüzeyde, düşey kuvvet ve ivme yokken N = mg olur.",
+       ["normal-kuvvet", "agirlik", "egik-duzlem", "vektor-bilesenleri"], LO("1.5", "1.7"), "CONCEPTUAL_ERROR",
+       "frictionless-incline ailesinin 'normal kuvvet ağırlığa eşittir' çeldiricisi; friction-angled-force ailesinin 'normal kuvvet her durumda mg'dir' çeldiricisi. "
+       "Temiz ve Kızılcık (2016) 'bir cisme etki eden normal kuvvet cismin ağırlığına eşittir' görüşünü literatürde sık rastlanan yanılgılar arasında sayar.",
+       DI("Sürtünmesiz bir eğik düzlemde (eğim açısı 37°) durgun hâlden serbest bırakılan 5 kg'lık bir cisim kayıyor (g = 10 m/s², sin37° = 0,6, cos37° = 0,8). "
+          "Cisme etki eden normal kuvvetin büyüklüğü kaç N'dur?",
+          "50", "40", "30", "25", "0",
+          "B", "A"),
+       RM(["Normal kuvvet yüzeye göre hangi doğrultuda? Ağırlık hangi doğrultuda?",
+           "Cisim yüzeye dik doğrultuda ivmeleniyor mu? O doğrultudaki net kuvvet kaç olmalı?",
+           "Eğim açısı 0° iken ve 90° iken (dik duvar) normal kuvvet kaç olurdu?",
+           "Ağırlığın yüzeye dik bileşeni kaç N?"],
+          "Eğim açısı arttıkça normal kuvvet ağırlığa eşit kalsaydı, dik bir duvarda (90°) normal kuvvet mg olurdu; oysa duvara yalnızca değen bir cisme duvar hiç kuvvet uygulamaz (N = 0).",
+          "Bir kapıya yaslanan kişi ne kadar bastırırsa kapı da o kadar iter; yüzeyin itme miktarı, cismin yüzeye ne kadar bastırdığına bağlıdır, cismin ağırlığına değil."),
+       S("TK16", "KGU05"), "HIGH"),
+
+    MC("friction-always-opposes-motion",
+       "Sürtünme kuvveti her zaman cismin hareket yönünün tersinedir; yürürken ya da tekerlek dönerken bile sürtünme hareketi hep engeller.",
+       "Sürtünme kuvveti temas eden yüzeylerin birbirine göre bağıl hareketine (ya da hareket etme eğilimine) zıttır. Kaymadan yürüyen kişinin yere basan ayağına yerin uyguladığı "
+       "statik sürtünme kuvveti hareket yönündedir; kişiyi ilerleten kuvvet budur. Dönerek ötelemede de itici sürtünme hareket yönünde olabilir.",
+       ["surtunme-kuvveti", "statik-surtunme", "donerek-oteleme"], LO("1.6"), "CONCEPTUAL_ERROR",
+       "friction-direction ailesinin 'sürtünme her zaman hareket yönüne zıttır' çeldiricisi. Kızılcık ve ark. (2021) incelemesinde 'sürtünme hareketin tersinedir' en çok makalede "
+       "rastlanan olası yanılgıdır; Yüzbaşıoğlu ve Kurnaz (2022)'de sürtünmenin yönü sorusu en az doğru yanıtlanan sorudur (%19,29).",
+       DI("Yatay zeminde kaymadan sağa doğru yürüyen bir kişinin, yere basan ayağına yerin uyguladığı sürtünme kuvveti için hangisi doğrudur?",
+          "Sola, yani hareketin tersi yöndedir; çünkü sürtünme hareketi engeller.",
+          "Sağa, yani hareket yönündedir; ayak yere sola kuvvet uygular, yer de tepki olarak ayağı sağa iter.",
+          "Sıfırdır; çünkü ayak yere göre kayarak ilerlemektedir.",
+          "Sağa yönelmiştir ve kinetik sürtünmedir; çünkü kişi hareket etmektedir.",
+          "Sola yönelmiştir; çünkü ayak yerde geriye doğru kayar.",
+          "B", "A"),
+       RM(["Buzda yürümeye çalışınca ne olur? Neden ilerleyemezsin?",
+           "Ayağın yere hangi yönde kuvvet uyguluyor? Bunun tepkisi hangi cisme, hangi yönde etki eder?",
+           "Ayağın yere değdiği noktanın yere göre bağıl hareketi var mı, yoksa kayma eğilimi mi var? Bu eğilim hangi yönde?",
+           "Gaz verince hızlanan bir kamyonetin kasasındaki kutuyu kamyonete göre hangi yöne kayma eğiliminde görürsün? Sürtünme kutuyu hangi yöne iter?"],
+          "Sürtünme hep hareketi engelleseydi insan karada da ilerleyemezdi. Yürümeyi sağlayan, zeminin ayağa uyguladığı ve hareket yönünü gösteren sürtünme kuvvetidir.",
+          "Yürürken ayağımız zemini geri iter, zemin de bizi ileri iter; zemin, bir çıpa gibi 'tutunma' sağlar. Tutunma olmadan (buzda) ilerleme de olmaz."),
+       S("KAS21", "YK22"), "HIGH"),
+
+    MC("no-motion-no-friction",
+       "Kuvvet uygulandığı hâlde kıpırdamayan cisme sürtünme kuvveti etki etmez (sürtünme yalnızca hareket varken oluşur), ya da cisim, uygulanan kuvvetten büyük bir sürtünmeyle durur.",
+       "Cisim harekete zorlanmasına rağmen durgunsa üzerine statik sürtünme etki eder; büyüklüğü uygulanan kuvvete eşit, yönü ters olur (net kuvvet sıfır). "
+       "Sürtünmenin var olması için hareket gerekmez, hareket etme eğilimi yeterlidir. Statik sürtünme, uygulanan kuvvetle birlikte artar.",
+       ["statik-surtunme", "surtunme-kuvveti", "bileske-kuvvet", "maksimum-statik-surtunme"], LO("1.6", "1.7"), "CONCEPTUAL_ERROR",
+       "friction-type-identification ailesinin 'harekete zorlanmasına rağmen durmakta olan cisme etki eden sürtünme' bileşeni; friction-threshold ve friction-applied-force-graph ailelerinde "
+       "durgun cisimde sürtünmenin yok sayıldığı ya da uygulanan kuvvetten büyük sanıldığı seçenekler. FCI taksonomisinde AF3 (no motion implies no force).",
+       DI("Yatay zeminde duran 10 kg'lık bir sandığa yatay doğrultuda 20 N'luk kuvvet uygulanıyor, ancak sandık kıpırdamıyor (maksimum statik sürtünme kuvveti 40 N'dur). "
+          "Sandığa etki eden sürtünme kuvveti için hangisi doğrudur?",
+          "Sürtünme yoktur; çünkü sandık hareket etmiyor.",
+          "20 N'dur ve uygulanan kuvvetin tersi yöndedir.",
+          "40 N'dur ve uygulanan kuvvetin tersi yöndedir.",
+          "20 N'dur ve uygulanan kuvvetle aynı yöndedir.",
+          "20 N'dan büyüktür; çünkü sandığı durduran sürtünme uygulanan kuvveti yenmiştir.",
+          "B", "A"),
+       RM(["Sandık durgun: net kuvvet kaç olmalı? Bunun için sürtünme ne kadar olmalı?",
+           "Uygulanan kuvveti 20 N'dan 30 N'a çıkarırsan sandık hâlâ durgunsa sürtünme ne olur?",
+           "Sürtünme hiç olmasaydı 20 N'luk kuvvet sandığa ne yapardı?",
+           "Sürtünmenin var olması için gerekli olan şey hareket mi, hareket etme eğilimi mi?"],
+          "Sürtünme olmasaydı 20 N'luk kuvvet sandığı hızlandırırdı. Sandığın kıpırdamaması sürtünmenin var olduğunun, hatta uygulanan kuvveti tam dengelediğinin kanıtıdır.",
+          "Bir kapıyı iki kişi zıt yönlerde eşit şiddette ittiğinde kapı kıpırdamaz; kıpırdamıyor diye kimsenin itmediği söylenemez. Kuvvetler birbirini dengeler."),
+       S("FCI", "KAS21"), "MEDIUM"),
+
+    MC("rolling-friction-is-kinetic",
+       "Yuvarlanan (dönerek öteleme yapan) cisimlere kinetik sürtünme etki eder; hareket eden her cisimde sürtünme kinetiktir.",
+       "Kaymadan yuvarlanan tekerlekte yola değen nokta yola göre anlık olarak durgundur; bu yüzden sürtünme statik sürtünmedir. Kinetik sürtünme yalnızca temas yüzeyleri arasında "
+       "bağıl kayma varken, yani kayarak ötelemede oluşur.",
+       ["donerek-oteleme", "kayarak-oteleme", "statik-surtunme", "kinetik-surtunme"], LO("1.6"), "CONCEPTUAL_ERROR",
+       "friction-type-identification ailesinin 'hareket eden her cisme kinetik sürtünme etki eder' çeldiricisi. Kızılcık ve ark. (2021) kayma–yuvarlanma ve statik–kinetik "
+       "ayrımının çoğu zaman göz ardı edildiğini bulmuştur.",
+       DI("Düz yolda kaymadan yuvarlanan bir bisiklet tekerleği ile, frenin kilitlenmesi sonucu aynı yolda kayarak ilerleyen bir bisiklet tekerleği karşılaştırılıyor. "
+          "Tekerlek ile yol arasındaki sürtünme türleri için hangisi doğrudur?",
+          "İkisinde de kinetik sürtünme vardır; çünkü iki durumda da bisiklet hareket etmektedir.",
+          "Yuvarlanan tekerlekte statik, kayan tekerlekte kinetik sürtünme vardır.",
+          "Yuvarlanan tekerlekte kinetik, kayan tekerlekte statik sürtünme vardır.",
+          "Yuvarlanan tekerlekte sürtünme yoktur, kayan tekerlekte kinetik sürtünme vardır.",
+          "İkisinde de statik sürtünme vardır.",
+          "B", "A"),
+       RM(["Kaymadan yuvarlanan tekerleğin yola değdiği nokta, yere göre anlık olarak hangi hızdadır?",
+           "Temas noktalarında bağıl hareket yoksa hangi sürtünme türünden söz edersin?",
+           "Fren kilitlenip tekerlek kayarsa temas noktasının yere göre hızı ne olur? Sürtünme türü değişir mi?",
+           "Kinetik sürtünme tam olarak hangi koşulda oluşur?"],
+          "Kilitli tekerlekte lastik yolda iz ve ses bırakarak kayar; normal yuvarlanmada bu olmaz. İki durumda sürtünme türü aynı olamaz.",
+          "Yürürken ayağınızın yere basan noktası bir an için yere yapışık gibidir: kişi hareket etse de ayağın o noktası yere göre durgundur ve sürtünme statiktir."),
+       S("KAS21", "TB"), "HIGH"),
+
+    MC("kinetic-greater-than-max-static",
+       "Kinetik sürtünme kuvveti maksimum statik sürtünme kuvvetinden büyüktür; cisim harekete geçince sürtünme artar.",
+       "Aynı yüzey çifti için kinetik sürtünme katsayısı statik katsayıdan küçüktür (μ_k < μ_s); bu nedenle f_k < f_s,max olur. Cisim harekete geçtiğinde sürtünme kuvveti "
+       "maksimum statik değerden daha küçük bir kinetik değere düşer; harekete geçirmek, hareketi sürdürmekten zordur.",
+       ["statik-surtunme", "kinetik-surtunme", "maksimum-statik-surtunme", "surtunme-katsayisi"], LO("1.6", "1.7"), "CONCEPTUAL_ERROR",
+       "static-vs-kinetic-compare ailesinin 'kinetik sürtünme maksimum statikten büyüktür' ve friction-applied-force-graph ailesinin 'cisim harekete geçince sürtünme artar' çeldiricileri; "
+       "friction-threshold'da eşiğin kinetik değer sanılması.",
+       DI("Yatay zeminde durgun bir dolaba uygulanan yatay kuvvet sıfırdan başlayarak artırılıyor; dolap 120 N'da harekete geçiyor, ardından 100 N'luk yatay kuvvetle sabit hızla itiliyor. "
+          "Dolaba etki eden sürtünme kuvvetleri için hangisi doğrudur?",
+          "Maksimum statik sürtünme 100 N, kinetik sürtünme 120 N'dur; çünkü hareket eden cisimde sürtünme artar.",
+          "Maksimum statik sürtünme 120 N, kinetik sürtünme 100 N'dur.",
+          "Maksimum statik ve kinetik sürtünme kuvvetlerinin ikisi de 120 N'dur.",
+          "İkisi de 100 N'dur; çünkü sabit hızda net kuvvet sıfırdır.",
+          "Kinetik sürtünme sıfırdır; çünkü cisim harekete geçince statik sürtünme kaybolur ve başka sürtünme oluşmaz.",
+          "B", "A"),
+       RM(["Dolap 120 N'da harekete geçti. Bu, maksimum statik sürtünme hakkında ne söylüyor?",
+           "Sabit hızla giderken net kuvvet kaç? Buna göre kinetik sürtünme kaç N?",
+           "Bir dolabı harekete geçirmek neden hareket hâlinde tutmaktan daha zordur? Kendi deneyiminden örnek ver.",
+           "Sürtünme–uygulanan kuvvet grafiğinde cisim harekete geçtiği anda çizgi yukarı mı aşağı mı gider?"],
+          "Kinetik sürtünme maksimum statikten büyük olsaydı, harekete geçen cisim yavaşlar ve yeniden dururdu; oysa bir kez kayan dolap daha az kuvvetle sürüklenmeye devam eder.",
+          "Kapıyı açarken en çok başlangıçta zorlanırsın; kapı hareket etmeye başlayınca daha az kuvvet yeter. Yapışkan bir zemin koptuktan sonra daha az tutar."),
+       S("KAS21", "TB"), "MEDIUM"),
+]
+
+# --- FİZ.11.1.7–FİZ.11.1.8: Sürtünme kuvvetinin matematiksel modeli; limit hız ---
+MISCONCEPTIONS += [
+    MC("static-friction-always-maximum",
+       "Cisim durgunken statik sürtünme kuvveti her zaman maksimum değerindedir (f_s = μ_s·N); uygulanan kuvvet değişse de bu değer sabittir.",
+       "Statik sürtünme kuvveti uygulanan kuvvete eşit ve zıt olacak biçimde 0 ile f_s,max = μ_s·N arasında değişir; yalnızca harekete geçmeden hemen önce maksimum değerine ulaşır. "
+       "μ_s·N sürtünmenin üst sınırıdır, her zamanki değeri değildir.",
+       ["statik-surtunme", "maksimum-statik-surtunme", "surtunme-katsayisi", "normal-kuvvet"], LO("1.6", "1.7"), "CONCEPTUAL_ERROR",
+       "friction-threshold ailesinin 'cisim durgunken sürtünme her zaman maksimum statik değerdedir', static-vs-kinetic-compare ailesinin 'statik sürtünme her zaman sabittir' ve "
+       "friction-stacked-blocks-together ailesinin 'üst bloğa etki eden sürtünme her zaman maksimum değerdedir' çeldiricileri. Hesapta μ_s·N'nin her durumda kullanılması.",
+       DI("Yatay zeminde durgun duran 20 kg'lık bir kutuya (μ_s = 0,5; μ_k = 0,4; g = 10 m/s²) yatay doğrultuda 60 N'luk kuvvet uygulanıyor ve kutu kıpırdamıyor. "
+          "Kutuya etki eden sürtünme kuvvetinin büyüklüğü kaç N'dur?",
+          "100", "60", "80", "40", "0",
+          "B", "A"),
+       RM(["Kuvveti 60 N'dan 80 N'a çıkarırsan kutu hâlâ durgunsa sürtünme değişir mi?",
+           "Kutu durgunken net kuvvet kaç olmalı? Bu durumda sürtünme ne kadar olmalı?",
+           "f_s,max neyi anlatır: sürtünmenin her zamanki değerini mi, ulaşabileceği üst sınırı mı?",
+           "Sürtünme–uygulanan kuvvet grafiğinde kutu hareket etmeden önceki kısım nasıl bir şekil çizer?"],
+          "Statik sürtünme her zaman 100 N olsaydı, 60 N'luk kuvvetle itilen kutuya ters yönde 40 N'luk net kuvvet etki eder ve kutu geriye doğru hızlanırdı; oysa kutu yerinde kalır.",
+          "Güvenlik halatı en çok 100 N taşıyacak şekilde üretilmiştir (üst sınır), ama 60 N'luk yük asılıysa yalnızca 60 N gerilir. Sürtünme de gerektiği kadar tutar, sınır aşılınca kopar."),
+       S("KAS21", "TB"), "MEDIUM"),
+
+    MC("friction-depends-on-contact-area",
+       "Temas yüzey alanı büyüdükçe sürtünme kuvveti artar (geniş yüz daha çok sürtünür).",
+       "Kuru yüzeylerde sürtünme kuvveti temas alanına bağlı değildir: f = μ·N. Alan büyürken birim alana düşen basınç azalır, toplam sürtünme (N ve μ aynı kaldığı sürece) değişmez.",
+       ["surtunme-kuvveti", "surtunme-katsayisi", "normal-kuvvet"], LO("1.7"), "CONCEPTUAL_ERROR",
+       "friction-variables-data ailesinin 'temas yüzey alanı büyüdükçe sürtünme artar' çeldiricisi; friction-incline-coefficient ve friction-horizontal-dynamics'te alanın hesaba katıldığı seçenekler. "
+       "Temiz ve Kızılcık (2016) öğrencilerin sürtünmeyi alanla ilişkilendirdiğini, basınç gerekçesi kurduğunu bildirir.",
+       DI("Üç yüzü farklı alanlı, 6 kg'lık bir tuğla yatay bir masada önce geniş yüzü, sonra dar yüzü üzerinde olacak biçimde sabit hızla çekiliyor (kinetik sürtünme katsayısı her iki yüz için 0,3; g = 10 m/s²). "
+          "Sabit hızla çekmek için gereken yatay kuvvet için hangisi doğrudur?",
+          "Geniş yüz üzerindeyken daha büyüktür; çünkü temas alanı daha büyüktür.",
+          "İki durumda da 18 N'dur.",
+          "Dar yüz üzerindeyken daha büyüktür; çünkü basınç daha büyüktür.",
+          "Geniş yüz üzerindeyken 18 N, dar yüz üzerindeyken alanla orantılı olarak daha küçüktür.",
+          "İki durumda da 60 N'dur.",
+          "B", "A"),
+       RM(["f = μN bağıntısında alan var mı? N neye eşit? Tuğla yan yatınca ağırlığı değişir mi?",
+           "Alan iki katına çıkınca basınç nasıl değişir? Sürtünmeyi belirleyen basınç mı, toplam normal kuvvet mi?",
+           "Sürtünmenin alana bağlı olup olmadığını denemek için hangi değişkenleri sabit tutarak nasıl bir deney tasarlarsın?"],
+          "Aynı iki tuğla yan yana bağlanırsa alan ve ağırlık iki katına çıkar ve sürtünme iki katına çıkar; ama tek tuğla yan yatırılırsa alan iki katına çıkar, ağırlık değişmez ve sürtünme değişmez. "
+          "Sürtünmeyi değiştiren şey alan değil normal kuvvettir.",
+          "Tek ayak üstünde ya da iki ayak üstünde durmak tartının okumasını değiştirmez: temas alanı değişir, ama yüzeye uygulanan toplam kuvvet aynı kalır."),
+       S("TK16", "KAS21", "KGU05"), "HIGH"),
+
+    MC("wall-press-increases-friction",
+       "Duvara bastırılarak dengede tutulan cisimde bastırma kuvveti artırılırsa sürtünme kuvveti de artar (sürtünme bastırma kuvvetine eşittir ya da μN kadardır).",
+       "Cisim düşey doğrultuda dengede olduğu sürece statik sürtünme ağırlığa eşittir (f = mg) ve bastırma kuvveti artınca değişmez. Bastırma kuvveti yalnızca maksimum statik sürtünmeyi "
+       "(μ_s·N) yani kaymama güvence sınırını artırır.",
+       ["statik-surtunme", "maksimum-statik-surtunme", "normal-kuvvet", "agirlik"], LO("1.7"), "CONCEPTUAL_ERROR",
+       "friction-wall-press ailesinin 'bastırma kuvveti artınca sürtünme de artar (cisim dengedeyken)' çeldiricisi; friction-stacked-blocks-together'da sürtünmenin her zaman μN alınması.",
+       DI("Düşey bir duvara 2 kg'lık bir kutu, yatay doğrultuda F = 50 N'luk kuvvetle bastırılarak kaymadan durgun tutuluyor (μ_s = 0,6; g = 10 m/s²). "
+          "F, 80 N'a çıkarıldığında kutu hâlâ durgun kalıyor. Duvarın kutuya uyguladığı sürtünme kuvveti nasıl değişir?",
+          "Bastırma kuvvetine eşit olduğundan 50 N'dan 80 N'a çıkar.",
+          "20 N olarak değişmez.",
+          "μ_s·N kadar olduğundan 30 N'dan 48 N'a çıkar.",
+          "Yarıya iner; çünkü yüzey daha sıkı kavrar.",
+          "Sıfırlanır; çünkü kutu duvara yapışmıştır.",
+          "B", "C"),
+       RM(["Kutu durgun: düşey doğrultuda hangi kuvvetler var ve net kuvvet kaç olmalı?",
+           "Bastırma kuvvetini artırınca düşey kuvvetlerin dengesi bozuluyor mu?",
+           "Bu sürtünme kuvveti neyi dengeliyor?",
+           "f_s,max'ın artması, f_s'nin artması anlamına gelir mi?"],
+          "Bastırma kuvveti sürtünmeyi artırıyor olsaydı, düşeyde yukarı yönlü net kuvvet oluşur ve kutu yukarı doğru hızlanırdı; oysa kutu yerinde duruyor.",
+          "Daha güçlü bir halat daha ağır yükü taşıyabilir, ama bugün asılı olan yük aynıysa halat yine aynı gerilmeyi taşır. Daha sıkı bastırmak taşıma sınırını artırır, taşınan yükü değil."),
+       S("KAS21", "TB"), "MEDIUM"),
+
+    MC("incline-slip-angle-depends-on-mass",
+       "Sürtünmeli eğik düzlemde cismin kayıp kaymayacağı (ya da ivmesi) cismin kütlesine veya konumuna bağlıdır; ağır cisim daha küçük açıda kayar.",
+       "Kaymaya başlama koşulu mg sinθ ≥ μ_s·mg cosθ, yani tanθ ≥ μ_s'dir; kütle sadeleşir. Kritik açı kütleden ve cismin eğik düzlem üzerindeki konumundan bağımsızdır, "
+       "yalnızca yüzey çiftine (μ_s) bağlıdır. Kayma hâlinde de a = g(sinθ − μ_k cosθ) kütleden bağımsızdır.",
+       ["egik-duzlem", "surtunme-katsayisi", "statik-surtunme", "kutle"], LO("1.7"), "CONCEPTUAL_ERROR",
+       "friction-incline-coefficient ailesinin 'katsayı cismin kütlesine bağlıdır' ve 'kaymaya başlama açısı kinetik katsayıyı verir' çeldiricileri; "
+       "frictionless-incline ailesinin 'ağır cisim daha büyük ivmeyle kayar' çeldiricisi. Temiz ve Kızılcık (2016): lise öğrencilerinin büyük çoğunluğu, eğik düzlemdeki cismin konumu ve kütlesi gibi etkisiz değişkenlerin hareketi etkilediğini düşünüyor.",
+       DI("Aynı tahta eğik düzlem üzerinde, aynı yüzeye sahip 1 kg'lık ve 4 kg'lık iki blok durgun hâlde duruyor. Eğim açısı yavaş yavaş artırıldığında bloklar için hangisi doğrudur?",
+          "4 kg'lık blok daha küçük açıda kaymaya başlar; çünkü ağırlığı daha büyüktür.",
+          "İki blok da aynı açıda kaymaya başlar.",
+          "1 kg'lık blok daha küçük açıda kaymaya başlar; çünkü normal kuvveti daha küçüktür.",
+          "Kayma açıları arasındaki fark kütle oranı kadardır (4 kat).",
+          "4 kg'lık blok hiç kaymaz; çünkü normal kuvveti daha büyüktür.",
+          "B", "A"),
+       RM(["Blok kaymaya başlamak üzereyken eğik düzlem boyunca ve düzleme dik doğrultuda hangi kuvvetler dengede?",
+           "mg sinθ ve μ_s·mg cosθ ifadelerinde kütle sadeleşiyor mu?",
+           "Ağırlık 4 katına çıkınca hem kaydırıcı bileşen hem de sürtünme kaç katına çıkar?",
+           "Yüzey çifti aynıysa kritik açıyı belirleyen nedir?"],
+          "4 kg'lık blok, yapışık dört adet 1 kg'lık bloktan başka bir şey değildir. Tek bir blok bu açıda kaymıyorsa, dört bloğu birbirine yapıştırmak hiçbir şeyi değiştirmeyeceğinden dörtlü yığın da kaymaz.",
+          "Aynı yokuşta ya da buzda dört kardeş birbirinin elini tutarak yürüse her biri tek başına yürürken kaydığı koşulda kayar; el ele tutuşmak yüzeyin tutuşunu değiştirmez."),
+       S("TK16", "TB"), "HIGH"),
+
+    MC("terminal-velocity-net-force-nonzero",
+       "Limit hıza ulaşan cismin ivmesi hâlâ g'dir ya da hava direnci ağırlığından büyüktür; hız sabit kalsa bile net kuvvet sıfır olmaz.",
+       "Limit hızda hava direnci kuvveti ağırlığa eşit büyüklükte ve zıt yöndedir; net kuvvet sıfır, ivme sıfırdır ve cisim sabit hızla düşer. "
+       "Hız arttıkça direnç arttığı için ivme azalarak sıfıra yaklaşır.",
+       ["limit-hiz", "hava-direnci", "bileske-kuvvet", "newton-birinci-yasa"], LO("1.8"), "CONCEPTUAL_ERROR",
+       "terminal-velocity-graph ailesinin 'limit hızda ivme g'dir' ve 'limit hıza ulaşınca hava direnci ağırlıktan büyüktür' çeldiricileri; terminal-velocity-daily-life ve drag-variables-data sorularında "
+       "net kuvvetin sıfır olduğunun görülmemesi. FCI taksonomisinde AF6 (force causes acceleration to terminal velocity).",
+       DI("Yüksekten atlayan bir paraşütçü, paraşütü açılmadan yeterince uzun süre düştükten sonra limit hıza ulaşıyor. Limit hıza ulaşıldıktan sonra paraşütçü için hangisi doğrudur?",
+          "İvmesi g'dir; çünkü ağırlığı hâlâ etki etmektedir.",
+          "Hava direnci kuvveti ağırlığına eşittir, net kuvvet sıfırdır ve sabit hızla düşer.",
+          "Hava direnci ağırlığından büyüktür; bu yüzden hızı azalır.",
+          "Hava direnci ağırlığından küçüktür ama hızındaki artış durmuştur.",
+          "Hava direnci sıfırdır; paraşütçü serbest düşme yapar.",
+          "B", "A"),
+       RM(["Limit hızda paraşütçüye etki eden kuvvetleri çiz. Aşağı ve yukarı yönlü okların büyüklükleri nasıl?",
+           "Hız artık değişmiyorsa ivme kaç? İvme sıfırsa net kuvvet kaç olmalı?",
+           "Hız arttıkça hava direnci nasıl değişir? Bu değişim hızın artışını nasıl durdurur?",
+           "Hava direnci ağırlıktan büyük olsaydı hız ne olurdu?"],
+          "Limit hızda ivme g olsaydı hız her saniye 10 m/s artmaya devam ederdi; oysa limit hız tanımı gereği hız artık değişmiyor.",
+          "Deliği olan bir su deposunda doluluk arttıkça akış artar; giren su ile çıkan su eşitlenince seviye sabit kalır, oysa musluk hâlâ açıktır. Ağırlık hâlâ vardır; yalnızca direnç onu dengelemiştir."),
+       S("FCI", "FERR17", "BL23"), "MEDIUM"),
+
+    MC("heavier-lower-terminal-speed",
+       "Kütlesi büyük olan cismin limit hızı küçüktür (ağır cisim daha çabuk yavaşlar) ya da limit hız kütleye hiç bağlı değildir.",
+       "Limit hızda mg = direnç kuvveti olur. Direnç hızla ve kesit alanıyla arttığından, aynı şekil ve kesit alanında daha ağır cisim, direncin ağırlığa ulaşması için daha büyük hıza çıkmak zorundadır; "
+       "limit hız kütle arttıkça artar.",
+       ["limit-hiz", "hava-direnci", "kutle", "kesit-alani"], LO("1.8"), "CONCEPTUAL_ERROR",
+       "terminal-velocity-variables ailesinin 'kütlesi büyük olanın limit hızı küçüktür' çeldiricisi; terminal-velocity-daily-life ve ff-mass-independence ile birlikte serbest düşmede "
+       "ivmenin kütleden bağımsızlığının limit hıza yanlış genellenmesi. Potvin ve ark. (2023) ile Ferreira ve ark. (2017) havalı ortamda kütle–hız ilişkisinin öğrencilerin "
+       "günlük deneyimiyle çeliştiğini bildirir.",
+       DI("Aynı boyutta ve aynı şekilde iki küre havada yeterince yüksekten bırakılıyor: biri içi boş plastik (50 g), diğeri içi dolu demir (500 g). "
+          "Her ikisi de limit hıza ulaşıyor. Limit hızlar v_plastik ve v_demir için hangisi doğrudur?",
+          "v_demir < v_plastik",
+          "v_demir = v_plastik; çünkü şekilleri aynıdır.",
+          "v_demir > v_plastik; çünkü demir kürenin ağırlığını dengelemek için daha büyük bir direnç, dolayısıyla daha büyük hız gerekir.",
+          "v_demir = v_plastik; çünkü serbest düşmede ivme kütleden bağımsızdır.",
+          "v_demir > v_plastik; çünkü demir küreye daha az hava direnci etki eder.",
+          "C", "A"),
+       RM(["Limit hızda ağırlıkla hangi kuvvet eşitleniyor? Ağırlık büyükse dengelemek için bu kuvvet de büyük olmak zorunda mı?",
+           "Hava direnci neye bağlı: hıza, kesit alanına? Kesit alanı aynıysa direncin büyümesi için ne artmalı?",
+           "Hangi küre direncini ağırlığına ulaştırmak için daha çok hızlanmalıdır?",
+           "1 filtre kâğıdı ile aynı şekilli 4 filtre kâğıdını üst üste bırakırsan hangisi daha hızlı düşer?"],
+          "Aynı şekilli dört kahve filtresi üst üste yüksekten bırakılınca, tek filtreye göre belirgin biçimde daha hızlı düşer: ağır olan 'daha yavaş' olsaydı tersi beklenirdi.",
+          "Aynı bisiklet ve aynı duruşla yokuş aşağı inen iki sürücüden ağır olan daha yüksek hızda dengeye ulaşır; çünkü onu aşağı çeken kuvvet büyüktür ve rüzgâr direncinin buna yetişmesi için hızın artması gerekir."),
+       S("POTV23", "FERR17", "TB"), "MEDIUM"),
+]
+
+# --- FİZ.11.1.9–FİZ.11.1.10: Düzgün çembersel hareket ---
+MISCONCEPTIONS += [
+    MC("constant-speed-means-no-acceleration",
+       "Düzgün çembersel harekette sürat sabit olduğundan hız da sabittir; hız değişmediği için ivme ve net kuvvet yoktur (cisim dengededir).",
+       "Hız vektörel bir niceliktir; sürat sabit olsa da yönü sürekli değiştiği için hız değişir ve cismin merkezcil ivmesi vardır (a = ϑ²/r = ω²r). Net kuvvet merkeze yönelir ve sıfır değildir; cisim dengede değildir.",
+       ["duzgun-cembersel-hareket", "cizgisel-hiz", "cizgisel-surat", "merkezcil-ivme"], LO("1.9", "1.10"), "CONCEPTUAL_ERROR",
+       "circular-velocity-direction ailesinin 'sürat sabit olduğundan hız da sabittir' çeldiricisi; circular-analogies ailesinin 'düzgün çembersel harekette ivme yoktur' çeldiricisi. "
+       "Kızılcık ve Güneş (2011) 'düzgün dairesel harekette hız değişmez' yanılgısını en yüksek oranda (%18,88), denge şartı arayışını ise %6,99 oranında bulmuştur.",
+       DI("Yarıçapı 2 m olan bir çember üzerinde 4 m/s sabit süratle hareket eden bir cisim düzgün çembersel hareket yapıyor. Cismin ivmesi için hangisi doğrudur?",
+          "Sıfırdır; çünkü sürat sabittir.",
+          "8 m/s² büyüklüğündedir ve merkeze yöneliktir.",
+          "8 m/s² büyüklüğündedir ve hareket yönündedir (yörüngeye teğettir).",
+          "2 m/s² büyüklüğündedir ve merkeze yöneliktir.",
+          "8 m/s² büyüklüğündedir ve merkezden dışarı yöneliktir.",
+          "B", "A"),
+       RM(["Hız nasıl bir niceliktir: yalnızca büyüklük mü, büyüklük ve yön mü?",
+           "Çember üzerinde iki farklı noktadaki hız vektörlerini çiz. Aynı vektör mü?",
+           "İvmenin tanımı hız vektörünün değişimi mi, yoksa yalnızca büyüklüğünün değişimi mi?",
+           "Net kuvvet sıfır olsaydı Newton'ın 1. yasasına göre cisim nasıl bir yol izlerdi?"],
+          "Net kuvvet sıfır olsaydı cisim doğrusal bir yolda giderdi. Çember boyunca gidiyorsa yönü sürekli değişiyor demektir; bu da bir ivme ve dolayısıyla net kuvvet gerektirir.",
+          "Hız göstergesi 60 km/sa'te sabit olan bir araç viraja girdiğinde içindekiler yana doğru bastırıldığını hisseder: sürat sabit, ama yön değişiyor ve bu bir ivmedir."),
+       S("KG11", "UG07", "FCI"), "HIGH"),
+
+    MC("circular-velocity-toward-center",
+       "Düzgün çembersel harekette hız vektörü yarıçap doğrultusunda (merkeze doğru) yönelir; hız ile ivme aynı doğrultudadır.",
+       "Hız vektörü her an yörüngeye teğettir ve yarıçap vektörüne diktir. İvme (ve net kuvvet) ise merkeze yönelir, yani hıza diktir; hıza dik olan bir ivme hızın büyüklüğünü değil yalnızca yönünü değiştirir.",
+       ["duzgun-cembersel-hareket", "cizgisel-hiz", "yaricap-vektoru", "merkezcil-ivme"], LO("1.9"), "CONCEPTUAL_ERROR",
+       "circular-velocity-direction ailesinin 'hız vektörü merkeze doğrudur' çeldiricisi; circular-analogies'te farklı hareketlerin hız vektörlerinin karşılaştırılması. "
+       "Kızılcık ve Güneş (2011) 'hız ve ivme aynı doğrultudadır' yanılgısını %5,07, 'hız vektörü net kuvvet doğrultusundadır' yanılgısını %4,20 oranında bulmuştur.",
+       DI("Düzgün çembersel hareket yapan bir cismin çember üzerindeki bir noktada hız vektörü ϑ, ivme vektörü a ile gösteriliyor. Hangisi doğrudur?",
+          "ϑ merkeze yönelir; a yörüngeye teğettir.",
+          "ϑ ve a aynı doğrultudadır ve ikisi de merkeze yönelir.",
+          "ϑ yörüngeye teğettir; a merkeze yöneliktir ve ϑ'ye diktir.",
+          "ϑ merkezden dışarı yöneliktir; a merkeze doğrudur.",
+          "ϑ yörüngeye teğettir; a da teğettir ve ϑ ile zıt yönlüdür.",
+          "C", "B"),
+       RM(["Çember üzerinde dönen cismi bir noktada serbest bıraksan hangi yönde gider? Bu yön hızın yönü mü?",
+           "Hız merkeze doğru olsaydı cisim merkeze yaklaşır mıydı? Yarıçap sabit kalır mıydı?",
+           "Hıza dik bir ivme hızın büyüklüğünü mü yoksa yönünü mü değiştirir?",
+           "Kuvvet hızı nasıl değiştirir: büyüklüğünü, yönünü ya da ikisini?"],
+          "Hız vektörü merkeze doğru olsaydı cisim yarıçap boyunca merkeze doğru ilerler ve çember çizmezdi.",
+          "Çekiç atan atlet çekici bıraktığında çekiç, bırakıldığı andaki yörüngeye teğet doğrultuda uçar; bu doğrultu o andaki hızın doğrultusudur."),
+       S("KG11", "MCCL", "TB"), "MEDIUM"),
+
+    MC("string-cut-circular-motion-continues",
+       "İp koptuğunda (ya da merkezcil kuvvet ortadan kalktığında) cisim çembersel yolunu bir süre sürdürür ya da merkezden dışarı doğru savrulur; merkezcil etki kopmadan sonra da devam eder.",
+       "İp koptuğu anda cismin hızı yörüngeye teğettir. Net kuvvet sıfır olduğundan (yatay düzlemde ağırlık dengelenmişse) Newton'ın 1. yasası gereği cisim o teğet doğrultuda sabit hızla doğrusal gider. "
+       "Merkezcil kuvvet yalnızca onu uygulayan ip varken vardır.",
+       ["cizgisel-hiz", "newton-birinci-yasa", "merkezcil-kuvvet", "duzgun-cembersel-hareket"], LO("1.9"), "CONCEPTUAL_ERROR",
+       "string-cut-trajectory ailesinin 'cisim merkezden dışa doğru (radyal) uçar' ve 'cisim kopma anından sonra eğri yol izlemeye devam eder' çeldiricileri. "
+       "McCloskey ve ark. (1980) dış kuvvet yokken eğrisel hareket beklentisini belgelemiştir; Kızılcık ve Güneş (2011) 'merkezcil kuvvetin etkisi hareket bitse de devam eder' yanılgısını %13,99 oranında bulmuştur. FCI taksonomisinde I5 (circular impetus).",
+       DI("Yatay, sürtünmesiz bir masada ipin ucuna bağlı bir bilye, üstten bakıldığında saat yönünde düzgün çembersel hareket yapıyor. Bilye çemberin en üst (kuzey) noktasındayken, hızı doğuya doğruyken ip kopuyor. "
+          "Bilyenin kopmadan sonraki hareketi için hangisi doğrudur?",
+          "Bir süre çember yayı boyunca hareketini sürdürür, sonra doğrusal yola geçer.",
+          "Doğuya doğru, kopma anındaki hızıyla sabit hızlı doğrusal hareket yapar.",
+          "Merkezden dışarı doğru (kuzeye) doğrusal hareket yapar.",
+          "Merkeze doğru (güneye) doğrusal hareket yapar.",
+          "Doğuya doğru gider ama giderek yavaşlayıp durur.",
+          "B", "A"),
+       RM(["Kopma anında bilyenin hızı hangi yönde? İp koptuktan sonra bilyeye yatay düzlemde hangi kuvvetler etki ediyor?",
+           "İp varken bilyeyi hangi yöne çekiyordu? İp koptuğunda bu çekmeye ne olur?",
+           "Newton'ın 1. yasasına göre net kuvvet sıfır olunca bilye ne yapar?",
+           "Bilye çember yolunda kalmaya devam etseydi, merkeze doğru gerekli kuvveti hangi cisim uyguluyor olurdu?"],
+          "Çember yolunda kalmak için merkeze yönelen bir kuvvet gerekir. İp koptuktan sonra bu kuvveti uygulayan hiçbir cisim kalmadığı için bilyenin çembersel hareketini sürdürmesi mümkün değildir.",
+          "Dönen bir tekerleğin kenarından kopan çamur parçası yörüngeye teğet doğrultuda fırlar; çembersel yolda kalmaz ve radyal olarak da savrulmaz."),
+       S("KG11", "MCCL", "FCI"), "HIGH"),
+
+    MC("centrifugal-real-force",
+       "Düzgün çembersel hareket yapan cisme merkezden dışa doğru, merkezcil kuvvete eşit büyüklükte gerçek bir 'merkezkaç kuvveti' etki eder; bu kuvvet cismi dışarı savurur.",
+       "Yerdeki (eylemsiz) gözlemciye göre merkezkaç diye gerçek bir kuvvet yoktur; cismin dışarı savrulma eğilimi eylemsizliğidir (Newton'ın 1. yasası). Cisme etki eden net kuvvet merkeze yöneliktir.",
+       ["merkezcil-kuvvet", "eylemsizlik", "yatay-viraj", "duzgun-cembersel-hareket"], LO("1.9", "1.10"), "CONCEPTUAL_ERROR",
+       "string-cut-trajectory, vertical-circle-min-speed, flat-curve ve rail-system-circular ailelerinin 'merkezkaç kuvvet' çeldiricileri; fbd-identify-forces'ta dışa yönelik kuvvet oku. "
+       "Ünlü ve Gök (2007), Kızılcık ve Güneş (2011, %8,80), FCI taksonomisinde CF (centrifugal force) ve Durkaya (2021) bunu doğrular: 33 öğretmen adayının 9'u merkezcil kuvveti dışa yönelik çizmiştir.",
+       DI("Yatay bir yolda sabit süratle sağa viraj alan bir arabadaki yolcu kendini kapıya (virajın dışına) doğru bastırılmış hisseder. Yerdeki gözlemcinin bakış açısından bu durum nasıl açıklanır?",
+          "Yolcuya dışa doğru etki eden gerçek bir merkezkaç kuvveti vardır.",
+          "Yolcu eylemsizliği nedeniyle doğrusal yolda gitmek ister; araç ve koltuk yolcuya merkeze yönelen kuvvet uygulayarak onu çembersel yola zorlar.",
+          "Merkezcil ve merkezkaç kuvvetleri eşit olduğundan yolcu dengededir.",
+          "Yolcuya viraj içine doğru etki eden hiçbir kuvvet yoktur.",
+          "Dışa doğru etki eden bir sürtünme kuvveti yolcuyu kapıya bastırır.",
+          "B", "A"),
+       RM(["Yolcuyu dışa iten kuvveti hangi cisim uyguluyor?",
+           "Araç kaygan zeminde dönme gücünü kaybederse hangi yönde gider: radyal dışa mı, teğet doğrultuda mı?",
+           "Yolcuya etki eden net kuvvetin yönü nedir? Bu yön ivmenin yönüyle uyumlu mu?",
+           "'Hissedilen' bir etkiyle bir cismin uyguladığı gerçek kuvvet arasındaki fark nedir?"],
+          "Kaygan zeminde araç, virajın dışına radyal olarak değil, kopma anındaki yola teğet doğrultuda gider; merkezkaç gerçek bir kuvvet olsaydı doğrudan dışarı fırlardı.",
+          "Hızlanan bir otobüste geriye yaslandığınızı hissedersiniz ama sizi kimse geri itmiyor; otobüs size ileri kuvvet uyguluyor. Virajda 'dışa itilme' de benzer bir eylemsizlik hissidir."),
+       S("UG07", "KG11", "FCI", "DUR21"), "HIGH"),
+
+    MC("centripetal-force-extra-separate-force",
+       "Merkezcil kuvvet, çembersel hareket yapan cisme ayrıca etki eden yeni bir kuvvettir; hareket çembersel olunca ortaya çıkar ve serbest cisim diyagramında diğer kuvvetlere eklenir.",
+       "Merkezcil kuvvet ayrı bir kuvvet türü değildir; merkeze yönelen net (bileşke) kuvvetin adıdır. İp gerilmesi, sürtünme, normal kuvvet ya da ağırlık gibi gerçek kuvvetlerin merkeze yönelik bileşkesi merkezcil kuvvet görevi görür. "
+       "Çembersel hareket merkezcil kuvvetin sonucudur, nedeni değil.",
+       ["merkezcil-kuvvet", "serbest-cisim-diyagrami", "statik-surtunme", "gerilme-kuvveti"], LO("1.5", "1.10"), "CONCEPTUAL_ERROR",
+       "fbd-identify-forces ailesinin 'merkezcil kuvvet ayrı bir kuvvet olarak çizilmiş' çeldiricisi; rotor-and-regulator ailesinin 'merkezcil kuvvet ayrı bir kuvvettir' çeldiricisi. "
+       "Kızılcık ve Güneş (2011): öğrencilerin %11,01'i 'merkezcil kuvvet düzgün dairesel hareket olduğunda oluşan bir kuvvettir', %13,99'u 'merkezcil kuvvetin etkisi hareket bitse de devam eder' görüşündedir.",
+       DI("Yatay, pürüzlü bir platformun kenarında duran bir cisim, platformla birlikte sabit açısal hızla dönüyor ve platforma göre kaymıyor. Cismin serbest cisim diyagramında merkezcil kuvvet için hangisi doğrudur?",
+          "Ağırlık, normal kuvvet ve sürtünme kuvvetine ek olarak, merkeze doğru ayrı bir 'merkezcil kuvvet' da çizilir.",
+          "Ayrı bir merkezcil kuvvet çizilmez; platformun cisme uyguladığı ve merkeze yönelen statik sürtünme kuvveti merkezcil kuvvet görevini üstlenir.",
+          "Merkezcil kuvvet, ağırlık ile normal kuvvetin bileşkesidir.",
+          "Merkezcil kuvvet merkezden dışarı doğru çizilir.",
+          "Cisim sabit hızla döndüğü için cisme sürtünme etki etmez; merkezcil kuvvet çizilmez.",
+          "B", "A"),
+       RM(["Cisme çevresindeki hangi cisimler kuvvet uyguluyor? Bu kuvvetlerden hangisi merkeze doğru?",
+           "Merkeze yönelen kuvveti uygulayan cisim kim?",
+           "Platform çok kaygan olsaydı cisim ne yapardı? Bu hangi kuvvetin yokluğunu gösterir?",
+           "Hem sürtünmeyi hem ayrı bir merkezcil kuvveti çizersen merkeze yönelen kuvvet iki kez sayılmış olmaz mı?"],
+          "Hem sürtünmeyi hem de ayrı bir merkezcil kuvveti çizersek merkeze doğru gerekenin iki katı kuvvet olur; bu durumda ivme mω²r ile uyuşmaz.",
+          "'Takım kaptanı' ayrı bir oyuncu değildir, mevcut oyunculardan birinin üstlendiği rolün adıdır. Merkezcil kuvvet de ip gerilmesi ya da sürtünme gibi kuvvetlerden birinin (ya da bileşkesinin) üstlendiği rolün adıdır."),
+       S("KG11", "UG07", "DUR21"), "HIGH"),
+
+    MC("centripetal-force-decreases-with-radius",
+       "Merkezcil kuvvet, cismin dönme merkezine uzaklığı (yarıçap) arttıkça her koşulda azalır.",
+       "Merkezcil kuvvet F = mϑ²/r = mω²r ile verilir: sabit çizgisel hızda yarıçapla ters orantılıdır, sabit açısal hızda (aynı platform üzerindeki cisimler) yarıçapla doğru orantılı artar. "
+       "Hangi niceliğin sabit tutulduğuna dikkat etmek gerekir.",
+       ["merkezcil-kuvvet", "yatay-duzlemde-cembersel", "acisal-hiz", "oran-oranti"], LO("1.10"), "FORMULA_APPLICATION_ERROR",
+       "circular-variables-data ailesinin 'F_m yarıçapla doğru orantılıdır' / ters kurma çeldiricileri; rotating-platform-friction ailesinin 'merkeze yakın cisim önce kayar' çeldiricisi ve "
+       "coupled-wheels'te 1/r ilişkisinin ters kurulması. Ünlü ve Gök (2007): 8. ve 9. sorularda öğrencilerin %30'u merkezcil kuvvetin merkeze uzaklık arttıkça azaldığını savunmuştur.",
+       DI("Yatay dönen bir platform üzerinde, aynı kütleli iki cisim platformla birlikte aynı açısal hızla dönüyor; biri dönme ekseninden 0,5 m, diğeri 1 m uzaklıkta. "
+          "Cisimleri çembersel yolda tutmak için gereken merkezcil kuvvetler (0,5 m'deki F_1, 1 m'deki F_2) için hangisi doğrudur?",
+          "F_2 = F_1/2; çünkü merkezcil kuvvet yarıçapla ters orantılıdır.",
+          "F_2 = 2F_1; çünkü açısal hız aynıyken F = mω²r'dir.",
+          "F_2 = 4F_1; çünkü merkezcil kuvvet yarıçapın karesiyle orantılıdır.",
+          "F_2 = F_1; çünkü kütleleri aynıdır.",
+          "F_2 = F_1/4; çünkü merkezcil kuvvet yarıçapın karesiyle ters orantılıdır.",
+          "B", "A"),
+       RM(["Bu iki cismin hangi niceliği aynıdır: çizgisel hız mı, açısal hız mı?",
+           "F = mϑ²/r ve F = mω²r bağıntılarının ikisi de doğruysa hangisini bu soruda kullanmak daha uygundur ve neden?",
+           "Aynı sürede iki cisim de bir tur atıyorsa dış cisim daha uzun bir yol alıyor mu? Çizgisel hızı ne olur?",
+           "Platformun dönüşünü hızlandırdığında hangi cisim önce kayar ve neden?"],
+          "Dönen bir platformda dış kenardaki cisim daha çabuk kayar; yani merkezcil kuvvet gereksinimi dışa doğru artar. 'Uzaklık arttıkça azalır' düşüncesi bunu açıklayamaz.",
+          "Dönen bir atlıkarıncada dış sıradaki hayvanın üstündeki çocuk, aynı sürede daha büyük çember çizer ve daha hızlı gider; onu çembersel yolda tutmak için daha sıkı tutunması gerekir."),
+       S("UG07", "KG11", "TB"), "HIGH"),
+]
+
+_U1_END = len(MISCONCEPTIONS)
+
+
+def _balance_answer_positions(items):
+    """Tanı sorularında doğru şıkkın konumunu A–E arasında dengeler (yazım sırasında doğru şık hep aynı harfe düşmesin).
+
+    Şıklar dairesel olarak kaydırılır; göreli sıra korunur. Metin içinde şık harfine gönderme yoktur."""
+    for i, m in enumerate(items):
+        di = m["diagnostic_item"]
+        letters = "ABCDE"
+        shift = (letters.index(di["answer"]) - i % 5) % 5   # doğru şık, i'inci sıradaki harfe gelsin
+        old = [di["options"][k] for k in letters]
+        new = old[shift:] + old[:shift]
+        remap = {letters[(j + shift) % 5]: letters[j] for j in range(5)}
+        di["options"] = dict(zip(letters, new))
+        di["answer"] = remap[di["answer"]]
+        di["misconception_option"] = remap[di["misconception_option"]]
+
+
+_balance_answer_positions(MISCONCEPTIONS[_U1_START:_U1_END])
