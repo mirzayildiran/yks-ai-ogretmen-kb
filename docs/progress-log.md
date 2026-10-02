@@ -10,7 +10,7 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 | STEP 8 Ünite 1 | ✅ commit'li | 57 aile |
 | STEP 8 Ünite 2 | ✅ commit'li | 56 aile |
 | STEP 8 Ünite 3 | ✅ commit'li | 65 aile. Toplam 178 aile, 85/85 süreç bileşeni, 392/392 kitap + 140/140 program kanıtı |
-| STEP 10 ÖSYM | 🔄 parça parça | ✅ AYT 2018–2022 (70 soru, resmî kitapçık) commit'li · 🔄 ajan AYT 2023–2025 · ⏳ TYT 2018–2025 optik. Doğrulama `build_osym.py --check` |
+| STEP 10 ÖSYM | 🔄 parça parça | ✅ AYT 2018–2025 (112 soru, resmî kitapçık) commit'li · 🔄 ajan TYT 2018–2025 optik. Doğrulama `build_osym.py --check` |
 | STEP 13 Hata + yanılgı | 🔄 parça parça | ✅ 17 hata türü commit'li · 🔄 ajan Ünite 1 yanılgıları · ⏳ Ünite 2 · ⏳ Ünite 3. Doğrulama `build_errors.py --check` |
 | STEP 11–12 Çözüm + kısa yol | 🔄 parça parça | Derleyici `build_solutions.py` hazır · 🔄 ajan Ünite 1 (`data_solutions_u1.py`) · ⏳ Ünite 2 · ⏳ Ünite 3 |
 | STEP 9 Piyasa, STEP 14 Pedagoji | ⏳ | Derleyicileri yazılacak (`build_market.py`, `build_pedagogy.py`) |
