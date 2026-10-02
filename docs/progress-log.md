@@ -27,3 +27,4 @@ Otomatik devam görevinin ve ana oturumun nerede kalındığını bildiği tek k
 - Otomatik devam görevi: bu oturumda her saat :17'de çalışır, oturum kapanınca ya da 7 gün sonra biter.
 - Derleyiciler hazır: `build_osym.py`, `build_errors.py` (ortak: `kb_common.py`). `run_all_audits.py`'ye ancak veri dosyaları tamamlanınca eklenecekler.
 - Dalga 2 (Ünite 3 bitince): piyasa analizi + çözüm/kısa yol ajanları; önce `build_solutions.py` ve `build_market.py` yazılacak.
+- GitHub: https://github.com/mirzayildiran/yks-ai-ogretmen-kb (herkese açık). `.git/hooks/post-commit` her commit'i otomatik gönderir; hata kaydı `.git/auto-push.log`. Commit yazarı GitHub noreply adresi (git config yerel).
