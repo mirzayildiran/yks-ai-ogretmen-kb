@@ -564,3 +564,99 @@ ITEMS += [
       "K ortamından L ve M ortamlarına geçen ışının iki kırılma şeklinden ortamların kırıcılığı karşılaştırılıyor; L'den M'ye geçişte izlenebilecek yollar (kırılma, sınır, yansıma) seçiliyor.",
       "yes", "Snell yasasının nitel kullanımı, sınır açısı ve tam yansıma FİZ.11.3.5 kapsamındadır; formül gerekmiyor.", "HIGH"),
 ]
+
+# ---- 2019 TYT (optik: S6, S7 okundu; S1–S5 kapsam dışı: yoğunluk, çembersel yolda yer değiştirme/hız, iş-güç, genleşme, devre) ----
+ITEMS += [
+    Q(2019, "TYT", 6, "Noktasal kaynak aynı uzaklıkta kalıp eğik konuma gelince perdedeki bölgeden geçen ışık akısının değişimi", ["FİZ.11.3.1"], "", "illum-oblique-angle", "partial", ["FBAB8"],
+      2, 2, 0, "", ROMAN, "Kaynak–perde uzaklığı sabit kalsa da ışınlar bölgeye eğik gelince akı azalır; bölge büyüyünce daha fazla ışık geçer, akı artar",
+      "Noktasal kaynak yarım çemberin K noktasından L noktasına getirilince perdedeki küçük dikdörtgenden geçen ışık akısının azalıp azalmadığı ve bölge büyütülünce artıp artmadığı soruluyor.",
+      "yes", "Işık akısı ve aydınlanmanın uzaklık ve eğimle nitel yorumu FİZ.11.3.1 kapsamında; sayısal hesap gerekmiyor.", "MEDIUM"),
+    Q(2019, "TYT", 7, "Sarı far ışığında tabelanın boya rengiyle fark edilebilirliği (ışık ve boya renk karışımı şemaları)", [], "12. sınıf FİZ.12.3.6 (ana ışık renkleri); boya karışımı ve cismin rengi programda yok", None, "none", [],
+      2, 3, 0, "dl", "tek renk seçenekli (mavi, sarı, yeşil, kırmızı, cyan)", "Sarı far ışığı kırmızı ve yeşil ışık içerir; mavi boya bunları yansıtmaz, siyah görünür ve siyah fonla karışır",
+      "Sarı ışık yayan farlarla aydınlatılan siyah fonlu tabelanın harfleri hangi renkte boyanırsa farkın en az algılanacağı, verilen ışık ve boya renk şemalarından çıkarılıyor.",
+      "no", "Işık renkleri 12. sınıf (FİZ.12.3.6); boya ve cisim rengi bağlamı Maarif 9-12. sınıf programında yer almıyor.", "MEDIUM"),
+]
+
+# ---- 2020 TYT (S2 Newton, S7 düzlem ayna okundu; S1 birim, S3 kaldırma, S4 basınç/ısı, S5 devre, S6 telde dalga kapsam dışı) ----
+ITEMS += [
+    Q(2020, "TYT", 2, "Freni bozuk otomobilin çöp kovasına çarpmasında kuvvet, ivme ve hız değişimi yorumları", ["FİZ.11.1.4"], "", "newton3-action-reaction", "partial", ["FBAB10"],
+      2, 2, 0, "dl", "üç kişinin yorumları (Ahmet, Burçin, Cevdet); şıklar yorum kombinasyonları", "Etki-tepki kuvvetleri eşittir; kütlesi küçük kovanın ivmesi ve aynı sürede hız değişimi büyüktür",
+      "Küçük kütleli kovaya çarpan otomobil için kuvvetin, ivmenin ve hız değişiminin kimde daha büyük olduğuna dair üç yorumdan hangilerinin doğru olduğu seçiliyor.",
+      "yes", "Etki-tepki eşitliği ve F = ma ilişkisinin nitel yorumu FİZ.11.1.4 kapsamında; hesap gerekmiyor.", "HIGH"),
+    Q(2020, "TYT", 7, "Düzlem aynada kişi ve aynanın birlikte suya batırılmasında görüntünün boyu ve uzaklığı", ["FİZ.11.3.2"], "", "pm-image-properties", "partial", ["FBAB9"],
+      2, 2, 0, "dl", ROMAN, "Görüntü boyu ve ayna uzaklığı cisimle aynıdır; ayna ve kişi aynı ortamda olduğundan ortamın cinsi (hava, tatlı su, tuzlu su) görüntüyü değiştirmez",
+      "Kişi aynaya önce havada, sonra aynayla birlikte suya batarak bakıyor; görüntünün boyunun, uzaklığının ve su cinsine bağlılığının değişip değişmediği öncüllerle soruluyor.",
+      "yes", "Düzlem ayna görüntüsünün özellikleri FİZ.11.3.2 kapsamında; ortam değişimi bağlamı yeni duruma uyarlama (FBAB9.SB2) ruhuna uygun.", "MEDIUM"),
+]
+
+# ---- 2021 TYT (S2 net kuvvet, S7 mercek okundu; S1 yüzey gerilimi, S3 basınç, S4 ısı iletimi, S5 elektrik enerjisi, S6 telde dalga kapsam dışı) ----
+ITEMS += [
+    Q(2021, "TYT", 2, "Otomobil, tren ve uçağın hız bilgilerinden üzerlerindeki net kuvvetlerin büyüklüklerinin sıralanması", ["FİZ.11.1.4"], "", "net-force-motion-state", "exact", ["FBAB10"],
+      2, 2, 0, "dl", "sıralama şıkları (F1, F2, F3 arasındaki >, = ilişkileri)", "Sabit hızda hareket eden araçta net kuvvet sıfırdır; hızı artan trende net kuvvet sıfırdan büyüktür",
+      "Sabit hızla giden otomobil, hızlanan tren ve sabit hızla giden uçak için net kuvvet büyüklükleri karşılaştırılıyor; hareket durumundan net kuvvetin sıfır olup olmadığı çıkarılıyor.",
+      "yes", "Net kuvvet ile hareket durumu arasındaki nitel ilişki FİZ.11.1.4 kapsamında; hesap yok, günlük hayat bağlamı Maarif üslubuna yakın.", "HIGH"),
+    Q(2021, "TYT", 7, "Pencereden ağaç görüntüsü veren mercekten sonra ikinci özdeş mercekle aynı boyda düz görüntü için konum seçimi", ["FİZ.11.3.10", "FİZ.11.3.9"], "", "lens-image-position-properties", "partial", ["FBAB7", "KB2.7"],
+      3, 3, 0, "ms ex", "ikili konum eşleştirmesi (merceğin ve kâğıdın K, L, M, N noktalarındaki yerleri)", "Uzak cismin görüntüsü odakta oluşur; ilk görüntüden 2f uzağa konan özdeş merceğin 2f ötesinde cisimle aynı boyda ters, yani düz görüntü oluşur",
+      "Odakta ağaç görüntüsü veren mercek sabitken, ilk görüntüyü cisim kabul eden ikinci özdeş merceğin ve kâğıdın eşit aralıklı noktalardan hangilerine konacağı görüntü özelliklerinden çıkarılıyor.",
+      "yes", "Cismin 2f ve sonsuzdaki konumuna göre görüntü yeri ve boyu FİZ.11.3.9-10 konum–özellik tablosuyla çözülür; mercek denklemi gerekmiyor.", "MEDIUM"),
+]
+
+# ---- 2022 TYT (S2 etki-tepki, S5 elektriksel kuvvet, S7 düzlem ayna okundu; S1 özkütle, S3 akışkan, S4 ısı iletimi, S6 su dalgası (10. sınıf FİZ.10.4.5) kapsam dışı) ----
+ITEMS += [
+    Q(2022, "TYT", 2, "Masadaki kitap için kitap–masa–Yerküre kuvvet çiftlerinden hangisinin verilenlerle bulunamayacağı", ["FİZ.11.1.4", "FİZ.11.1.5"], "", "newton3-action-reaction", "exact", ["FBAB10", "KB2.14"],
+      2, 2, 1, "dl", "beş kuvvet ifadesi (hangisi çıkarılamaz tipi, olumsuz kök)", "Kitap dengede olduğundan etki-tepki çiftleri ve denge ile 10 N bulunur; masanın kütlesi bilinmediği için Yerküre'nin masaya kuvveti verilemez",
+      "Dengedeki kitap için Yerküre ve masayla etkileşim kuvvetleri 10 N olarak sorulurken, masa kütlesi verilmediğinden hangi kuvvetin bulunamayacağı soruluyor.",
+      "yes", "Etki-tepki çiftleri ve dengede kuvvet analizi FİZ.11.1.4-5 kapsamında; olumsuz kök ve eksik veri bağlamı beceri temelli yazıma uygun.", "HIGH"),
+    Q(2022, "TYT", 5, "Pozitif yüklü taraktan asılı kalan nötr kâğıdın üst ve alt yarısındaki elektriksel kuvvetlerin yönü ve büyüklüğü", ["FİZ.11.2.1"], "kâğıdın kutuplanması (yük ayrışması) açık çıktı değil; elektriklenme çeşitleri 11. Ünite 2 temel kabulü (önceki sınıf ön bilgisi)", "coulomb-direction-newton3", "partial", ["FBAB10"],
+      3, 2, 0, "ms ex", ROMAN, "Tarağa yakın uçta zıt, uzak uçta aynı işaretli yük birikir; çekim ve itme yönleri ters olur ve asılı kalan kâğıtta bileşke kuvvet ağırlığı dengeler",
+      "Pozitif yüklü tarağa asılı kalan nötr kâğıdın A ve B yarılarına etki eden elektriksel kuvvetlerin yönleri ile A bölümündeki kuvvetin kütle çekim kuvvetinden büyüklüğü öncüllerle soruluyor.",
+      "form_changes", "Elektriksel kuvvetin yönü ve denge FİZ.11.2.1 ve 11.1.5 ile uyumlu; yalıtkanda yük ayrışması açık çıktıda yok, bağlam olarak verilmesi gerekir.", "MEDIUM"),
+    Q(2022, "TYT", 7, "Yürüyen merdivende yansıtıcı alt yüzeyden arkadaki kişiyi ve kendini görmek için bakılacak yönler", ["FİZ.11.3.2"], "", "pm-reflection-ray-paths", "partial", ["FBAB9"],
+      2, 3, 0, "ms dl", "iki yönlü eşleştirme (arkadaki kişi, kendisi) şıkları (I ve II … II ve IV)", "Yansıma yasasıyla kişinin görüntüsü aynaya göre simetrik çizilir; kendini görmek için ayna yüzeyine dik yönde bakmak gerekir",
+      "Düzlem ayna gibi davranan merdiven altına bakan kişinin arkadaki kişiyi ve sonra kendini görebilmesi için hangi yönlere bakacağı yansıma kuralıyla seçiliyor.",
+      "yes", "Düzlem aynada yansıma yasasıyla ışın yolu ve görüntü bulma FİZ.11.3.2 kapsamında; günlük hayat modeli (alışveriş merkezi) beceri temelli.", "MEDIUM"),
+]
+
+# ---- 2023 TYT (S3 ışık şiddeti–enerji, S6 abajur, S7 Ay yüzeyi ayna sistemi okundu; S1 özkütle, S2 yer değiştirme-yol, S4 ısı aktarımı, S5 devre kapsam dışı) ----
+ITEMS += [
+    Q(2023, "TYT", 3, "Aynı ışık şiddetini sağlayan akkor, LED ve floresan ampullerin eşit sürede harcadığı enerjilerin karşılaştırılması", ["FİZ.11.3.1"], "", "lamp-lumen-efficiency", "partial", ["FBAB8"],
+      1, 2, 1, "dl tb", "sıralama şıkları (E_I, E_II, E_III arasındaki >, = ilişkileri)", "Ampuller aynı ışık şiddetini verdiğinden fark watt değerindedir; eşit sürede enerji gücle orantılı olduğundan en az güçlü ampul en az enerji harcar",
+      "Masayı aynı ışık şiddetiyle aydınlatan üç ampulün watt değerleri verilip, eşit süre çalışınca harcayacakları elektrik enerjilerinin sıralaması soruluyor.",
+      "yes", "Işık şiddeti kavramı ve ampul verimini yorumlamak FİZ.11.3.1 kapsamında; enerji–güç ilişkisi ön bilgi, günlük hayat bağlamı uygun.", "MEDIUM"),
+    Q(2023, "TYT", 6, "Saydam küresel abajur içindeki noktasal kaynakta yarıçap, saydamlık ve zincir değişiminin I, E ve Φ üzerindeki etkisi", ["FİZ.11.3.1"], "", "lum-qualitative-factors", "exact", ["FBAB8"],
+      3, 2, 0, "ms dl", "beş ayrı ifade (işlem ve nicelik eşleşmeleri), tek doğru", "Noktasal kaynağın ışık şiddeti ve toplam akısı kaynağa bağlıdır; aydınlanma kaynak uzaklığı ve yüzeyin ışığı geçirme oranıyla değişir",
+      "Abajur yarıçapı, saydamlığı ve asılma yüksekliği değiştirilince ışık şiddeti, K noktasındaki aydınlanma ve abajurdan geçen toplam akının nasıl değiştiğine dair ifadeler değerlendiriliyor.",
+      "yes", "Işık şiddeti, akı ve aydınlanmanın bağlı olduğu etmenlerin nitel yorumu FİZ.11.3.1 kapsamında; hesap yok, üç nicelik birlikte kullanılıyor.", "HIGH"),
+    Q(2023, "TYT", 7, "Ay yüzeyinde lazer ışığını kendi üzerinden geri yansıtan çukur ayna ve açılı düzlem ayna düzeneklerinin seçimi", ["FİZ.11.3.2", "FİZ.11.3.3"], "", "sm-arbitrary-ray-path", "partial", ["FBAB9", "KB2.7"],
+      3, 3, 0, "ms gr", ROMAN, "Merkezden geçen ışın çukur aynadan kendi üzerinden döner; açılı düzlem aynalarda ikinci aynaya dik gelen ışın geri döner",
+      "Birimkareli zeminde verilen üç ayna düzeneğinde lazer ışınının geldiği yolu izleyip kaynağa dönüp dönmediği, merkez ve odak noktası ile açı bilgilerinden çıkarılıyor.",
+      "yes", "Çukur aynada merkezden geçen ışın ve düzlem aynada yansıma yasası FİZ.11.3.2-3 kapsamında; açılı aynalarda görüntü sayısı formülü kullanılmıyor.", "MEDIUM"),
+]
+
+# ---- 2024 TYT (S2 statik sürtünme, S7 çukur ayna + mercek + renk okundu; S1 özkütle, S3 kaldırma, S4 ısı alışverişi, S5 devre/güç, S6 yayda dalga kapsam dışı) ----
+ITEMS += [
+    Q(2024, "TYT", 2, "Aynı kuvvetle itilen farklı kütleli ve sürtünme katsayılı hareketsiz blokların statik sürtünme kuvvetlerinin karşılaştırılması", ["FİZ.11.1.6", "FİZ.11.1.7"], "", "friction-threshold", "exact", ["KB2.7"],
+      2, 1, 0, "tb dl", "sıralama şıkları (f_K, f_L, f_M arasındaki >, <, = ilişkileri)", "Bloklar hareketsiz olduğundan statik sürtünme uygulanan kuvvete eşittir; kütle ve katsayı fark yaratmaz, f = μN yazmak tuzaktır",
+      "Üç farklı bloğa aynı yatay kuvvet uygulanıyor ve hiçbiri kımıldamıyor; kütle ve katsayı verilerine rağmen statik sürtünme kuvvetlerinin büyüklük sıralaması soruluyor.",
+      "yes", "Statik sürtünmenin denge koşulundan bulunması ve katsayıya bağlı olmaması FİZ.11.1.6-7 kapsamında; hesap gerekmiyor.", "HIGH"),
+    Q(2024, "TYT", 7, "Çukur ayna ve yakınsak mercek sisteminde odaktaki kaynaktan mavi ışık yayılınca toplanma noktası (kırmızıda K)", ["FİZ.11.3.3", "FİZ.11.3.9"], "renge göre farklı kırılma (kromatik sapma) 12. sınıf FİZ.12.3.6 bağlamında; 11. sınıf prizma çıktısı tek renkli ışıkla sınırlı", "lens-chromatic", "exact", ["KB2.7"],
+      3, 2, 0, "ms gr", "beş konum seçeneği (F, T, K, T–K arası, F–T arası)", "Odaktaki kaynağın ışınları aynadan paralel yansır; mavi ışık kırmızıdan daha çok kırıldığı için mercekte odak daha yakın olur ve mavi T ile K arasında toplanır",
+      "Çukur aynanın odağındaki kaynak kırmızı ışıkta K noktasında toplanıyor; aynı düzenekte mavi ışık kullanılınca ışığın asal eksende hangi bölgede toplanacağı seçiliyor.",
+      "form_changes", "Ayna ve mercekte özel ışın yolu 11. sınıf kapsamında; ışığın renge göre farklı kırılması Maarif'te tek renkli ışıkla sınırlı olduğundan renk bilgisi verilmeli ya da soru tek renge indirgenmeli.", "MEDIUM"),
+]
+
+# ---- 2025 TYT (S1 net kuvvet, S5 elektriklenme, S7 görünür derinlik okundu; S2 ortalama hız, S3 özkütle, S4 ısı sığası, S6 su dalgası genliği/periyodu kapsam dışı) ----
+ITEMS += [
+    Q(2025, "TYT", 1, "Koltuğu iten iki kişinin kuvvetleri ve kinetik sürtünme ile net kuvvetin büyüklüğü ve yönü", ["FİZ.11.1.5", "FİZ.11.1.6"], "", "friction-horizontal-dynamics", "partial", ["KB2.14"],
+      1, 1, 1, "dl", "sayı–yön çiftleri (10 N–Sol … 40 N–Sağ)", "Aynı yöndeki kuvvetler toplanır, zıt yöndeki kinetik sürtünme çıkarılır; net kuvvet büyük olan yöndedir (yön hatası ve toplama hatası tuzağı)",
+      "İki kişinin aynı yönde uyguladığı kuvvetler ile zıt yöndeki kinetik sürtünme verilerek hareket eden koltuğa etki eden net kuvvetin büyüklüğü ve yönü soruluyor.",
+      "yes", "Serbest cisim diyagramı ile net kuvvet ve kinetik sürtünmenin yönü FİZ.11.1.5-6 kapsamında; tek işlemlik basit toplama.", "HIGH"),
+    Q(2025, "TYT", 5, "Sürtünme, temas ve iletimle elektron alış verişi sonucu hangi öğrencinin negatif yüklü olduğu", [], "11. sınıf Ünite 2 temel kabulü (elektriklenme çeşitleri, önceki sınıf ön bilgisi); açık çıktı yok", None, "none", [],
+      1, 2, 0, "dl", "tek veya ikili öğrenci kombinasyonları (Yalnız Ayşe … Ezgi ve Seda)", "Elektron alan cisim negatif, veren pozitif olur; ayakkabıyla halıda elektron alınır, jeneratöre dokununca elektron kaybedilir",
+      "Üç öğrencinin halıda sürtünme, jeneratöre dokunma ve kazak çıkarma işlemlerinden hangilerinde elektron kazanıp negatif yüklü hale geldiği günlük olaylar üzerinden soruluyor.",
+      "no", "Elektriklenme çeşitleri program metninde önceki sınıf bilgisi (11. sınıf temel kabulü) olarak geçiyor; 11. sınıf çıktısı elektriksel kuvvetin modellenmesidir.", "MEDIUM"),
+    Q(2025, "TYT", 7, "Havadaki gözlemci ve deniz altındaki dalgıcın birbirlerini gördükleri konumlar (görünür derinlik)", ["FİZ.11.3.6"], "", "ad-explain-direction-of-shift", "exact", ["FBAB1"],
+      2, 3, 0, "dl", "iki konum ifadesi (M'nin aşağısı/yukarısı/bulunduğu konum; B için aynı)", "Yoğun ortamdaki cisim yüzeye daha yakın, seyrek ortamdaki cisim yüzeyden daha uzak görünür; gözlemcinin bulunduğu ortam belirleyicidir",
+      "Havadaki eğitmenin suyun altındaki öğrenciyi ve öğrencinin eğitmeni görürken bu cisimlerin gerçek konumlarına göre hangi yönde kaymış göründüğü, kırılma indisi bilgisiyle soruluyor.",
+      "yes", "Görünür derinliğin ortamların kırılma indisine bağlı nitel yorumu FİZ.11.3.6 kapsamında; matematiksel model gerekmiyor.", "HIGH"),
+]
